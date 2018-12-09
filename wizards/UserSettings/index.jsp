@@ -54,23 +54,23 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.generic.*,
-org.opencrx.kernel.portal.wizard.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.opencrx.kernel.backend.*,
+		   org.opencrx.kernel.generic.*,
+		   org.opencrx.kernel.portal.wizard.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.kernel.id.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*
+		   " %>
 <!--
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 -->
@@ -78,7 +78,7 @@ org.openmdx.base.naming.*
 	final String FORM_NAME = "UserSettingsForm";
 	UserSettingsController wc = new UserSettingsController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();		
@@ -91,20 +91,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" id="Command" name="Command" value="" />
@@ -119,22 +119,22 @@ org.openmdx.base.naming.*
 							<img border='0' alt='' title='sorted by timezone' height='16px' src='images/filter_down_cal.gif' />
 						</td>
 						<td>
-							<select id="timezone_sorttz" name="timezone_sorttz" class="form-control" onchange="javascript:document.getElementById('timezone').value=this.value;document.getElementById('timezone_sortAlpha').value=this.value;" >
-<%
-								String initiallySelectedTZ = userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName()); //TimeZone.getTimeZone(app.getCurrentTimeZone()).getDisplayName();
-								String[] timezones = java.util.TimeZone.getAvailableIDs();
-								for(int i = 0; i < timezones.length; i++) {
-			                    	String timezoneID = timezones[i].trim();
-									String selectedModifier = "";
-									if (timezoneID.equals(userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName()))) {
-										selectedModifier = "selected";
-			                    		initiallySelectedTZ = timezoneID;
-									}
-%>
-									<option  <%= selectedModifier %> value="<%= timezoneID %>"><%= timezoneID %>
-<%
-								}
-%>
+							<select id="timezone_sorttz" name="timezone_sorttz" class="form-control" onchange="javascript:document.getElementById('timezone').value = this.value;document.getElementById('timezone_sortAlpha').value = this.value;" >
+								<%
+																String initiallySelectedTZ = userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName()); //TimeZone.getTimeZone(app.getCurrentTimeZone()).getDisplayName();
+																String[] timezones = java.util.TimeZone.getAvailableIDs();
+																for(int i = 0; i < timezones.length; i++) {
+																	String timezoneID = timezones[i].trim();
+																	String selectedModifier = "";
+																	if (timezoneID.equals(userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName()))) {
+																		selectedModifier = "selected";
+																		initiallySelectedTZ = timezoneID;
+																	}
+								%>
+								<option  <%= selectedModifier %> value="<%= timezoneID %>"><%= timezoneID %>
+									<%
+																	}
+									%>
 							</select>
 						</td>
 					</tr>
@@ -144,18 +144,18 @@ org.openmdx.base.naming.*
 							<img border='0' alt='' title='sorted alphabetically' height='16px' src='images/filter_down_star.gif' />
 						</td>
 						<td>
-							<select id="timezone_sortAlpha" name="timezone_sortAlpha" class="form-control" onchange="javascript:document.getElementById('timezone').value=this.value;document.getElementById('timezone_sorttz').value=this.value;" >
-<%
-								String[] timezonesAlpha = java.util.TimeZone.getAvailableIDs();
-								java.util.Arrays.sort(timezonesAlpha, java.text.Collator.getInstance());
-								for(int i = 0; i < timezonesAlpha.length; i++) {
-									String timezoneID = timezonesAlpha[i].trim();
-									String selectedModifier = timezoneID.equals(userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName())) ? "selected" : "";
-%>
-	  								<option  <%= selectedModifier %> value="<%= timezoneID %>"><%= timezoneID %>
-<%
-								}
-%>
+							<select id="timezone_sortAlpha" name="timezone_sortAlpha" class="form-control" onchange="javascript:document.getElementById('timezone').value = this.value;document.getElementById('timezone_sorttz').value = this.value;" >
+								<%
+																String[] timezonesAlpha = java.util.TimeZone.getAvailableIDs();
+																java.util.Arrays.sort(timezonesAlpha, java.text.Collator.getInstance());
+																for(int i = 0; i < timezonesAlpha.length; i++) {
+																	String timezoneID = timezonesAlpha[i].trim();
+																	String selectedModifier = timezoneID.equals(userSettings.getProperty(UserSettings.TIMEZONE_NAME.getName())) ? "selected" : "";
+								%>
+								<option  <%= selectedModifier %> value="<%= timezoneID %>"><%= timezoneID %>
+									<%
+																	}
+									%>
 							</select>
 							<input type="text" id="timezone" name="timezone" class="form-control" value="<%= initiallySelectedTZ %>" style="position:absolute;width:0;visibility:hidden;" />
 						</td>
@@ -168,13 +168,13 @@ org.openmdx.base.naming.*
 							<input type="checkbox" <%= userHome.isStoreSettingsOnLogoff() != null && userHome.isStoreSettingsOnLogoff().booleanValue() ? "checked" : "" %> id="storeSettingsOnLogoff" name="storeSettingsOnLogoff"/>
 						</td>
 					</tr>
-<%
-					org.opencrx.kernel.home1.cci2.EMailAccountQuery emailAccountQuery = (org.opencrx.kernel.home1.cci2.EMailAccountQuery)pm.newQuery(org.opencrx.kernel.home1.jmi1.EMailAccount.class);
-					emailAccountQuery.thereExistsIsActive().isTrue();
-					emailAccountQuery.thereExistsIsDefault().isTrue();
-					List<org.opencrx.kernel.home1.jmi1.EMailAccount> emailAccounts = userHome.getEMailAccount(emailAccountQuery);
-					org.opencrx.kernel.home1.jmi1.EMailAccount defaultEmailAccount = emailAccounts.isEmpty() ? null : emailAccounts.iterator().next();
-%>
+					<%
+										org.opencrx.kernel.home1.cci2.EMailAccountQuery emailAccountQuery = (org.opencrx.kernel.home1.cci2.EMailAccountQuery)pm.newQuery(org.opencrx.kernel.home1.jmi1.EMailAccount.class);
+										emailAccountQuery.thereExistsIsActive().isTrue();
+										emailAccountQuery.thereExistsIsDefault().isTrue();
+										List<org.opencrx.kernel.home1.jmi1.EMailAccount> emailAccounts = userHome.getEMailAccount(emailAccountQuery);
+										org.opencrx.kernel.home1.jmi1.EMailAccount defaultEmailAccount = emailAccounts.isEmpty() ? null : emailAccounts.iterator().next();
+					%>
 					<tr>
 						<td><label style="font-weight:normal" for="emailAccount">Email:</label></td>
 						<td><input type="text" id="emailAccount" name="emailAccount" class="form-control" value="<%= defaultEmailAccount == null || defaultEmailAccount.getName() == null ? "" :  defaultEmailAccount.getName() %>"/></td>
@@ -194,44 +194,44 @@ org.openmdx.base.naming.*
 				<table style="width:100%">
 					<tr>
 						<td style="width:300px;"></td>
-<%
-						int p = 0;
-					    for(Action action: wc.getSelectPerspectiveActions()) {
-					        if(action.isEnabled()) {
-					        	boolean isCurrent = (p == app.getCurrentPerspective());
-%>
-								<td style='text-align:center;<%= isCurrent ? "font-weight:bold;text-decoration:underline;' title='current perspective" : "" %>'><%= action.getTitle() %></td>
-<%
-							}
-					        p++;
-						}
-%>
+						<%
+												int p = 0;
+												for(Action action: wc.getSelectPerspectiveActions()) {
+													if(action.isEnabled()) {
+														boolean isCurrent = (p == app.getCurrentPerspective());
+						%>
+						<td style='text-align:center;<%= isCurrent ? "font-weight:bold;text-decoration:underline;' title='current perspective" : "" %>'><%= action.getTitle() %></td>
+						<%
+													}
+													p++;
+												}
+						%>
 					</tr>
-<%
-					Action[] rootObjectActions = app.getRootObjectActions();
-					// Always show root object 0
-					int n = 1;
-					for(int i = 1; i < rootObjectActions.length; i++) {
-						Action action = rootObjectActions[i];
-						if(action.getParameter(Action.PARAMETER_REFERENCE).length() == 0) {
-%>
-							<tr>
-								<td><label style="font-weight:normal" for="rootObject<%= n %>"><%= action.getTitle() %>:</label></td>
-<%		
-								for(p = 0; p < wc.getSelectPerspectiveActions().length; p++) {
-%>
-									<td style="text-align:center;">
-										<input type="checkbox" <%= userSettings.getProperty(UserSettings.ROOT_OBJECT_STATE.getName() + (p == 0 ? "" : "[" + Integer.toString(p) + "]") + "." + n + ".State", "1").equals("1") ? "checked" : "" %> id="rootObject<%= p %>_<%= n %>" name="rootObject<%= p %>_<%= n %>"/>
-									</td>
-<%
-								}
-%>
-							</tr>
-<%
-							n++;
-						}
-					}
-%>
+					<%
+										Action[] rootObjectActions = app.getRootObjectActions();
+										// Always show root object 0
+										int n = 1;
+										for(int i = 1; i < rootObjectActions.length; i++) {
+											Action action = rootObjectActions[i];
+											if(action.getParameter(Action.PARAMETER_REFERENCE).length() == 0) {
+					%>
+					<tr>
+						<td><label style="font-weight:normal" for="rootObject<%= n %>"><%= action.getTitle() %>:</label></td>
+						<%		
+														for(p = 0; p < wc.getSelectPerspectiveActions().length; p++) {
+						%>
+						<td style="text-align:center;">
+							<input type="checkbox" <%= userSettings.getProperty(UserSettings.ROOT_OBJECT_STATE.getName() + (p == 0 ? "" : "[" + Integer.toString(p) + "]") + "." + n + ".State", "1").equals("1") ? "checked" : "" %> id="rootObject<%= p %>_<%= n %>" name="rootObject<%= p %>_<%= n %>"/>
+						</td>
+						<%
+														}
+						%>
+					</tr>
+					<%
+												n++;
+											}
+										}
+					%>
 					<tr>
 						<td nowrap>
 							<label style="font-weight:normal" for="topNavigationShowMax">Show max items in top navigation:</label>
@@ -269,28 +269,28 @@ org.openmdx.base.naming.*
 						<td style="text-align:center;">Replacement</td>
 						<td style="text-align:center;">Removal</td>
 					</tr>
-<%
-					org.opencrx.kernel.workflow1.jmi1.Segment workflowSegment = Workflows.getInstance().getWorkflowSegment(pm, wc.getProviderName(), wc.getSegmentName());
-					org.opencrx.kernel.workflow1.cci2.TopicQuery topicQuery =
-						(org.opencrx.kernel.workflow1.cci2.TopicQuery)pm.newQuery(org.opencrx.kernel.workflow1.jmi1.Topic.class);
-					topicQuery.orderByName().ascending();
-					topicQuery.forAllDisabled().isFalse();
-					for(org.opencrx.kernel.workflow1.jmi1.Topic topic: workflowSegment.getTopic(topicQuery)) {
-						ObjectReference objRefTopic = new ObjectReference(topic, app);
-						org.opencrx.kernel.home1.cci2.SubscriptionQuery query = (org.opencrx.kernel.home1.cci2.SubscriptionQuery)pm.newQuery(org.opencrx.kernel.home1.jmi1.Subscription.class);
-						query.thereExistsTopic().equalTo(topic);
-						Collection<org.opencrx.kernel.home1.jmi1.Subscription> subscriptions = userHome.getSubscription(query);
-						org.opencrx.kernel.home1.jmi1.Subscription subscription = subscriptions.isEmpty() 
-							? null
-							: (org.opencrx.kernel.home1.jmi1.Subscription)subscriptions.iterator().next();
-						Set<Short> eventTypes = new HashSet<Short>();
-						if(subscription != null) {
-							for(Short eventType: subscription.getEventType()) {
-								eventTypes.add(eventType);
-							}
-						}
-						String topicId = topic.refGetPath().getBase();
-%>
+					<%
+										org.opencrx.kernel.workflow1.jmi1.Segment workflowSegment = Workflows.getInstance().getWorkflowSegment(pm, wc.getProviderName(), wc.getSegmentName());
+										org.opencrx.kernel.workflow1.cci2.TopicQuery topicQuery =
+											(org.opencrx.kernel.workflow1.cci2.TopicQuery)pm.newQuery(org.opencrx.kernel.workflow1.jmi1.Topic.class);
+										topicQuery.orderByName().ascending();
+										topicQuery.forAllDisabled().isFalse();
+										for(org.opencrx.kernel.workflow1.jmi1.Topic topic: workflowSegment.getTopic(topicQuery)) {
+											ObjectReference objRefTopic = new ObjectReference(topic, app);
+											org.opencrx.kernel.home1.cci2.SubscriptionQuery query = (org.opencrx.kernel.home1.cci2.SubscriptionQuery)pm.newQuery(org.opencrx.kernel.home1.jmi1.Subscription.class);
+											query.thereExistsTopic().equalTo(topic);
+											Collection<org.opencrx.kernel.home1.jmi1.Subscription> subscriptions = userHome.getSubscription(query);
+											org.opencrx.kernel.home1.jmi1.Subscription subscription = subscriptions.isEmpty() 
+												? null
+												: (org.opencrx.kernel.home1.jmi1.Subscription)subscriptions.iterator().next();
+											Set<Short> eventTypes = new HashSet<Short>();
+											if(subscription != null) {
+												for(Short eventType: subscription.getEventType()) {
+													eventTypes.add(eventType);
+												}
+											}
+											String topicId = topic.refGetPath().getBase();
+					%>
 					<tr>
 						<td nowrap title="<%= topic.getDescription() != null ? topic.getDescription() : "" %>">
 							<label style="font-weight:normal"><%= objRefTopic.getTitle() %>:</label>
@@ -308,44 +308,44 @@ org.openmdx.base.naming.*
 							<input type="checkbox" <%= eventTypes.contains((short)4) ? "checked" : "" %> id="topicRemoval-<%= topicId %>" name="topicRemoval-<%= topicId %>" />
 						</td>
 					</tr>
-<%
-				}
-%>
+					<%
+									}
+					%>
 				</table>
 			</fieldset>
 		</div>
 	</div>
 	<div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
 	<div id="SubmitArea" style="display:none;">
-<%
-		boolean allowApply = wc.currentUserIsAdmin() || wc.currentUserOwnsHome(userHome);
-		if(allowApply) {
-%>		
-			<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;this.name='---';" />
-<%
-		} else {
-%>
-			<div class="alert alert-warning">
-				<b>NOTE:</b> Update of settings not allowed. Admin permissions required.
-			</div>
-<%
-		}
-%>			
-		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;" />
+		<%
+				boolean allowApply = wc.currentUserIsAdmin() || wc.currentUserOwnsHome(userHome);
+				if(allowApply) {
+		%>		
+		<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;this.name = '---';" />
+		<%
+				} else {
+		%>
+		<div class="alert alert-warning">
+			<b>NOTE:</b> Update of settings not allowed. Admin permissions required.
+		</div>
+		<%
+				}
+		%>			
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
 	</div>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';	
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

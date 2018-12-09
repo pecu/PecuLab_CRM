@@ -52,13 +52,13 @@
  * license.
  */
 %><%@ page session="true" import="
-java.util.*,
-java.text.*,
-java.math.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.base.naming.*
+		   java.util.*,
+		   java.text.*,
+		   java.math.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.base.naming.*
 " %><%
 	ApplicationContext app = (ApplicationContext)session.getValue(WebKeys.APPLICATION_KEY);
 	ViewsCache viewsCache = (ViewsCache)session.getValue(WebKeys.VIEW_CACHE_KEY_EDIT);
@@ -94,89 +94,89 @@ org.openmdx.base.naming.*
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
-<head>
-<%
-	String objectTitle = view.getObjectReference().getTitle();
-	if(objectTitle == null) objectTitle = "#NULL";
-%>
-  <title><%= app.getApplicationName() + " - " + objectTitle + (objectTitle.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
-<%
-	prolog.paint(p, PagePrologControl.FRAME_PRE_PROLOG, false);
-	p.flush();
-%>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=<%= app.getInitialScale() %>">
-	
-	<!-- Styles -->
-	<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="_style/ssf.css" >
-	<link rel="stylesheet" href="_style/n2default.css" >
-	<link rel="stylesheet" href="_style/colors.css">
-	<link rel="stylesheet" href="_style/calendar-small.css">
-	<link rel="stylesheet" href="js/wiky/wiky.css" >
-	<link rel="stylesheet" href="js/wiky/wiky.lang.css" >
-	<link rel="stylesheet" href="js/wiky/wiky.math.css" >
-	<link rel="stylesheet" href="js/yui/build/assets/skins/sam/container.css" >
-	<link rel='shortcut icon' href='images/favicon.ico' />
+	<head>
+		<%
+			String objectTitle = view.getObjectReference().getTitle();
+			if(objectTitle == null) objectTitle = "#NULL";
+		%>
+		<title><%= app.getApplicationName() + " - " + objectTitle + (objectTitle.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
+		<%
+			prolog.paint(p, PagePrologControl.FRAME_PRE_PROLOG, false);
+			p.flush();
+		%>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=<%= app.getInitialScale() %>">
 
-	<!-- Libraries -->
-    <script src="js/prototype.js"></script>
-    <script src="js/jquery/jquery.min.js"></script>
-	<script>
-	  $.noConflict();
-	</script>
-    <script src="js/bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/polymer/components/webcomponentsjs/webcomponents-lite.min.js"></script>    
-	<script src="js/portal-all.js"></script>
-	<script src="js/calendar/lang/calendar-<%= app.getCurrentLocaleAsString() %>.js"></script>
-	<!--[if lt IE 7]><script type="text/javascript" src="js/iehover-fix.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript">
-		var OF = null;
-		try {
-			OF = self.opener.OF;
-		} catch(e) {
-			OF = null;
-		}
-		if(!OF) {
-			OF = new ObjectFinder();
-		}	  
-	</script>
-<%
-	prolog.paint(p, PagePrologControl.FRAME_POST_PROLOG, false);
-	p.flush();
-%>
-</head>
-<body onload="initPage();">
-<iframe class="<%= CssClass.popUpFrame %>" id="DivShim" src="blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
-<%
-	if(view.getMode() == ViewMode.STANDARD) {
-		EditInspectorControl.paintEditPopups(p);
-		p.flush();
-	}
-%>
-<%@ include file="../../../../edit-header.html" %>
-<div id="container">
-	<div id="wrap">
-		<div id="eheader">
-<%
-	north.paint(p, true);
-	p.flush();
-%>&nbsp;
-		</div> <!-- header -->
-		<div id="content-wrap">
-			<div id="econtent">
-<%
-				view.paint(p, null, true);
-				epilog.paint(p, true);
-				p.close(false);
-%>
-				<br />
-<%@ include file="../../../../edit-footer.html" %>
-			</div> <!-- content -->
-		</div> <!-- content-wrap -->
-	</div> <!-- wrap -->
-</div> <!-- container -->
-</body>
+		<!-- Styles -->
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="_style/ssf.css" >
+		<link rel="stylesheet" href="_style/n2default.css" >
+		<link rel="stylesheet" href="_style/colors.css">
+		<link rel="stylesheet" href="_style/calendar-small.css">
+		<link rel="stylesheet" href="js/wiky/wiky.css" >
+		<link rel="stylesheet" href="js/wiky/wiky.lang.css" >
+		<link rel="stylesheet" href="js/wiky/wiky.math.css" >
+		<link rel="stylesheet" href="js/yui/build/assets/skins/sam/container.css" >
+		<link rel='shortcut icon' href='images/favicon.ico' />
+
+		<!-- Libraries -->
+		<script src="js/prototype.js"></script>
+		<script src="js/jquery/jquery.min.js"></script>
+		<script>
+			$.noConflict();
+		</script>
+		<script src="js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/polymer/components/webcomponentsjs/webcomponents-lite.min.js"></script>    
+		<script src="js/portal-all.js"></script>
+		<script src="js/calendar/lang/calendar-<%= app.getCurrentLocaleAsString() %>.js"></script>
+		<!--[if lt IE 7]><script type="text/javascript" src="js/iehover-fix.js"></script><![endif]-->
+		<script language="javascript" type="text/javascript">
+			var OF = null;
+			try {
+				OF = self.opener.OF;
+			} catch (e) {
+				OF = null;
+			}
+			if (!OF) {
+				OF = new ObjectFinder();
+			}
+		</script>
+		<%
+			prolog.paint(p, PagePrologControl.FRAME_POST_PROLOG, false);
+			p.flush();
+		%>
+	</head>
+	<body onload="initPage();">
+		<iframe class="<%= CssClass.popUpFrame %>" id="DivShim" src="blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+			<%
+				if(view.getMode() == ViewMode.STANDARD) {
+					EditInspectorControl.paintEditPopups(p);
+					p.flush();
+				}
+			%>
+			<%@ include file="../../../../edit-header.html" %>
+		<div id="container">
+			<div id="wrap">
+				<div id="eheader">
+					<%
+						north.paint(p, true);
+						p.flush();
+					%>&nbsp;
+				</div> <!-- header -->
+				<div id="content-wrap">
+					<div id="econtent">
+						<%
+										view.paint(p, null, true);
+										epilog.paint(p, true);
+										p.close(false);
+						%>
+						<br />
+						<%@ include file="../../../../edit-footer.html" %>
+					</div> <!-- content -->
+				</div> <!-- content-wrap -->
+			</div> <!-- wrap -->
+		</div> <!-- container -->
+	</body>
 </html>
 <%
 	}
@@ -186,9 +186,9 @@ org.openmdx.base.naming.*
 		p.flush();
 		p.close(false);
 %>
-		<script language="javascript" type="text/javascript">
-			//alert('postLoad edit');
-		</script>
+<script language="javascript" type="text/javascript">
+	//alert('postLoad edit');
+</script>
 <%
 	}
 %>

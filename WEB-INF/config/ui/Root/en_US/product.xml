@@ -53,15 +53,15 @@
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
-														  <_item>Products</_item>
+															<_item>Products</_item>
 														</toolTip>
 														<label>
-														  <_item>Products</_item>
+															<_item>Products</_item>
 														</label>
 														<order>
-														  <_item>0</_item>
-														  <_item>0</_item>
-														  <_item>20</_item>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>20</_item>
 														</order>
 														<iconKey>Product</iconKey>
 														<maxMember>25</maxMember>
@@ -496,24 +496,24 @@
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
 									<!-- removed since openCRX v1.10
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AbstractProduct:competitor">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>Competitor</_item>
-											</toolTip>
-											<label>
-												<_item>Competitor</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>20</_item>
-												<_item>120</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-                  -->
+													  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AbstractProduct:competitor">
+														  <_object>
+															  <active>true</active>
+															  <toolTip>
+																  <_item>Competitor</_item>
+															  </toolTip>
+															  <label>
+																  <_item>Competitor</_item>
+															  </label>
+															  <order>
+																  <_item>10</_item>
+																  <_item>20</_item>
+																  <_item>120</_item>
+															  </order>
+														  </_object>
+														  <_content/>
+													  </org.openmdx.ui1.ElementDefinition>
+									-->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AbstractProduct:productUsage">
 										<_object>
 											<active>true</active>

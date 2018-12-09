@@ -28,8 +28,8 @@
 												<_item>0</_item>
 												<_item>10</_item>
 											</order>
-                      <showMaxMember>11</showMaxMember>
-                      <maxMember>25</maxMember>
+											<showMaxMember>11</showMaxMember>
+											<maxMember>25</maxMember>
 										</_object>
 										<_content>
 											<additionalElementDefinition>
@@ -52,29 +52,29 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 											</additionalElementDefinition>
-<!--
-											<additionalElementDefinition>
-												<org.openmdx.ui1.AdditionalElementDefinition id="10001" _operation="create">
-													<_object>
-														<toolTip>
-															<_item>Price Levels (Editable)</_item>
-														</toolTip>
-														<label>
-															<_item>»Price Levels (Editable)</_item>
-														</label>
-														<order>
-															<_item>10</_item>
-															<_item>0</_item>
-															<_item>500</_item>
-														</order>
-														<iconKey>PriceLevel</iconKey>
-														<showMaxMember>10</showMaxMember>
-														<maxMember>25</maxMember>
-													</_object>
-													<_content/>
-												</org.openmdx.ui1.AdditionalElementDefinition>
-											</additionalElementDefinition>
--->
+											<!--
+																						<additionalElementDefinition>
+																							<org.openmdx.ui1.AdditionalElementDefinition id="10001" _operation="create">
+																								<_object>
+																									<toolTip>
+																										<_item>Price Levels (Editable)</_item>
+																									</toolTip>
+																									<label>
+																										<_item>»Price Levels (Editable)</_item>
+																									</label>
+																									<order>
+																										<_item>10</_item>
+																										<_item>0</_item>
+																										<_item>500</_item>
+																									</order>
+																									<iconKey>PriceLevel</iconKey>
+																									<showMaxMember>10</showMaxMember>
+																									<maxMember>25</maxMember>
+																								</_object>
+																								<_content/>
+																							</org.openmdx.ui1.AdditionalElementDefinition>
+																						</additionalElementDefinition>
+											-->
 										</_content>
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:priceListEntry">
@@ -94,9 +94,9 @@
 											</order>
 											<maxMember>14</maxMember>
 											<showMaxMember>12</showMaxMember>
-                    </_object>
-                    <_content>
-                      <additionalElementDefinition>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
 
 												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
 													<_object>
@@ -117,9 +117,9 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:pricingRule">
 										<_object>
@@ -183,8 +183,8 @@
 											<maxMember>14</maxMember>
 											<showMaxMember>12</showMaxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 
 												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
 													<_object>
@@ -205,9 +205,9 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AbstractPriceLevel:assignedAccount">
 										<_object>
 											<active>true</active>

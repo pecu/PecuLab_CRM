@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "ImportAddressesForm";	
 	ImportAddressesWizardController wc = new ImportAddressesWizardController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -88,20 +88,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form name="<%= FORM_NAME %>" id="<%= FORM_NAME %>" accept-charset="UTF-8" method="post" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" id="Command" name="Command" value="" />
@@ -110,17 +110,17 @@ org.openmdx.base.naming.*
 			<td class="<%= CssClass.fieldLabel %>">Address filter:</td>
 			<td>
 				<select id="addressFilterXri" class="valueL" tabindex="100" name="addressFilterXri">
-<%
-					org.opencrx.kernel.account1.jmi1.Segment accountSegment = Accounts.getInstance().getAccountSegment(pm, wc.getProviderName(), wc.getSegmentName());
-					org.opencrx.kernel.account1.cci2.AddressFilterGlobalQuery addressFilterQuery = (org.opencrx.kernel.account1.cci2.AddressFilterGlobalQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.AddressFilterGlobal.class);
-					addressFilterQuery.forAllDisabled().isFalse();
-					addressFilterQuery.orderByName().ascending();
-					for(org.opencrx.kernel.account1.jmi1.AddressFilterGlobal addressFilter: accountSegment.getAddressFilter(addressFilterQuery)) {
-%>
-						<option value="<%= addressFilter.refMofId() %>"><%= new ObjectReference(addressFilter, app).getTitle() %></option>
-<%
-					}
-%>
+					<%
+										org.opencrx.kernel.account1.jmi1.Segment accountSegment = Accounts.getInstance().getAccountSegment(pm, wc.getProviderName(), wc.getSegmentName());
+										org.opencrx.kernel.account1.cci2.AddressFilterGlobalQuery addressFilterQuery = (org.opencrx.kernel.account1.cci2.AddressFilterGlobalQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.AddressFilterGlobal.class);
+										addressFilterQuery.forAllDisabled().isFalse();
+										addressFilterQuery.orderByName().ascending();
+										for(org.opencrx.kernel.account1.jmi1.AddressFilterGlobal addressFilter: accountSegment.getAddressFilter(addressFilterQuery)) {
+					%>
+					<option value="<%= addressFilter.refMofId() %>"><%= new ObjectReference(addressFilter, app).getTitle() %></option>
+					<%
+										}
+					%>
 				</select>
 			</td>
 			<td class="addon"/>
@@ -140,23 +140,23 @@ org.openmdx.base.naming.*
 	<br />
 	<div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
 	<div id="SubmitArea" style="display:none;">										    	    								
-		<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="Import" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;" />
-		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value=this.name;" />
+		<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="Import" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;" />
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
 	</div>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';		
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />
 

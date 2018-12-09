@@ -7,7 +7,7 @@
 	// or
 	// String localeStr = request.getParameter("locale");
 
-  	defaultLocale = "en_US";
+	defaultLocale = "en_US";
 
 	activeLocales.put("en_US", "English (United States)");
   	

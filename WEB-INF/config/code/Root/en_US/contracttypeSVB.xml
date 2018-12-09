@@ -46,7 +46,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
--->
+												-->
 												<org.opencrx.kernel.code1.CodeValueEntry code="2" _operation="set">
 													<_object>
 														<shortText>
@@ -94,19 +94,19 @@
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-<!--
-												<org.opencrx.kernel.code1.CodeValueEntry code="6" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Sales Volume Contract</_item>
-														</shortText>
-														<longText>
-															<_item>[6] Sales Volume Contract</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
--->
+												<!--
+																								<org.opencrx.kernel.code1.CodeValueEntry code="6" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Sales Volume Contract</_item>
+																										</shortText>
+																										<longText>
+																											<_item>[6] Sales Volume Contract</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+												-->
 											</entry>
 										</_content>
 									</org.opencrx.kernel.code1.CodeValueContainer>

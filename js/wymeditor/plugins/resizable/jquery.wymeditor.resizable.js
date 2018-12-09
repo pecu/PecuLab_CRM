@@ -16,26 +16,26 @@
  * @param options options for the plugin
  */
 WYMeditor.editor.prototype.resizable = function (options) {
-    var wym = this,
-        $iframe = jQuery(wym._box).find('iframe'),
-        $iframeDiv = jQuery(wym._box).find('.wym_iframe'),
-        // Define some default options
-        defaultOptions = {
-            resize: function () {
-                $iframeDiv.height($iframe.height());
-            },
-            alsoResize: $iframe,
-            handles: "s,e,se",
-            minHeight: 250
-        },
-        // Merge given options with default options. Given options override
-        // default ones.
-        finalOptions = jQuery.extend(defaultOptions, options);
+	var wym = this,
+			$iframe = jQuery(wym._box).find('iframe'),
+			$iframeDiv = jQuery(wym._box).find('.wym_iframe'),
+			// Define some default options
+			defaultOptions = {
+				resize: function () {
+					$iframeDiv.height($iframe.height());
+				},
+				alsoResize: $iframe,
+				handles: "s,e,se",
+				minHeight: 250
+			},
+	// Merge given options with default options. Given options override
+	// default ones.
+	finalOptions = jQuery.extend(defaultOptions, options);
 
-    if (jQuery.isFunction(jQuery.fn.resizable)) {
-        jQuery(wym._box).resizable(finalOptions);
-    } else {
-        WYMeditor.console.error('Oops, jQuery UI.resizable unavailable.');
-    }
+	if (jQuery.isFunction(jQuery.fn.resizable)) {
+		jQuery(wym._box).resizable(finalOptions);
+	} else {
+		WYMeditor.console.error('Oops, jQuery UI.resizable unavailable.');
+	}
 
 };

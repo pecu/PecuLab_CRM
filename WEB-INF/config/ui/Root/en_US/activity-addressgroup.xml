@@ -136,7 +136,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<!--Element Definitions AdressGroupMember-->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:AddressGroupMember:identity">
-									  <!-- this element definition is used to display phone numbers with account info in the gird [PortalExtension] -->
+										<!-- this element definition is used to display phone numbers with account info in the gird [PortalExtension] -->
 										<_object>
 											<active>true</active>
 											<toolTip>

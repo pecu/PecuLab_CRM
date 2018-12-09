@@ -49,13 +49,13 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<!-- disable Edit/Delete Operations -->
 									<!--
-									<org.openmdx.ui1.ElementDefinition name="org:openmdx:base:IndexEntry:Pane:Op:Tab:edit">
-										<_object>
-											<active>false</active>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-                  -->
+													  <org.openmdx.ui1.ElementDefinition name="org:openmdx:base:IndexEntry:Pane:Op:Tab:edit">
+														  <_object>
+															  <active>false</active>
+														  </_object>
+														  <_content/>
+													  </org.openmdx.ui1.ElementDefinition>
+									-->
 									<org.openmdx.ui1.ElementDefinition name="org:openmdx:base:IndexEntry:Pane:Op:Tab:delete">
 										<_object>
 											<active>false</active>

@@ -103,43 +103,43 @@ license.
  *
  */
 Polymer({
-    is: 'portal-datetime-input',
-    properties: {
-    	locale: {
-    		type: String
-    	},
-    	timezone: {
-    		type: String
-    	},
-    	disabled: {
-    		type: Boolean,
-    		value: false
-    	},
-    	dateTime: {
-    		type: Date,
-    		notify: true,
-    		value: function() {
-    			return new Date();
-    		}
-    	},
-    	dateFormatted: {
-    		type: String,
-    		value: ""
-    	},
-    	timeFormatted: {
-    		type: String,
-    		value: ""
-    	},
+	is: 'portal-datetime-input',
+	properties: {
+		locale: {
+			type: String
+		},
+		timezone: {
+			type: String
+		},
+		disabled: {
+			type: Boolean,
+			value: false
+		},
+		dateTime: {
+			type: Date,
+			notify: true,
+			value: function () {
+				return new Date();
+			}
+		},
+		dateFormatted: {
+			type: String,
+			value: ""
+		},
+		timeFormatted: {
+			type: String,
+			value: ""
+		},
 		value: {
-	        type: Date,
-	        notify: true,
-    		observer: "valueChanged",	        
+			type: Date,
+			notify: true,
+			observer: "valueChanged",
 		}
-    },
-	ready: function() {
 	},
-	valueChanged: function() {
-		if(this.value == null) {
+	ready: function () {
+	},
+	valueChanged: function () {
+		if (this.value == null) {
 			this.dateFormatted = null;
 			this.timeFormatted = null;
 			this.dateTime = new Date();
@@ -151,13 +151,13 @@ Polymer({
 			this.dateTime = new Date(this.value);
 		}
 	},
-	clearValue: function() {
+	clearValue: function () {
 		this.set("value", null);
 	},
-	dismissDatePickerDialog: function(event) {
-		if(event.detail.confirmed) {
+	dismissDatePickerDialog: function (event) {
+		if (event.detail.confirmed) {
 			var newValue = null;
-			if(this.value == null) {
+			if (this.value == null) {
 				newValue = new Date();
 				newValue.setSeconds(0);
 			} else {
@@ -169,13 +169,13 @@ Polymer({
 			newValue.setUTCDate(pickerValue.getUTCDate());
 			this.set("value", newValue);
 			this.$.datePickerDialog.close();
-	    } else if(this.value != null) {
-	    	this.dateTime = new Date(this.value);
-	    }
+		} else if (this.value != null) {
+			this.dateTime = new Date(this.value);
+		}
 	},
-	dismissTimePickerDialog: function(event) {
-		if(event.detail.confirmed) {
-			if(this.value == null) {
+	dismissTimePickerDialog: function (event) {
+		if (event.detail.confirmed) {
+			if (this.value == null) {
 				newValue = new Date();
 				newValue.setSeconds(0);
 			} else {
@@ -186,14 +186,14 @@ Polymer({
 			newValue.setUTCMinutes(pickerValue.getUTCMinutes());
 			this.set("value", newValue);
 			this.$.timePickerDialog.close();
-	    } else if(this.value != null) {
-	    	this.dateTime = new Date(this.value);
-	    }
+		} else if (this.value != null) {
+			this.dateTime = new Date(this.value);
+		}
 	},
-	showDatePickerDialog: function() {
+	showDatePickerDialog: function () {
 		this.$.datePickerDialog.toggle();
 	},
-	showTimePickerDialog: function() {
+	showTimePickerDialog: function () {
 		this.$.timePickerDialog.toggle();
 	}
 });

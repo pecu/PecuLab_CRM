@@ -4861,7 +4861,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 
 									<!-- Operations -->
-										<_content />
+									<_content />
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:depot1:DepotReport:Pane:Op:Tab:refreshReport">
 										<_object>
 											<active>true</active>

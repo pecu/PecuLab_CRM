@@ -52,18 +52,18 @@
  * license.
  */
 %><%@ page session="true" import="
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.base.exception.*
-" %>
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.base.exception.*
+		   " %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	try {
 		ViewsCache viewsCache = (ViewsCache)session.getValue(WebKeys.VIEW_CACHE_KEY_SHOW);
 		ShowObjectView view = (ShowObjectView)viewsCache.getView(request.getParameter(Action.PARAMETER_REQUEST_ID));
-	    ServletContext sc = getServletConfig().getServletContext();
-	    RequestDispatcher rd = sc.getRequestDispatcher(view.getLayout(false));
-	    rd.forward(request, response);
+		ServletContext sc = getServletConfig().getServletContext();
+		RequestDispatcher rd = sc.getRequestDispatcher(view.getLayout(false));
+		rd.forward(request, response);
 	}
 	catch(Exception e) {
 		new ServiceException(e).log();	

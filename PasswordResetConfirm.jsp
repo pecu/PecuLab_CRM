@@ -54,15 +54,15 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.net.*,
-java.util.Enumeration,
-java.io.PrintWriter,
-org.w3c.spi2.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.base.naming.*,
-org.opencrx.kernel.backend.*
-"%>
+		   java.util.*,
+		   java.net.*,
+		   java.util.Enumeration,
+		   java.io.PrintWriter,
+		   org.w3c.spi2.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.base.naming.*,
+		   org.opencrx.kernel.backend.*
+		   "%>
 <%
 	Boolean success = null;
 	String resetToken = request.getParameter("t");
@@ -88,10 +88,10 @@ org.opencrx.kernel.backend.*
 			pm.currentTransaction().begin();
 			org.opencrx.kernel.home1.jmi1.ChangePasswordParams params = Structures.create(
 				org.opencrx.kernel.home1.jmi1.ChangePasswordParams.class, 
-	           	Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.oldPassword, UserHomes.RESET_PASSWORD_PREFIX + resetToken),
-	           	Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.newPassword, password1),
-	           	Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.newPasswordVerification, password2)           	
-	        );
+				Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.oldPassword, UserHomes.RESET_PASSWORD_PREFIX + resetToken),
+				Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.newPassword, password1),
+				Datatypes.member(org.opencrx.kernel.home1.jmi1.ChangePasswordParams.Member.newPasswordVerification, password2)           	
+			);
 			org.opencrx.kernel.home1.jmi1.ChangePasswordResult result = userHome.changePassword(params);
 			pm.currentTransaction().commit();
 			success = result.getStatus() == 0;
@@ -105,89 +105,89 @@ org.opencrx.kernel.backend.*
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-	<title>Confirm Password Reset</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Expires" content="0">
-	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<meta name="apple-touch-fullscreen" content="YES" />
+	<head>
+		<title>Confirm Password Reset</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="apple-touch-fullscreen" content="YES" />
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/ssf.css" >
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/n2default.css" >
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/colors.css">
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/calendar-small.css">
-	<link rel='shortcut icon' href='<%= request.getContextPath() %>/images/favicon.ico' />
+		<!-- Styles -->
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/ssf.css" >
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/n2default.css" >
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/colors.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/calendar-small.css">
+		<link rel='shortcut icon' href='<%= request.getContextPath() %>/images/favicon.ico' />
 
-	<!-- Libraries -->
-	<script language="javascript" type="text/javascript" src="<%= request.getContextPath() %>/js/prototype.js"></script>
+		<!-- Libraries -->
+		<script language="javascript" type="text/javascript" src="<%= request.getContextPath() %>/js/prototype.js"></script>
 
-</head>
-<body style="border:0px solid white;">
-  <div id="header" style="height:90px;">
-    <div id="logoTable">
-      <table dir="ltr" id="headerlayout" style="position:relative;">
-        <tr id="headRow">
-          <td id="head" colspan="2">
-            <table id="info">
-              <tr>
-                <td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
-                <td id="headerCellMiddle" style="background-image:url('./images/logoMiddle.gif');background-repeat:repeat-x;width:100%;"></td>
-                <td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="container">
-  	<div class="row">
-  		<div class="col-sm-12">
-<%
-			if(Boolean.TRUE.equals(success)) {
-%>
-				<h2>Password successfully changed for <%= id %>@<%= providerName + "/" + segmentName %></h2>
-<%
-			} else if(Boolean.FALSE.equals(success)) {
-%>
-				<h2>Unable to reset password</h2>
-<%
-			} else if(
-				resetToken != null && !resetToken.isEmpty() &&
-				providerName != null && !providerName.isEmpty() &&
-				segmentName != null && !segmentName.isEmpty() &&
-				id != null && !id.isEmpty()
-			) {
-%>
-			    <form role="form" class="form-signin" style="max-width:400px;margin:0 auto;" method="POST" action="PasswordResetConfirm.jsp" accept-charset="UTF-8">
-      				<h2 class="form-signin-heading">Reset password for <%= id %>@<%= providerName + "/" + segmentName %></h2>					
-			    	<input type="hidden" name="t" value="<%= resetToken %>" />
-			    	<input type="hidden" name="p" value="<%= providerName %>" />
-			    	<input type="hidden" name="s" value="<%= segmentName %>" />
-			    	<input type="hidden" name="id" value="<%= id %>" />
-					<input type="password" name="password1" autofocus="" placeholder="Password" class="form-control" />
-					<input type="password" name="password2" placeholder="Password (verify)" class="form-control" />
-					<br />
-					<button type="submit" class="btn btn-lg btn-primary btn-block">OK</button>
-					<br />
-      				<%@ include file="password-reset-confirm-note.html" %>					
-			    </form>
-<%				
-			} else {
-%>
-				<h2>Invalid password confirm request</h2>
-<%
-			}
-%>
+	</head>
+	<body style="border:0px solid white;">
+		<div id="header" style="height:90px;">
+			<div id="logoTable">
+				<table dir="ltr" id="headerlayout" style="position:relative;">
+					<tr id="headRow">
+						<td id="head" colspan="2">
+							<table id="info">
+								<tr>
+									<td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
+									<td id="headerCellMiddle" style="background-image:url('./images/logoMiddle.gif');background-repeat:repeat-x;width:100%;"></td>
+									<td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
-	</div>
-  	<div class="row">
-  		<div class="col-sm-12">
-  			<a href="./Login.jsp">Go to login page</a>
-  		</div>
-  	</div>	
-  </div>
-</body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<%
+								if(Boolean.TRUE.equals(success)) {
+					%>
+					<h2>Password successfully changed for <%= id %>@<%= providerName + "/" + segmentName %></h2>
+					<%
+								} else if(Boolean.FALSE.equals(success)) {
+					%>
+					<h2>Unable to reset password</h2>
+					<%
+								} else if(
+									resetToken != null && !resetToken.isEmpty() &&
+									providerName != null && !providerName.isEmpty() &&
+									segmentName != null && !segmentName.isEmpty() &&
+									id != null && !id.isEmpty()
+								) {
+					%>
+					<form role="form" class="form-signin" style="max-width:400px;margin:0 auto;" method="POST" action="PasswordResetConfirm.jsp" accept-charset="UTF-8">
+						<h2 class="form-signin-heading">Reset password for <%= id %>@<%= providerName + "/" + segmentName %></h2>					
+						<input type="hidden" name="t" value="<%= resetToken %>" />
+						<input type="hidden" name="p" value="<%= providerName %>" />
+						<input type="hidden" name="s" value="<%= segmentName %>" />
+						<input type="hidden" name="id" value="<%= id %>" />
+						<input type="password" name="password1" autofocus="" placeholder="Password" class="form-control" />
+						<input type="password" name="password2" placeholder="Password (verify)" class="form-control" />
+						<br />
+						<button type="submit" class="btn btn-lg btn-primary btn-block">OK</button>
+						<br />
+						<%@ include file="password-reset-confirm-note.html" %>					
+					</form>
+					<%				
+								} else {
+					%>
+					<h2>Invalid password confirm request</h2>
+					<%
+								}
+					%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="./Login.jsp">Go to login page</a>
+				</div>
+			</div>	
+		</div>
+	</body>
 </html>

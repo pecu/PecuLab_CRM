@@ -55,24 +55,24 @@
  */
 %>
 <%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.net.*,
-java.math.*,
-java.sql.*,
-java.text.*,
-javax.xml.transform.stream.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.backend.*,
-org.openmdx.base.exception.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.kernel.id.*,
-org.openmdx.kernel.exception.*
-"%>
+		 java.util.*,
+		 java.io.*,
+		 java.net.*,
+		 java.math.*,
+		 java.sql.*,
+		 java.text.*,
+		 javax.xml.transform.stream.*,
+		 org.opencrx.kernel.portal.wizard.*,
+		 org.opencrx.kernel.backend.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.kernel.id.*,
+		 org.openmdx.kernel.exception.*
+		 "%>
 <%
 	ActivityProcessExportWizardController wc = new ActivityProcessExportWizardController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='OK' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='OK' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -81,16 +81,16 @@ org.openmdx.kernel.exception.*
 	try {
 		// Response
 		if(wc.getScxmlName() != null) {
-		    response.setContentType("text/xml");
-		    response.setHeader("Content-disposition", "attachment;filename=" + wc.getScxmlName() + ".scxml");            
-		    OutputStream os = response.getOutputStream();
-		    byte[] xmlBytes = wc.getScxml().getBytes("UTF-8");
-		    for(int i = 0; i < xmlBytes.length; i++) {
-		        os.write(xmlBytes[i]);
-		    }
-		    response.setContentLength(xmlBytes.length);
-		    os.close();
-		    return;
+			response.setContentType("text/xml");
+			response.setHeader("Content-disposition", "attachment;filename=" + wc.getScxmlName() + ".scxml");            
+			OutputStream os = response.getOutputStream();
+			byte[] xmlBytes = wc.getScxml().getBytes("UTF-8");
+			for(int i = 0; i < xmlBytes.length; i++) {
+				os.write(xmlBytes[i]);
+			}
+			response.setContentLength(xmlBytes.length);
+			os.close();
+			return;
 		}
 	} finally {
 		wc.close();

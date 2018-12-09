@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "ManageChangeRequestsWizardForm";
 	ManageChangeRequestsWizardController wc = new ManageChangeRequestsWizardController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -87,20 +87,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" name="<%= ManageChangeRequestsWizardController.PARAMETER_CURRENT_CHANGE_REQUEST_XRI %>" id="<%=ManageChangeRequestsWizardController.PARAMETER_CURRENT_CHANGE_REQUEST_XRI %>" value="<%= wc.getSelectedChangeRequest() == null ? "" : wc.getSelectedChangeRequest().refGetPath().toXRI() %>" />
@@ -113,70 +113,74 @@ org.openmdx.base.naming.*
 				<div class="panel" style="display:block;overflow:visible;">
 					<div>&nbsp;</div>
 					<table class="gridTableFull">
-<%
-						int count = 0;
-						for(org.opencrx.kernel.activity1.jmi1.Activity changeRequest: wc.getChangeRequests()) {
-							boolean isSelected = wc.getSelectedChangeRequest() != null && wc.getSelectedChangeRequest().equals(changeRequest);
-%>
-							<tr class="gridTableRowFull <%= count % 2 == 0 ? "" : "gridTableFullhover"%>" style="cursor:pointer;background-color:<%=isSelected ? wc.getColor(ManageChangeRequestsWizardController.Format.CHANGE_REQUEST) : "none"%>;" onclick="javascript:if(!$('Command').value){$('<%=ManageChangeRequestsWizardController.PARAMETER_SELECTED_CHANGE_REQUEST_XRI %>').value='<%= changeRequest.refGetPath().toXRI() %>';$('Refresh').click();};">							
-<%
-								wc.renderChangeRequest(changeRequest, ManageChangeRequestsWizardController.Format.SUMMARY, out);
-%>
-							</tr>
-<%
-							count++;
-						}
-%>
+						<%
+												int count = 0;
+												for(org.opencrx.kernel.activity1.jmi1.Activity changeRequest: wc.getChangeRequests()) {
+													boolean isSelected = wc.getSelectedChangeRequest() != null && wc.getSelectedChangeRequest().equals(changeRequest);
+						%>
+						<tr class="gridTableRowFull <%= count % 2 == 0 ? "" : "gridTableFullhover"%>" style="cursor:pointer;background-color:<%=isSelected ? wc.getColor(ManageChangeRequestsWizardController.Format.CHANGE_REQUEST) : "none"%>;" onclick="javascript:if (!$('Command').value) {
+									$('<%=ManageChangeRequestsWizardController.PARAMETER_SELECTED_CHANGE_REQUEST_XRI %>').value = '<%= changeRequest.refGetPath().toXRI() %>';
+									$('Refresh').click();
+								}
+								;">							
+							<%
+															wc.renderChangeRequest(changeRequest, ManageChangeRequestsWizardController.Format.SUMMARY, out);
+							%>
+						</tr>
+						<%
+													count++;
+												}
+						%>
 					</table>
-<%
-					if(wc.getSelectedChangeRequest() != null) {
-%>					
-						<div>&nbsp;</div>
-						<table>
-							<tr>
-								<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.CHANGE_REQUEST)%>;">
-									<br />
-									<%
-										wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.CHANGE_REQUEST, out);
-									%>
-								</td>
-								<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.EXISTING_OBJECT)%>;">
-									<br />
-									<%
-										wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.EXISTING_OBJECT, out);
-									%>
-								</td>
-								<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.MERGED_OBJECT)%>;">
-									<br />
-									<%
-										wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.MERGED_OBJECT, out);
-									%>
-									<div id="WaitIndicator2" style="display:none;width:50px;height:24px;" class="wait">&nbsp;</div>
-									<div id="SubmitArea2" style="display:none;">
-										<input type="submit" name="Apply" tabindex="9010" value="<%= wc.getTexts().getSaveTitle() %>" onclick="javascript:$('WaitIndicator2').style.display='block';$('SubmitArea2').style.display='none';$('Command').value=this.name;" />
-									</div>
-								</td>
-							</tr>
-						</table>
-						<script type="text/javascript">
-							<%= wc.getPostRenderChangeRequestScript().toString() %>
-						</script>						
-<%
-					}
-%>
+					<%
+										if(wc.getSelectedChangeRequest() != null) {
+					%>					
+					<div>&nbsp;</div>
+					<table>
+						<tr>
+							<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.CHANGE_REQUEST)%>;">
+								<br />
+								<%
+									wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.CHANGE_REQUEST, out);
+								%>
+							</td>
+							<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.EXISTING_OBJECT)%>;">
+								<br />
+								<%
+									wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.EXISTING_OBJECT, out);
+								%>
+							</td>
+							<td style="width:30%;border-radius:10px;background-color:<%= wc.getColor(ManageChangeRequestsWizardController.Format.MERGED_OBJECT)%>;">
+								<br />
+								<%
+									wc.renderChangeRequest(wc.getSelectedChangeRequest(), ManageChangeRequestsWizardController.Format.MERGED_OBJECT, out);
+								%>
+								<div id="WaitIndicator2" style="display:none;width:50px;height:24px;" class="wait">&nbsp;</div>
+								<div id="SubmitArea2" style="display:none;">
+									<input type="submit" name="Apply" tabindex="9010" value="<%= wc.getTexts().getSaveTitle() %>" onclick="javascript:$('WaitIndicator2').style.display = 'block';$('SubmitArea2').style.display = 'none';$('Command').value = this.name;" />
+								</div>
+							</td>
+						</tr>
+					</table>
+					<script type="text/javascript">
+						<%= wc.getPostRenderChangeRequestScript().toString() %>
+					</script>						
+					<%
+										}
+					%>
 				</div>
-				<input type="submit" name="Refresh" id="Refresh" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('Command').value=this.name;" />
-				<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value=this.name;" />
+				<input type="submit" name="Refresh" id="Refresh" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('Command').value = this.name;" />
+				<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
 			</td>
 		</tr>
 	</table>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});

@@ -54,31 +54,31 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.base.exception.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.action.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*,
-org.openmdx.kernel.log.*,
-org.openmdx.kernel.id.*
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.action.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*,
+		   org.openmdx.kernel.log.*,
+		   org.openmdx.kernel.id.*
 " %><%!
 
 	public static class SessionInfoController extends org.openmdx.portal.servlet.AbstractWizardController {
 	
-	   	public void doRefresh(
-	   	) throws ServiceException {
+		public void doRefresh(
+		) throws ServiceException {
 	   		
-	   	}
+		}
 	   	
-	   	public void doCancel(
+		public void doCancel(
 		) throws ServiceException {
 			this.setExitAction(
 				new ObjectReference(this.getObject(), this.getApp()).getSelectObjectAction()
@@ -90,7 +90,7 @@ org.openmdx.kernel.id.*
 %><%
 	SessionInfoController wc = new SessionInfoController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -115,8 +115,8 @@ org.openmdx.kernel.id.*
 							<session-info url="<%= wizardPath %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>"></session-info>
 						</div>
 						<div id="SubmitArea" style="float:left;">	
-		      				<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
-		      			</div>
+							<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
+						</div>
 					</td>
 				</tr>
 			</table>
@@ -125,15 +125,15 @@ org.openmdx.kernel.id.*
 	</template>
 	<script type="text/javascript">
 		HTMLImports.whenReady(function () {
-        	Polymer({
+			Polymer({
 				is: 'session-info-wizard',
-				doCancel: function(event) {
+				doCancel: function (event) {
 					this.$.Command.value = "Cancel";
 					this.$.form.submit();
 				}
-        	});
+			});
 		});
 	</script>
 </dom-module>
 <session-info-wizard></session-info-wizard>
-<t:wizardClose controller="<%= wc %>" />
+	<t:wizardClose controller="<%= wc %>" />

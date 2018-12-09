@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "MapsForm";
 	MapsController wc = new MapsController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -89,23 +89,23 @@ org.openmdx.base.naming.*
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <table class="gridTableFull">
     <tr class="gridTableHeaderFull">
-      <td align=left colspan="2"><a href="http://maps.google.com/" target="_blank">Google Maps</a></td>
+		<td align=left colspan="2"><a href="http://maps.google.com/" target="_blank">Google Maps</a></td>
     </tr>
-<%
-	for(org.opencrx.kernel.address1.jmi1.PostalAddressable location: wc.getLocations()) {
-		String[] googleMapsUrl = wc.getGoogleMapsUrl(location);
-%>    
-        <tr class="gridTableRowFull">
-          <td>
+	<%
+		for(org.opencrx.kernel.address1.jmi1.PostalAddressable location: wc.getLocations()) {
+			String[] googleMapsUrl = wc.getGoogleMapsUrl(location);
+	%>    
+	<tr class="gridTableRowFull">
+		<td>
             <a href="<%= googleMapsUrl[0] %>" target="_blank"><%= googleMapsUrl[1] %></a><br />
-          </td>
-          <td>
-          	<input type="button" name="clip" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Clipboard" onClick='javascript:window.prompt("Copy to clipboard: Ctrl+C, Enter", "<%= googleMapsUrl[1].replace("<br />", "\\r\\n").replace("'" , "&#39;") %>");' />
-          </td>
-        </tr>
-<%
-      }
-%>
+		</td>
+		<td>
+			<input type="button" name="clip" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Clipboard" onClick='javascript:window.prompt("Copy to clipboard: Ctrl+C, Enter", "<%= googleMapsUrl[1].replace("<br />", "\\r\\n").replace("'" , "&#39;") %>");' />
+		</td>
+	</tr>
+	<%
+		  }
+	%>
 </table>
 <br />
 <t:wizardClose controller="<%= wc %>" />

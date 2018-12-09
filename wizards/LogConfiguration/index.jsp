@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "LogConfiguration";	
 	LogConfigurationController wc = new LogConfigurationController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -88,26 +88,26 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form name="<%= FORM_NAME %>" id="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" name="Command" id="Command" value="" />
 	<div id="SubmitArea">										    	    
-		<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value=this.name;" />
-		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML='';return false;" />
+		<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML = '';return false;" />
 	</div>
 	<div class="fieldGroupName">&nbsp;</div>
 	<table class="fieldGroup">
@@ -125,49 +125,49 @@ org.openmdx.base.naming.*
 				</select>
 			</td>
         </tr>
-<%
-		java.util.logging.LogManager logManager = java.util.logging.LogManager.getLogManager();
-		Enumeration<String> loggerNames = logManager.getLoggerNames();
-		Set<String> sortedLoggerNames = new TreeSet<String>();
-		while(loggerNames.hasMoreElements()) {
-			sortedLoggerNames.add(loggerNames.nextElement());
-		}
-		int ii = 0;
-		for(String loggerName: sortedLoggerNames) {
-			java.util.logging.Logger logger = logManager.getLogger(loggerName);
-			if(logger != null) {
-%>
-				<tr>
-					<td <%= ii % 2 == 0 ? "style='background-color:#E6FEE6;'" : "" %> style="vertical-align:middle;"><%= loggerName.length() == 0 ? "*" : loggerName %></td>
-					<td <%= ii % 2 == 0 ? "style='background-color:#E6FEE6;'" : "" %> width="120px;">
-						<select name="Logger.<%= loggerName %>" id="Logger.<%= loggerName %>" onchange="javascript:$('OK.Button').click();">
-							<option <%= logger.getLevel() == java.util.logging.Level.SEVERE ? "SELECTED" : "" %> value="<%= java.util.logging.Level.SEVERE.intValue() %>">SEVERE</option>
-							<option <%= logger.getLevel() == java.util.logging.Level.WARNING ? "SELECTED" : "" %> value="<%= java.util.logging.Level.WARNING.intValue() %>">WARNING</option>
-							<option <%= logger.getLevel() == java.util.logging.Level.INFO ? "SELECTED" : "" %>>INFO</option>
-							<option <%= logger.getLevel() == java.util.logging.Level.FINE ? "SELECTED" : "" %>>FINE</option>
-							<option <%= logger.getLevel() == java.util.logging.Level.FINER ? "SELECTED" : "" %>>FINER</option>
-							<option <%= logger.getLevel() == java.util.logging.Level.FINEST ? "SELECTED" : "" %>>FINEST</option>
-						</select>
-					</td>
-		        </tr>
-<%
-				ii++;
-			}
-		}
-%>
+		<%
+				java.util.logging.LogManager logManager = java.util.logging.LogManager.getLogManager();
+				Enumeration<String> loggerNames = logManager.getLoggerNames();
+				Set<String> sortedLoggerNames = new TreeSet<String>();
+				while(loggerNames.hasMoreElements()) {
+					sortedLoggerNames.add(loggerNames.nextElement());
+				}
+				int ii = 0;
+				for(String loggerName: sortedLoggerNames) {
+					java.util.logging.Logger logger = logManager.getLogger(loggerName);
+					if(logger != null) {
+		%>
+		<tr>
+			<td <%= ii % 2 == 0 ? "style='background-color:#E6FEE6;'" : "" %> style="vertical-align:middle;"><%= loggerName.length() == 0 ? "*" : loggerName %></td>
+			<td <%= ii % 2 == 0 ? "style='background-color:#E6FEE6;'" : "" %> width="120px;">
+				<select name="Logger.<%= loggerName %>" id="Logger.<%= loggerName %>" onchange="javascript:$('OK.Button').click();">
+					<option <%= logger.getLevel() == java.util.logging.Level.SEVERE ? "SELECTED" : "" %> value="<%= java.util.logging.Level.SEVERE.intValue() %>">SEVERE</option>
+					<option <%= logger.getLevel() == java.util.logging.Level.WARNING ? "SELECTED" : "" %> value="<%= java.util.logging.Level.WARNING.intValue() %>">WARNING</option>
+					<option <%= logger.getLevel() == java.util.logging.Level.INFO ? "SELECTED" : "" %>>INFO</option>
+					<option <%= logger.getLevel() == java.util.logging.Level.FINE ? "SELECTED" : "" %>>FINE</option>
+					<option <%= logger.getLevel() == java.util.logging.Level.FINER ? "SELECTED" : "" %>>FINER</option>
+					<option <%= logger.getLevel() == java.util.logging.Level.FINEST ? "SELECTED" : "" %>>FINEST</option>
+				</select>
+			</td>
+		</tr>
+		<%
+						ii++;
+					}
+				}
+		%>
 	</table>
 	<div class="fieldGroupName">&nbsp;</div>
 	<div id="SubmitArea2">
-		<input type="Submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value=this.name;" />
-		<input type="Submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML='';return false;" />
+		<input type="Submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+		<input type="Submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML = '';return false;" />
 	</div>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});

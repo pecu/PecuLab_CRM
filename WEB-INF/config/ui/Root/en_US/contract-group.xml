@@ -191,16 +191,16 @@
 											<label>
 												<_item>Contract group</_item>
 											</label>
-                      <orderFieldGroup>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                        <_item>80</_item>
-                      </orderFieldGroup>
-                      <orderObjectContainer>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                      </orderObjectContainer>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</orderObjectContainer>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>

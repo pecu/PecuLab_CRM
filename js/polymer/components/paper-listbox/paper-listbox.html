@@ -62,35 +62,33 @@ of a listbox item will also focus it.
 -->
 
 <dom-module id="paper-listbox">
-  <template>
-    <style>
-      :host {
-        display: block;
-        padding: 8px 0;
+	<template>
+		<style>
+			:host {
+				display: block;
+				padding: 8px 0;
 
-        background: var(--paper-listbox-background-color, --primary-background-color);
-        color: var(--paper-listbox-color, --primary-text-color);
+				background: var(--paper-listbox-background-color, --primary-background-color);
+				color: var(--paper-listbox-color, --primary-text-color);
 
-        @apply(--paper-listbox);
-      }
-    </style>
+				@apply(--paper-listbox);
+			}
+		</style>
 
-    <content></content>
-  </template>
+		<content></content>
+	</template>
 
-  <script>
-    (function() {
-      Polymer({
-        is: 'paper-listbox',
-
-        behaviors: [
-          Polymer.IronMenuBehavior
-        ],
-
-        hostAttributes: {
-          role: 'listbox'
-        }
-      });
-    })();
-  </script>
+	<script>
+		(function () {
+			Polymer({
+				is: 'paper-listbox',
+				behaviors: [
+					Polymer.IronMenuBehavior
+				],
+				hostAttributes: {
+					role: 'listbox'
+				}
+			});
+		})();
+	</script>
 </dom-module>

@@ -12,24 +12,24 @@
 							<_content>
 								<elementDefinition>
 
-                  <!--Segment Grids -->
-                  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Segment:accountFilter">
-                    <_object>
-                      <active>true</active>
-                      <toolTip>
-                        <_item>Saved Searches - Accounts</_item>
-                      </toolTip>
-                      <label>
-                        <_item>»Saved Searches - Accounts</_item>
-                      </label>
-                      <order>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                        <_item>60</_item>
-                      </order>
-                      <maxMember>2</maxMember>
-                    </_object>
-                    <_content/>
+									<!--Segment Grids -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Segment:accountFilter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>Saved Searches - Accounts</_item>
+											</toolTip>
+											<label>
+												<_item>»Saved Searches - Accounts</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>60</_item>
+											</order>
+											<maxMember>2</maxMember>
+										</_object>
+										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
 
 									<!-- AbstractFilterAccount -->

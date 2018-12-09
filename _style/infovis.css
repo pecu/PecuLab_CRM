@@ -1,10 +1,10 @@
 a {
-  text-decoration: none;
-  color: #EC8D00;
+	text-decoration: none;
+	color: #EC8D00;
 }
 
 a:hover {
-  color: #FF9900;
+	color: #FF9900;
 }
 
 .node {
@@ -70,8 +70,8 @@ html, body {
 }
 
 .toggler {
-  padding: 5px 0 5px 5px;
-  border-bottom:1px solid #444;
+	padding: 5px 0 5px 5px;
+	border-bottom:1px solid #444;
 }
 
 #right-container {

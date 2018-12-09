@@ -23,7 +23,7 @@
 										</_object>
 										<_content>
 											<entry>
-											    <!-- note that codes are "mirrored" between xxxLinkTo and xxxLinkFrom -->
+												<!-- note that codes are "mirrored" between xxxLinkTo and xxxLinkFrom -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
 													<_object>
 														<shortText>

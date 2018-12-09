@@ -634,7 +634,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ScheduledEndFilterProperty:offsetInHours">
 										<_object>
-                      <columnBreak>true</columnBreak>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Offset in hours</_item>
@@ -689,7 +689,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ScheduledStartFilterProperty:offsetInHours">
 										<_object>
-                      <columnBreak>true</columnBreak>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Offset in hours</_item>

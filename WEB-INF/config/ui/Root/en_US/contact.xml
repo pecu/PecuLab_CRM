@@ -466,8 +466,8 @@
 									</org.openmdx.ui1.ElementDefinition>
 
 									<!-- <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:externalLink" _operation="null"> <_object/> <_content> <alternateElementDefinition> <org.openmdx.ui1.AlternateElementDefinition id="0"> <_object> <columnBreak>false</columnBreak> 
-										<spanRow>2</spanRow> <toolTip> <_item>Outlook GUID</_item> <_item>Outlook GUID</_item> </toolTip> <label> <_item>Outlook</_item> <_item>Outlook</_item> </label> <orderFieldGroup> <_item>0</_item> <_item>0</_item> <_item>130</_item> </orderFieldGroup> </_object> 
-										<_content/> </org.openmdx.ui1.AlternateElementDefinition> </alternateElementDefinition> </_content> </org.openmdx.ui1.ElementDefinition> -->
+									<spanRow>2</spanRow> <toolTip> <_item>Outlook GUID</_item> <_item>Outlook GUID</_item> </toolTip> <label> <_item>Outlook</_item> <_item>Outlook</_item> </label> <orderFieldGroup> <_item>0</_item> <_item>0</_item> <_item>130</_item> </orderFieldGroup> </_object> 
+									<_content/> </org.openmdx.ui1.AlternateElementDefinition> </alternateElementDefinition> </_content> </org.openmdx.ui1.ElementDefinition> -->
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Attr:Tab:0:Group:10">
 										<_object>
@@ -1212,11 +1212,11 @@
 										<_content />
 									</org.openmdx.ui1.ElementDefinition>
 									<!-- <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Op:Tab:exportVCard"> <_object> <active>true</active> <toolTip> <_item>Export as vCard</_item> </toolTip> <label> <_item>Export as vCard</_item> </label> <order> 
-										<_item>100</_item> <_item>0</_item> <_item>210</_item> </order> <iconKey>org:opencrx:kernel:Export</iconKey> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Op:Tab:exportVCard:Group:in"> 
-										<_object> <active>true</active> <toolTip> <_item>Input</_item> </toolTip> <label> <_item>Input</_item> </label> <order> <_item>0</_item> <_item>0</_item> <_item>10</_item> </order> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition 
-										name="org:opencrx:kernel:account1:ExportVCardParams:locale"> <_object> <active>true</active> <toolTip> <_item>Language</_item> </toolTip> <label> <_item>Language</_item> </label> <order> <_item>0</_item> <_item>0</_item> <_item>10</_item> </order> </_object> 
-										<_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Op:Tab:exportVCard:Group:result"> <_object> <active>true</active> <toolTip> <_item>Result</_item> </toolTip> <label> <_item>Result</_item> 
-										</label> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> -->
+									<_item>100</_item> <_item>0</_item> <_item>210</_item> </order> <iconKey>org:opencrx:kernel:Export</iconKey> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Op:Tab:exportVCard:Group:in"> 
+									<_object> <active>true</active> <toolTip> <_item>Input</_item> </toolTip> <label> <_item>Input</_item> </label> <order> <_item>0</_item> <_item>0</_item> <_item>10</_item> </order> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition 
+									name="org:opencrx:kernel:account1:ExportVCardParams:locale"> <_object> <active>true</active> <toolTip> <_item>Language</_item> </toolTip> <label> <_item>Language</_item> </label> <order> <_item>0</_item> <_item>0</_item> <_item>10</_item> </order> </_object> 
+									<_content/> </org.openmdx.ui1.ElementDefinition> <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:Pane:Op:Tab:exportVCard:Group:result"> <_object> <active>true</active> <toolTip> <_item>Result</_item> </toolTip> <label> <_item>Result</_item> 
+									</label> </_object> <_content/> </org.openmdx.ui1.ElementDefinition> -->
 								</elementDefinition>
 							</_content>
 						</org.openmdx.ui1.Segment>

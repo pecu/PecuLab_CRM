@@ -23,29 +23,29 @@
 	}
 
 	/************************************
-		Pack Base 60
-	************************************/
+	 Pack Base 60
+	 ************************************/
 
 	var BASE60 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX',
-		EPSILON = 0.000001; // Used to fix floating point rounding errors
+			EPSILON = 0.000001; // Used to fix floating point rounding errors
 
 	function packBase60Fraction(fraction, precision) {
 		var buffer = '.',
-			output = '',
-			current;
+				output = '',
+				current;
 
 		while (precision > 0) {
-			precision  -= 1;
-			fraction   *= 60;
-			current     = Math.floor(fraction + EPSILON);
-			buffer     += BASE60[current];
-			fraction   -= current;
+			precision -= 1;
+			fraction *= 60;
+			current = Math.floor(fraction + EPSILON);
+			buffer += BASE60[current];
+			fraction -= current;
 
 			// Only add buffer to output once we have a non-zero value.
 			// This makes '.000' output '', and '.100' output '.1'
 			if (current) {
 				output += buffer;
-				buffer  = '';
+				buffer = '';
 			}
 		}
 
@@ -54,9 +54,9 @@
 
 	function packBase60(number, precision) {
 		var output = '',
-			absolute = Math.abs(number),
-			whole = Math.floor(absolute),
-			fraction = packBase60Fraction(absolute - whole, Math.min(~~precision, 10));
+				absolute = Math.abs(number),
+				whole = Math.floor(absolute),
+				fraction = packBase60Fraction(absolute - whole, Math.min(~~precision, 10));
 
 		while (whole > 0) {
 			output = BASE60[whole % 60] + output;
@@ -79,13 +79,13 @@
 	}
 
 	/************************************
-		Pack
-	************************************/
+	 Pack
+	 ************************************/
 
 	function packUntils(untils) {
 		var out = [],
-			last = 0,
-			i;
+				last = 0,
+				i;
 
 		for (i = 0; i < untils.length - 1; i++) {
 			out[i] = packBase60(Math.round((untils[i] - last) / 1000) / 60, 1);
@@ -97,11 +97,11 @@
 
 	function packAbbrsAndOffsets(source) {
 		var index = 0,
-			abbrs = [],
-			offsets = [],
-			indices = [],
-			map = {},
-			i, key;
+				abbrs = [],
+				offsets = [],
+				indices = [],
+				map = {},
+				i, key;
 
 		for (i = 0; i < source.abbrs.length; i++) {
 			key = source.abbrs[i] + '|' + source.offsets[i];
@@ -117,7 +117,7 @@
 		return abbrs.join(' ') + '|' + offsets.join(' ') + '|' + indices.join('');
 	}
 
-	function packPopulation (number) {
+	function packPopulation(number) {
 		if (!number) {
 			return '';
 		}
@@ -129,20 +129,28 @@
 		return '|' + precision + 'e' + exponent;
 	}
 
-	function validatePackData (source) {
-		if (!source.name)    { throw new Error("Missing name"); }
-		if (!source.abbrs)   { throw new Error("Missing abbrs"); }
-		if (!source.untils)  { throw new Error("Missing untils"); }
-		if (!source.offsets) { throw new Error("Missing offsets"); }
+	function validatePackData(source) {
+		if (!source.name) {
+			throw new Error("Missing name");
+		}
+		if (!source.abbrs) {
+			throw new Error("Missing abbrs");
+		}
+		if (!source.untils) {
+			throw new Error("Missing untils");
+		}
+		if (!source.offsets) {
+			throw new Error("Missing offsets");
+		}
 		if (
-			source.offsets.length !== source.untils.length ||
-			source.offsets.length !== source.abbrs.length
-		) {
+				source.offsets.length !== source.untils.length ||
+				source.offsets.length !== source.abbrs.length
+				) {
 			throw new Error("Mismatched array lengths");
 		}
 	}
 
-	function pack (source) {
+	function pack(source) {
 		validatePackData(source);
 		return [
 			source.name,
@@ -152,13 +160,15 @@
 	}
 
 	/************************************
-		Create Links
-	************************************/
+	 Create Links
+	 ************************************/
 
 	function arraysAreEqual(a, b) {
 		var i;
 
-		if (a.length !== b.length) { return false; }
+		if (a.length !== b.length) {
+			return false;
+		}
 
 		for (i = 0; i < a.length; i++) {
 			if (a[i] !== b[i]) {
@@ -172,7 +182,7 @@
 		return arraysAreEqual(a.offsets, b.offsets) && arraysAreEqual(a.abbrs, b.abbrs) && arraysAreEqual(a.untils, b.untils);
 	}
 
-	function findAndCreateLinks (input, output, links) {
+	function findAndCreateLinks(input, output, links) {
 		var i, j, a, b, group, foundGroup, groups = [];
 
 		for (i = 0; i < input.length; i++) {
@@ -206,9 +216,9 @@
 		}
 	}
 
-	function createLinks (source) {
+	function createLinks(source) {
 		var zones = [],
-			links = [];
+				links = [];
 
 		if (source.links) {
 			links = source.links.slice();
@@ -217,21 +227,21 @@
 		findAndCreateLinks(source.zones, zones, links);
 
 		return {
-			version : source.version,
-			zones   : zones,
-			links   : links.sort()
+			version: source.version,
+			zones: zones,
+			links: links.sort()
 		};
 	}
 
 	/************************************
-		Filter Years
-	************************************/
+	 Filter Years
+	 ************************************/
 
-	function findStartAndEndIndex (untils, start, end) {
+	function findStartAndEndIndex(untils, start, end) {
 		var startI = 0,
-			endI = untils.length + 1,
-			untilYear,
-			i;
+				endI = untils.length + 1,
+				untilYear,
+				i;
 
 		if (!end) {
 			end = start;
@@ -259,40 +269,40 @@
 		return [startI, endI];
 	}
 
-	function filterYears (source, start, end) {
-		var slice     = Array.prototype.slice,
-			indices   = findStartAndEndIndex(source.untils, start, end),
-			untils    = slice.apply(source.untils, indices);
+	function filterYears(source, start, end) {
+		var slice = Array.prototype.slice,
+				indices = findStartAndEndIndex(source.untils, start, end),
+				untils = slice.apply(source.untils, indices);
 
 		untils[untils.length - 1] = null;
 
 		return {
-			name       : source.name,
-			abbrs      : slice.apply(source.abbrs, indices),
-			untils     : untils,
-			offsets    : slice.apply(source.offsets, indices),
-			population : source.population
+			name: source.name,
+			abbrs: slice.apply(source.abbrs, indices),
+			untils: untils,
+			offsets: slice.apply(source.offsets, indices),
+			population: source.population
 		};
 	}
 
 	/************************************
-		Filter, Link, and Pack
-	************************************/
+	 Filter, Link, and Pack
+	 ************************************/
 
-	function filterLinkPack (input, start, end) {
+	function filterLinkPack(input, start, end) {
 		var i,
-			inputZones = input.zones,
-			outputZones = [],
-			output;
+				inputZones = input.zones,
+				outputZones = [],
+				output;
 
 		for (i = 0; i < inputZones.length; i++) {
 			outputZones[i] = filterYears(inputZones[i], start, end);
 		}
 
 		output = createLinks({
-			zones : outputZones,
-			links : input.links.slice(),
-			version : input.version
+			zones: outputZones,
+			links: input.links.slice(),
+			version: input.version
 		});
 
 		for (i = 0; i < output.zones.length; i++) {
@@ -303,13 +313,13 @@
 	}
 
 	/************************************
-		Exports
-	************************************/
+	 Exports
+	 ************************************/
 
-	moment.tz.pack           = pack;
-	moment.tz.packBase60     = packBase60;
-	moment.tz.createLinks    = createLinks;
-	moment.tz.filterYears    = filterYears;
+	moment.tz.pack = pack;
+	moment.tz.packBase60 = packBase60;
+	moment.tz.createLinks = createLinks;
+	moment.tz.filterYears = filterYears;
 	moment.tz.filterLinkPack = filterLinkPack;
 
 	return moment;

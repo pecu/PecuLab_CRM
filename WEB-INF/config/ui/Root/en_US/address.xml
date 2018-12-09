@@ -44,8 +44,8 @@
 															<_item>0</_item>
 															<_item>6</_item>
 														</order>
-                            <maxMember>25</maxMember>
-                            <showMaxMember>4</showMaxMember>
+														<maxMember>25</maxMember>
+														<showMaxMember>4</showMaxMember>
 													</_object>
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
@@ -84,8 +84,8 @@
 															<_item>0</_item>
 															<_item>8</_item>
 														</order>
-                            <maxMember>25</maxMember>
-                            <showMaxMember>4</showMaxMember>
+														<maxMember>25</maxMember>
+														<showMaxMember>4</showMaxMember>
 													</_object>
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
@@ -1573,7 +1573,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:address1:PhoneNumberAddressable:automaticParsing">
 										<_object>
-                      <defaultValue>true</defaultValue>
+											<defaultValue>true</defaultValue>
 											<active>true</active>
 											<toolTip>
 												<_item>Automatic parsing</_item>
@@ -2319,7 +2319,7 @@
 										<_object>
 											<columnBreak>true</columnBreak>
 											<active>true</active>
-                      <defaultValue>true</defaultValue>
+											<defaultValue>true</defaultValue>
 											<toolTip>
 												<_item>check if this is the main address of this address type</_item>
 											</toolTip>

@@ -523,24 +523,24 @@
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
-                  <org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:Realm:principal">
-                    <_object>
-                      <active>true</active>
-                      <toolTip>
-                        <_item>All Users / Principals / Principal Groups</_item>
-                      </toolTip>
-                      <label>
-                        <_item>»All Users / Principals / Principal Groups</_item>
-                      </label>
-                      <order>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                        <_item>500</_item>
-                      </order>
-                      <maxMember>6</maxMember>
-                    </_object>
-                    <_content>
-                      <additionalElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:Realm:principal">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>All Users / Principals / Principal Groups</_item>
+											</toolTip>
+											<label>
+												<_item>»All Users / Principals / Principal Groups</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>500</_item>
+											</order>
+											<maxMember>6</maxMember>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -577,128 +577,128 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                        <org.openmdx.ui1.AdditionalElementDefinition id="0" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Users</_item>
-                            </toolTip>
-                            <label>
-                              <_item>Users</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>20</_item>
-                            </order>
-                            <maxMember>4</maxMember>
+												<org.openmdx.ui1.AdditionalElementDefinition id="0" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Users</_item>
+														</toolTip>
+														<label>
+															<_item>Users</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>20</_item>
+														</order>
+														<maxMember>4</maxMember>
 														<showMemberRange>
 															<_item>0:0:0-0:0:2</_item>
 															<_item>0:0:4-0:0:8</_item>
 														</showMemberRange>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                        <org.openmdx.ui1.AdditionalElementDefinition id="10" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Principals</_item>
-                            </toolTip>
-                            <label>
-                              <_item>Principals</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>30</_item>
-                            </order>
-                            <maxMember>5</maxMember>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                        <org.openmdx.ui1.AdditionalElementDefinition id="20" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Principal Groups</_item>
-                            </toolTip>
-                            <label>
-                              <_item>Principal Groups</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>40</_item>
-                            </order>
-                            <maxMember>5</maxMember>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="10" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Principals</_item>
+														</toolTip>
+														<label>
+															<_item>Principals</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>30</_item>
+														</order>
+														<maxMember>5</maxMember>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="20" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Principal Groups</_item>
+														</toolTip>
+														<label>
+															<_item>Principal Groups</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>40</_item>
+														</order>
+														<maxMember>5</maxMember>
 														<showMemberRange>
 															<_item>0:0:0-0:0:2</_item>
 															<_item>0:0:4-0:0:8</_item>
 														</showMemberRange>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                        <org.openmdx.ui1.AdditionalElementDefinition id="100" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Users (disabled)</_item>
-                            </toolTip>
-                            <label>
-                              <_item>»Users (disabled)</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>120</_item>
-                            </order>
-                            <maxMember>4</maxMember>
+												<org.openmdx.ui1.AdditionalElementDefinition id="100" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Users (disabled)</_item>
+														</toolTip>
+														<label>
+															<_item>»Users (disabled)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>120</_item>
+														</order>
+														<maxMember>4</maxMember>
 														<showMemberRange>
 															<_item>0:0:0-0:0:2</_item>
 															<_item>0:0:4-0:0:8</_item>
 														</showMemberRange>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                        <org.openmdx.ui1.AdditionalElementDefinition id="110" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Principals (disabled)</_item>
-                            </toolTip>
-                            <label>
-                              <_item>»Principals (disabled)</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>130</_item>
-                            </order>
-                            <maxMember>5</maxMember>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                        <org.openmdx.ui1.AdditionalElementDefinition id="120" _operation="create">
-                          <_object>
-                            <toolTip>
-                              <_item>Principal Groups (disabled)</_item>
-                            </toolTip>
-                            <label>
-                              <_item>»Principal Groups (disabled)</_item>
-                            </label>
-                            <order>
-                              <_item>0</_item>
-                              <_item>0</_item>
-                              <_item>140</_item>
-                            </order>
-                            <maxMember>5</maxMember>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="110" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Principals (disabled)</_item>
+														</toolTip>
+														<label>
+															<_item>»Principals (disabled)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>130</_item>
+														</order>
+														<maxMember>5</maxMember>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="120" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>Principal Groups (disabled)</_item>
+														</toolTip>
+														<label>
+															<_item>»Principal Groups (disabled)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>140</_item>
+														</order>
+														<maxMember>5</maxMember>
 														<showMemberRange>
 															<_item>0:0:0-0:0:2</_item>
 															<_item>0:0:4-0:0:8</_item>
 														</showMemberRange>
-                          </_object>
-                          <_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+													</_object>
+													<_content/>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:Realm:securityContext">
 										<_object>
@@ -744,24 +744,24 @@
 									<org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:Principal:Pane:Attr:Tab:0:Group:0">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item>Principal</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Principal</_item>
-                      </label>
+											<toolTip>
+												<_item>Principal</_item>
+											</toolTip>
+											<label>
+												<_item>Principal</_item>
+											</label>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:Principal:Pane:Attr:Tab:0:Group:10">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item></_item>
-                      </toolTip>
-                      <label>
-                        <_item>&amp;nbsp;</_item>
-                      </label>
+											<toolTip>
+												<_item></_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
@@ -1056,12 +1056,12 @@
 									<org.openmdx.ui1.ElementDefinition name="org:openmdx:security:realm1:PrincipalGroup:Pane:Attr:Tab:0:Group:0">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item>Principal Group</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Principal Group</_item>
-                      </label>
+											<toolTip>
+												<_item>Principal Group</_item>
+											</toolTip>
+											<label>
+												<_item>Principal Group</_item>
+											</label>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
@@ -1851,7 +1851,7 @@
 												<_item>0</_item>
 												<_item>9</_item>
 											</orderObjectContainer>
-											</_object>
+										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
 									<!-- tabs -->

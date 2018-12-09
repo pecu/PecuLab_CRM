@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "FetchEMail";	
 	FetchEMailController wc = new FetchEMailController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' assertRequestId='false' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' assertRequestId='false' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -89,20 +89,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="checkbox" style="display:none;" name="isInitialized" checked />
@@ -117,12 +117,20 @@ org.openmdx.base.naming.*
 			<td class="<%= CssClass.fieldLabel %>"><span class="nw">Protocol:</span></td>
 			<td nowrap>
 				<select class="valueL" name="protocol" id="protocol" tabindex="<%= tabIndex++ %>" onChange="javascript:
-					if(this.value=='imap')  {document.getElementById('port').value='143';}
-					if(this.value=='imaps') {document.getElementById('port').value='993';}
-					if(this.value=='pop3')  {document.getElementById('port').value='110';}
-					if(this.value=='pop3s') {document.getElementById('port').value='995';}
-					document.getElementById('reload.button').click();
-				  ">
+								if (this.value == 'imap') {
+							document.getElementById('port').value = '143';
+						}
+						if (this.value == 'imaps') {
+							document.getElementById('port').value = '993';
+						}
+						if (this.value == 'pop3') {
+							document.getElementById('port').value = '110';
+						}
+						if (this.value == 'pop3s') {
+							document.getElementById('port').value = '995';
+						}
+						document.getElementById('reload.button').click();
+						">
 					<option value="imap"  <%= wc.getFormFields().getProtocol() != null && "imap".equals(wc.getFormFields().getProtocol()) ? "selected" : "" %>>imap</option>
 					<option value="imaps" <%= wc.getFormFields().getProtocol() != null && "imaps".equals(wc.getFormFields().getProtocol()) ? "selected" : "" %>>imaps</option>
 					<option value="pop3"  <%= wc.getFormFields().getProtocol() != null && "pop3".equals(wc.getFormFields().getProtocol()) ? "selected" : "" %>>pop3</option>
@@ -151,53 +159,56 @@ org.openmdx.base.naming.*
 			<td nowrap><input type="text" class="valueL" name="messageCount" tabindex="<%= tabIndex++ %>" value="<%= wc.getFormFields().getMessageCount() %>" /></td>
 			<td class="addon" />
 		</tr>
-           <tr>
-             <td class="<%= CssClass.fieldLabel %>"><span class="nw"><%= app.getLabel(FetchEMailController.ACTIVITYCREATOR_CLASS) %>:</span></td>
-             <td>
-               <select class="valueL" name="activityCreatorXri" tabindex="<%= tabIndex++ %>">
-                 <option value="0">Default</option>
-<%
-					org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery activityCreatorFilter = (org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery)wc.getPm().newQuery(org.opencrx.kernel.activity1.jmi1.ActivityCreator.class);
-					activityCreatorFilter.orderByName().ascending();
-					activityCreatorFilter.forAllActivityType().activityClass().equalTo(new Short((short)0));
-					int maxCreator = 200;
-					int counter = 0;
-					org.opencrx.kernel.activity1.jmi1.Segment activitySegment = Activities.getInstance().getActivitySegment(pm, wc.getProviderName(), wc.getSegmentName());
-					for(org.opencrx.kernel.activity1.jmi1.ActivityCreator activityCreator: activitySegment.getActivityCreator(activityCreatorFilter)) {
-						String selectedModifier = "";
-                        counter++;
-                        selectedModifier = (wc.getFormFields().getActivityCreatorXri() != null) && wc.getFormFields().getActivityCreatorXri().equals((activityCreator.refGetPath().toXRI())) ? "selected" : "";
-%>
-                        <option <%= selectedModifier %> value="<%= activityCreator.refGetPath().toXRI() %>"><%= activityCreator.getName() != null ? activityCreator.getName() : "???" %><%= activityCreator.getDescription() != null ? " / " + activityCreator.getDescription() : "" %></option>
-<%
-					}
-%>
-			</select>
-    		  </td>
-     		  <td class="addon">&nbsp;</td>
-     		</tr>
+		<tr>
+			<td class="<%= CssClass.fieldLabel %>"><span class="nw"><%= app.getLabel(FetchEMailController.ACTIVITYCREATOR_CLASS) %>:</span></td>
+			<td>
+				<select class="valueL" name="activityCreatorXri" tabindex="<%= tabIndex++ %>">
+					<option value="0">Default</option>
+					<%
+										org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery activityCreatorFilter = (org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery)wc.getPm().newQuery(org.opencrx.kernel.activity1.jmi1.ActivityCreator.class);
+										activityCreatorFilter.orderByName().ascending();
+										activityCreatorFilter.forAllActivityType().activityClass().equalTo(new Short((short)0));
+										int maxCreator = 200;
+										int counter = 0;
+										org.opencrx.kernel.activity1.jmi1.Segment activitySegment = Activities.getInstance().getActivitySegment(pm, wc.getProviderName(), wc.getSegmentName());
+										for(org.opencrx.kernel.activity1.jmi1.ActivityCreator activityCreator: activitySegment.getActivityCreator(activityCreatorFilter)) {
+											String selectedModifier = "";
+											counter++;
+											selectedModifier = (wc.getFormFields().getActivityCreatorXri() != null) && wc.getFormFields().getActivityCreatorXri().equals((activityCreator.refGetPath().toXRI())) ? "selected" : "";
+					%>
+					<option <%= selectedModifier %> value="<%= activityCreator.refGetPath().toXRI() %>"><%= activityCreator.getName() != null ? activityCreator.getName() : "???" %><%= activityCreator.getDescription() != null ? " / " + activityCreator.getDescription() : "" %></option>
+					<%
+										}
+					%>
+				</select>
+			</td>
+			<td class="addon">&nbsp;</td>
+		</tr>
 	</table>
 	<br />
 	<div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
 	<div id="SubmitArea" style="display:none;">										    	    				
-	    <input type="Submit" name="Refresh" tabindex="1000" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;"/>
-	    <input type="Submit" name="OK" tabindex="1010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;"/>
-	    <input type="Submit" name="Cancel" tabindex="1020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value=this.name;" />
+		<input type="Submit" name="Refresh" tabindex="1000" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';
+				$('SubmitArea').style.display = 'none';
+				$('Command').value = this.name;"/>
+		<input type="Submit" name="OK" tabindex="1010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';
+				$('Command').value = this.name;"/>
+		<input type="Submit" name="Cancel" tabindex="1020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
 	</div>		
 </form>
 <br>
 <%
 if("OK".equals(wc.getCommand())) {
 %>
-	<table><tr>
-<%
-		if(wc.getImportedMessages() == null || wc.getImportedMessages().isEmpty()) {
-%>
-			<td colspan="5">No unread messages found</td>
-<%
-		} else {
-%>
-			<td><table class="gridTableFull">
+<table><tr>
+		<%
+				if(wc.getImportedMessages() == null || wc.getImportedMessages().isEmpty()) {
+		%>
+		<td colspan="5">No unread messages found</td>
+		<%
+				} else {
+		%>
+		<td><table class="gridTableFull">
 				<tr class="gridTableHeaderFull">
 					<td>Sent</td>
 					<td>From</td>
@@ -205,59 +216,59 @@ if("OK".equals(wc.getCommand())) {
 					<td>Message ID</td>
 					<td>Imported Message</td>
 				</tr>
-<%					
-				for(FetchEMailController.ImportedMessage importedMessage: wc.getImportedMessages()) {
-%>
-					<tr class="gridTableRowFull">
-						<td><%= importedMessage.getMimeMessage().getSentDate() %></td>
-						<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getFrom()[0].toString(), false) %></td>
-						<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getSubject(), false) %></td>
-						<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getMessageID() == null ? "NA" : importedMessage.getMimeMessage().getMessageID(), false) %></td>
-<%
-						if(importedMessage.getEmails() != null) {
-%>
-							<td class="ok">
-<%
-								for(org.opencrx.kernel.activity1.jmi1.EMail email: importedMessage.getEmails()) {
-									String emailHref = "";
-									Action action = new ObjectReference(email, app).getSelectObjectAction();
-%>
-									<a href="<%= action.getEncodedHRef() %>" target="_blank"><%= "#" + email.getActivityNumber() + " - " + email.getName() %></a>
-<%																	
-								}
-%>
-							</td>
-<%
-						} else {
-%>
-						<td class="error">failed</td>
-<%
-					}
-%>
-					<tr>							
-<%
-				}
-%>
+				<%					
+								for(FetchEMailController.ImportedMessage importedMessage: wc.getImportedMessages()) {
+				%>
+				<tr class="gridTableRowFull">
+					<td><%= importedMessage.getMimeMessage().getSentDate() %></td>
+					<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getFrom()[0].toString(), false) %></td>
+					<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getSubject(), false) %></td>
+					<td><%= app.getHtmlEncoder().encode(importedMessage.getMimeMessage().getMessageID() == null ? "NA" : importedMessage.getMimeMessage().getMessageID(), false) %></td>
+					<%
+											if(importedMessage.getEmails() != null) {
+					%>
+					<td class="ok">
+						<%
+														for(org.opencrx.kernel.activity1.jmi1.EMail email: importedMessage.getEmails()) {
+															String emailHref = "";
+															Action action = new ObjectReference(email, app).getSelectObjectAction();
+						%>
+						<a href="<%= action.getEncodedHRef() %>" target="_blank"><%= "#" + email.getActivityNumber() + " - " + email.getName() %></a>
+						<%																	
+														}
+						%>
+					</td>
+					<%
+											} else {
+					%>
+					<td class="error">failed</td>
+					<%
+										}
+					%>
+				<tr>							
+					<%
+									}
+					%>
 			</table></td>
-<%			
-		}
-%>
+			<%			
+					}
+			%>
 	</tr></table>
-<%
-}
-%>
+	<%
+	}
+	%>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';		
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

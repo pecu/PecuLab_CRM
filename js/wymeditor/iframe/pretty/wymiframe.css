@@ -22,93 +22,93 @@
 @font-face {
     font-family: "Visitor";
     src: url("visitor1.woff") format("woff"),
-         url("visitor1.ttf") format("truetype");
+		url("visitor1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 /* basic */
-  body  { background: #e1e8f1;}
+body  { background: #e1e8f1;}
 
 /* make HTML blocs visible */
-  div,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  ol,
-  table,
-  address,
-  blockquote,
-  pre           { background: #FFFFFF;
-                  padding:8px 5px 5px;
-                  margin:10px; }
-  ul,
-  ol,
-  dl            { background: #B9C4D0;
-                  margin: 10px;
-                  padding: 0 0 0 10px;
-                  list-style-position: outside;
-                  min-height: 1.6em; }
-  ul ul,
-  ul ol,
-  ol ol,
-  ol ul         { margin: 5px 0 0 -5px }
-  ul > li ul,
-  ul > li ol,
-  ol > li ul,
-  ol > li ol    { border-top: 4px solid #B9C4D0 }
-  li > p:first-child,
-  li > div:first-child { margin-top: 0 } 
-  li > p:last-child,
-  li > div:last-child {	margin-bottom: 0 }
-  li, 
-  dd, 
-  dt            { background: white;
-                  margin: 0px 0 4px 20px;
-                  padding: 8px 0 0 5px; }
-  dt            { margin-bottom: 0 }
-  dd + dt       { margin-top: 4px; }
-  dd            { margin: 2px 0 0 4em }
-  td            { background: #F0F4F8; width: 25%; }
-  th            { background: #ffffcc; }
-  caption       { background: #E4E4B0; padding: 5px; font-weight: bold; }
-  table         { font-size: 12px; width: 500px; }
-  blockquote    { margin-left: 30px; }
-  pre           { background-color:transparent; border: 1px solid white; }
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+table,
+address,
+blockquote,
+pre           { background: #FFFFFF;
+				padding:8px 5px 5px;
+				margin:10px; }
+ul,
+ol,
+dl            { background: #B9C4D0;
+				margin: 10px;
+				padding: 0 0 0 10px;
+				list-style-position: outside;
+				min-height: 1.6em; }
+ul ul,
+ul ol,
+ol ol,
+ol ul         { margin: 5px 0 0 -5px }
+ul > li ul,
+ul > li ol,
+ol > li ul,
+ol > li ol    { border-top: 4px solid #B9C4D0 }
+li > p:first-child,
+li > div:first-child { margin-top: 0 } 
+li > p:last-child,
+li > div:last-child {	margin-bottom: 0 }
+li, 
+dd, 
+dt            { background: white;
+				margin: 0px 0 4px 20px;
+				padding: 8px 0 0 5px; }
+dt            { margin-bottom: 0 }
+dd + dt       { margin-top: 4px; }
+dd            { margin: 2px 0 0 4em }
+td            { background: #F0F4F8; width: 25%; }
+th            { background: #ffffcc; }
+caption       { background: #E4E4B0; padding: 5px; font-weight: bold; }
+table         { font-size: 12px; width: 500px; }
+blockquote    { margin-left: 30px; }
+pre           { background-color:transparent; border: 1px solid white; }
 
 /* Gecko min height fix */
-  td            { height: 1.6em; }
+td            { height: 1.6em; }
 
 /* specific HTML elements */
-  caption   { text-align: left; }
-  img       { margin-right: 5px;
-              border-style: solid;
-              border-color: gray;
-              border-width: 0; }
-  a img     { border-width: 1px; border-color: blue; }
-  acronym   { border: 1px solid gray; }
-  span      { /*background-color: #eef;*/ }
+caption   { text-align: left; }
+img       { margin-right: 5px;
+			border-style: solid;
+			border-color: gray;
+			border-width: 0; }
+a img     { border-width: 1px; border-color: blue; }
+acronym   { border: 1px solid gray; }
+span      { /*background-color: #eef;*/ }
 
 /* visual feedback for non-valid nesting of elements*/
-  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6, h1 p, h1 pre, h1 address,
-  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6, h2 p, h2 pre, h2 address,
-  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6, h3 p, h3 pre, h3 address,
-  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6, h4 p, h4 pre, h4 address,
-  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6, h5 p, h5 pre, h5 address,
-  h6 h1, h6 h2, h6 h3, h6 h4, h6 h4, h6 h6, h6 p, h6 pre, h6 address,
-  p h1, p h2, p h3, p h4, p h5, p h6, p pre, p address,
-  pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, pre p, pre pre, pre address,
-  address h1, address h2, address h3, address h4, address h5, address h6,
-  address p, address pre, address address
-  { background-color: #ff9999 !important;
-    border: 1px solid red !important;
-    font-size: 12px !important;
-    font-weight: normal; }
+h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6, h1 p, h1 pre, h1 address,
+h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6, h2 p, h2 pre, h2 address,
+h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6, h3 p, h3 pre, h3 address,
+h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6, h4 p, h4 pre, h4 address,
+h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6, h5 p, h5 pre, h5 address,
+h6 h1, h6 h2, h6 h3, h6 h4, h6 h4, h6 h6, h6 p, h6 pre, h6 address,
+p h1, p h2, p h3, p h4, p h5, p h6, p pre, p address,
+pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, pre p, pre pre, pre address,
+address h1, address h2, address h3, address h4, address h5, address h6,
+address p, address pre, address address
+{ background-color: #ff9999 !important;
+  border: 1px solid red !important;
+  font-size: 12px !important;
+  font-weight: normal; }
 
 /* Spacer BRs shouldn't add much whitespace */
 br { height: 5px; line-height: 5px; }
@@ -393,4 +393,4 @@ dfn:hover,
 code:hover,
 sup:hover,
 sub:hover { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY3DMfPj/////DDDMxIAGMAQYHTMf/kcWAADRgQ4R3lkO7wAAAABJRU5ErkJggg==) bottom left no-repeat,
-                        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }
+				url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }

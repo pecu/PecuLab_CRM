@@ -46,25 +46,25 @@
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
-<!--
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:base:SecureObject:accessGrantedByParent">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>Access granted by parent</_item>
-											</toolTip>
-											<label>
-												<_item>Access granted by parent</_item>
-											</label>
-											<order>
-												<_item>900100</_item>
-												<_item>30</_item>
-												<_item>30</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
--->
+									<!--
+																		<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:base:SecureObject:accessGrantedByParent">
+																			<_object>
+																				<active>true</active>
+																				<toolTip>
+																					<_item>Access granted by parent</_item>
+																				</toolTip>
+																				<label>
+																					<_item>Access granted by parent</_item>
+																				</label>
+																				<order>
+																					<_item>900100</_item>
+																					<_item>30</_item>
+																					<_item>30</_item>
+																				</order>
+																			</_object>
+																			<_content/>
+																		</org.openmdx.ui1.ElementDefinition>
+									-->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:base:SecureObject:accessLevelBrowse">
 										<_object>
 											<columnBreak>true</columnBreak>

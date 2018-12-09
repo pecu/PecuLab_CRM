@@ -29,8 +29,8 @@
 											</order>
 											<maxMember>3</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="10" _operation="create">
 													<_object>
 														<toolTip>
@@ -44,13 +44,13 @@
 															<_item>0</_item>
 															<_item>12</_item>
 														</order>
-                            <maxMember>3</maxMember>
-                            <showMaxMember>3</showMaxMember>
-                            <showMemberRange>
-                              <_item>0:0:10-0:0:10</_item>
-                              <_item>0:0:20-0:0:20</_item>
-                              <_item>10:0:30-10:0:30</_item>
-                            </showMemberRange>
+														<maxMember>3</maxMember>
+														<showMaxMember>3</showMaxMember>
+														<showMemberRange>
+															<_item>0:0:10-0:0:10</_item>
+															<_item>0:0:20-0:0:20</_item>
+															<_item>10:0:30-10:0:30</_item>
+														</showMemberRange>
 													</_object>
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
@@ -90,9 +90,9 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Segment:activityCategory">
 										<_object>
@@ -110,8 +110,8 @@
 											</order>
 											<maxMember>2</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
@@ -149,9 +149,9 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Segment:activityMilestone">
 										<_object>
@@ -170,8 +170,8 @@
 											<maxMember>3</maxMember>
 											<iconKey>ActivityMilestone</iconKey>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
@@ -209,9 +209,9 @@
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<!-- ActivityGroup -->
 									<!--Inspector Definitions-->
@@ -361,9 +361,9 @@
 												<_item>20</_item>
 											</order>
 											<maxMember>19</maxMember>
-                      <showMemberRange>
-                        <_item>0:0:0-0:20:24</_item>
-                      </showMemberRange>
+											<showMemberRange>
+												<_item>0:0:0-0:20:24</_item>
+											</showMemberRange>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>

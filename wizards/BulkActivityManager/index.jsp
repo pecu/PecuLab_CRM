@@ -54,29 +54,29 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.base.exception.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.action.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*,
-org.openmdx.kernel.log.*,
-org.openmdx.kernel.id.*
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.action.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*,
+		   org.openmdx.kernel.log.*,
+		   org.openmdx.kernel.id.*
 " %><%!
 
 	public static class BulkActivityManagerController extends org.openmdx.portal.servlet.AbstractWizardController {
 	
-	   	public void doRefresh(
-	   	) throws ServiceException {
+		public void doRefresh(
+		) throws ServiceException {
 	   		
-	   	}
+		}
 	   	
 		public void doCancel(
 		) throws ServiceException {
@@ -90,7 +90,7 @@ org.openmdx.kernel.id.*
 %><%
 	BulkActivityManagerController wc = new BulkActivityManagerController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -116,9 +116,9 @@ org.openmdx.kernel.id.*
 							<bulk-activity-manager id="bulkActivityManager" url="<%= wizardPath %>" title="<%= wc.getToolTip() %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>"></bulk-activity-manager>
 						</div>
 						<div id="SubmitArea" style="float:left;">	
-		      				<paper-button raised on-tap="doReload"><%= app.getTexts().getReloadText() %></paper-button>
-		      				<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
-		      			</div>
+							<paper-button raised on-tap="doReload"><%= app.getTexts().getReloadText() %></paper-button>
+							<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
+						</div>
 					</td>
 				</tr>
 			</table>
@@ -127,18 +127,18 @@ org.openmdx.kernel.id.*
 	</template>
 	<script type="text/javascript">
 		HTMLImports.whenReady(function () {
-        	Polymer({
+			Polymer({
 				is: 'bulk-activity-manager-wizard',
-				doCancel: function(event) {
+				doCancel: function (event) {
 					this.$.Command.value = "Cancel";
 					this.$.form.submit();
 				},
-				doReload: function(event) {
+				doReload: function (event) {
 					this.$.bulkActivityManager.doReload();
 				}
-        	});
+			});
 		});
 	</script>
-<dom-module>
-<bulk-activity-manager-wizard></bulk-activity-manager-wizard>
-<t:wizardClose controller="<%= wc %>" />
+	<dom-module>
+		<bulk-activity-manager-wizard></bulk-activity-manager-wizard>
+			<t:wizardClose controller="<%= wc %>" />

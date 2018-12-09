@@ -11,22 +11,22 @@
 							<_object></_object>
 							<_content>
 								<featureDefinition>
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
 								</featureDefinition>							
 								<elementDefinition>
 									<!-- Segment -->

@@ -12,15 +12,15 @@
 							<_content>
 
 								<featureDefinition>							
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:LegalEntity:address!webUrl">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>true</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:LegalEntity:address!webUrl">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
 
 								</featureDefinition>														
 
@@ -247,7 +247,7 @@
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:LegalEntity:address!webUrl">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:WebAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:WebAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
 											<active>true</active>
 											<toolTip>
 												<_item>Web page business</_item>
@@ -265,25 +265,25 @@
 									</org.openmdx.ui1.ElementDefinition>
 
 									<!-- Operations -->
-                  <!-- Operation Import Parameters are customized in common.xml -->
-                  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:LegalEntity:Pane:Op:Tab:importItem">
-                    <_object>
-                      <active>true</active>
-                      <toolTip>
-                        <_item>Import vCard</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Import vCard</_item>
-                      </label>
-                      <iconKey>org:opencrx:kernel:Import</iconKey>
-                      <order>
-                        <_item>100</_item>
-                        <_item>0</_item>
-                        <_item>110</_item>
-                      </order>
-                    </_object>
-                    <_content/>
-                  </org.openmdx.ui1.ElementDefinition>
+									<!-- Operation Import Parameters are customized in common.xml -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:LegalEntity:Pane:Op:Tab:importItem">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>Import vCard</_item>
+											</toolTip>
+											<label>
+												<_item>Import vCard</_item>
+											</label>
+											<iconKey>org:opencrx:kernel:Import</iconKey>
+											<order>
+												<_item>100</_item>
+												<_item>0</_item>
+												<_item>110</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<!--RevenueReport-->
 									<!--Inspector Definitions-->

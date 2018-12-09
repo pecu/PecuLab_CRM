@@ -55,27 +55,27 @@
  */
 %>
 <%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.portal.wizard.*,
-org.openmdx.base.text.conversion.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		 java.util.*,
+		 java.io.*,
+		 java.text.*,
+		 org.opencrx.kernel.portal.wizard.*,
+		 org.openmdx.base.text.conversion.*,
+		 org.openmdx.kernel.id.cci.*,
+		 org.openmdx.kernel.id.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.portal.servlet.attribute.*,
+		 org.openmdx.portal.servlet.component.*,
+		 org.openmdx.portal.servlet.control.*,
+		 org.openmdx.portal.servlet.wizards.*,
+		 org.openmdx.base.naming.*
+		 " %>
 <%
 	final String FORM_NAME = "CreateProductForm";
 	final String FORM_NAME_BASEPRICE = "ProductBasePriceForm";	
 	CreateProductWizardController wc = new CreateProductWizardController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();		
@@ -88,20 +88,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%=FORM_NAME%>" name="<%=FORM_NAME%>" accept-charset="UTF-8" method="POST" action="<%=wc.getServletPath()%>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%=Action.PARAMETER_REQUEST_ID%>" value="<%=wc.getRequestId()%>" />
 	<input type="hidden" name="<%=Action.PARAMETER_OBJECTXRI%>" value="<%=wc.getObjectIdentity().toXRI()%>" />
 	<input type="hidden" id="Command" name="Command" value="" />											
@@ -110,83 +110,83 @@ org.openmdx.base.naming.*
 		<tr>
 			<td class="cellObject">
 				<div class="panel" id="panel<%=FORM_NAME%>" style="display:block;overflow:visible;">
-<%
-					wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
-					viewPort.flush();
-					// Product base prices
-					int lastProductBasePriceIndex = -1;
-					if(wc.getProductBasePriceCount() > 0) {
-%>
-						<div class="fieldGroupName">Prices</div>
-						<div>&nbsp;</div>
-						<table class="gridTableFull">
-							<tr class="gridTableHeaderFull">
-								<td />
-								<td><%=app.getLabel("org:opencrx:kernel:product1:PriceLevel")%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "usage", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "priceCurrency", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "quantityFrom", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "quantityTo", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "price", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "discountIsPercentage", app.getCurrentLocaleAsIndex())%></td>
-								<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "discount", app.getCurrentLocaleAsIndex())%></td>
-								<td class="addon"/>
-							</tr>
-<%
-							for(int i = 0; i < wc.getProductBasePriceCount(); i++) {
-								Map<String,Object> formValues = wc.getFormFields();
-								if(wc.getFormFields().get("productBasePrice.priceLevel." + i) != null) {
-									lastProductBasePriceIndex = i;
-									java.math.BigDecimal quantityFrom = (java.math.BigDecimal)formValues.get("productBasePrice.quantityFrom." + i);
-									java.math.BigDecimal quantityTo = (java.math.BigDecimal)formValues.get("productBasePrice.quantityTo." + i);
-									java.math.BigDecimal price = (java.math.BigDecimal)formValues.get("productBasePrice.price." + i);
-									java.math.BigDecimal discount = (java.math.BigDecimal)formValues.get("productBasePrice.discount." + i);
-									org.opencrx.kernel.product1.jmi1.PriceLevel priceLevel = 
-										(org.opencrx.kernel.product1.jmi1.PriceLevel)pm.getObjectById(
-											formValues.get("productBasePrice.priceLevel." + i)
-										);
-%>
-									<tr class="gridTableRowFull">
-										<td><input class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" type="submit" name="DeleteProductBasePrice" value="-" onclick="javascript:$('Command').value=this.name;$('DeleteProductBasePriceIndex').value='<%= i %>'"/></td>
-										<td><%= new ObjectReference(priceLevel, app).getTitle() %><input type="hidden" name="productBasePrice.priceLevel.<%= i %>" value="<%= priceLevel.refGetPath().toXRI() %>"/></td>
-										<td>
-<%
-											for(Iterator j = ((List)formValues.get("productBasePrice.usage." + i)).iterator(); j.hasNext(); ) {
-												Short usage = (Short)j.next();
-%>
-												<%= app.getCodes().getShortText("usageproductbaseprice", app.getCurrentLocaleAsIndex(), true, true).get(usage) %>
-<%
-											}
-%>
-											<input type="hidden" name="productBasePrice.usage.<%= i %>" value="<%= formValues.get("productBasePrice.usage." + i) %>"/>
-										</td>
-										<td><%= app.getCodes().getShortText("currency", app.getCurrentLocaleAsIndex(), true, true).get(formValues.get("productBasePrice.priceCurrency." + i)) %><input type="hidden" name="productBasePrice.priceCurrency.<%= i %>" value="<%= formValues.get("productBasePrice.priceCurrency." + i) %>"/></td>
-										<td><input class="valueR" type="text" name="productBasePrice.quantityFrom.<%= i %>" value="<%= quantityFrom == null ? "" : quantityFrom %>"/></td>
-										<td><input class="valueR" type="text" name="productBasePrice.quantityTo.<%= i %>" value="<%= quantityTo == null ? "" : quantityTo %>"/></td>
-										<td><input class="valueR" type="text" name="productBasePrice.price.<%= i %>" value="<%= price == null ? "" : price %>"/></td>
-										<td><input class="valueR" type="checkbox" name="productBasePrice.discountIsPercentage.<%= i %>" <%= ((Boolean)formValues.get("productBasePrice.discountIsPercentage." + i)).booleanValue() ? "checked" : "" %>"/></td>
-										<td><input class="valueR" type="text" name="productBasePrice.discount.<%= i %>" value="<%= discount == null ? "" : discount %>"/></td>
-										<td class="addon"/>
-									</tr>
-<%
-							    }
-							}
-%>
-						</table>
-<%
-					}
-					wc.getForms().get(FORM_NAME_BASEPRICE).paint(viewPort, null, true);
-					viewPort.flush();
-%>
+					<%
+										wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
+										viewPort.flush();
+										// Product base prices
+										int lastProductBasePriceIndex = -1;
+										if(wc.getProductBasePriceCount() > 0) {
+					%>
+					<div class="fieldGroupName">Prices</div>
+					<div>&nbsp;</div>
+					<table class="gridTableFull">
+						<tr class="gridTableHeaderFull">
+							<td />
+							<td><%=app.getLabel("org:opencrx:kernel:product1:PriceLevel")%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "usage", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "priceCurrency", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "quantityFrom", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "quantityTo", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "price", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "discountIsPercentage", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:AbstractProductPrice", "discount", app.getCurrentLocaleAsIndex())%></td>
+							<td class="addon"/>
+						</tr>
+						<%
+													for(int i = 0; i < wc.getProductBasePriceCount(); i++) {
+														Map<String,Object> formValues = wc.getFormFields();
+														if(wc.getFormFields().get("productBasePrice.priceLevel." + i) != null) {
+															lastProductBasePriceIndex = i;
+															java.math.BigDecimal quantityFrom = (java.math.BigDecimal)formValues.get("productBasePrice.quantityFrom." + i);
+															java.math.BigDecimal quantityTo = (java.math.BigDecimal)formValues.get("productBasePrice.quantityTo." + i);
+															java.math.BigDecimal price = (java.math.BigDecimal)formValues.get("productBasePrice.price." + i);
+															java.math.BigDecimal discount = (java.math.BigDecimal)formValues.get("productBasePrice.discount." + i);
+															org.opencrx.kernel.product1.jmi1.PriceLevel priceLevel = 
+																(org.opencrx.kernel.product1.jmi1.PriceLevel)pm.getObjectById(
+																	formValues.get("productBasePrice.priceLevel." + i)
+																);
+						%>
+						<tr class="gridTableRowFull">
+							<td><input class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" type="submit" name="DeleteProductBasePrice" value="-" onclick="javascript:$('Command').value = this.name;$('DeleteProductBasePriceIndex').value = '<%= i %>'"/></td>
+							<td><%= new ObjectReference(priceLevel, app).getTitle() %><input type="hidden" name="productBasePrice.priceLevel.<%= i %>" value="<%= priceLevel.refGetPath().toXRI() %>"/></td>
+							<td>
+								<%
+																			for(Iterator j = ((List)formValues.get("productBasePrice.usage." + i)).iterator(); j.hasNext(); ) {
+																				Short usage = (Short)j.next();
+								%>
+								<%= app.getCodes().getShortText("usageproductbaseprice", app.getCurrentLocaleAsIndex(), true, true).get(usage) %>
+								<%
+																			}
+								%>
+								<input type="hidden" name="productBasePrice.usage.<%= i %>" value="<%= formValues.get("productBasePrice.usage." + i) %>"/>
+							</td>
+							<td><%= app.getCodes().getShortText("currency", app.getCurrentLocaleAsIndex(), true, true).get(formValues.get("productBasePrice.priceCurrency." + i)) %><input type="hidden" name="productBasePrice.priceCurrency.<%= i %>" value="<%= formValues.get("productBasePrice.priceCurrency." + i) %>"/></td>
+							<td><input class="valueR" type="text" name="productBasePrice.quantityFrom.<%= i %>" value="<%= quantityFrom == null ? "" : quantityFrom %>"/></td>
+							<td><input class="valueR" type="text" name="productBasePrice.quantityTo.<%= i %>" value="<%= quantityTo == null ? "" : quantityTo %>"/></td>
+							<td><input class="valueR" type="text" name="productBasePrice.price.<%= i %>" value="<%= price == null ? "" : price %>"/></td>
+							<td><input class="valueR" type="checkbox" name="productBasePrice.discountIsPercentage.<%= i %>" <%= ((Boolean)formValues.get("productBasePrice.discountIsPercentage." + i)).booleanValue() ? "checked" : "" %>"/></td>
+							<td><input class="valueR" type="text" name="productBasePrice.discount.<%= i %>" value="<%= discount == null ? "" : discount %>"/></td>
+							<td class="addon"/>
+						</tr>
+						<%
+														}
+													}
+						%>
+					</table>
+					<%
+										}
+										wc.getForms().get(FORM_NAME_BASEPRICE).paint(viewPort, null, true);
+										viewPort.flush();
+					%>
 					<input type="hidden" name="ProductBasePriceCount" id="ProductBasePriceCount" value="<%= lastProductBasePriceIndex + 1 %>" />
-					<input type="submit" name="AddProductBasePrice" id="AddProductBasePrice.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="+" onclick="javascript:$('Command').value=this.name;" />
+					<input type="submit" name="AddProductBasePrice" id="AddProductBasePrice.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="+" onclick="javascript:$('Command').value = this.name;" />
 					<div class="fieldGroupName">&nbsp;</div>
 				</div>
 				<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
 				<div id="SubmitArea" style="float:left;display:none;">								
-					<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Refresh" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;" />
-					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9050" value="<%= app.getTexts().getSaveTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;" />
-					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9060" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;" />
+					<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Refresh" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;" />
+					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9050" value="<%= app.getTexts().getSaveTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;" />
+					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9060" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;" />
 				</div>
 			</td>
 		</tr>
@@ -194,16 +194,16 @@ org.openmdx.base.naming.*
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';	
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

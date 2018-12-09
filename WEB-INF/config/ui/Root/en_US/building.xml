@@ -48,8 +48,8 @@
 											</order>
 											<maxMember>6</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -83,10 +83,10 @@
 														<maxMember>6</maxMember>
 													</_object>
 													<_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:Segment:buildingComplex">
 										<_object>
@@ -104,8 +104,8 @@
 											</order>
 											<maxMember>5</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -139,10 +139,10 @@
 														<maxMember>5</maxMember>
 													</_object>
 													<_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:Segment:buildingUnit">
 										<_object>
@@ -159,10 +159,10 @@
 												<_item>0</_item>
 												<_item>130</_item>
 											</order>
-  										<maxMember>6</maxMember>
+											<maxMember>6</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -196,10 +196,10 @@
 														<maxMember>6</maxMember>
 													</_object>
 													<_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:Segment:facility">
 										<_object>
@@ -218,8 +218,8 @@
 											</order>
 											<maxMember>3</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -253,10 +253,10 @@
 														<maxMember>3</maxMember>
 													</_object>
 													<_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:Segment:inventoryItem">
 										<_object>
@@ -274,8 +274,8 @@
 											</order>
 											<maxMember>5</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
 														<toolTip>
@@ -309,10 +309,10 @@
 														<maxMember>5</maxMember>
 													</_object>
 													<_content/>
-                        </org.openmdx.ui1.AdditionalElementDefinition>
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<!--AbstractBuildingUnit-->
 									<!--Inspector Definitions-->
@@ -965,7 +965,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:AccountAssignmentInventoryItem:description">
 										<_object>
-                      <columnBreak>true</columnBreak>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Description</_item>
@@ -1098,7 +1098,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:building1:LinkableItemLink:linkType">
 										<_object>
-                      <columnBreak>true</columnBreak>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Type</_item>

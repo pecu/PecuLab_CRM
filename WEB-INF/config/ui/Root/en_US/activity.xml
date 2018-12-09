@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
-  <_object/>
+	<_object/>
 	<_content>
 		<provider>
 			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-        <_object/>
+				<_object/>
 				<_content>
 					<segment>
 						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
-              <_object/>
+							<_object/>
 							<_content>
 								<elementDefinition>
 									<!-- Segment -->
@@ -92,8 +92,8 @@
 											<showMaxMember>10</showMaxMember>
 											<maxMember>15</maxMember>
 										</_object>
-                    <_content>
-                      <additionalElementDefinition>
+										<_content>
+											<additionalElementDefinition>
 
 												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
 													<_object>
@@ -108,8 +108,8 @@
 															<_item>0</_item>
 															<_item>40</_item>
 														</order>
-                            <showMaxMember>10</showMaxMember>
-                            <maxMember>15</maxMember>
+														<showMaxMember>10</showMaxMember>
+														<maxMember>15</maxMember>
 													</_object>
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
@@ -127,15 +127,15 @@
 															<_item>0</_item>
 															<_item>541</_item>
 														</order>
-                            <showMaxMember>10</showMaxMember>
-                            <maxMember>15</maxMember>
+														<showMaxMember>10</showMaxMember>
+														<maxMember>15</maxMember>
 													</_object>
 													<_content/>
 												</org.openmdx.ui1.AdditionalElementDefinition>
 
-                      </additionalElementDefinition>
-                    </_content>
-                  </org.openmdx.ui1.ElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Segment:activityType">
 										<_object>
@@ -302,10 +302,10 @@
 												<_item>20</_item>
 											</order>
 											<maxMember>19</maxMember>
-                      <showMemberRange>
-                        <_item>0:0:0-0:20:20</_item>
-                        <_item>0:20:24-0:20:24</_item>
-                      </showMemberRange>
+											<showMemberRange>
+												<_item>0:0:0-0:20:20</_item>
+												<_item>0:20:24-0:20:24</_item>
+											</showMemberRange>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
@@ -527,7 +527,7 @@
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
-								<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:assignedTo">
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:assignedTo">
 										<_object>
 											<active>true</active>
 											<filterable>true</filterable>
@@ -557,7 +557,7 @@
 											<filterable>true</filterable>
 											<sortable>false</sortable>
 											<skipRow>1</skipRow>
-                      <toolTip>
+											<toolTip>
 												<_item>Reporting contact</_item>
 											</toolTip>
 											<label>
@@ -1051,59 +1051,59 @@
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
 
-<!--
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortHours">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>hh (actual effort)</_item>
-											</toolTip>
-											<label>
-												<_item>hh (actual effort)</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortMinutes">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>mm (actual effort)</_item>
-											</toolTip>
-											<label>
-												<_item>mm (actual effort)</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortHhMm">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>hh mm (actual effort)</_item>
-											</toolTip>
-											<label>
-												<_item>hh mm (actual effort)</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
--->
+									<!--
+																		<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortHours">
+																			<_object>
+																				<active>true</active>
+																				<toolTip>
+																					<_item>hh (actual effort)</_item>
+																				</toolTip>
+																				<label>
+																					<_item>hh (actual effort)</_item>
+																				</label>
+																				<order>
+																					<_item>10</_item>
+																					<_item>0</_item>
+																					<_item>10</_item>
+																				</order>
+																			</_object>
+																			<_content/>
+																		</org.openmdx.ui1.ElementDefinition>
+																		<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortMinutes">
+																			<_object>
+																				<active>true</active>
+																				<toolTip>
+																					<_item>mm (actual effort)</_item>
+																				</toolTip>
+																				<label>
+																					<_item>mm (actual effort)</_item>
+																				</label>
+																				<order>
+																					<_item>10</_item>
+																					<_item>0</_item>
+																					<_item>20</_item>
+																				</order>
+																			</_object>
+																			<_content/>
+																		</org.openmdx.ui1.ElementDefinition>
+																		<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:actualEffortHhMm">
+																			<_object>
+																				<active>true</active>
+																				<toolTip>
+																					<_item>hh mm (actual effort)</_item>
+																				</toolTip>
+																				<label>
+																					<_item>hh mm (actual effort)</_item>
+																				</label>
+																				<order>
+																					<_item>10</_item>
+																					<_item>0</_item>
+																					<_item>30</_item>
+																				</order>
+																			</_object>
+																			<_content/>
+																		</org.openmdx.ui1.ElementDefinition>
+									-->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:mainEstimateEffortHhMm">
 										<_object>
 											<active>true</active>
@@ -2555,12 +2555,12 @@
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
-                  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddExpenseRecordParams:owningGroup">
-                    <_object>
-                      <active>false</active>
-                    </_object>
-                    <_content/>
-                  </org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddExpenseRecordParams:owningGroup">
+										<_object>
+											<active>false</active>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:Pane:Op:Tab:addExpenseRecord:Group:result">
 										<_object>
 											<active>true</active>
@@ -2709,12 +2709,12 @@
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddWorkRecordParams:durationHours">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item>Hours (work duration)</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Hours (work duration)</_item>
-                      </label>
+											<toolTip>
+												<_item>Hours (work duration)</_item>
+											</toolTip>
+											<label>
+												<_item>Hours (work duration)</_item>
+											</label>
 											<order>
 												<_item>0</_item>
 												<_item>0</_item>
@@ -2726,12 +2726,12 @@
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddWorkRecordParams:durationMinutes">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item>Minutes (work duration)</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Minutes (work duration)</_item>
-                      </label>
+											<toolTip>
+												<_item>Minutes (work duration)</_item>
+											</toolTip>
+											<label>
+												<_item>Minutes (work duration)</_item>
+											</label>
 											<order>
 												<_item>0</_item>
 												<_item>0</_item>
@@ -2808,12 +2808,12 @@
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
-                  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddWorkRecordParams:owningGroup">
-                    <_object>
-                      <active>false</active>
-                    </_object>
-                    <_content/>
-                  </org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityAddWorkRecordParams:owningGroup">
+										<_object>
+											<active>false</active>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Activity:Pane:Op:Tab:addWorkRecord:Group:result">
 										<_object>
 											<active>true</active>
@@ -3322,7 +3322,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreator:icalType">
 										<_object>
-                      <columnBreak>true</columnBreak>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>iCal type</_item>
@@ -3487,13 +3487,13 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<!-- Operations -->
 									<!-- disable clone 
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreator:Pane:Op:Tab:clone">
-										<_object>
-											<active>false</active>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-                  -->
+													  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreator:Pane:Op:Tab:clone">
+														  <_object>
+															  <active>false</active>
+														  </_object>
+														  <_content/>
+													  </org.openmdx.ui1.ElementDefinition>
+									-->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreator:Pane:Op:Tab:newActivity">
 										<_object>
 											<active>true</active>

@@ -279,8 +279,8 @@
 														</shortText>
 														<longText>
 															<_item>&gt;= 100 000</_item>
-														<validFrom>1900-01-01T00:00:00.000Z</validFrom>
-														<validTo>2011-01-01T00:00:00.000Z</validTo>
+															<validFrom>1900-01-01T00:00:00.000Z</validFrom>
+															<validTo>2011-01-01T00:00:00.000Z</validTo>
 														</longText>
 													</_object>
 													<_content/>

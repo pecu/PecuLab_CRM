@@ -39,10 +39,10 @@
 														<label>
 															<_item>Saved Searches - Products</_item>
 														</label>
-													   <order>
-														  <_item>20</_item>
-														  <_item>0</_item>
-														  <_item>20</_item>
+														<order>
+															<_item>20</_item>
+															<_item>0</_item>
+															<_item>20</_item>
 														</order>
 														<maxMember>2</maxMember>
 													</_object>

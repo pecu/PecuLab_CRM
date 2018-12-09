@@ -52,24 +52,24 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-java.math.*,
-java.net.*,
-java.sql.*,
-javax.naming.Context,
-javax.naming.InitialContext,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.base.exception.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*,
-org.openmdx.base.query.*
-" %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   java.math.*,
+		   java.net.*,
+		   java.sql.*,
+		   javax.naming.Context,
+		   javax.naming.InitialContext,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*,
+		   org.openmdx.base.query.*
+		   " %>
 
 <%!
 
@@ -81,7 +81,7 @@ org.openmdx.base.query.*
 	  boolean isDisabled = account.isDisabled() != null && account.isDisabled().booleanValue();
 
 	  title.append(
-	    isDisabled ? "<del>" : ""
+		isDisabled ? "<del>" : ""
 	  ).append(
 		  app.getHtmlEncoder().encode(new ObjectReference(account, app).getTitle(), false)
 		).append(
@@ -135,10 +135,10 @@ org.openmdx.base.query.*
 			String relationships = new String();
 			if (membership != null && memberRoleTexts != null) {
 			  for(Iterator roles = membership.getMemberRole().iterator(); roles.hasNext(); ) {
-			    if (relationships.length() > 0) {
-			      relationships += ", ";
-			    }
-			    relationships += (String)memberRoleTexts.get(new Short(((Short)roles.next()).shortValue()));
+				if (relationships.length() > 0) {
+				  relationships += ", ";
+				}
+				relationships += (String)memberRoleTexts.get(new Short(((Short)roles.next()).shortValue()));
 			  }
 			}
 
@@ -242,7 +242,7 @@ org.openmdx.base.query.*
                 for(Iterator i = C.keySet().iterator(); i.hasNext(); ) {
                     org.opencrx.kernel.account1.jmi1.Account child = (org.opencrx.kernel.account1.jmi1.Account)i.next();
                     if(child != null && !parents.contains(child)) {
-                    	  String childId = child.refGetPath().getBase();
+						  String childId = child.refGetPath().getBase();
                         json.append(
                             separator
                         ).append(
@@ -329,56 +329,56 @@ org.openmdx.base.query.*
 			int[] maxCounts = new int[]{5, 5, 25};
 			int maxCount = maxCounts[level];
 
- 			org.opencrx.kernel.account1.cci2.AccountMembershipQuery membershipQuery = (org.opencrx.kernel.account1.cci2.AccountMembershipQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.AccountMembership.class);
- 			org.openmdx.base.rest.cci.QueryExtensionRecord queryFilter = org.openmdx.base.persistence.cci.PersistenceHelper.newQueryExtension(membershipQuery);
+			org.opencrx.kernel.account1.cci2.AccountMembershipQuery membershipQuery = (org.opencrx.kernel.account1.cci2.AccountMembershipQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.AccountMembership.class);
+			org.openmdx.base.rest.cci.QueryExtensionRecord queryFilter = org.openmdx.base.persistence.cci.PersistenceHelper.newQueryExtension(membershipQuery);
 			Collection memberships = null;
- 			int count = 0;
+			int count = 0;
 			// acountFrom=account [ignore mebers if account is disabled!!!]
 			if ((account.isDisabled() == null) || (!account.isDisabled().booleanValue())) {
-	  			membershipQuery.forAllDisabled().isFalse();
-	  			membershipQuery.distance().greaterThanOrEqualTo(new Integer(-1));
-	  			membershipQuery.distance().lessThanOrEqualTo(new Integer(1));
-	  			membershipQuery.thereExistsAccountFrom().equalTo(account);
+				membershipQuery.forAllDisabled().isFalse();
+				membershipQuery.distance().greaterThanOrEqualTo(new Integer(-1));
+				membershipQuery.distance().lessThanOrEqualTo(new Integer(1));
+				membershipQuery.thereExistsAccountFrom().equalTo(account);
 				// HINT_DBOBJECT allows to qualify the DbObject to use.
 				// For distance +/-1 memberships use ACCTMEMBERSHIP1 instead of ACCTMEMBERSHIP
-		        queryFilter.setClause(
-		          "(" + org.openmdx.base.dataprovider.layer.persistence.jdbc.spi.Database_1_Attributes.HINT_DBOBJECT + "1 */ (1=1) ) and " +
-		          "( " +
-		          "v.member IN ( " +
-		          "  select distinct(member) from oocke1_tobj_acctmembership1 m, oocke1_account a " +
-		          "  where " +
-		          "   ((m.disabled is null) or (m.disabled = '0')) and " +
-		          "   ((m.account_to   = a.object_id) and ((a.disabled is null) or (a.disabled = '0'))) " +
-		          "  ) " +
-		          ") "
-		        );
-  			memberships = account.getAccountMembership(membershipQuery);
-  			for(Iterator i = memberships.iterator(); i.hasNext(); ) {
-  				org.opencrx.kernel.account1.jmi1.AccountMembership membership = (org.opencrx.kernel.account1.jmi1.AccountMembership)i.next();
-  				addNode(
-  					membership,
-  					membership.getAccountFrom(),
-  					membership.getAccountTo(),
-  					M
-  				);
-  				addNode(
-  					membership,
-  					membership.getAccountTo(),
-  					membership.getAccountFrom(),
-  					M
-  				);
-  				if (membership.getAccountTo() != null) {
-  	  				addRelationships(
-  	  					membership.getAccountTo(),
-  	  					M,
-  	  					level - 1,
-  	  					pm
-  	  				);
-  	  				count++;
-    			    }
-  				if(count > maxCount) break;
-  			}
-  	  }
+				queryFilter.setClause(
+				  "(" + org.openmdx.base.dataprovider.layer.persistence.jdbc.spi.Database_1_Attributes.HINT_DBOBJECT + "1 */ (1=1) ) and " +
+				  "( " +
+				  "v.member IN ( " +
+				  "  select distinct(member) from oocke1_tobj_acctmembership1 m, oocke1_account a " +
+				  "  where " +
+				  "   ((m.disabled is null) or (m.disabled = '0')) and " +
+				  "   ((m.account_to   = a.object_id) and ((a.disabled is null) or (a.disabled = '0'))) " +
+				  "  ) " +
+				  ") "
+				);
+			memberships = account.getAccountMembership(membershipQuery);
+			for(Iterator i = memberships.iterator(); i.hasNext(); ) {
+				org.opencrx.kernel.account1.jmi1.AccountMembership membership = (org.opencrx.kernel.account1.jmi1.AccountMembership)i.next();
+				addNode(
+					membership,
+					membership.getAccountFrom(),
+					membership.getAccountTo(),
+					M
+				);
+				addNode(
+					membership,
+					membership.getAccountTo(),
+					membership.getAccountFrom(),
+					M
+				);
+				if (membership.getAccountTo() != null) {
+					addRelationships(
+						membership.getAccountTo(),
+						M,
+						level - 1,
+						pm
+					);
+					count++;
+					}
+				if(count > maxCount) break;
+			}
+	  }
 
 			// acountTo=account
 			membershipQuery = (org.opencrx.kernel.account1.cci2.AccountMembershipQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.AccountMembership.class);
@@ -389,7 +389,7 @@ org.openmdx.base.query.*
 			// HINT_DBOBJECT allows to qualify the DbObject to use.
 			// For distance +/-1 memberships use ACCTMEMBERSHIP1 instead of ACCTMEMBERSHIP
             queryFilter.setClause(
-            		org.openmdx.base.dataprovider.layer.persistence.jdbc.spi.Database_1_Attributes.HINT_DBOBJECT + "1 */ (1=1)"
+					org.openmdx.base.dataprovider.layer.persistence.jdbc.spi.Database_1_Attributes.HINT_DBOBJECT + "1 */ (1=1)"
             );
 			memberships = account.getAccountMembership(membershipQuery);
 			count = 0;
@@ -408,13 +408,13 @@ org.openmdx.base.query.*
 					M
 				);
 				if (membership.getAccountFrom() != null) {
-                	addRelationships(
-                		membership.getAccountFrom(),
-                		M,
-                		level - 1,
-                		pm
-                	);
-                	count++;
+					addRelationships(
+						membership.getAccountFrom(),
+						M,
+						level - 1,
+						pm
+					);
+					count++;
                 }
 				if(count > maxCount) break;
 			}
@@ -482,199 +482,202 @@ org.openmdx.base.query.*
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-	<title>Relationships Graph</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel='shortcut icon' href='../../images/favicon.ico' />
-	<!-- JIT -->
-	<link href="../../_style/infovis.css" rel="stylesheet" type="text/css" />
-	<style type="text/css" media="all">
-		#infovis {
-		background-color:#222;
-		}
-		.node {
-		background-color: #222;
-		color:orange;
-		font-weight:bold;
-		cursor:pointer;
-		padding:2px;
-		}
-	</style>
-	<!--[if IE]><script language="javascript" type="text/javascript" src="../../js/jit/excanvas.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="../../js/jit/jit-yc.js"></script>
-	<script type="text/javascript">
-        var Log = {
-            elem: false,
-            write: function(text){
-                if (!this.elem)
-                    this.elem = document.getElementById('log');
-                this.elem.innerHTML = text;
-                //this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
-            }
-        };
+	<head>
+		<title>Relationships Graph</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel='shortcut icon' href='../../images/favicon.ico' />
+		<!-- JIT -->
+		<link href="../../_style/infovis.css" rel="stylesheet" type="text/css" />
+		<style type="text/css" media="all">
+			#infovis {
+				background-color:#222;
+			}
+			.node {
+				background-color: #222;
+				color:orange;
+				font-weight:bold;
+				cursor:pointer;
+				padding:2px;
+			}
+		</style>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="../../js/jit/excanvas.js"></script><![endif]-->
+		<script language="javascript" type="text/javascript" src="../../js/jit/jit-yc.js"></script>
+		<script type="text/javascript">
+			var Log = {
+				elem: false,
+				write: function (text) {
+					if (!this.elem)
+						this.elem = document.getElementById('log');
+					this.elem.innerHTML = text;
+					//this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
+				}
+			};
 
-        function addEvent(obj, type, fn) {
-            if (obj.addEventListener) obj.addEventListener(type, fn, false);
-            else obj.attachEvent('on' + type, fn);
-        };
-    		function init() {
-       			var json =  <%= json %>;
-       			var infovis = document.getElementById('infovis');
-            var w = 600;
-            var h = 600;
-            try {
-                w = infovis.offsetWidth - 250;
-                try {
-                    h = window.innerHeight - 20;
-                } catch (e) {}
-                try {
-                    h = document.body.clientHeight - 20;
-                } catch (e) {}
-                if (h < 200) {h = 200;}
-                infovis.style.width = w + 'px';
-                infovis.style.height = h + 'px';
-            } catch (e) {
-                alert("h=" + h);
-                alert("innerHeight=" + window.innerHeight);
-            }
+			function addEvent(obj, type, fn) {
+				if (obj.addEventListener)
+					obj.addEventListener(type, fn, false);
+				else
+					obj.attachEvent('on' + type, fn);
+			}
+			;
+			function init() {
+				var json = <%= json %>;
+				var infovis = document.getElementById('infovis');
+				var w = 600;
+				var h = 600;
+				try {
+					w = infovis.offsetWidth - 250;
+					try {
+						h = window.innerHeight - 20;
+					} catch (e) {
+					}
+					try {
+						h = document.body.clientHeight - 20;
+					} catch (e) {
+					}
+					if (h < 200) {
+						h = 200;
+					}
+					infovis.style.width = w + 'px';
+					infovis.style.height = h + 'px';
+				} catch (e) {
+					alert("h=" + h);
+					alert("innerHeight=" + window.innerHeight);
+				}
 
-            //init canvas
-            //Create a new canvas instance.
-            var canvas = new Canvas('crxcanvas', {
-                'injectInto': 'infovis',
-                'width': w,
-                'height': h
-            });
-            var ht = new Hypertree(canvas, {
-                //Change node and edge styles such as
-                //color, width and dimensions.
-                Node: {
-                    dim: 1,
-                    color: "#bbb"
-                },
+				//init canvas
+				//Create a new canvas instance.
+				var canvas = new Canvas('crxcanvas', {
+					'injectInto': 'infovis',
+					'width': w,
+					'height': h
+				});
+				var ht = new Hypertree(canvas, {
+					//Change node and edge styles such as
+					//color, width and dimensions.
+					Node: {
+						dim: 1,
+						color: "#bbb"
+					},
+					Edge: {
+						lineWidth: 1,
+						color: "#aaa"
+					},
+					getRelationship: function (G, F) {
+						for (var H = 0; H < G.data.length; H++) {
+							var I = G.data[H];
+							if (I.key == F.id) {
+								return I.value
+							}
+						}
+						for (var H = 0; H < F.data.length; H++) {
+							var I = F.data[H];
+							if (I.key == G.id) {
+								return I.value
+							}
+						}
+					},
+					onBeforeCompute: function (node) {
+						Log.write("centering");
+					},
+					//Attach event handlers and add text to the
+					//labels. This method is only triggered on label
+					//creation
+					onCreateLabel: function (domElement, node) {
+						domElement.innerHTML = node.name;
+						addEvent(domElement, 'click', function () {
+							ht.onClick(node.id);
+						});
+					},
+					//Change node styles when labels are placed
+					//or moved.
+					onPlaceLabel: function (domElement, node) {
+						var style = domElement.style;
+						style.display = '';
+						style.cursor = 'pointer';
+						if (node._depth <= 0) {
+							style.fontSize = "0.9em";
+							style.color = "#fff";
+						} else if (node._depth == 1) {
+							style.fontSize = "0.75em";
+							style.color = "#EC8D00";
+						} else {
+							style.fontSize = "0.6em";
+							style.color = "#FFBD59";
+						}
 
-                Edge: {
-                    lineWidth: 1,
-                    color: "#aaa"
-                },
+						var left = parseInt(style.left);
+						var w = domElement.offsetWidth;
+						style.left = (left - w / 2) + 'px';
+					},
+					onAfterCompute: function () {
+						Log.write("");
 
-                getRelationship: function(G,F){
-                    for(var H=0;H<G.data.length;H++){
-                      var I=G.data[H];
-                      if(I.key==F.id){
-                        return I.value
-                      }
-                    }
-                    for(var H=0;H<F.data.length;H++){
-                      var I=F.data[H];
-                      if(I.key==G.id){
-                        return I.value
-                      }
-                    }
-                },
+						//Build the left column relationship list.
+						//This is done by collecting the information (stored in the data property)
+						//for all the nodes adjacent to the centered node.
+						var F = this;
+						var node = Graph.Util.getClosestNodeToOrigin(ht.graph, "pos");
+						var html = "<h2>" + node.name + "</h2><b>Relationships:</b>";
+						html += "<ul>";
+						Graph.Util.eachAdjacency(node, function (adj) {
+							var nodeTo = adj.nodeTo;
+							if (nodeTo.data) {
+								var rel = (nodeTo.data.key == node.id) ? nodeTo.data.relationships : node.data.relationships;
+								html += "<li>" + nodeTo.name + ' <div class=\"relation\">(relationship: ' + rel + ")</div></li>"
+							}
+						});
+						html += "</ul>";
+						document.getElementById('inner-details').innerHTML = html;
+					}
+				});
 
-                onBeforeCompute: function(node){
-                    Log.write("centering");
-                },
-                //Attach event handlers and add text to the
-                //labels. This method is only triggered on label
-                //creation
-                onCreateLabel: function(domElement, node){
-                    domElement.innerHTML = node.name;
-                    addEvent(domElement, 'click', function () {
-                        ht.onClick(node.id);
-                    });
-                },
-                //Change node styles when labels are placed
-                //or moved.
-                onPlaceLabel: function(domElement, node){
-                    var style = domElement.style;
-                    style.display = '';
-                    style.cursor = 'pointer';
-                    if (node._depth <= 0) {
-                        style.fontSize = "0.9em";
-                        style.color = "#fff";
-                    } else if(node._depth == 1){
-                        style.fontSize = "0.75em";
-                        style.color = "#EC8D00";
-                    } else {
-                        style.fontSize = "0.6em";
-                        style.color = "#FFBD59";
-                    }
+				//load JSON data.
+				try {
+					ht.loadJSON(json);
+					//compute positions and plot.
+					ht.refresh();
+					ht.controller.onAfterCompute();
 
-                    var left = parseInt(style.left);
-                    var w = domElement.offsetWidth;
-                    style.left = (left - w / 2) + 'px';
-                },
+				} catch (e) {
+					document.getElementById('inner-details').innerHTML = 'root node disabled or no relationships<br>or relationships to disabled accounts only';
+				}
+			}
+		</script>
+	</head>
+	<body onload="init();">
 
-                onAfterCompute: function(){
-                    Log.write("");
+		<div id="viscontainer">
+			<div id="left-container">
+				<div id="details" class="toggler left-item">
+					Root: <b><%= getClickableNodeTitle(account, app, requestId) %></b><br>
+					<input type="Submit" name="Cancel.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="8020" value="X" onClick="javascript:window.close();" style="float:right;margin:5px 5px 0px 0px;" /><br>
+					Node Limits: 25 - 5 - 5
+				</div>
+				<div class="inner" id="inner-details"></div>
+			</div>
 
-                    //Build the left column relationship list.
-                    //This is done by collecting the information (stored in the data property)
-                    //for all the nodes adjacent to the centered node.
-                    var F = this;
-                    var node = Graph.Util.getClosestNodeToOrigin(ht.graph, "pos");
-                    var html = "<h2>" + node.name + "</h2><b>Relationships:</b>";
-                    html += "<ul>";
-                    Graph.Util.eachAdjacency(node, function(adj){
-                        var nodeTo = adj.nodeTo;
-                        if(nodeTo.data){
-                        	var rel = (nodeTo.data.key == node.id) ? nodeTo.data.relationships : node.data.relationships;
-                        	html += "<li>" + nodeTo.name + ' <div class=\"relation\">(relationship: ' + rel + ")</div></li>"
-                        }
-                    });
-                    html += "</ul>";
-                    document.getElementById('inner-details').innerHTML = html;
-                }
-            });
+			<div id="center-container">
+				<div id="infovis"></div>
+			</div>
 
-            //load JSON data.
-            try {
-                ht.loadJSON(json);
-                //compute positions and plot.
-                ht.refresh();
-                ht.controller.onAfterCompute();
+			<!--
+			<div id="right-container">
+			</div>
+			-->
 
-			       } catch(e) {
-                document.getElementById('inner-details').innerHTML = 'root node disabled or no relationships<br>or relationships to disabled accounts only';
-			       }
-		    }
-	</script>
-</head>
-<body onload="init();">
-
-<div id="viscontainer">
-    <div id="left-container">
-		<div id="details" class="toggler left-item">
-		  Root: <b><%= getClickableNodeTitle(account, app, requestId) %></b><br>
-		  <input type="Submit" name="Cancel.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="8020" value="X" onClick="javascript:window.close();" style="float:right;margin:5px 5px 0px 0px;" /><br>
-		  Node Limits: 25 - 5 - 5
+			<div id="log">calculating relationships - please wait...</div>
 		</div>
-		<div class="inner" id="inner-details"></div>
-    </div>
-
-    <div id="center-container">
-        <div id="infovis"></div>
-    </div>
-
-    <!--
-    <div id="right-container">
-    </div>
-    -->
-
-    <div id="log">calculating relationships - please wait...</div>
-</div>
-<%
-	}
-	catch (Exception e) {
- 	  new ServiceException(e).log();
-  } finally {
-	  if(pm != null) {
-		  pm.close();
-	  }		  
-  }
-%>
-</body>
+		<%
+			}
+			catch (Exception e) {
+			  new ServiceException(e).log();
+		  } finally {
+			  if(pm != null) {
+				  pm.close();
+			  }		  
+		  }
+		%>
+	</body>
 </html>

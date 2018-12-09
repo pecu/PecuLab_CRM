@@ -54,28 +54,28 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.generic.*,
-org.opencrx.kernel.portal.wizard.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.opencrx.kernel.backend.*,
+		   org.opencrx.kernel.generic.*,
+		   org.opencrx.kernel.portal.wizard.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.kernel.id.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*
+		   " %>
 <%
 	String FORM_NAME = "CreateActivityTrackerForm";
 	CreateBugTrackerWizardController wc = new CreateBugTrackerWizardController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='OK' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='OK' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();		
@@ -88,20 +88,20 @@ org.openmdx.base.naming.*
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" id="Command" name="Command" value="" />
@@ -109,15 +109,15 @@ org.openmdx.base.naming.*
 		<tr>
 			<td class="cellObject">
 				<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
-<%
-					wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
-					viewPort.flush();
-%>
+					<%
+										wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
+										viewPort.flush();
+					%>
 				</div>
 				<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
 				<div id="SubmitArea" style="float:left;display:none;">
-					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getNewText() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;this.name='---';" />
-					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;" />
+					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getNewText() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;this.name = '---';" />
+					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
 				</div>
 			</td>
 		</tr>
@@ -125,16 +125,16 @@ org.openmdx.base.naming.*
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';	
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

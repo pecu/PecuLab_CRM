@@ -55,26 +55,26 @@
  */
 %>
 <%@ page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.naming.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.kernel.id.*
-" %>
+		 java.util.*,
+		 java.io.*,
+		 java.text.*,
+		 org.opencrx.kernel.backend.*,
+		 org.opencrx.kernel.portal.wizard.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.base.naming.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.portal.servlet.attribute.*,
+		 org.openmdx.portal.servlet.component.*,
+		 org.openmdx.portal.servlet.control.*,
+		 org.openmdx.portal.servlet.wizards.*,
+		 org.openmdx.kernel.id.*
+		 " %>
 <%
 	String FORM_NAME = "QRencoder";
 	QRencoderController wc = new QRencoderController();
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -89,67 +89,67 @@ org.openmdx.kernel.id.*
 	if(wc.getDownloadFileAction() != null) {
 		Action downloadFileAction = wc.getDownloadFileAction();
 %>
-		<img src="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>" />
-		<a href="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>"><%= downloadFileAction.getTitle() %></a>		
-		<br />
-		<br />
+<img src="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>" />
+<a href="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>"><%= downloadFileAction.getTitle() %></a>		
+<br />
+<br />
 <%
 	} else {
 %>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-<%
-	if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-%>
-		<div class="alert alert-danger" role="alert">
-		  <table>
-		    <tr>
-		    	<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		    	<td><%= wc.getErrorMessage() %></td>
-		    </tr>
-		  </table>
-		</div>
-<%
-	}
-%>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
 	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
 	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
 	<input type="hidden" id="Command" name="Command" value="" />
 	<table class="tableLayout">
-	    <tr>
+		<tr>
 			<td class="cellObject">
-	        	<fieldset>
+				<fieldset>
 					<table class="fieldGroup">
-			  	        <tr>
+						<tr>
 							<td class="<%= CssClass.fieldLabel %>"><span class="nw">Text to encode:</span></td>
 							<td colspan=4>
-			  	          		<input type="text" name="stringToEncode" id="stringToEncode" size="100" tabindex="250" value="<%= wc.getStringToEncode() != null ? wc.getStringToEncode() : "" %>" />
-			  	          	</td>
+								<input type="text" name="stringToEncode" id="stringToEncode" size="100" tabindex="250" value="<%= wc.getStringToEncode() != null ? wc.getStringToEncode() : "" %>" />
+							</td>
 							<td class="addon"></td>
-			  	        </tr>
+						</tr>
 					</table>
 				</fieldset>
 				<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
 				<div id="SubmitArea" style="float:left;display:none;">
-					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;this.name='---';" />
-					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none'; $('Command').value=this.name;" />
+					<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;this.name = '---';" />
+					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
 				</div>
-	    	</td>
-	    </tr>
+			</td>
+		</tr>
 	</table>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function(event) {
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
 		$('<%= FORM_NAME %>').request({
-			onFailure: function() { },
-			onSuccess: function(t) {
+			onFailure: function () { },
+			onSuccess: function (t) {
 				$('UserDialog').update(t.responseText);
 			}
 		});
 		Event.stop(event);
 	});
-	$('WaitIndicator').style.display='none';
-	$('SubmitArea').style.display='block';	
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <%
 	}

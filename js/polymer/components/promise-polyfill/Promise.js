@@ -1,6 +1,7 @@
-function MakePromise (asap) {
-  function Promise(fn) {
-		if (typeof this !== 'object' || typeof fn !== 'function') throw new TypeError();
+function MakePromise(asap) {
+	function Promise(fn) {
+		if (typeof this !== 'object' || typeof fn !== 'function')
+			throw new TypeError();
 		this._state = null;
 		this._value = null;
 		this._deferreds = []
@@ -14,7 +15,7 @@ function MakePromise (asap) {
 			this._deferreds.push(deferred);
 			return
 		}
-		asap(function() {
+		asap(function () {
 			var cb = me._state ? deferred.onFulfilled : deferred.onRejected
 			if (typeof cb !== 'function') {
 				(me._state ? deferred.resolve : deferred.reject)(me._value);
@@ -23,8 +24,7 @@ function MakePromise (asap) {
 			var ret;
 			try {
 				ret = cb(me._value);
-			}
-			catch (e) {
+			} catch (e) {
 				deferred.reject(e);
 				return;
 			}
@@ -34,7 +34,8 @@ function MakePromise (asap) {
 
 	function resolve(newValue) {
 		try { //Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
-			if (newValue === this) throw new TypeError();
+			if (newValue === this)
+				throw new TypeError();
 			if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
 				var then = newValue.then;
 				if (typeof then === 'function') {
@@ -45,7 +46,9 @@ function MakePromise (asap) {
 			this._state = true;
 			this._value = newValue;
 			finale.call(this);
-		} catch (e) { reject.call(this, e); }
+		} catch (e) {
+			reject.call(this, e);
+		}
 	}
 
 	function reject(newValue) {
@@ -71,16 +74,19 @@ function MakePromise (asap) {
 		var done = false;
 		try {
 			fn(function (value) {
-				if (done) return;
+				if (done)
+					return;
 				done = true;
 				onFulfilled(value);
 			}, function (reason) {
-				if (done) return;
+				if (done)
+					return;
 				done = true;
 				onRejected(reason);
 			})
 		} catch (ex) {
-			if (done) return;
+			if (done)
+				return;
 			done = true;
 			onRejected(ex);
 		}
@@ -90,15 +96,15 @@ function MakePromise (asap) {
 		return this.then(null, onRejected);
 	};
 
-	Promise.prototype.then = function(onFulfilled, onRejected) {
+	Promise.prototype.then = function (onFulfilled, onRejected) {
 		var me = this;
-		return new Promise(function(resolve, reject) {
-      handle.call(me, {
-        onFulfilled: onFulfilled,
-        onRejected: onRejected,
-        resolve: resolve,
-        reject: reject
-      });
+		return new Promise(function (resolve, reject) {
+			handle.call(me, {
+				onFulfilled: onFulfilled,
+				onRejected: onRejected,
+				resolve: resolve,
+				reject: reject
+			});
 		})
 	};
 
@@ -118,11 +124,11 @@ function MakePromise (asap) {
 		});
 	};
 
-	
-  return Promise;
+
+	return Promise;
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = MakePromise;
+	module.exports = MakePromise;
 }
 

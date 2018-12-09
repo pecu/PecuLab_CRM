@@ -283,11 +283,11 @@
 											<label>
 												<_item>Effective on</_item>
 											</label>
-                      <order>
-                          <_item>0</_item>
-                          <_item>0</_item>
-                          <_item>90</_item>
-                      </order>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
@@ -668,11 +668,11 @@
 											<label>
 												<_item>Effective on</_item>
 											</label>
-                      <order>
-                        <_item>0</_item>
-                        <_item>0</_item>
-                        <_item>90</_item>
-                      </order>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>

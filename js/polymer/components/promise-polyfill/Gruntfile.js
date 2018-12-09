@@ -1,8 +1,7 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n'
@@ -13,23 +12,21 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
-    closurecompiler: {
-      options: {
-        compilation_level: 'ADVANCED_OPTIMIZATIONS',
-      },
-      dist: {
-        files: {
-          'Promise.min.js': ['Promise.js']
-        }
-      }
-    },
-
-    bytesize: {
-      dist: {
-        src: ['Promise*.js']
-      }
-    }
+		closurecompiler: {
+			options: {
+				compilation_level: 'ADVANCED_OPTIMIZATIONS',
+			},
+			dist: {
+				files: {
+					'Promise.min.js': ['Promise.js']
+				}
+			}
+		},
+		bytesize: {
+			dist: {
+				src: ['Promise*.js']
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');

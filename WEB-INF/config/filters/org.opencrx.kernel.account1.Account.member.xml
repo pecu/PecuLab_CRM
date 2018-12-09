@@ -132,15 +132,15 @@
 									<object class="org.openmdx.base.persistence.spi.QueryExtension">
 										<void property="clause">
 											<string>EXISTS (
-											  select 0 from oocke1_accountassignment acctass
-											  where v.p$$parent = acctass.p$$parent
-											  and v.account = acctass.account
-											  and v.object_id &lt;&gt; acctass.object_id
-											  and ( /* current entry disabled or (both current and duplicate enabled) */
-											    v.disabled = '1' OR
-											    ((v.disabled is null OR v.disabled = '0') and (acctass.disabled is null OR acctass.disabled = '0'))
-											  )
-										)</string>
+												select 0 from oocke1_accountassignment acctass
+												where v.p$$parent = acctass.p$$parent
+												and v.account = acctass.account
+												and v.object_id &lt;&gt; acctass.object_id
+												and ( /* current entry disabled or (both current and duplicate enabled) */
+												v.disabled = '1' OR
+												((v.disabled is null OR v.disabled = '0') and (acctass.disabled is null OR acctass.disabled = '0'))
+												)
+												)</string>
 										</void>
 									</object>
 								</void>

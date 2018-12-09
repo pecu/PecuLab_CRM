@@ -55,28 +55,28 @@
  */
 %>
 <%@page session="true" import="
-java.util.*,
-java.io.*,
-java.text.*,
-org.opencrx.kernel.backend.*,
-org.opencrx.kernel.portal.wizard.*,
-org.opencrx.kernel.generic.*,
-org.openmdx.kernel.id.cci.*,
-org.openmdx.kernel.id.*,
-org.openmdx.base.exception.*,
-org.openmdx.base.accessor.jmi.cci.*,
-org.openmdx.portal.servlet.*,
-org.openmdx.portal.servlet.attribute.*,
-org.openmdx.portal.servlet.component.*,
-org.openmdx.portal.servlet.control.*,
-org.openmdx.portal.servlet.wizards.*,
-org.openmdx.base.naming.*
-" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.kernel.backend.*,
+		org.opencrx.kernel.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "ImportPropertiesFromXLS";	
 	ImportPropertiesFromXlsController wc = new ImportPropertiesFromXlsController(false);
 %>
-	<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
+<t:wizardHandleCommand controller='<%= wc %>' defaultCommand='Refresh' />
 <%
 	if(response.getStatus() != HttpServletResponse.SC_OK) {
 		wc.close();
@@ -96,51 +96,51 @@ org.openmdx.base.naming.*
 <%
 if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
 %>
-	<br />
-	<span style="color:red;" onmouseover="javascript:$('WaitIndicator').style.display='none';"><b><u>ERROR:</u> <%= wc.getErrorMessage() %></b></span>
-	<br />
-	<br />
+<br />
+<span style="color:red;" onmouseover="javascript:$('WaitIndicator').style.display = 'none';"><b><u>ERROR:</u> <%= wc.getErrorMessage() %></b></span>
+<br />
+<br />
 <%
 } else if("OK".equals(wc.getCommand())) {
 %>
-	<br />
-	<table class="gridTableFull" onmouseover="javascript:$('WaitIndicator').style.display='none';">
-		<%= wc.getImportReport() %>
-	</table>
-	<br />
+<br />
+<table class="gridTableFull" onmouseover="javascript:$('WaitIndicator').style.display = 'none';">
+	<%= wc.getImportReport() %>
+</table>
+<br />
 <%
 } else {
 %>
-	<div id="WaitIndicator" style="width:50px;height:24px;display:none" class="wait">&nbsp;</div>
-	<div id="SubmitArea" style="display:block;">
-		<form name="UploadMedia" enctype="multipart/form-data" accept-charset="UTF-8" method="post" target="OperationDialogResponse" action="<%= wc.getServletPath() %>">
-			<input type="hidden" class="valueL" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-			<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-			<input type="hidden" id="Command" name="Command" value="" />	
-	        <div class="fieldGroupName">
-	          <span style="font-size:9px;">(Hint: row 1 contains field names, data starts at row 2)</span>
-	        </div>
-        	<br>
-	        <table class="fieldGroup">
-				<tr id="submitFilename">
-					<td class="<%= CssClass.fieldLabel %>"><span class="nw">File:</span></td>
-		            <td >
-		                <input type="file" class="valueL" size="100" name="<%= ImportPropertiesFromXlsController.UPLOAD_FILE_FIELD_NAME %>" tabindex="500" />
-		            </td>
-		            <td class="addon" >&nbsp;<br>&nbsp;</td>
-				</tr>
-				<tr id="submitButtons">
-					<td class="<%= CssClass.fieldLabel %>" colspan="3">
-						<input type="Submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display='block';$('SubmitArea').style.display='none';$('Command').value=this.name;" />
-						<input type="Submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML='';return false;" />
-					</td>
-					<td></td>
-					<td class="addon" >&nbsp;<br>&nbsp;</td>
-				</tr>
-			</table>
-		</form>
-	</div>
-	<br />		
+<div id="WaitIndicator" style="width:50px;height:24px;display:none" class="wait">&nbsp;</div>
+<div id="SubmitArea" style="display:block;">
+	<form name="UploadMedia" enctype="multipart/form-data" accept-charset="UTF-8" method="post" target="OperationDialogResponse" action="<%= wc.getServletPath() %>">
+		<input type="hidden" class="valueL" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+		<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+		<input type="hidden" id="Command" name="Command" value="" />	
+		<div class="fieldGroupName">
+			<span style="font-size:9px;">(Hint: row 1 contains field names, data starts at row 2)</span>
+		</div>
+		<br>
+		<table class="fieldGroup">
+			<tr id="submitFilename">
+				<td class="<%= CssClass.fieldLabel %>"><span class="nw">File:</span></td>
+				<td >
+					<input type="file" class="valueL" size="100" name="<%= ImportPropertiesFromXlsController.UPLOAD_FILE_FIELD_NAME %>" tabindex="500" />
+				</td>
+				<td class="addon" >&nbsp;<br>&nbsp;</td>
+			</tr>
+			<tr id="submitButtons">
+				<td class="<%= CssClass.fieldLabel %>" colspan="3">
+					<input type="Submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= wc.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;" />
+					<input type="Submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('UserDialog').innerHTML = '';return false;" />
+				</td>
+				<td></td>
+				<td class="addon" >&nbsp;<br>&nbsp;</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<br />		
 <%
 }
 %>

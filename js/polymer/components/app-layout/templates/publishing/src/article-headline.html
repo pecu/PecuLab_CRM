@@ -13,57 +13,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="article-headline">
 
-  <template>
+	<template>
 
-    <style>
+		<style>
 
-      :host {
-        @apply(--layout-vertical);
-        text-decoration: none;
-        font-size: 22px;
-        line-height: 32px;
-      }
+			:host {
+				@apply(--layout-vertical);
+				text-decoration: none;
+				font-size: 22px;
+				line-height: 32px;
+			}
 
-      .image {
-        @apply(--layout-flex);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-      }
+			.image {
+				@apply(--layout-flex);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+			}
 
-      .title {
-        height: 56px;
-        @apply(--layout-horizontal);
-        @apply(--layout-center-center);
-        padding: 0 8px;
-        text-align: center;
-        letter-spacing: 0.8px;
-        color: #fff;
-      }
+			.title {
+				height: 56px;
+				@apply(--layout-horizontal);
+				@apply(--layout-center-center);
+				padding: 0 8px;
+				text-align: center;
+				letter-spacing: 0.8px;
+				color: #fff;
+			}
 
-    </style>
+		</style>
 
-    <div class="image" style$="background-color: {{article.primaryColor}}; background-image: url('{{article.image}}');"></div>
-    <div class="title" style$="background-color: {{article.secondaryColor}};">{{article.title}}</div>
+		<div class="image" style$="background-color: {{article.primaryColor}}; background-image: url('{{article.image}}');"></div>
+		<div class="title" style$="background-color: {{article.secondaryColor}};">{{article.title}}</div>
 
-  </template>
+	</template>
 
-  <script>
+	<script>
 
-    Polymer({
+		Polymer({
+			is: 'article-headline',
+			extends: 'a',
+			properties: {
+				article: Object
 
-      is: 'article-headline',
+			}
 
-      extends: 'a',
+		});
 
-      properties: {
-
-        article: Object
-
-      }
-
-    });
-
-  </script>
+	</script>
 
 </dom-module>

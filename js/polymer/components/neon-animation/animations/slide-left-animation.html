@@ -29,31 +29,28 @@ Configuration:
 
 <script>
 
-  Polymer({
+	Polymer({
+		is: 'slide-left-animation',
+		behaviors: [
+			Polymer.NeonAnimationBehavior
+		],
+		configure: function (config) {
+			var node = config.node;
 
-    is: 'slide-left-animation',
+			if (config.transformOrigin) {
+				this.setPrefixedProperty(node, 'transformOrigin', config.transformOrigin);
+			} else {
+				this.setPrefixedProperty(node, 'transformOrigin', '0 50%');
+			}
 
-    behaviors: [
-      Polymer.NeonAnimationBehavior
-    ],
+			this._effect = new KeyframeEffect(node, [
+				{'transform': 'none'},
+				{'transform': 'translateX(-100%)'}
+			], this.timingFromConfig(config));
 
-    configure: function(config) {
-      var node = config.node;
+			return this._effect;
+		}
 
-      if (config.transformOrigin) {
-        this.setPrefixedProperty(node, 'transformOrigin', config.transformOrigin);
-      } else {
-        this.setPrefixedProperty(node, 'transformOrigin', '0 50%');
-      }
-
-      this._effect = new KeyframeEffect(node, [
-        {'transform': 'none'},
-        {'transform': 'translateX(-100%)'}
-      ], this.timingFromConfig(config));
-
-      return this._effect;
-    }
-
-  });
+	});
 
 </script>

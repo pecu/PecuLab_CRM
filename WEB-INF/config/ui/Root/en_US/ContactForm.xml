@@ -299,7 +299,8 @@
 																<_object>
 																	<forClass>org:opencrx:kernel:account1:Contact</forClass>
 																	<featureName>address!authority</featureName>
-																	<order>1300</order>																	<skipRow>0</skipRow>
+																	<order>1300</order>																	
+																	<skipRow>0</skipRow>
 																</_object>
 																<_content />
 															</org.openmdx.ui1.FormFieldDefinition>															

@@ -32,7 +32,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Christianity -->
+												<!-- Christianity -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="1000" _operation="set">
 													<_object>
 														<shortText>
@@ -88,21 +88,21 @@
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-<!--
-												<org.opencrx.kernel.code1.CodeValueEntry code="1050" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Christianity - Nestorianism</_item>
-														</shortText>
-														<longText>
-															<_item>Christianity - Nestorianism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
--->
+												<!--
+																								<org.opencrx.kernel.code1.CodeValueEntry code="1050" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Christianity - Nestorianism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Christianity - Nestorianism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+												-->
 
-<!-- Islam -->
+												<!-- Islam -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="2000" _operation="set">
 													<_object>
 														<shortText>
@@ -114,41 +114,41 @@
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-<!--
-												<org.opencrx.kernel.code1.CodeValueEntry code="2020" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Islam - Ghulat</_item>
-														</shortText>
-														<longText>
-															<_item>Islam - Ghulat</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="2030" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Islam - Kalam Schools</_item>
-														</shortText>
-														<longText>
-															<_item>Islam - Kalam Schools</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="2040" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Islam - Kharijite</_item>
-														</shortText>
-														<longText>
-															<_item>Islam - Kharijite</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
--->
+												<!--
+																								<org.opencrx.kernel.code1.CodeValueEntry code="2020" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Islam - Ghulat</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Islam - Ghulat</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="2030" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Islam - Kalam Schools</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Islam - Kalam Schools</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="2040" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Islam - Kharijite</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Islam - Kharijite</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+												-->
 												<org.opencrx.kernel.code1.CodeValueEntry code="2050" _operation="set">
 													<_object>
 														<shortText>
@@ -183,7 +183,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Judaism -->
+												<!-- Judaism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="3000" _operation="set">
 													<_object>
 														<shortText>
@@ -195,76 +195,76 @@
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-<!--
-												<org.opencrx.kernel.code1.CodeValueEntry code="3010" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Conservative Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Conservative Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="3020" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Humanistic Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Humanistic Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="3030" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Karaite Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Karaite Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="3040" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Orthodox Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Orthodox Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="3050" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Reconstructionist Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Reconstructionist Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="3060" _operation="set">
-													<_object>
-														<shortText>
-															<_item>Judaism - Reform Judaism</_item>
-														</shortText>
-														<longText>
-															<_item>Judaism - Reform Judaism</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
--->
+												<!--
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3010" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Conservative Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Conservative Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3020" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Humanistic Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Humanistic Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3030" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Karaite Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Karaite Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3040" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Orthodox Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Orthodox Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3050" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Reconstructionist Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Reconstructionist Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+																								<org.opencrx.kernel.code1.CodeValueEntry code="3060" _operation="set">
+																									<_object>
+																										<shortText>
+																											<_item>Judaism - Reform Judaism</_item>
+																										</shortText>
+																										<longText>
+																											<_item>Judaism - Reform Judaism</_item>
+																										</longText>
+																									</_object>
+																									<_content/>
+																								</org.opencrx.kernel.code1.CodeValueEntry>
+												-->
 
-<!-- Buddhism -->
+												<!-- Buddhism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="4000" _operation="set">
 													<_object>
 														<shortText>
@@ -277,7 +277,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Hinduism -->
+												<!-- Hinduism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="5000" _operation="set">
 													<_object>
 														<shortText>
@@ -290,7 +290,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Sikhism -->
+												<!-- Sikhism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="6000" _operation="set">
 													<_object>
 														<shortText>
@@ -303,7 +303,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Confucianism -->
+												<!-- Confucianism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="7000" _operation="set">
 													<_object>
 														<shortText>
@@ -316,7 +316,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Falun Gong -->
+												<!-- Falun Gong -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="8000" _operation="set">
 													<_object>
 														<shortText>
@@ -329,7 +329,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Shinto -->
+												<!-- Shinto -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="9000" _operation="set">
 													<_object>
 														<shortText>
@@ -342,7 +342,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- Taoism -->
+												<!-- Taoism -->
 												<org.opencrx.kernel.code1.CodeValueEntry code="10000" _operation="set">
 													<_object>
 														<shortText>
@@ -355,7 +355,7 @@
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
 
-<!-- and there are many more...active/add as you please  -->
+												<!-- and there are many more...active/add as you please  -->
 
 											</entry>
 										</_content>

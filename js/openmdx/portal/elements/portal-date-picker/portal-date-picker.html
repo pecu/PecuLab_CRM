@@ -68,15 +68,15 @@ Foundation (http://www.apache.org/).
 				<div class="calendar vertical justified layout">
 					<div class="horizontal justified layout">
 						<template is="dom-repeat" items="{{getFormattedDaysOfWeek(locale)}}" as="dayOfWeek">						
-					  		<paper-button class="calendar-week-day">{{dayOfWeek}}</paper-button>
+							<paper-button class="calendar-week-day">{{dayOfWeek}}</paper-button>
 						</template>
 					</div>
 					<template is="dom-repeat" items="{{calendar}}" as="row" index-as="r">
-				    	<div class="horizontal justified layout">
-					  		<template is="dom-repeat" items="{{row}}" as="dayOfMonth" index-as="c"> 
-					    		<paper-button on-tap="selectDate" class$="{{getDayClass(value, dayOfMonth)}}">{{dateFormat(dayOfMonth, 'DD')}}</paper-button>
-					    	</template>
-					    </div>
+						<div class="horizontal justified layout">
+							<template is="dom-repeat" items="{{row}}" as="dayOfMonth" index-as="c"> 
+								<paper-button on-tap="selectDate" class$="{{getDayClass(value, dayOfMonth)}}">{{dateFormat(dayOfMonth, 'DD')}}</paper-button>
+							</template>
+						</div>
 					</template>
 				</div>
 			</div>
@@ -109,83 +109,85 @@ Polymer({
 			type: String
 		}
 	},
-	ready: function() {
-	    this.firstDayOfMonth = moment({"year": this.value.getFullYear(), "month": this.value.getMonth(), "day": 1});
-	    this.moveMonth(0);
+	ready: function () {
+		this.firstDayOfMonth = moment({"year": this.value.getFullYear(), "month": this.value.getMonth(), "day": 1});
+		this.moveMonth(0);
 	},
-	getDayClass: function(value, dayOfMonth) {
-		if(value != null && dayOfMonth.year() == value.getFullYear() && dayOfMonth.month() == value.getMonth() && dayOfMonth.date() == value.getDate()) {
+	getDayClass: function (value, dayOfMonth) {
+		if (value != null && dayOfMonth.year() == value.getFullYear() && dayOfMonth.month() == value.getMonth() && dayOfMonth.date() == value.getDate()) {
 			return "calendar-day-selected";
-		} else if(dayOfMonth.month() == this.firstDayOfMonth.month()) {
+		} else if (dayOfMonth.month() == this.firstDayOfMonth.month()) {
 			return "calendar-day-in-range";
 		} else {
 			return "calendar-day-out-of-range";
 		}
 	},
-	getFormattedDaysOfWeek: function(locale) {
-		var formattedDaysOfWeek = [0, 1, 2, 3, 4, 5, 6].map(function(n) {return moment().day(n).format("dd");});
-	    return formattedDaysOfWeek;
+	getFormattedDaysOfWeek: function (locale) {
+		var formattedDaysOfWeek = [0, 1, 2, 3, 4, 5, 6].map(function (n) {
+			return moment().day(n).format("dd");
+		});
+		return formattedDaysOfWeek;
 	},
-    dateFormat: function(date, format) {
-        if(!date) {
-        	return '';
-      	}
-        var value = null;
-        if(date instanceof Date) {
-        	value = moment(date);
-        } else {
-        	value = date;
-        }
-      	value.locale(this.locale);
-      	return value.format(format);
-    },
-	moveMonth: function(n) {
+	dateFormat: function (date, format) {
+		if (!date) {
+			return '';
+		}
+		var value = null;
+		if (date instanceof Date) {
+			value = moment(date);
+		} else {
+			value = date;
+		}
+		value.locale(this.locale);
+		return value.format(format);
+	},
+	moveMonth: function (n) {
 		this.firstDayOfMonth.add(n, "months");
-	    this.formattedMonth = this.dateFormat(this.firstDayOfMonth, "MMMM");
-	    this.formattedYear = this.dateFormat(this.firstDayOfMonth, "YYYY");
-	    this.buildCalendar();
+		this.formattedMonth = this.dateFormat(this.firstDayOfMonth, "MMMM");
+		this.formattedYear = this.dateFormat(this.firstDayOfMonth, "YYYY");
+		this.buildCalendar();
 	},
-	back1: function() {
-	    this.moveMonth(-1);
+	back1: function () {
+		this.moveMonth(-1);
 	},
-	back12: function() {
-	    this.moveMonth(-12);
+	back12: function () {
+		this.moveMonth(-12);
 	},
-	next1: function() {
-	    this.moveMonth(1);
+	next1: function () {
+		this.moveMonth(1);
 	},
-	next12: function() {
-	    this.moveMonth(12);
+	next12: function () {
+		this.moveMonth(12);
 	},
-	selectDate: function(event) {
+	selectDate: function (event) {
 		var selectedDate = event.model.dayOfMonth;
 		var newValue = new Date(this.value);
-	    newValue.setYear(selectedDate.year());
-	    newValue.setMonth(selectedDate.month());
-	    newValue.setDate(selectedDate.date());
-	    this.set("value", newValue);
+		newValue.setYear(selectedDate.year());
+		newValue.setMonth(selectedDate.month());
+		newValue.setDate(selectedDate.date());
+		this.set("value", newValue);
 	},
-	buildCalendar: function() {
-	    var calendar = [];
-	    var columns = [];
-	    var dayOfMonth = this.firstDayOfMonth.clone();
-	    while(dayOfMonth.day() > moment.localeData().firstDayOfWeek()) {
-	    	dayOfMonth.add(-1, "days");
-	    }
-	    for(var i = 0; i < 6 * 7; i++) {
-			if(i % 7 == 0) {
-				if(columns.length > 0) {
-					calendar.push(columns);					
+	buildCalendar: function () {
+		var calendar = [];
+		var columns = [];
+		var dayOfMonth = this.firstDayOfMonth.clone();
+		while (dayOfMonth.day() > moment.localeData().firstDayOfWeek()) {
+			dayOfMonth.add(-1, "days");
+		}
+		for (var i = 0; i < 6 * 7; i++) {
+			if (i % 7 == 0) {
+				if (columns.length > 0) {
+					calendar.push(columns);
 				}
 				columns = [];
 			}
 			columns.push(dayOfMonth);
-			dayOfMonth = dayOfMonth.clone().add(1, 'days'); 
-	    }
-		if(columns.length > 0) {
-			calendar.push(columns);					
+			dayOfMonth = dayOfMonth.clone().add(1, 'days');
 		}
-	    this.set("calendar", calendar);
+		if (columns.length > 0) {
+			calendar.push(columns);
+		}
+		this.set("calendar", calendar);
 	}
 });
 </script>

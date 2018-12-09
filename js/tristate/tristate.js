@@ -1,9 +1,9 @@
 /* 
  --- Tristate Checkbox ---
-v 0.9.2 19th Dec 2008
-By Shams Mahmood
-http://shamsmi.blogspot.com 
-*/
+ v 0.9.2 19th Dec 2008
+ By Shams Mahmood
+ http://shamsmi.blogspot.com 
+ */
 
 var STATE_NONE = 0;
 var STATE_SOME = 1;
@@ -17,22 +17,30 @@ var CHECKED_NORM = 'CHECKED_NORM';
 var CHECKED_HILI = 'CHECKED_HILI';
 
 var DEFAULT_CONFIG = {
-	UNCHECKED_NORM : './javascript/tristate/images/unchecked.gif',
-	UNCHECKED_HILI : './javascript/tristate/images/unchecked_highlighted.gif',
-	INTERMEDIATE_NORM : './javascript/tristate/images/intermediate.gif',
-	INTERMEDIATE_HILI : './javascript/tristate/images/intermediate_highlighted.gif',
-	CHECKED_NORM : './javascript/tristate/images/checked.gif',
-	CHECKED_HILI : './javascript/tristate/images/checked_highlighted.gif'
+	UNCHECKED_NORM: './javascript/tristate/images/unchecked.gif',
+	UNCHECKED_HILI: './javascript/tristate/images/unchecked_highlighted.gif',
+	INTERMEDIATE_NORM: './javascript/tristate/images/intermediate.gif',
+	INTERMEDIATE_HILI: './javascript/tristate/images/intermediate_highlighted.gif',
+	CHECKED_NORM: './javascript/tristate/images/checked.gif',
+	CHECKED_HILI: './javascript/tristate/images/checked_highlighted.gif'
 };
 
 function getNextStateFromValue(theValue) {
-	if (theValue == STATE_SOME) { return STATE_ALL; }
-	if (theValue == STATE_ALL) { return STATE_NONE; }
+	if (theValue == STATE_SOME) {
+		return STATE_ALL;
+	}
+	if (theValue == STATE_ALL) {
+		return STATE_NONE;
+	}
 	return STATE_SOME;
 }
 function getStateFromValue(theValue, highlightedState) {
-	if (theValue == STATE_SOME) { return (!highlightedState) ? INTERMEDIATE_NORM : INTERMEDIATE_HILI; }
-	if (theValue == STATE_ALL) { return (!highlightedState) ? CHECKED_NORM : CHECKED_HILI; }
+	if (theValue == STATE_SOME) {
+		return (!highlightedState) ? INTERMEDIATE_NORM : INTERMEDIATE_HILI;
+	}
+	if (theValue == STATE_ALL) {
+		return (!highlightedState) ? CHECKED_NORM : CHECKED_HILI;
+	}
 	return (!highlightedState) ? UNCHECKED_NORM : UNCHECKED_HILI;
 }
 
@@ -55,14 +63,14 @@ function getAllCheckboxesInContainer(triStateBoxContainerNodeId) {
 	var inputElements = triStateBoxContainerNode.getElementsByTagName('input');
 	var checkboxes = new Array();
 	var index = 0;
-	
+
 	for (var x = 0; x < inputElements.length; x++) {
 		var loopElement = inputElements[x];
 		if (loopElement.type == 'checkbox') {
 			checkboxes[index++] = loopElement;
 		}
 	}
-	
+
 	return checkboxes;
 }
 function selectOrUnselectBoxes(checkBoxes, selectBoxes) {
@@ -88,50 +96,50 @@ function replaceImage(imageId, imageSrc) {
 	}
 }
 function mouseOverOutOfImage(imageId, mouseOverMode) {
-	
+
 	var fieldAndContainerIds = getFieldAndContainerIds(imageId);
 	var triStateBoxField = document.getElementById(fieldAndContainerIds[0]);
-	
+
 	var currentState = getStateFromValue(triStateBoxField.value, mouseOverMode);
 	return DEFAULT_CONFIG[currentState];
 }
 function onMouseOverImage(imageId) {
-	return function() {
+	return function () {
 		var imageSrc = mouseOverOutOfImage(imageId, true);
 		replaceImage(imageId, imageSrc)
 	};
 }
-function onMouseOutImage(imageId) { 
-	return function() {
+function onMouseOutImage(imageId) {
+	return function () {
 		var imageSrc = mouseOverOutOfImage(imageId, false);
 		replaceImage(imageId, imageSrc)
 	};
 }
 function onTristateImageClick(imageId, standAloneMode) {
-	return function() {
+	return function () {
 		var fieldAndContainerIds = getFieldAndContainerIds(imageId);
 		var triStateBoxField = document.getElementById(fieldAndContainerIds[0]);
-		
+
 		var nextState = getNextStateFromValue(triStateBoxField.value);
 		if (!standAloneMode && nextState == STATE_SOME) {
 			nextState = getNextStateFromValue(nextState);
 		}
 		triStateBoxField.value = nextState;
-		
+
 		if (fieldAndContainerIds[1] != '') {
 			var allTheCheckboxes = getAllCheckboxesInContainer(fieldAndContainerIds[1]);
 			selectOrUnselectBoxes(allTheCheckboxes, nextState == STATE_ALL);
 		}
-		
+
 		var imageSrc = mouseOverOutOfImage(imageId, true);
 		replaceImage(imageId, imageSrc)
 	}
 }
 function onCheckboxClick(imageId, checkBoxId) {
-	return function() {
+	return function () {
 		var fieldAndContainerIds = getFieldAndContainerIds(imageId);
 		var allTheCheckboxes = getAllCheckboxesInContainer(fieldAndContainerIds[1]);
-		
+
 		var triStateBoxField = document.getElementById(fieldAndContainerIds[0]);
 		updateStateAndImage(allTheCheckboxes, triStateBoxField, imageId)
 	}
@@ -141,7 +149,7 @@ function updateStateAndImage(allTheCheckboxes, triStateBoxField, imageId) {
 	if (allTheCheckboxes.length > 0) {
 		var allBoxesSelected = areAllBoxesInGivenCheckedState(allTheCheckboxes, true);
 		var allBoxesUnselected = areAllBoxesInGivenCheckedState(allTheCheckboxes, false);
-		
+
 		if (allBoxesSelected) {
 			triStateBoxField.value = STATE_ALL;
 		} else if (allBoxesUnselected) {
@@ -149,7 +157,7 @@ function updateStateAndImage(allTheCheckboxes, triStateBoxField, imageId) {
 		} else {
 			triStateBoxField.value = STATE_SOME;
 		}
-	} 
+	}
 	var imageSrc = mouseOverOutOfImage(imageId, false);
 	replaceImage(imageId, imageSrc);
 }
@@ -167,7 +175,7 @@ function createTriStateImageNode(triStateBoxNode, imageNodeId, standAloneMode) {
 	imageNode.src = DEFAULT_CONFIG[UNCHECKED_NORM];
 	triStateBoxNode.appendChild(imageNode);
 	if (triStateBoxNode.addEventListener) {
-        triStateBoxNode.addEventListener('mouseover', onMouseOverImage(imageNode.id), false);
+		triStateBoxNode.addEventListener('mouseover', onMouseOverImage(imageNode.id), false);
 		triStateBoxNode.addEventListener('mouseout', onMouseOutImage(imageNode.id), false);
 		triStateBoxNode.addEventListener('click', onTristateImageClick(imageNode.id, standAloneMode), false);
 	} else if (triStateBoxNode.attachEvent) {
@@ -195,7 +203,7 @@ function attachOnclickEventsToDependentBoxes(triStateBoxContainerId, imageNodeId
 	for (var x in allTheCheckboxes) {
 		var loopCheckBox = allTheCheckboxes[x];
 		if (loopCheckBox.addEventListener) {
-	        loopCheckBox.addEventListener('click', onCheckboxClick(imageNodeId, loopCheckBox.id), false);
+			loopCheckBox.addEventListener('click', onCheckboxClick(imageNodeId, loopCheckBox.id), false);
 		} else if (loopCheckBox.attachEvent) {
 			loopCheckBox.attachEvent('onclick', onCheckboxClick(imageNodeId, loopCheckBox.id));
 		}
@@ -205,35 +213,35 @@ function attachOnclickEventsToDependentBoxes(triStateBoxContainerId, imageNodeId
 function initTriStateCheckBox(triStateBoxId, containerOrStateFieldId, standAloneMode) {
 
 	var triStateBoxNode = document.getElementById(triStateBoxId);
-	
+
 	var triStateBoxContainerId = containerOrStateFieldId;
 	var triStateBoxFieldId = triStateBoxId + '.Value';
 	if (standAloneMode) {
 		triStateBoxContainerId = '';
 		triStateBoxFieldId = containerOrStateFieldId;
 	}
-	
+
 	var triStateBoxTextNode = triStateBoxNode.childNodes[0];
 	triStateBoxNode.removeChild(triStateBoxTextNode);
-	
+
 	var triStateBoxField = document.getElementById(triStateBoxFieldId);
 	if (!standAloneMode) {
 		triStateBoxField = createHiddenStateField(triStateBoxNode, triStateBoxFieldId);
-	} 
-	
+	}
+
 	var imageNodeId = triStateBoxId + '.Img';
 	createTriStateImageNode(triStateBoxNode, imageNodeId, standAloneMode);
-	
+
 	var fieldNameNodeId = triStateBoxId + '.Field';
 	createFieldNameHiddenField(triStateBoxNode, fieldNameNodeId, triStateBoxFieldId);
-	
+
 	if (!standAloneMode) {
 		var containerNameNodeId = triStateBoxId + '.Container';
 		createContainerNameHiddenField(triStateBoxNode, containerNameNodeId, triStateBoxContainerId);
 	}
-	
+
 	triStateBoxNode.appendChild(triStateBoxTextNode);
-	
+
 	var allTheCheckboxes = attachOnclickEventsToDependentBoxes(triStateBoxContainerId, imageNodeId);
 	updateStateAndImage(allTheCheckboxes, triStateBoxField, imageNodeId);
 }

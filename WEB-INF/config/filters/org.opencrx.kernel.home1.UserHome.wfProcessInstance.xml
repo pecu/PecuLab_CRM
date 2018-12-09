@@ -338,7 +338,7 @@
 							</array>
 						</void>
 						<!-- <void property="orderSpecifier"> <array class="org.openmdx.base.query.OrderSpecifier" length="1"> <void index="0"> <object class="org.openmdx.base.query.OrderSpecifier"> <void property="feature"> <string>lastActivityOn</string> </void> <void property="order"> 
-							<short>-1</short> </void> </object> </void> </array> </void> -->
+						<short>-1</short> </void> </object> </void> </array> </void> -->
 						<void property="condition">
 							<array class="org.openmdx.base.query.Condition" length="2">
 								<void index="0"> <!-- startedOn != null -->
@@ -403,7 +403,7 @@
 							</array>
 						</void>
 						<!-- <void property="orderSpecifier"> <array class="org.openmdx.base.query.OrderSpecifier" length="1"> <void index="0"> <object class="org.openmdx.base.query.OrderSpecifier"> <void property="feature"> <string>lastActivityOn</string> </void> <void property="order"> 
-							<short>-1</short> </void> </object> </void> </array> </void> -->
+						<short>-1</short> </void> </object> </void> </array> </void> -->
 						<void property="condition">
 							<array class="org.openmdx.base.query.Condition" length="2">
 								<void index="0"> <!-- startedOn != null -->

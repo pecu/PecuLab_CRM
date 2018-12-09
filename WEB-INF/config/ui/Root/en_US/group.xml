@@ -12,61 +12,61 @@
 							<_content>
 
 								<featureDefinition>
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Business!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 200 = Mobile -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Mobile!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Business!emailAddress">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Business!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 200 = Mobile -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Mobile!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Member:(account;address)*Business!emailAddress">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
 
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 200 = Mobile -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Mobile!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!emailAddress">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 200 = Mobile -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Mobile!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!emailAddress">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
 								</featureDefinition>														
 
 								<elementDefinition>
@@ -174,12 +174,12 @@
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Group:aliasName">
 										<_object>
 											<active>true</active>
-                      <toolTip>
-                        <_item>Account's alias name</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Alias name</_item>
-                      </label>
+											<toolTip>
+												<_item>Account's alias name</_item>
+											</toolTip>
+											<label>
+												<_item>Alias name</_item>
+											</label>
 											<orderFieldGroup>
 												<_item>0</_item>
 												<_item>0</_item>
@@ -215,25 +215,25 @@
 									-->
 
 									<!-- Operations -->
-                  <!-- Operation Import Parameters are customized in common.xml -->
-                  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Group:Pane:Op:Tab:importItem">
-                    <_object>
-                      <active>true</active>
-                      <toolTip>
-                        <_item>Import vCard</_item>
-                      </toolTip>
-                      <label>
-                        <_item>Import vCard</_item>
-                      </label>
-                      <iconKey>org:opencrx:kernel:Import</iconKey>
-                      <order>
-                        <_item>100</_item>
-                        <_item>0</_item>
-                        <_item>110</_item>
-                      </order>
-                    </_object>
-                    <_content/>
-                  </org.openmdx.ui1.ElementDefinition>
+									<!-- Operation Import Parameters are customized in common.xml -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Group:Pane:Op:Tab:importItem">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>Import vCard</_item>
+											</toolTip>
+											<label>
+												<_item>Import vCard</_item>
+											</label>
+											<iconKey>org:opencrx:kernel:Import</iconKey>
+											<order>
+												<_item>100</_item>
+												<_item>0</_item>
+												<_item>110</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
 
 									<!--Inspector Definitions MemberGroup -->
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:MemberGroup">
@@ -432,8 +432,8 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Member:(account;address)*Business!phoneNumberFull">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
-                      <columnBreak>false</columnBreak>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
+											<columnBreak>false</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Phone business</_item>
@@ -456,7 +456,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Member:(account;address)*Mobile!phoneNumberFull">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
 											<active>true</active>
 											<toolTip>
 												<_item>Phone mobile</_item>
@@ -479,8 +479,8 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Member:(account;address)*Business!emailAddress">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
-                      <columnBreak>true</columnBreak>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>E-mail business</_item>
@@ -793,8 +793,8 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!phoneNumberFull">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
-                      <columnBreak>false</columnBreak>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
+											<columnBreak>false</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>Phone business</_item>
@@ -817,7 +817,7 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Mobile!phoneNumberFull">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
 											<active>true</active>
 											<toolTip>
 												<_item>Phone mobile</_item>
@@ -840,8 +840,8 @@
 									</org.openmdx.ui1.ElementDefinition>
 									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountMembership:(accountFrom;address)*Business!emailAddress">
 										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
-                      <columnBreak>true</columnBreak>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
+											<columnBreak>true</columnBreak>
 											<active>true</active>
 											<toolTip>
 												<_item>E-mail business</_item>
