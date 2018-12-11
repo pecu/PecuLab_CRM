@@ -1,0 +1,8 @@
+/nbproject/private/
+/nbproject/genfiles.properties
+/dist/
+/build/
+/apache-tomee/work/
+/apache-tomee/logs/
+/apache-tomee/temp
+/apache-tomee/conf/Catalina/

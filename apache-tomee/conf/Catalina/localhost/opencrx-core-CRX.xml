@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="/home/peculab-dev/PecuLab_CRM/build/web" path="/PecuLab_CRM">
+  <!-- SSO authentication for remote users when accessed via AJP connector.
+	For more information see Javadoc of RemoteUserAuthenticator -->
+  <Valve className="org.openmdx.catalina.authenticator.RemoteUserAuthenticator"/>
+  <Realm className="org.apache.catalina.realm.CombinedRealm">
+    <Realm className="org.openmdx.catalina.realm.ExtendedDataSourceRealm" dataSourceName="jdbc_opencrx_CRX" debug="0" digest="MD5" digestEncoding="UTF-8" digestFormat="base64" localDataSource="true" roleNameCol="role_name" userCredCol="passwd" userNameCol="principal_name" userRoleTable="OOMSE2_TOBJ_ROLES" userTable="OOMSE2_TOBJ_USERS"/>
+    <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
+  </Realm>
+</Context>
