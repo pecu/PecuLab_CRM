@@ -11,8 +11,8 @@ Notice: Since this project is base on OpenCRX, it's best to remove OpenCRX to av
 
 ### Environment Setup
 
-This repository is configured to be a `NetBeans Web Project`, so you can open it easily by NetBeans
-You then will receive `Resolve Missing Server Problem...`
+This repository is configured to be a `NetBeans Web Project`, so you can open it easily by NetBeans.
+You then will receive `Resolve Missing Server Problem...`.
 
 1. Add Server...
 2. Select Tomcat and name the server
@@ -22,3 +22,6 @@ You then will receive `Resolve Missing Server Problem...`
 6. Finish
 
 Environment Setup should be done now.
+
+You have to start hsqldb when developing,  run `hsqldb/db_run`.
+To close hsqldb properlu, execute `hsqldb/db_stop`.
