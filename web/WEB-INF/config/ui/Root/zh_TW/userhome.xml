@@ -1,0 +1,2509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
+	<_object></_object>
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object></_object>
+				<_content>
+					<segment>
+						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+							<_object></_object>
+							<_content>
+								<featureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:assignedPrincipal">
+										<_object>
+											<type>org:opencrx:security:realm1:Principal</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:emailAccount">
+										<_object>
+											<type>org:opencrx:kernel:home1:EMailAccount</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:lastLoginAt">
+										<_object>
+											<type>org:w3c:dateTime</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:isDisabled">
+										<_object>
+											<type>org:w3c:boolean</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:assignedPrincipalGroup">
+										<_object>
+											<type>org:opencrx:security:realm1:PrincipalGroup</type>
+											<multiplicity>list</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:home1:UserHome:assignedRole">
+										<_object>
+											<type>org:openmdx:security:realm1:Role</type>
+											<multiplicity>list</multiplicity>
+											<changeable>false</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+								</featureDefinition>
+								<elementDefinition>
+									<!--Segment Definition -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>使用者</_item>
+											</toolTip>
+											<label>
+												<_item>使用者</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>3</_item>
+											</order>
+											<iconKey>org:opencrx:kernel:home1:UserHome</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Tab Definitions Pane1 -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:userHome">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>所有使用者</_item>
+											</toolTip>
+											<label>
+												<_item>所有使用者</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>7</maxMember>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>使用者 (已啟用)</_item>
+														</toolTip>
+														<label>
+															<_item>使用者 (已啟用)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>20</_item>
+														</order>
+														<maxMember>7</maxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>使用者 (未啟用)</_item>
+														</toolTip>
+														<label>
+															<_item>使用者 (未啟用)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>30</_item>
+														</order>
+														<maxMember>7</maxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:alert">
+										<_object>
+											<active>true</active>
+											<inPlace>true</inPlace>
+											<toolTip>
+												<_item>警報</_item>
+											</toolTip>
+											<label>
+												<_item>警報</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<showMaxMember>5</showMaxMember>
+											<maxMember>6</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:timer">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>計時器</_item>
+											</toolTip>
+											<label>
+												<_item>計時器</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+											<showMaxMember>7</showMaxMember>
+											<maxMember>11</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:accessHistory">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>歷史</_item>
+											</toolTip>
+											<label>
+												<_item>»歷史</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>510</_item>
+											</order>
+											<maxMember>3</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:quickAccess">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>最愛</_item>
+											</toolTip>
+											<label>
+												<_item>»最愛</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>520</_item>
+											</order>
+											<maxMember>3</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:chart">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>附加媒體</_item>
+											</toolTip>
+											<label>
+												<_item>»媒體</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>530</_item>
+											</order>
+											<maxMember>2</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:propertySet">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>屬性集</_item>
+											</toolTip>
+											<label>
+												<_item>»屬性集</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>1040</_item>
+											</order>
+											<maxMember>2</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:objectFinder">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>物件查找器</_item>
+											</toolTip>
+											<label>
+												<_item>»物件查找器</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>540</_item>
+											</order>
+											<maxMember>5</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>家</_item>
+											</toolTip>
+											<label>
+												<_item>家</_item>
+											</label>
+											<iconKey>UserHome</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- disable Delete Operation -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:delete">
+										<_object>
+											<active>false</active>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Tab Definition -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:30">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>選項</_item>
+											</toolTip>
+											<label>
+												<_item>選項</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:40">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>安全</_item>
+											</toolTip>
+											<label>
+												<_item>安全</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:40:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>&amp;nbsp;</_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:40:Group:20">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>&amp;nbsp;</_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:40:Group:30">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>&amp;nbsp;</_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:0:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>日曆</_item>
+											</toolTip>
+											<label>
+												<_item>日曆</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in Details Tab -->
+									<!--FieldGroups in Options Tab -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:30:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>E-mail選項</_item>
+											</toolTip>
+											<label>
+												<_item>E-mail選項</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Attr:Tab:30:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>使用者設定</_item>
+											</toolTip>
+											<label>
+												<_item>使用者設定</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:contact">
+										<_object>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>聯繫</_item>
+											</toolTip>
+											<label>
+												<_item>聯繫</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>1</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:assignedPrincipal">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeHasAssignedPrincipalDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>主要</_item>
+											</toolTip>
+											<label>
+												<_item>主要</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>40</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>3</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:isDisabled">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeIsDisabledDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>停用</_item>
+											</toolTip>
+											<label>
+												<_item>停用</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>40</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>6</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:lastLoginAt">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeLastLoginAtDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>最後登入於</_item>
+											</toolTip>
+											<label>
+												<_item>最後登入於</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>40</_item>
+												<_item>10</_item>
+												<_item>40</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>7</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:assignedPrincipalGroup">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeHasAssignedPrincipalGroupDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<spanRow>10</spanRow>
+											<toolTip>
+												<_item>群組</_item>
+											</toolTip>
+											<label>
+												<_item>群組</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>40</_item>
+												<_item>20</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>4</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:assignedRole">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeHasAssignedRoleDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<spanRow>10</spanRow>
+											<toolTip>
+												<_item>角色</_item>
+											</toolTip>
+											<label>
+												<_item>角色</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>40</_item>
+												<_item>30</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>5</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Options -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:sendMailSubjectPrefix">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>E-mail標題前綴</_item>
+											</toolTip>
+											<label>
+												<_item>E-mail標題前綴</_item>
+											</label>
+											<order>
+												<_item>30</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:webAccessUrl">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>Web造訪URL</_item>
+											</toolTip>
+											<label>
+												<_item>Web造訪URL</_item>
+											</label>
+											<order>
+												<_item>30</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:primaryGroup">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>主要用戶組</_item>
+											</toolTip>
+											<label>
+												<_item>主要用戶組</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>30</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:emailAccount">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.UserHomeHasEMailAccountDataBinding</dataBindingName>
+											<active>true</active>
+											<filterable>false</filterable>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>E-Mail</_item>
+											</toolTip>
+											<label>
+												<_item>E-Mail</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>30</_item>
+												<_item>10</_item>
+												<_item>15</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>2</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:storeSettingsOnLogoff">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>登出時儲存設定</_item>
+											</toolTip>
+											<label>
+												<_item>登出時儲存設定</_item>
+											</label>
+											<order>
+												<_item>30</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:settings">
+										<_object>
+											<active>true</active>
+											<sortable>false</sortable>
+											<spanRow>4</spanRow>
+											<toolTip>
+												<_item>使用者設定</_item>
+											</toolTip>
+											<label>
+												<_item>使用者設定</_item>
+											</label>
+											<order>
+												<_item>30</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Alert -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert">
+										<_object>
+											<active>true</active>
+											<changeable>true</changeable>
+											<toolTip>
+												<_item>警報</_item>
+											</toolTip>
+											<label>
+												<_item>警報</_item>
+											</label>
+											<iconKey>Alert</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:alertState">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>州</_item>
+											</toolTip>
+											<label>
+												<_item>州</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:importance">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>重要性</_item>
+											</toolTip>
+											<label>
+												<_item>重要性</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:reference">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>來源</_item>
+											</toolTip>
+											<label>
+												<_item>來源</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>5</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:referencedObjectType">
+										<_object>
+											<active>false</active>
+											<toolTip>
+												<_item>來源物件型態</_item>
+											</toolTip>
+											<label>
+												<_item>來源物件型態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:description">
+										<_object>
+											<spanRow>4</spanRow>
+											<sortable>false</sortable>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<!-- <order> <_item>0</_item> <_item>0</_item> <_item>80</_item> </order> -->
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grid enhancement -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:createdAt">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建於</_item>
+											</toolTip>
+											<label>
+												<_item>創建於</_item>
+											</label>
+											<!-- <orderFieldGroup> <_item>0</_item> <_item>0</_item> <_item>3</_item> </orderFieldGroup> -->
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>70</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Operations -->
+									<!-- disable delete because of AirSync -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:delete">
+										<_object>
+											<active>false</active>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsRead">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>標記為已讀</_item>
+											</toolTip>
+											<label>
+												<_item>標記為已讀</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsRead:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsRead:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsAccepted">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>標記為接受</_item>
+											</toolTip>
+											<label>
+												<_item>標記為接受</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+											<iconKey>org:opencrx:kernel:OpMarkAsAccepted</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsAccepted:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Alert:Pane:Op:Tab:markAsAccepted:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- Timer -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer">
+										<_object>
+											<active>true</active>
+											<changeable>true</changeable>
+											<toolTip>
+												<_item>計時器</_item>
+											</toolTip>
+											<label>
+												<_item>計時器</_item>
+											</label>
+											<iconKey>Timer</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:action">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>計時器動作</_item>
+											</toolTip>
+											<label>
+												<_item>計時器動作</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>30</_item>
+												<_item>90</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:timerStartAt">
+										<_object>
+											<active>true</active>
+											<columnBreak>true</columnBreak>
+											<mandatory>true</mandatory>
+											<toolTip>
+												<_item>計時器開始於</_item>
+											</toolTip>
+											<label>
+												<_item>計時器開始於</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:timerEndAt">
+										<_object>
+											<active>true</active>
+											<mandatory>true</mandatory>
+											<toolTip>
+												<_item>計時器結束於</_item>
+											</toolTip>
+											<label>
+												<_item>計時器結束於</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>100</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>30</_item>
+												<_item>110</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:description">
+										<_object>
+											<spanRow>4</spanRow>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:target">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>目標</_item>
+											</toolTip>
+											<label>
+												<_item>目標</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>5</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:timerState">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>州</_item>
+											</toolTip>
+											<label>
+												<_item>州</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>20</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:disabled">
+										<_object>
+											<active>true</active>
+											<columnBreak>true</columnBreak>
+											<toolTip>
+												<_item>未啟用</_item>
+											</toolTip>
+											<label>
+												<_item>未啟用</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>20</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grid enhancement -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:createdAt">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建於</_item>
+											</toolTip>
+											<label>
+												<_item>創建於</_item>
+											</label>
+											<!-- <orderFieldGroup> <_item>0</_item> <_item>0</_item> <_item>3</_item> </orderFieldGroup> -->
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>20</_item>
+												<_item>30</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:triggerRepeat">
+										<_object>
+											<active>true</active>
+											<mandatory>true</mandatory>
+											<toolTip>
+												<_item>重複X次</_item>
+											</toolTip>
+											<label>
+												<_item>重複X次</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>30</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:triggerIntervalMinutes">
+										<_object>
+											<active>true</active>
+											<mandatory>true</mandatory>
+											<toolTip>
+												<_item>每X分鐘重複一次</_item>
+											</toolTip>
+											<label>
+												<_item>每X分鐘重複一次</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>30</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Timer:lastTriggerAt">
+										<_object>
+											<active>true</active>
+											<columnBreak>true</columnBreak>
+											<mandatory>true</mandatory>
+											<toolTip>
+												<_item>計時器被觸發於</_item>
+											</toolTip>
+											<label>
+												<_item>計時器被觸發於</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>30</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- QuickAccess -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>最愛</_item>
+											</toolTip>
+											<label>
+												<_item>最愛</_item>
+											</label>
+											<iconKey>QuickAccess</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:reference">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>來源</_item>
+											</toolTip>
+											<label>
+												<_item>來源</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:referencedObjectType">
+										<_object>
+											<active>false</active>
+											<toolTip>
+												<_item>來源物件型態</_item>
+											</toolTip>
+											<label>
+												<_item>來源物件型態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:quickAccessState">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>訪問狀態</_item>
+											</toolTip>
+											<label>
+												<_item>訪問狀態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:iconKey">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>圖標鍵</_item>
+											</toolTip>
+											<label>
+												<_item>圖標鍵</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>60</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:actionType">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>動作類型</_item>
+											</toolTip>
+											<label>
+												<_item>動作類型</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:actionName">
+										<_object>
+											<active>true</active>
+											<spanRow>5</spanRow>
+											<toolTip>
+												<_item>動作名稱</_item>
+											</toolTip>
+											<label>
+												<_item>動作名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:QuickAccess:actionParam">
+										<_object>
+											<active>true</active>
+											<spanRow>5</spanRow>
+											<toolTip>
+												<_item>動作參數</_item>
+											</toolTip>
+											<label>
+												<_item>動作參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- AccessHistory -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:AccessHistory">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>最後訪問於</_item>
+											</toolTip>
+											<label>
+												<_item>最後訪問於</_item>
+											</label>
+											<iconKey>AccessHistory</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:AccessHistory:reference">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>來源</_item>
+											</toolTip>
+											<label>
+												<_item>來源</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:AccessHistory:referencedObjectType">
+										<_object>
+											<active>false</active>
+											<toolTip>
+												<_item>來源物件型態</_item>
+											</toolTip>
+											<label>
+												<_item>來源物件型態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:AccessHistory:accessHistoryState">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>訪問狀態</_item>
+											</toolTip>
+											<label>
+												<_item>訪問狀態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:AccessHistory:description">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Chart -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Chart">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>圖表</_item>
+											</toolTip>
+											<label>
+												<_item>圖表</_item>
+											</label>
+											<iconKey>Chart</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Chart:chartName">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>99</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Chart:chartMimeType">
+										<_object>
+											<active>false</active>
+											<label>
+												<_item></_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Chart:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>99</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Chart:chart">
+										<_object>
+											<inPlace>true</inPlace>
+											<active>true</active>
+											<toolTip>
+												<_item>圖表</_item>
+											</toolTip>
+											<label>
+												<_item>圖表</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- PropertySet -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:PropertySet">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>屬性集</_item>
+											</toolTip>
+											<label>
+												<_item>屬性集</_item>
+											</label>
+											<iconKey>PropertySet</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:PropertySet:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:PropertySet:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- ObjectFinder -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>物件查找器</_item>
+											</toolTip>
+											<label>
+												<_item>物件查找器</_item>
+											</label>
+											<iconKey>ObjectFinder</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grids -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryAccount">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryActivity">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>活動</_item>
+											</toolTip>
+											<label>
+												<_item>活動</_item>
+											</label>
+											<order>
+												<_item>20</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryContract">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>合約</_item>
+											</toolTip>
+											<label>
+												<_item>合約</_item>
+											</label>
+											<order>
+												<_item>30</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryProduct">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>產品</_item>
+											</toolTip>
+											<label>
+												<_item>產品</_item>
+											</label>
+											<order>
+												<_item>40</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryDocument">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>文件</_item>
+											</toolTip>
+											<label>
+												<_item>文件</_item>
+											</label>
+											<order>
+												<_item>50</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryBuilding">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>房屋</_item>
+											</toolTip>
+											<label>
+												<_item>房屋</_item>
+											</label>
+											<order>
+												<_item>60</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:indexEntryDepot">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>倉庫</_item>
+											</toolTip>
+											<label>
+												<_item>倉庫</_item>
+											</label>
+											<order>
+												<_item>70</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>1</maxMember>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:allWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>所有的字</_item>
+											</toolTip>
+											<label>
+												<_item>所有的字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:atLeastOneOfTheWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>至少有一個字</_item>
+											</toolTip>
+											<label>
+												<_item>至少有一個字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ObjectFinder:withoutWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>沒有一個字</_item>
+											</toolTip>
+											<label>
+												<_item>沒有一個字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions -->
+									<!--FieldGroups in General Tab -->
+									<!--FieldGroups in Details Tab -->
+									<!--Element Definitions -->
+									<!-- customized in common.xml -->
+									<!-- Operations -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:createUser">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建使用者</_item>
+											</toolTip>
+											<label>
+												<_item>創建使用者</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>OpCreateUser</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:createUser:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:createUser:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUserParams:principalName">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>主要名稱</_item>
+											</toolTip>
+											<label>
+												<_item>主要名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUserParams:contact">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>聯繫</_item>
+											</toolTip>
+											<label>
+												<_item>聯繫</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUserParams:primaryUserGroup">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>主要用戶組</_item>
+											</toolTip>
+											<label>
+												<_item>主要用戶組</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUserParams:initialPassword">
+										<_object>
+											<active>true</active>
+											<isPassword>true</isPassword>
+											<toolTip>
+												<_item>初始密碼</_item>
+											</toolTip>
+											<label>
+												<_item>初始密碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUserParams:initialPasswordVerification">
+										<_object>
+											<active>true</active>
+											<isPassword>true</isPassword>
+											<toolTip>
+												<_item>再輸入一次密碼</_item>
+											</toolTip>
+											<label>
+												<_item>再輸入一次密碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUser結果:status">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>狀態</_item>
+											</toolTip>
+											<label>
+												<_item>狀態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUser結果:statusMessage">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>狀態訊息</_item>
+											</toolTip>
+											<label>
+												<_item>狀態訊息</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:CreateUser結果:createdUserHome">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建使用者家</_item>
+											</toolTip>
+											<label>
+												<_item>創建使用者家</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:importUsers">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>匯入使用者</_item>
+											</toolTip>
+											<label>
+												<_item>匯入使用者</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+											<iconKey>OpCreateUser</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:importUsers:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Segment:Pane:Op:Tab:importUsers:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ImportUsersParams:item">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>物件</_item>
+											</toolTip>
+											<label>
+												<_item>物件</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ImportUsersParams:itemMimeType">
+										<_object>
+											<active>false</active>
+											<toolTip>
+												<_item>MIME型態</_item>
+											</toolTip>
+											<label>
+												<_item>MIME型態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ImportUsersParams:itemName">
+										<_object>
+											<active>false</active>
+											<toolTip>
+												<_item>物件名稱</_item>
+											</toolTip>
+											<label>
+												<_item>物件名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ImportUsers結果:statusMessage">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>狀態訊息</_item>
+											</toolTip>
+											<label>
+												<_item>狀態訊息</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:refreshItems">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>重新計算和重新整理</_item>
+											</toolTip>
+											<label>
+												<_item>重新計算和重新整理</_item>
+											</label>
+											<order>
+												<_item>300</_item>
+												<_item>0</_item>
+												<_item>500</_item>
+											</order>
+											<iconKey>org:opencrx:kernel:OpRefresh</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:refreshItems:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:refreshItems:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:changePassword">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>變更密碼</_item>
+											</toolTip>
+											<label>
+												<_item>變更密碼</_item>
+											</label>
+											<order>
+												<_item>600</_item>
+												<_item>0</_item>
+												<_item>100</_item>
+											</order>
+											<iconKey>org:opencrx:kernel:OpChangePassword</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:changePassword:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:changePassword:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ChangePasswordParams:oldPassword">
+										<_object>
+											<active>true</active>
+											<isPassword>true</isPassword>
+											<toolTip>
+												<_item>舊密碼</_item>
+											</toolTip>
+											<label>
+												<_item>舊密碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ChangePasswordParams:newPassword">
+										<_object>
+											<active>true</active>
+											<isPassword>true</isPassword>
+											<toolTip>
+												<_item>新密碼</_item>
+											</toolTip>
+											<label>
+												<_item>新密碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ChangePasswordParams:newPasswordVerification">
+										<_object>
+											<active>true</active>
+											<isPassword>true</isPassword>
+											<toolTip>
+												<_item>再輸入一次密碼</_item>
+											</toolTip>
+											<label>
+												<_item>再輸入一次密碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:ChangePassword結果:status">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>狀態</_item>
+											</toolTip>
+											<label>
+												<_item>狀態</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:requestPasswordReset">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>要求重設密碼</_item>
+											</toolTip>
+											<label>
+												<_item>要求重設密碼</_item>
+											</label>
+											<order>
+												<_item>600</_item>
+												<_item>0</_item>
+												<_item>200</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:requestPasswordReset:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:requestPasswordReset:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:210">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>尋找</_item>
+											</toolTip>
+											<label>
+												<_item>尋找</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchBasic">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>尋找</_item>
+											</toolTip>
+											<label>
+												<_item>尋找</_item>
+											</label>
+											<order>
+												<_item>210</_item>
+												<_item>0</_item>
+												<_item>500</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchBasic:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchBasic:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:SearchBasicParams:searchExpression">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>尋找這個</_item>
+											</toolTip>
+											<label>
+												<_item>尋找這個</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchAdvanced">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>進階尋找</_item>
+											</toolTip>
+											<label>
+												<_item>進階尋找</_item>
+											</label>
+											<order>
+												<_item>210</_item>
+												<_item>0</_item>
+												<_item>510</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchAdvanced:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:Pane:Op:Tab:searchAdvanced:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:SearchAdvancedParams:allWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>所有的字</_item>
+											</toolTip>
+											<label>
+												<_item>所有的字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:SearchAdvancedParams:atLeastOneOfTheWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>至少一個字</_item>
+											</toolTip>
+											<label>
+												<_item>至少一個字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:SearchAdvancedParams:withoutWords">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>沒有一個字</_item>
+											</toolTip>
+											<label>
+												<_item>沒有一個字</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:Search結果:objectFinder">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>物件查找器</_item>
+											</toolTip>
+											<label>
+												<_item>物件查找器</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+								</elementDefinition>
+							</_content>
+						</org.openmdx.ui1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
+</org.openmdx.base.Authority>

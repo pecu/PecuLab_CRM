@@ -11,13 +11,12 @@
 							<_object/>
 							<_content>
 								<valueContainer>
-									<org.opencrx.kernel.code1.CodeValueContainer name="locale" _operation="set">
+									<org.opencrx.kernel.code1.CodeValueContainer name="pricingState" _operation="set">
 										<_object>
 											<name>
-												<_item>locale</_item>
-												<_item>org:opencrx:kernel:account1:ExportVCardParams:locale</_item>
-												<_item>org:opencrx:kernel:activity1:ExportICalendarParams:locale</_item>
-												<_item>org:opencrx:kernel:generic:LocalizedField:locale</_item>
+												<_item>pricingState</_item>
+												<_item>org:opencrx:kernel:contract1:SalesContract:pricingState</_item>
+												<_item>org:opencrx:kernel:contract1:SalesContractPosition:pricingState</_item>
 											</name>
 										</_object>
 										<_content>
@@ -25,23 +24,32 @@
 												<org.opencrx.kernel.code1.CodeValueEntry code="00" _operation="set">
 													<_object>
 														<shortText>
-															<_item>en_US</_item>
+															<_item>--無--</_item>
 														</shortText>
 														<longText>
-															<_item> English (en_US)</_item>
+															<_item>--無--</_item>
 														</longText>
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-											</entry>
-											<entry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="01" _operation="set">
+												<org.opencrx.kernel.code1.CodeValueEntry code="10" _operation="set">
 													<_object>
 														<shortText>
-															<_item>zh_TW</_item>
+															<_item>有誤 / 需要重新訂價</_item>
 														</shortText>
 														<longText>
-															<_item> Chinese (zh_TW)</_item>
+															<_item>有誤 / 需要重新訂價</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="20" _operation="set">
+													<_object>
+														<shortText>
+															<_item>完成</_item>
+														</shortText>
+														<longText>
+															<_item>完成</_item>
 														</longText>
 													</_object>
 													<_content/>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:opencrx:kernel:code1" xsi:noNamespaceSchemaLocation="xri://+resource/org/opencrx/kernel/code1/xmi1/code1.xsd">
+	<_object/>
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object/>
+				<_content>
+					<segment>
+						<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
+							<_object/>
+							<_content>
+								<valueContainer>
+									<org.opencrx.kernel.code1.CodeValueContainer name="accountCategory" _operation="set">
+										<_object>
+											<name>
+												<_item>accountCategory</_item>
+												<_item>org:opencrx:kernel:account1:Account:accountCategory</_item>
+												<_item>org:opencrx:kernel:account1:AccountCategoryFilterProperty:accountCategory</_item>
+											</name>
+										</_object>
+										<_content>
+											<entry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
+													<_object>
+														<shortText>
+															<_item>無效</_item>
+														</shortText>
+														<longText>
+															<_item>無效</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="1" _operation="set">
+													<_object>
+														<shortText>
+															<_item>分析者</_item>
+														</shortText>
+														<longText>
+															<_item>分析者</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="2" _operation="set">
+													<_object>
+														<shortText>
+															<_item>综合者</_item>
+														</shortText>
+														<longText>
+															<_item>综合者</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="3" _operation="set">
+													<_object>
+														<shortText>
+															<_item>投資者</_item>
+														</shortText>
+														<longText>
+															<_item>投資者</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="4" _operation="set">
+													<_object>
+														<shortText>
+															<_item>競爭者</_item>
+														</shortText>
+														<longText>
+															<_item>競爭者</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="5" _operation="set">
+													<_object>
+														<shortText>
+															<_item>客戶</_item>
+														</shortText>
+														<longText>
+															<_item>客戶</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="6" _operation="set">
+													<_object>
+														<shortText>
+															<_item>期望</_item>
+														</shortText>
+														<longText>
+															<_item>期望</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="7" _operation="set">
+													<_object>
+														<shortText>
+															<_item>機會</_item>
+														</shortText>
+														<longText>
+															<_item>機會</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="8" _operation="set">
+													<_object>
+														<shortText>
+															<_item>合夥人</_item>
+														</shortText>
+														<longText>
+															<_item>合夥人</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="9" _operation="set">
+													<_object>
+														<shortText>
+															<_item>新聞界</_item>
+														</shortText>
+														<longText>
+															<_item>新聞界</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="10" _operation="set">
+													<_object>
+														<shortText>
+															<_item>商販</_item>
+														</shortText>
+														<longText>
+															<_item>商販</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="11" _operation="set">
+													<_object>
+														<shortText>
+															<_item>批發商</_item>
+														</shortText>
+														<longText>
+															<_item>批發商</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="12" _operation="set">
+													<_object>
+														<shortText>
+															<_item>零售商</_item>
+														</shortText>
+														<longText>
+															<_item>零售商</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="13" _operation="set">
+													<_object>
+														<shortText>
+															<_item>影響者</_item>
+														</shortText>
+														<longText>
+															<_item>影響者</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="14" _operation="set">
+													<_object>
+														<shortText>
+															<_item>顧問</_item>
+														</shortText>
+														<longText>
+															<_item>顧問</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="15" _operation="set">
+													<_object>
+														<shortText>
+															<_item>商機</_item>
+														</shortText>
+														<longText>
+															<_item>商機</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="16" _operation="set">
+													<_object>
+														<shortText>
+															<_item>供應商</_item>
+														</shortText>
+														<longText>
+															<_item>供應商</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="17" _operation="set">
+													<_object>
+														<shortText>
+															<_item>員工</_item>
+														</shortText>
+														<longText>
+															<_item>員工</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="18" _operation="set">
+													<_object>
+														<shortText>
+															<_item>商品销售代理</_item>
+														</shortText>
+														<longText>
+															<_item>商品销售代理</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="100" _operation="set">
+													<_object>
+														<shortText>
+															<_item>其它</_item>
+														</shortText>
+														<longText>
+															<_item>其它</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+											</entry>
+										</_content>
+									</org.opencrx.kernel.code1.CodeValueContainer>
+								</valueContainer>
+							</_content>
+						</org.opencrx.kernel.code1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
+</org.openmdx.base.Authority>

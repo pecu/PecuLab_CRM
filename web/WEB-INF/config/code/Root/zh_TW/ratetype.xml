@@ -11,37 +11,47 @@
 							<_object/>
 							<_content>
 								<valueContainer>
-									<org.opencrx.kernel.code1.CodeValueContainer name="locale" _operation="set">
+									<org.opencrx.kernel.code1.CodeValueContainer name="ratetype" _operation="set">
 										<_object>
 											<name>
-												<_item>locale</_item>
-												<_item>org:opencrx:kernel:account1:ExportVCardParams:locale</_item>
-												<_item>org:opencrx:kernel:activity1:ExportICalendarParams:locale</_item>
-												<_item>org:opencrx:kernel:generic:LocalizedField:locale</_item>
+												<_item>ratetype</_item>
+												<_item>org:opencrx:kernel:activity1:ResourceRate:rateType</_item>
+												<_item>org:opencrx:kernel:activity1:AbstractWorkRecord:rateType</_item>
+												<_item>org:opencrx:kernel:activity1:ActivityAddWorkRecordByDurationParams:rateType</_item>
+												<_item>org:opencrx:kernel:activity1:ResourceAddWorkRecordByDurationParams:rateType</_item>
 											</name>
 										</_object>
 										<_content>
 											<entry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="00" _operation="set">
+												<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
 													<_object>
 														<shortText>
-															<_item>en_US</_item>
+															<_item>--無--</_item>
 														</shortText>
 														<longText>
-															<_item> English (en_US)</_item>
+															<_item>--無--</_item>
 														</longText>
 													</_object>
 													<_content/>
 												</org.opencrx.kernel.code1.CodeValueEntry>
-											</entry>
-											<entry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="01" _operation="set">
+												<org.opencrx.kernel.code1.CodeValueEntry code="1" _operation="set">
 													<_object>
 														<shortText>
-															<_item>zh_TW</_item>
+															<_item>標準</_item>
 														</shortText>
 														<longText>
-															<_item> Chinese (zh_TW)</_item>
+															<_item>標準</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="2" _operation="set">
+													<_object>
+														<shortText>
+															<_item>超時</_item>
+														</shortText>
+														<longText>
+															<_item>超時</_item>
 														</longText>
 													</_object>
 													<_content/>

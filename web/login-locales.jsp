@@ -10,5 +10,6 @@
 	defaultLocale = "en_US";
 
 	activeLocales.put("en_US", "English (United States)");
-  	
+  	activeLocales.put("zh_TW", "Chinese (Traditional)");
+	
 %>

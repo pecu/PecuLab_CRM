@@ -1,0 +1,2052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
+	<_object />
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object />
+				<_content>
+					<segment>
+						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+							<_object />
+							<_content>
+
+								<featureDefinition>
+									<!-- usage 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- usage 530 = Business fax -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*BusinessFax!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- usage 200 = Mobile -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Mobile!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- usage 1800 = Other -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Other!phoneNumberFull">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- usage 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!emailAddress">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<!-- usage 1800 = Other -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Other!emailAddress">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+
+									<!-- usage 500 = Business -->
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalAddressLine">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..n</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalStreet">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..n</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalState">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalCode">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalCity">
+										<_object>
+											<type>org:w3c:string</type>
+											<multiplicity>0..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!postalCountry">
+										<_object>
+											<type>org:w3c:short</type>
+											<multiplicity>1..1</multiplicity>
+											<changeable>true</changeable>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+									<org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:account1:Account:address*Business!authority">
+										<_object>
+										  <type>org:opencrx:kernel:account1:Account</type>
+										  <multiplicity>0..1</multiplicity>
+										  <changeable>true</changeable>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.StructuralFeatureDefinition>
+								</featureDefinition>
+
+								<elementDefinition>
+									<!--Segment Definition -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Segment">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>管理帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>管理帳戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>3</_item>
+											</order>
+											<iconKey>帳戶</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Tab Definitions Pane1 -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Segment:account">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>全部帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>»全部帳戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>500</_item>
+											</order>
+											<maxMember>23</maxMember>
+											<showMaxMember>7</showMaxMember>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>帳戶</_item>
+														</toolTip>
+														<label>
+															<_item>帳戶</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>10</_item>
+														</order>
+														<maxMember>23</maxMember>
+														<showMaxMember>7</showMaxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+
+												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>帳戶 (停用)</_item>
+														</toolTip>
+														<label>
+															<_item>»帳戶 (停用)</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>510</_item>
+														</order>
+														<maxMember>23</maxMember>
+														<showMaxMember>7</showMaxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+
+												<org.openmdx.ui1.AdditionalElementDefinition id="0" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>僅帳戶群</_item>
+														</toolTip>
+														<label>
+															<_item>僅帳戶群</_item>
+														</label>
+														<order>
+															<_item>0</_item>
+															<_item>0</_item>
+															<_item>15</_item>
+														</order>
+														<maxMember>23</maxMember>
+														<showMemberRange>
+															<_item>0:0:0-0:0:7</_item>
+															<_item>0:0:9-0:0:9</_item>
+														</showMemberRange>
+														<showMaxMember>7</showMaxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</order>
+											<iconKey>帳戶</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grid -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:accountMembership">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>關係</_item>
+											</toolTip>
+											<label>
+												<_item>關係</_item>
+											</label>
+											<order>
+												<_item>10</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</order>
+											<maxMember>8</maxMember>
+											<showMemberRange>
+												<_item>0:0:0-0:0:5</_item>
+												<_item>0:0:8-0:0:220</_item>
+											</showMemberRange>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="20" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>會籍</_item>
+														</toolTip>
+														<label>
+															<_item>»會籍</_item>
+														</label>
+														<order>
+															<_item>10</_item>
+															<_item>0</_item>
+															<_item>5</_item>
+														</order>
+														<maxMember>10</maxMember>
+														<showMemberRange>
+															<_item>0:0:0-0:0:220</_item>
+														</showMemberRange>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="30" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>會籍 (深)</_item>
+														</toolTip>
+														<label>
+															<_item>»會員 (深)</_item>
+														</label>
+														<order>
+															<_item>10</_item>
+															<_item>0</_item>
+															<_item>3</_item>
+														</order>
+														<maxMember>11</maxMember>
+														<showMemberRange>
+															<_item>0:0:0-0:0:220</_item>
+														</showMemberRange>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>會籍 (停用)</_item>
+														</toolTip>
+														<label>
+															<_item>»會籍 (停用)</_item>
+														</label>
+														<order>
+															<_item>10</_item>
+															<_item>0</_item>
+															<_item>4</_item>
+														</order>
+														<maxMember>12</maxMember>
+														<showMemberRange>
+															<_item>0:0:0-0:0:220</_item>
+														</showMemberRange>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:assignedAccountAssignment">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配</_item>
+											</label>
+											<order>
+												<_item>10</_item>
+												<_item>0</_item>
+												<_item>70</_item>
+											</order>
+											<maxMember>6</maxMember>
+										</_object>
+										<_content>
+											<additionalElementDefinition>
+												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
+													<_object>
+														<toolTip>
+															<_item>帳戶分配 (停用)</_item>
+														</toolTip>
+														<label>
+															<_item>»帳戶分配 (停用)</_item>
+														</label>
+														<order>
+															<_item>10</_item>
+															<_item>0</_item>
+															<_item>60</_item>
+														</order>
+														<maxMember>6</maxMember>
+													</_object>
+													<_content />
+												</org.openmdx.ui1.AdditionalElementDefinition>
+											</additionalElementDefinition>
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:partner">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>夥伴</_item>
+											</toolTip>
+											<label>
+												<_item>»夥伴</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>97</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:contact">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>聯絡人</_item>
+											</toolTip>
+											<label>
+												<_item>»聯絡人</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>98</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>99</_item>
+												<_item>0</_item>
+												<_item>0</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--grid column definition -->
+									<!--Tab Definition -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Attr:Tab:25">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Field Group Definition -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Attr:Tab:25:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item></_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Attr:Tab:25:Group:20">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item></_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Attr:Tab:25:Group:30">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item></_item>
+											</toolTip>
+											<label>
+												<_item>&amp;nbsp;</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Element Definition w/ composite data binding -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!phoneNumberFull">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?isMain=(boolean)true;usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>公司電話</_item>
+											</toolTip>
+											<label>
+												<_item>公司電話</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>5</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Mobile!phoneNumberFull">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?isMain=(boolean)true;usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>行動電話</_item>
+											</toolTip>
+											<label>
+												<_item>行動電話</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>6</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Other!phoneNumberFull">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?isMain=(boolean)true;usage=(short)1800;automaticParsing=(boolean)true</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>其他電話</_item>
+											</toolTip>
+											<label>
+												<_item>其他電話</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>110</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*BusinessFax!phoneNumberFull">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?isMain=(boolean)true;usage=(short)530;automaticParsing=(boolean)true</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>公司傳真</_item>
+											</toolTip>
+											<label>
+												<_item>公司傳真</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>115</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>115</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!emailAddress">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.EmailAddressDataBinding?isMain=(boolean)true;usage=(short)500;[emailType=(short)1]</dataBindingName>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>公司電子郵件</_item>
+											</toolTip>
+											<label>
+												<_item>公司電子郵件</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>120</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>7</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Other!emailAddress">
+										<_object>
+											<dataBindingName>org.opencrx.kernel.portal.EmailAddressDataBinding?isMain=(boolean)true;usage=(short)1800;[emailType=(short)1]</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>其他電子郵件</_item>
+											</toolTip>
+											<label>
+												<_item>其他電子郵件</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>140</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Attr:Tab:0:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>公司郵寄地址</_item>
+											</toolTip>
+											<label>
+												<_item>公司郵寄地址</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalAddressLine">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500</dataBindingName>
+											<active>true</active>
+											<spanRow>3</spanRow>
+											<multiplicity>0..3</multiplicity> <!-- can be increased if more lines are needed -->
+											<toolTip>
+												<_item>地址欄</_item>
+											</toolTip>
+											<label>
+												<_item>地址欄</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>0</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalStreet">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500</dataBindingName>
+											<active>true</active>
+											<spanRow>2</spanRow>
+											<multiplicity>0..3</multiplicity> <!-- can be increased if more lines are needed -->
+											<toolTip>
+												<_item>郵寄路 / 郵寄信箱</_item>
+											</toolTip>
+											<label>
+												<_item>路 / 郵寄信箱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalState">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>州</_item>
+											</toolTip>
+											<label>
+												<_item>州</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalCode">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>ZIP/郵政編碼</_item>
+											</toolTip>
+											<label>
+												<_item>ZIP/郵政編碼</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalCity">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>城市</_item>
+											</toolTip>
+											<label>
+												<_item>城市</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!postalCountry">
+										<_object>
+											<dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500?zeroAsNull=true</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>國家/地區</_item>
+											</toolTip>
+											<label>
+												<_item>國家/地區</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:address*Business!authority">
+										<_object>
+											 <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;isMain=(boolean)true;usage=(short)500?zeroAsNull=true</dataBindingName>
+											<active>true</active>
+											<toolTip>
+												<_item>權力</_item>
+											</toolTip>
+											<label>
+												<_item>權力</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>60</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Element Definition Tab [Details] -->
+									<!-- picture -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:generic:Pictured:pictureContent">
+										<_object>
+											<active>true</active>
+											<columnBreak>false</columnBreak>
+											<spanRow>7</spanRow>
+											<changeable>false</changeable>
+											<inPlace>true</inPlace>
+											<toolTip>
+												<_item>照片</_item>
+											</toolTip>
+											<label>
+												<_item>照片</_item>
+											</label>
+											<order>
+												<_item>10</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content>
+											<!-- <alternateElementDefinition> <org.openmdx.ui1.AlternateElementDefinition id="0"> <_object> <columnBreak>true</columnBreak> <spanRow>8</spanRow> <changeable>false</changeable> <inPlace>true</inPlace> <toolTip> <_item>Picture</_item> </toolTip> 
+												<label> <_item>Picture</_item> </label> <order> <_item>0</_item> <_item>0</_item> <_item>80</_item> </order> </_object> <_content/> </org.openmdx.ui1.AlternateElementDefinition> </alternateElementDefinition> -->
+										</_content>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:generic:Pictured:picture">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>標題 / 來源</_item>
+											</toolTip>
+											<label>
+												<_item>標題 / 來源</_item>
+											</label>
+											<order>
+												<_item>10</_item>
+												<_item>10</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!--Element Definition Tab [Account] -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:fullName">
+										<_object>
+											<!-- <filterable>false</filterable> -->
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶全名</_item>
+											</toolTip>
+											<label>
+												<_item>全名</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>3</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:aliasName">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶別名</_item>
+											</toolTip>
+											<label>
+												<_item>別名</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>4</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:description">
+										<_object>
+											<active>true</active>
+											<spanRow>2</spanRow>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>9</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:businessType">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>工作類別</_item>
+											</toolTip>
+											<label>
+												<_item>工作類別</_item>
+											</label>
+											<order>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:governmentId">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>身份證</_item>
+											</toolTip>
+											<label>
+												<_item>身份證</_item>
+											</label>
+											<order>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>50</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:accountState">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶狀況</_item>
+											</toolTip>
+											<label>
+												<_item>狀況</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>80</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:accountRating">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶評分</_item>
+											</toolTip>
+											<label>
+												<_item>評分</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>90</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>12</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:accountCategory">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶分類</_item>
+											</toolTip>
+											<label>
+												<_item>分類</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>100</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>12</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:accountType">
+										<_object>
+											<active>true</active>
+											<sortable>false</sortable>
+											<toolTip>
+												<_item>帳戶類型</_item>
+											</toolTip>
+											<label>
+												<_item>類型</_item>
+											</label>
+											<orderFieldGroup>
+												<_item>25</_item>
+												<_item>10</_item>
+												<_item>110</_item>
+											</orderFieldGroup>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>12</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:master">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>大師</_item>
+											</toolTip>
+											<label>
+												<_item>大師</_item>
+											</label>
+											<order>
+												<_item>25</_item>
+												<_item>20</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:vcard">
+										<_object>
+											<active>true</active>
+											<spanRow>10</spanRow>
+											<toolTip>
+												<_item>電子名片</_item>
+											</toolTip>
+											<label>
+												<_item>電子名片</_item>
+											</label>
+											<order>
+												<_item>25</_item>
+												<_item>30</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- AccountAssignment -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountAssignment">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶分配</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AccountAssignment</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grid Tabs -->
+									<!--FieldGroups in General Tab -->
+									<!--Element Definition Contact -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountAssignment:account">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>帳戶</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountAssignment:validFrom">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>有效自</_item>
+											</toolTip>
+											<label>
+												<_item>有效自</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AccountAssignment:validTo">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>有效到</_item>
+											</toolTip>
+											<label>
+												<_item>有效到</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- AssignedAccountAssignment -->
+									<!--Inspector Definitions -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AccountAssignment</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Grid Tabs -->
+									<!--FieldGroups in General Tab -->
+									<!--Element Definition Contact -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:accountAssignmentHolder">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>分配持有人</_item>
+											</toolTip>
+											<label>
+												<_item>分配持有人</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentProduct">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配 [產品]</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配 [產品]</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AccountAssignmentProduct</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentProduct:accountRole">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>角色</_item>
+											</toolTip>
+											<label>
+												<_item>角色</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentActivityGroup">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配 [活動群]</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配 [活動群]</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AssignedAccountAssignmentActivityGroup</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentActivityGroup:accountRole">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>角色</_item>
+											</toolTip>
+											<label>
+												<_item>角色</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentContract">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配 [聯絡人]</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配 [聯絡人]</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AssignedAccountAssignmentContract</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentContract:accountRole">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>角色</_item>
+											</toolTip>
+											<label>
+												<_item>角色</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentInventoryItem">
+										<_object>
+											<active>true</active>
+											<changeable>false</changeable>
+											<toolTip>
+												<_item>帳戶分配 [庫存物料]</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配 [庫存物料]</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>AssignedAccountAssignmentInventoryItem</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignmentInventoryItem:accountRole">
+										<_object>
+											<active>true</active>
+											<filterable>true</filterable>
+											<toolTip>
+												<_item>角色</_item>
+											</toolTip>
+											<label>
+												<_item>角色</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:validFrom">
+										<_object>
+											<columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>有效自</_item>
+											</toolTip>
+											<label>
+												<_item>有效自</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:validTo">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>有效到</_item>
+											</toolTip>
+											<label>
+												<_item>有效到</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:description">
+										<_object>
+											<active>true</active>
+											<columnBreak>true</columnBreak>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:accountAssignment">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>帳戶分配</_item>
+											</toolTip>
+											<label>
+												<_item>帳戶分配</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>20</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:disabled">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>物件已停用</_item>
+											</toolTip>
+											<label>
+												<_item>停用</_item>
+											</label>
+											<order>
+												<_item>900100</_item>
+												<_item>10</_item>
+												<_item>100</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:AssignedAccountAssignment:disabledReason">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>停用原因</_item>
+											</toolTip>
+											<label>
+												<_item>原因</_item>
+											</label>
+											<order>
+												<_item>900100</_item>
+												<_item>10</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Operations -->
+									<!-- Operation Import Parameters are customized in common.xml -->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createLead">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>製作引導</_item>
+											</toolTip>
+											<label>
+												<_item>製作引導</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+											<iconKey>Lead</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createLead:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateLeadParams:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>引導名稱</_item>
+											</toolTip>
+											<label>
+												<_item>引導名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateLeadParams:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateLeadParams:nextStep">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>下一步</_item>
+											</toolTip>
+											<label>
+												<_item>下一步</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateLeadParams:basedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>基於範本</_item>
+											</toolTip>
+											<label>
+												<_item>基於範本</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createLead:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateLeadResult:lead">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>引導</_item>
+											</toolTip>
+											<label>
+												<_item>引導</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createOpportunity">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創造機會</_item>
+											</toolTip>
+											<label>
+												<_item>創造機會</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>60</_item>
+											</order>
+											<iconKey>Opportunity</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createOpportunity:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateOpportunityParams:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>機會名稱</_item>
+											</toolTip>
+											<label>
+												<_item>機會名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateOpportunityParams:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateOpportunityParams:basedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>基於範本</_item>
+											</toolTip>
+											<label>
+												<_item>基於範本</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createOpportunity:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateOpportunityResult:opportunity">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>機會</_item>
+											</toolTip>
+											<label>
+												<_item>機會</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createQuote">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創造引用</_item>
+											</toolTip>
+											<label>
+												<_item>創造引用</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>70</_item>
+											</order>
+											<iconKey>Quote</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createQuote:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateQuoteParams:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>引用名稱</_item>
+											</toolTip>
+											<label>
+												<_item>引用名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateQuoteParams:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateQuoteParams:basedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>基於範本</_item>
+											</toolTip>
+											<label>
+												<_item>基於範本</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createQuote:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateQuoteResult:quote">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>引用</_item>
+											</toolTip>
+											<label>
+												<_item>引用</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createSalesOrder">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建銷售訂單</_item>
+											</toolTip>
+											<label>
+												<_item>創建銷售訂單</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+											<iconKey>SalesOrder</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createSalesOrder:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateSalesOrderParams:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>銷售訂單名稱</_item>
+											</toolTip>
+											<label>
+												<_item>銷售訂單名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateSalesOrderParams:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateSalesOrderParams:basedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>基於範本</_item>
+											</toolTip>
+											<label>
+												<_item>基於範本</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createSalesOrder:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateSalesOrderResult:salesOrder">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>銷售訂單</_item>
+											</toolTip>
+											<label>
+												<_item>銷售訂單</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createInvoice">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>創建收入</_item>
+											</toolTip>
+											<label>
+												<_item>創見收入</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
+											<iconKey>Invoice</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createInvoice:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateInvoiceParams:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>收入名稱</_item>
+											</toolTip>
+											<label>
+												<_item>收入名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateInvoiceParams:description">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateInvoiceParams:basedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>基於範本</_item>
+											</toolTip>
+											<label>
+												<_item>基於範本</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:createInvoice:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>姐果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:CreateInvoiceResult:invoice">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>收入</_item>
+											</toolTip>
+											<label>
+												<_item>收入</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:updateVcard">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>更新電子名片</_item>
+											</toolTip>
+											<label>
+												<_item>更新電子名片</_item>
+											</label>
+											<order>
+												<_item>500</_item>
+												<_item>0</_item>
+												<_item>250</_item>
+											</order>
+											<iconKey>Account</iconKey>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:updateVcard:Group:in">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>輸入</_item>
+											</toolTip>
+											<label>
+												<_item>輸入</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Account:Pane:Op:Tab:updateVcard:Group:result">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>結果</_item>
+											</toolTip>
+											<label>
+												<_item>結果</_item>
+											</label>
+										</_object>
+										<_content />
+									</org.openmdx.ui1.ElementDefinition>
+
+								</elementDefinition>
+							</_content>
+						</org.openmdx.ui1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
+</org.openmdx.base.Authority>

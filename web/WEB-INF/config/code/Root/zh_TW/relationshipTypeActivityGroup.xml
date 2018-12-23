@@ -11,37 +11,22 @@
 							<_object/>
 							<_content>
 								<valueContainer>
-									<org.opencrx.kernel.code1.CodeValueContainer name="locale" _operation="set">
+									<org.opencrx.kernel.code1.CodeValueContainer name="relationshipTypeActivityGroup" _operation="set">
 										<_object>
 											<name>
-												<_item>locale</_item>
-												<_item>org:opencrx:kernel:account1:ExportVCardParams:locale</_item>
-												<_item>org:opencrx:kernel:activity1:ExportICalendarParams:locale</_item>
-												<_item>org:opencrx:kernel:generic:LocalizedField:locale</_item>
+												<_item>relationshipTypeActivityGroup</_item>
+												<_item>org:opencrx:kernel:activity1:ActivityGroupRelationship:relationshipType</_item>
 											</name>
 										</_object>
 										<_content>
 											<entry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="00" _operation="set">
+												<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
 													<_object>
 														<shortText>
-															<_item>en_US</_item>
+															<_item>--無--</_item>
 														</shortText>
 														<longText>
-															<_item> English (en_US)</_item>
-														</longText>
-													</_object>
-													<_content/>
-												</org.opencrx.kernel.code1.CodeValueEntry>
-											</entry>
-											<entry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="01" _operation="set">
-													<_object>
-														<shortText>
-															<_item>zh_TW</_item>
-														</shortText>
-														<longText>
-															<_item> Chinese (zh_TW)</_item>
+															<_item>--無--</_item>
 														</longText>
 													</_object>
 													<_content/>

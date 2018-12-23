@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
+	<_object/>
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object/>
+				<_content>
+					<segment>
+						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+							<_object/>
+							<_content>
+								<elementDefinition>
+									<!--Workflow Process Instance-->
+									<!--Tab Definitions Pane1-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:UserHome:wfProcessInstance">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>未完成 / 完成 工作流</_item>
+											</toolTip>
+											<label>
+												<_item>未完成 / 完成 工作流</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>500</_item>
+											</order>
+											<maxMember>8</maxMember>
+											<showMaxMember>7</showMaxMember>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>工作流進度</_item>
+											</toolTip>
+											<label>
+												<_item>工作流進度</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:Pane:Attr:Tab:0:Group:10">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>額外資訊</_item>
+											</toolTip>
+											<label>
+												<_item>額外資訊</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Element Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:process">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>工作流</_item>
+											</toolTip>
+											<label>
+												<_item>工作流</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:targetObject">
+										<_object>
+										    <active>true</active>
+											<toolTip>
+												<_item>目標物件</_item>
+											</toolTip>
+											<label>
+												<_item>目標物件</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>45</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:parent">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>父工作流進度</_item>
+											</toolTip>
+											<label>
+												<_item>父工作流進度</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:startedOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>開始於</_item>
+											</toolTip>
+											<label>
+												<_item>開始於</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>10</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>2</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:lastActivityOn">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>最後活動在</_item>
+											</toolTip>
+											<label>
+												<_item>最後活動在</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>20</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>4</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:stepCounter">
+										<_object>
+                      <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>計步器</_item>
+											</toolTip>
+											<label>
+												<_item>計步器</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>80</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>6</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:failed">
+										<_object>
+										  <active>true</active>
+											<toolTip>
+												<_item>失敗</_item>
+											</toolTip>
+											<label>
+												<_item>失敗</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>10</_item>
+												<_item>90</_item>
+											</order>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>8</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!--Tab Definitions Pane1-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:actionLog">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>操作日誌條目</_item>
+											</toolTip>
+											<label>
+												<_item>操作日誌條目</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>6</maxMember>
+											<showMaxMember>4</showMaxMember>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:parameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>參數</_item>
+											</toolTip>
+											<label>
+												<_item>參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+											<maxMember>9</maxMember>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstance:childProcessInstance">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>子工作流進度</_item>
+											</toolTip>
+											<label>
+												<_item>子工作流進度</_item>
+											</label>
+											<order>
+												<_item>10</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>8</maxMember>
+											<showMaxMember>7</showMaxMember>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!-- Action Log Entries -->
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfActionLogEntry">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>操作日誌條目</_item>
+											</toolTip>
+											<label>
+												<_item>操作日誌條目</_item>
+											</label>
+											<iconKey>Wf</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--FieldGroups in General Tab-->
+									<!--Element Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfActionLogEntry:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfActionLogEntry:correlation">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>關聯</_item>
+											</toolTip>
+											<label>
+												<_item>關聯</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfActionLogEntry:description">
+										<_object>
+											<active>true</active>
+											<sortable>false</sortable>
+											<spanRow>5</spanRow>
+											<toolTip>
+												<_item>描述</_item>
+											</toolTip>
+											<label>
+												<_item>描述</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfActionLogEntry:modifiedAt">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>上次修改物件的時間和日期</_item>
+											</toolTip>
+											<label>
+												<_item>編輯於</_item>
+											</label>
+											<orderObjectContainer>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</orderObjectContainer>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									
+									<!-- WfProcessInstanceParameter -->
+									<!-- Grid -->
+									<!--Element Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfProcessInstanceParameter:name">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>名稱</_item>
+											</toolTip>
+											<label>
+												<_item>名稱</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfBooleanParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfBooleanParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>布林參數</_item>
+											</toolTip>
+											<label>
+												<_item>布林參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfBooleanParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>布林參數</_item>
+											</toolTip>
+											<label>
+												<_item>布林參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<iconKey>WfBooleanParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfBooleanParameter:booleanValue">
+										<_object>
+									    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>布林值</_item>
+											</toolTip>
+											<label>
+												<_item>布林值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>79</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfIntegerParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfIntegerParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>整數參數</_item>
+											</toolTip>
+											<label>
+												<_item>整數參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfIntegerParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>整數參數</_item>
+											</toolTip>
+											<label>
+												<_item>整數參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>20</_item>
+											</order>
+											<iconKey>WfIntegerParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfIntegerParameter:integerValue">
+										<_object>
+									    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>整數值</_item>
+											</toolTip>
+											<label>
+												<_item>整數值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfDecimalParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDecimalParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>十進位參數</_item>
+											</toolTip>
+											<label>
+												<_item>十進位參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDecimalParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>十進位參數</_item>
+											</toolTip>
+											<label>
+												<_item>十進位參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>30</_item>
+											</order>
+											<iconKey>WfDecimalParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDecimalParameter:decimalValue">
+										<_object>
+										  <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>十進位值</_item>
+											</toolTip>
+											<label>
+												<_item>十進位值</_item>
+											</label>
+											<decimalPlaces>9</decimalPlaces>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfStringParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfStringParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>字串參數</_item>
+											</toolTip>
+											<label>
+												<_item>字串參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfStringParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>字串參數</_item>
+											</toolTip>
+											<label>
+												<_item>字串參數s</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>40</_item>
+											</order>
+											<iconKey>WfStringParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfStringParameter:stringValue">
+										<_object>
+										    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>字串值</_item>
+											</toolTip>
+											<label>
+												<_item>字串值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>78</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfDateParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>日期參數</_item>
+											</toolTip>
+											<label>
+												<_item>日期參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>日期參數</_item>
+											</toolTip>
+											<label>
+												<_item>日期參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>50</_item>
+											</order>
+											<iconKey>WfDateParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateParameter:dateValue">
+										<_object>
+										    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>日期值</_item>
+											</toolTip>
+											<label>
+												<_item>日期值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfDateTimeParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateTimeParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>日期/Time參數</_item>
+											</toolTip>
+											<label>
+												<_item>日期/Time參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateTimeParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>日期/Time參數</_item>
+											</toolTip>
+											<label>
+												<_item>日期/Time參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>60</_item>
+											</order>
+											<iconKey>WfDateTimeParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfDateTimeParameter:dateTimeValue">
+										<_object>
+										    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>日期/Time值</_item>
+											</toolTip>
+											<label>
+												<_item>日期/Time值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfUriParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfUriParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>URI參數</_item>
+											</toolTip>
+											<label>
+												<_item>URI參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfUriParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>URI參數</_item>
+											</toolTip>
+											<label>
+												<_item>URI參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>70</_item>
+											</order>
+											<iconKey>WfUriParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfUriParameter:uriValue">
+										<_object>
+										    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>URI值</_item>
+											</toolTip>
+											<label>
+												<_item>URI值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+
+									<!-- WfReferenceParameter -->
+									<!--FieldGroups in General Tab-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfReferenceParameter:Pane:Attr:Tab:0:Group:0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>參考參數</_item>
+											</toolTip>
+											<label>
+												<_item>參考參數</_item>
+											</label>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<!--Inspector Definitions-->
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfReferenceParameter">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>參考參數</_item>
+											</toolTip>
+											<label>
+												<_item>參考參數</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+											<iconKey>WfReferenceParameter</iconKey>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:home1:WfReferenceParameter:referenceValue">
+										<_object>
+										    <columnBreak>true</columnBreak>
+											<active>true</active>
+											<toolTip>
+												<_item>參考值</_item>
+											</toolTip>
+											<label>
+												<_item>參考值</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+								</elementDefinition>
+							</_content>
+						</org.openmdx.ui1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
+</org.openmdx.base.Authority>
