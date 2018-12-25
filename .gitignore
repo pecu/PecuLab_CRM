@@ -8,4 +8,5 @@
 /apache-tomee/conf/Catalina/
 /hsqldb/crx.properties
 /hsqldb/crx.lck
+/hsqldb/crx.log
 /hsqldb/crx.tmp/
