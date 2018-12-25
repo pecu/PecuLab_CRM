@@ -6,3 +6,6 @@
 /apache-tomee/logs/
 /apache-tomee/temp
 /apache-tomee/conf/Catalina/
+/hsqldb/crx.properties
+/hsqldb/crx.lck
+/hsqldb/crx.tmp/
