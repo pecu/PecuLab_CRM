@@ -110,10 +110,10 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                     <div class="curved container">
                         <h3>Managing Tomcat</h3>
                         <p>For security, access to the <a href="/manager/html">manager webapp</a> is restricted.
-                        Users are defined in:</p>
+			    Users are defined in:</p>
                         <pre>$CATALINA_HOME/conf/tomcat-users.xml</pre>
                         <p>In Tomcat 7.0 access to the manager application is split between
-                           different users. &nbsp; <a href="${tomcatDocUrl}manager-howto.html">Read more...</a></p>
+			    different users. &nbsp; <a href="${tomcatDocUrl}manager-howto.html">Read more...</a></p>
                         <br />
                         <h4><a href="${tomcatDocUrl}RELEASE-NOTES.txt">Release Notes</a></h4>
                         <h4><a href="${tomcatDocUrl}changelog.html">Changelog</a></h4>
@@ -144,7 +144,7 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                         <p>The following mailing lists are available:</p>
                         <ul>
                             <li id="list-announce"><strong><a href="${tomcatUrl}lists.html#tomcat-announce">tomcat-announce</a><br />
-                                Important announcements, releases, security vulnerability notifications. (Low volume).</strong>
+				    Important announcements, releases, security vulnerability notifications. (Low volume).</strong>
                             </li>
                             <li><a href="${tomcatUrl}lists.html#tomcat-users">tomcat-users</a><br />
                                 User support and discussion

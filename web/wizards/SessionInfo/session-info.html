@@ -57,100 +57,100 @@ openMDX (http://www.openmdx.org/)
 <link rel="import" href="../../js/polymer/components/paper-card/paper-card.html"/>
 <link rel="import" href="../../js/polymer/components/paper-input/paper-input-container.html">
 <dom-module id="session-info">
-	<link rel="import" type="css" href="session-info.css">
+    <link rel="import" type="css" href="session-info.css">
     <template>
-		<iron-ajax
-			id="getMetaInf" 
-			url="{{url}}/Api.jsp?xri={{xri}}/getMetaInf" 
-			withcredentials=""
-			handle-as="json"
-			method="GET"
-			on-response="getMetaInfResponse">
-		</iron-ajax>
-		<iron-ajax
-			id="getData"
-			url="{{url}}/Api.jsp?xri={{xri}}/getData" 
-			withcredentials=""
-			handle-as="json"
-			method="GET"
-			on-response="getDataResponse">
-		</iron-ajax>
-		<div class="vertical justified layout">
-			<paper-card elevation="0">
-				<div class="field-group-header card-header">&nbsp;</div>
-				<div class="card-content horizontal justified layout">
-					<div class="field-group vertical layout flex one">
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelProvider}}:</label>
-							<input type="text" is="iron-input" value="{{provider::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelSegment}}:</label>
-							<input type="text" is="iron-input" value="{{segment::input}}">
-						</paper-input-container>				        
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelLoginPrincipal}}:</label>
-							<input type="text" is="iron-input" value="{{data.loginPrincipal::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelLocale}}:</label>
-							<input type="text" is="iron-input" value="{{data.locale::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelUserRole}}:</label>
-							<input type="text" is="iron-input" value="{{data.userRole::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelTimeZone}}:</label>
-							<input type="text" is="iron-input" value="{{data.timeZone::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelSessionId}}:</label>
-							<input type="text" is="iron-input" value="{{data.sessionId::input}}">
-						</paper-input-container>
-					</div>
-				</div>
-			</paper-card>
+	<iron-ajax
+	    id="getMetaInf" 
+	    url="{{url}}/Api.jsp?xri={{xri}}/getMetaInf" 
+	    withcredentials=""
+	    handle-as="json"
+	    method="GET"
+	    on-response="getMetaInfResponse">
+	</iron-ajax>
+	<iron-ajax
+	    id="getData"
+	    url="{{url}}/Api.jsp?xri={{xri}}/getData" 
+	    withcredentials=""
+	    handle-as="json"
+	    method="GET"
+	    on-response="getDataResponse">
+	</iron-ajax>
+	<div class="vertical justified layout">
+	    <paper-card elevation="0">
+		<div class="field-group-header card-header">&nbsp;</div>
+		<div class="card-content horizontal justified layout">
+		    <div class="field-group vertical layout flex one">
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelProvider}}:</label>
+			    <input type="text" is="iron-input" value="{{provider::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelSegment}}:</label>
+			    <input type="text" is="iron-input" value="{{segment::input}}">
+			</paper-input-container>				        
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelLoginPrincipal}}:</label>
+			    <input type="text" is="iron-input" value="{{data.loginPrincipal::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelLocale}}:</label>
+			    <input type="text" is="iron-input" value="{{data.locale::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelUserRole}}:</label>
+			    <input type="text" is="iron-input" value="{{data.userRole::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelTimeZone}}:</label>
+			    <input type="text" is="iron-input" value="{{data.timeZone::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelSessionId}}:</label>
+			    <input type="text" is="iron-input" value="{{data.sessionId::input}}">
+			</paper-input-container>
+		    </div>
 		</div>
+	    </paper-card>
+	</div>
     </template>
 </dom-module>
 <script>
-	Polymer({
-		is: 'session-info',
-		properties: {
-			xri: {
-				type: String
-			},
-			provider: {
-				type: String
-			},
-			segment: {
-				type: String
-			},
-			data: {
-				type: Object
-			},
-			metaInf: {
-				type: Object
-			}
-		},
-		ready: function () {
-			this.$.getMetaInf.generateRequest();
-			this.$.getData.generateRequest();
-		},
-		getDataResponse: function (event, response) {
-			if (response == null || response.response == null) {
-				this.data = null;
-			} else {
-				this.data = response.response;
-			}
-		},
-		getMetaInfResponse: function (event, response) {
-			if (response == null || response.response == null) {
-				this.metaInf = null;
-			} else {
-				this.metaInf = response.response;
-			}
-		}
-	});
+    Polymer({
+	is: 'session-info',
+	properties: {
+	    xri: {
+		type: String
+	    },
+	    provider: {
+		type: String
+	    },
+	    segment: {
+		type: String
+	    },
+	    data: {
+		type: Object
+	    },
+	    metaInf: {
+		type: Object
+	    }
+	},
+	ready: function () {
+	    this.$.getMetaInf.generateRequest();
+	    this.$.getData.generateRequest();
+	},
+	getDataResponse: function (event, response) {
+	    if (response == null || response.response == null) {
+		this.data = null;
+	    } else {
+		this.data = response.response;
+	    }
+	},
+	getMetaInfResponse: function (event, response) {
+	    if (response == null || response.response == null) {
+		this.metaInf = null;
+	    } else {
+		this.metaInf = response.response;
+	    }
+	}
+    });
 </script>

@@ -22,7 +22,7 @@
 @font-face {
     font-family: "Visitor";
     src: url("visitor1.woff") format("woff"),
-		url("visitor1.ttf") format("truetype");
+	url("visitor1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -45,15 +45,15 @@ table,
 address,
 blockquote,
 pre           { background: #FFFFFF;
-				padding:8px 5px 5px;
-				margin:10px; }
+		padding:8px 5px 5px;
+		margin:10px; }
 ul,
 ol,
 dl            { background: #B9C4D0;
-				margin: 10px;
-				padding: 0 0 0 10px;
-				list-style-position: outside;
-				min-height: 1.6em; }
+		margin: 10px;
+		padding: 0 0 0 10px;
+		list-style-position: outside;
+		min-height: 1.6em; }
 ul ul,
 ul ol,
 ol ol,
@@ -69,8 +69,8 @@ li > div:last-child {	margin-bottom: 0 }
 li, 
 dd, 
 dt            { background: white;
-				margin: 0px 0 4px 20px;
-				padding: 8px 0 0 5px; }
+		margin: 0px 0 4px 20px;
+		padding: 8px 0 0 5px; }
 dt            { margin-bottom: 0 }
 dd + dt       { margin-top: 4px; }
 dd            { margin: 2px 0 0 4em }
@@ -87,9 +87,9 @@ td            { height: 1.6em; }
 /* specific HTML elements */
 caption   { text-align: left; }
 img       { margin-right: 5px;
-			border-style: solid;
-			border-color: gray;
-			border-width: 0; }
+	    border-style: solid;
+	    border-color: gray;
+	    border-width: 0; }
 a img     { border-width: 1px; border-color: blue; }
 acronym   { border: 1px solid gray; }
 span      { /*background-color: #eef;*/ }
@@ -116,7 +116,7 @@ br { height: 5px; line-height: 5px; }
 /* labels: block elements; IE9 support ::before: http://stackoverflow.com/questions/7157405/are-css3-after-and-before-pseudo-elements-rendered-by-ie9  */
 div, p, ol, ul, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, blockquote, 
 pre, address {
-	position: relative;
+    position: relative;
 }
 div::before,
 p::before,
@@ -135,13 +135,13 @@ h6::before,
 blockquote::before,
 pre::before,
 address::before {
-	position: absolute;
-	left: -1px;
-	top: -1px;
-	padding: 0px 3px;
-	font: 10px/10px "Visitor", monospace;
-	color: silver;
-	background: rgba(255,255,255,0.5);
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    padding: 0px 3px;
+    font: 10px/10px "Visitor", monospace;
+    color: silver;
+    background: rgba(255,255,255,0.5);
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -168,9 +168,9 @@ h6:hover::before,
 blockquote:hover::before,
 pre:hover::before,
 address:hover::before {
-	color: rgb(65,105,225);
-	background: rgba(255,255,255,0);
-	outline: 1px solid rgba(65,105,225,0.9);
+    color: rgb(65,105,225);
+    background: rgba(255,255,255,0);
+    outline: 1px solid rgba(65,105,225,0.9);
 }
 div::before                          { content: "document division" } /* official names: https://developer.mozilla.org/en/HTML/Element */
 div[class]::before                   { content: "document division type \"" attr(class) "\"" }
@@ -244,23 +244,23 @@ body.short ddress[class]::before     { content: "address." attr(class) }
 ul[class]:not(:empty)::before, body:not(.short) ul:not(:empty)::before,
 ol[class]:not(:empty)::before, body:not(.short) ol:not(:empty)::before,
 dl[class]:not(:empty)::before, body:not(.short) dl:not(:empty)::before {
-	transform: rotate(90deg);
-	-ms-transform: rotate(90deg); /* IE 9 */
-	-webkit-transform: rotate(90deg); /* Safari and Chrome */
-	-o-transform: rotate(90deg); /* Opera 11+ */
-	-moz-transform: rotate(90deg); /* Firefox */
-	transform-origin: bottom left;
-	-ms-transform-origin:  bottom left;
-	-webkit-transform-origin: bottom left;
-	-o-transform-origin: bottom left;
-	-moz-transform-origin: bottom left;
-	top: -11px;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -o-transform: rotate(90deg); /* Opera 11+ */
+    -moz-transform: rotate(90deg); /* Firefox */
+    transform-origin: bottom left;
+    -ms-transform-origin:  bottom left;
+    -webkit-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    top: -11px;
 }
 
 /* labels: inline elements */
 span, strong, b, em, i, a, abbr, acronym, kbd, q, cite, samp, var, del, 
 ins, dfn, code, sup, sub {
-	position: relative;
+    position: relative;
 }
 span:hover::before,
 strong:hover::before,
@@ -281,15 +281,15 @@ dfn:hover::before,
 code:hover::before,
 sup:hover::before,
 sub:hover::before {
-	position: absolute;
-	top: -8px;
-	left: -2px;
-	padding: 0px 3px;
-	font: 10px/10px "Visitor", monospace;
-	hyphens: none; /* chrome: a-href */
-	color: rgb(65,105,225);
-	background: rgba(255,255,255,0.9);
-	outline: 1px solid rgba(65,105,225,0.9);
+    position: absolute;
+    top: -8px;
+    left: -2px;
+    padding: 0px 3px;
+    font: 10px/10px "Visitor", monospace;
+    hyphens: none; /* chrome: a-href */
+    color: rgb(65,105,225);
+    background: rgba(255,255,255,0.9);
+    outline: 1px solid rgba(65,105,225,0.9);
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -393,4 +393,4 @@ dfn:hover,
 code:hover,
 sup:hover,
 sub:hover { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY3DMfPj/////DDDMxIAGMAQYHTMf/kcWAADRgQ4R3lkO7wAAAABJRU5ErkJggg==) bottom left no-repeat,
-				url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }

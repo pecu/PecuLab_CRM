@@ -62,39 +62,39 @@ license.
 <script src="../../../../polymer/components/moment/min/moment-with-locales.min.js"></script>
 <script src="../../../../polymer/components/moment-timezone/builds/moment-timezone-with-data.js"></script>
 <dom-module id="portal-datetime-input">
-	<link rel="import" type="css" href="portal-datetime-input.css">
-	<template>
-		<div class="layout horizontal">
-			<span class="date-formatted">{{dateFormatted}}</span>
-			<template is="dom-if" if="{{!disabled}}">
-				<paper-button on-tap="showDatePickerDialog" class="show-date-picker-button"><iron-icon icon="icons:event"></iron-icon></paper-button>
-			</template>
-			<template is="dom-if" if="{{disabled}}">
-				<span>&nbsp;</span>
-			</template>
-			<paper-dialog id="datePickerDialog" class="paper-date-picker-dialog" on-iron-overlay-closed="dismissDatePickerDialog" style="display:none">
-				<portal-date-picker id="datePicker" value="{{dateTime}}" locale="{{locale}}"></portal-date-picker>
-				<div class="buttons">
-					<paper-button dialog-dismiss>Cancel</paper-button>
-					<paper-button dialog-confirm>OK</paper-button>
-				</div>
-			</paper-dialog>
-			<span class="time-formatted">{{timeFormatted}}</span>
-			<template is="dom-if" if="{{!disabled}}">
-				<paper-button on-tap="showTimePickerDialog" class="show-time-picker-button"><iron-icon icon="icons:schedule"></iron-icon></paper-button>
-			</template>
-			<paper-dialog id="timePickerDialog" class="paper-date-picker-dialog" on-iron-overlay-closed="dismissTimePickerDialog" style="display:none">
-				<portal-time-picker id="timePicker" value="{{dateTime}}" locale="{{locale}}" timezone="{{timezone}}"></portal-time-picker>
-				<div class="buttons">
-					<paper-button dialog-dismiss>Cancel</paper-button>
-					<paper-button dialog-confirm>OK</paper-button>
-				</div>
-			</paper-dialog>
-			<template is="dom-if" if="{{!disabled}}">
-				<paper-button on-tap="clearValue" class="clear-value-button"><iron-icon icon="icons:clear"></iron-icon></paper-button>
-			</template>
+    <link rel="import" type="css" href="portal-datetime-input.css">
+    <template>
+	<div class="layout horizontal">
+	    <span class="date-formatted">{{dateFormatted}}</span>
+	    <template is="dom-if" if="{{!disabled}}">
+		<paper-button on-tap="showDatePickerDialog" class="show-date-picker-button"><iron-icon icon="icons:event"></iron-icon></paper-button>
+	    </template>
+	    <template is="dom-if" if="{{disabled}}">
+		<span>&nbsp;</span>
+	    </template>
+	    <paper-dialog id="datePickerDialog" class="paper-date-picker-dialog" on-iron-overlay-closed="dismissDatePickerDialog" style="display:none">
+		<portal-date-picker id="datePicker" value="{{dateTime}}" locale="{{locale}}"></portal-date-picker>
+		<div class="buttons">
+		    <paper-button dialog-dismiss>Cancel</paper-button>
+		    <paper-button dialog-confirm>OK</paper-button>
 		</div>
-	</template>
+	    </paper-dialog>
+	    <span class="time-formatted">{{timeFormatted}}</span>
+	    <template is="dom-if" if="{{!disabled}}">
+		<paper-button on-tap="showTimePickerDialog" class="show-time-picker-button"><iron-icon icon="icons:schedule"></iron-icon></paper-button>
+	    </template>
+	    <paper-dialog id="timePickerDialog" class="paper-date-picker-dialog" on-iron-overlay-closed="dismissTimePickerDialog" style="display:none">
+		<portal-time-picker id="timePicker" value="{{dateTime}}" locale="{{locale}}" timezone="{{timezone}}"></portal-time-picker>
+		<div class="buttons">
+		    <paper-button dialog-dismiss>Cancel</paper-button>
+		    <paper-button dialog-confirm>OK</paper-button>
+		</div>
+	    </paper-dialog>
+	    <template is="dom-if" if="{{!disabled}}">
+		<paper-button on-tap="clearValue" class="clear-value-button"><iron-icon icon="icons:clear"></iron-icon></paper-button>
+	    </template>
+	</div>
+    </template>
 </dom-module>
 <script>
 /*
@@ -103,98 +103,98 @@ license.
  *
  */
 Polymer({
-	is: 'portal-datetime-input',
-	properties: {
-		locale: {
-			type: String
-		},
-		timezone: {
-			type: String
-		},
-		disabled: {
-			type: Boolean,
-			value: false
-		},
-		dateTime: {
-			type: Date,
-			notify: true,
-			value: function () {
-				return new Date();
-			}
-		},
-		dateFormatted: {
-			type: String,
-			value: ""
-		},
-		timeFormatted: {
-			type: String,
-			value: ""
-		},
-		value: {
-			type: Date,
-			notify: true,
-			observer: "valueChanged",
-		}
+    is: 'portal-datetime-input',
+    properties: {
+	locale: {
+	    type: String
 	},
-	ready: function () {
+	timezone: {
+	    type: String
 	},
-	valueChanged: function () {
-		if (this.value == null) {
-			this.dateFormatted = null;
-			this.timeFormatted = null;
-			this.dateTime = new Date();
-		} else {
-			var m = moment.tz(this.value, this.timezone);
-			m.locale(this.locale);
-			this.dateFormatted = m.format("L");
-			this.timeFormatted = m.format("LT");
-			this.dateTime = new Date(this.value);
-		}
+	disabled: {
+	    type: Boolean,
+	    value: false
 	},
-	clearValue: function () {
-		this.set("value", null);
+	dateTime: {
+	    type: Date,
+	    notify: true,
+	    value: function () {
+		return new Date();
+	    }
 	},
-	dismissDatePickerDialog: function (event) {
-		if (event.detail.confirmed) {
-			var newValue = null;
-			if (this.value == null) {
-				newValue = new Date();
-				newValue.setSeconds(0);
-			} else {
-				newValue = new Date(this.value);
-			}
-			var pickerValue = this.$.datePicker.value;
-			newValue.setUTCFullYear(pickerValue.getUTCFullYear());
-			newValue.setUTCMonth(pickerValue.getUTCMonth());
-			newValue.setUTCDate(pickerValue.getUTCDate());
-			this.set("value", newValue);
-			this.$.datePickerDialog.close();
-		} else if (this.value != null) {
-			this.dateTime = new Date(this.value);
-		}
+	dateFormatted: {
+	    type: String,
+	    value: ""
 	},
-	dismissTimePickerDialog: function (event) {
-		if (event.detail.confirmed) {
-			if (this.value == null) {
-				newValue = new Date();
-				newValue.setSeconds(0);
-			} else {
-				newValue = new Date(this.value);
-			}
-			var pickerValue = this.$.timePicker.value;
-			newValue.setUTCHours(pickerValue.getUTCHours());
-			newValue.setUTCMinutes(pickerValue.getUTCMinutes());
-			this.set("value", newValue);
-			this.$.timePickerDialog.close();
-		} else if (this.value != null) {
-			this.dateTime = new Date(this.value);
-		}
+	timeFormatted: {
+	    type: String,
+	    value: ""
 	},
-	showDatePickerDialog: function () {
-		this.$.datePickerDialog.toggle();
-	},
-	showTimePickerDialog: function () {
-		this.$.timePickerDialog.toggle();
+	value: {
+	    type: Date,
+	    notify: true,
+	    observer: "valueChanged",
 	}
+    },
+    ready: function () {
+    },
+    valueChanged: function () {
+	if (this.value == null) {
+	    this.dateFormatted = null;
+	    this.timeFormatted = null;
+	    this.dateTime = new Date();
+	} else {
+	    var m = moment.tz(this.value, this.timezone);
+	    m.locale(this.locale);
+	    this.dateFormatted = m.format("L");
+	    this.timeFormatted = m.format("LT");
+	    this.dateTime = new Date(this.value);
+	}
+    },
+    clearValue: function () {
+	this.set("value", null);
+    },
+    dismissDatePickerDialog: function (event) {
+	if (event.detail.confirmed) {
+	    var newValue = null;
+	    if (this.value == null) {
+		newValue = new Date();
+		newValue.setSeconds(0);
+	    } else {
+		newValue = new Date(this.value);
+	    }
+	    var pickerValue = this.$.datePicker.value;
+	    newValue.setUTCFullYear(pickerValue.getUTCFullYear());
+	    newValue.setUTCMonth(pickerValue.getUTCMonth());
+	    newValue.setUTCDate(pickerValue.getUTCDate());
+	    this.set("value", newValue);
+	    this.$.datePickerDialog.close();
+	} else if (this.value != null) {
+	    this.dateTime = new Date(this.value);
+	}
+    },
+    dismissTimePickerDialog: function (event) {
+	if (event.detail.confirmed) {
+	    if (this.value == null) {
+		newValue = new Date();
+		newValue.setSeconds(0);
+	    } else {
+		newValue = new Date(this.value);
+	    }
+	    var pickerValue = this.$.timePicker.value;
+	    newValue.setUTCHours(pickerValue.getUTCHours());
+	    newValue.setUTCMinutes(pickerValue.getUTCMinutes());
+	    this.set("value", newValue);
+	    this.$.timePickerDialog.close();
+	} else if (this.value != null) {
+	    this.dateTime = new Date(this.value);
+	}
+    },
+    showDatePickerDialog: function () {
+	this.$.datePickerDialog.toggle();
+    },
+    showTimePickerDialog: function () {
+	this.$.timePickerDialog.toggle();
+    }
 });
 </script>

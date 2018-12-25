@@ -1,10 +1,10 @@
 a {
-	text-decoration: none;
-	color: #EC8D00;
+    text-decoration: none;
+    color: #EC8D00;
 }
 
 a:hover {
-	color: #FF9900;
+    color: #FF9900;
 }
 
 .node {
@@ -12,13 +12,13 @@ a:hover {
 }
 
 html, body {
-	background-color:#1D1D20;
-	height:100%;
-	width:100%;
-	margin: 0; padding: 0;
-	font-family: "Open Sans", "DejaVu Sans Condensed", "lucida sans", tahoma, verdana, arial, sans-serif;
-	font-size:11px;
-	overflow:hidden;
+    background-color:#1D1D20;
+    height:100%;
+    width:100%;
+    margin: 0; padding: 0;
+    font-family: "Open Sans", "DejaVu Sans Condensed", "lucida sans", tahoma, verdana, arial, sans-serif;
+    font-size:11px;
+    overflow:hidden;
 }
 
 #viscontainer {
@@ -34,13 +34,13 @@ html, body {
 }
 
 #left-container {
-	width:250px;
-	height:100%;
-	float:left;
-	margin:0;
-	font-family: "Open Sans", "DejaVu Sans Condensed", "lucida sans", tahoma, verdana, arial, sans-serif;
-	font-size:12px;
-	color: white;
+    width:250px;
+    height:100%;
+    float:left;
+    margin:0;
+    font-family: "Open Sans", "DejaVu Sans Condensed", "lucida sans", tahoma, verdana, arial, sans-serif;
+    font-size:12px;
+    color: white;
 }
 
 #left-container DIV {
@@ -48,30 +48,30 @@ html, body {
 }
 
 #left-container .contained-item {
-	width:100%;
-	height:100%;
-	padding:2px;
+    width:100%;
+    height:100%;
+    padding:2px;
 }
 
 .inner ul {
-	list-style:none;
-	padding:0px;
+    list-style:none;
+    padding:0px;
 }
 
 .inner ul li {
-	padding:1px 5px;
+    padding:1px 5px;
 }
 
 .inner ul li .relation {
-	font-size:10px;
-	text-indent:10px;
-	font-style:italic;
-	margin:5px 0;
+    font-size:10px;
+    text-indent:10px;
+    font-style:italic;
+    margin:5px 0;
 }
 
 .toggler {
-	padding: 5px 0 5px 5px;
-	border-bottom:1px solid #444;
+    padding: 5px 0 5px 5px;
+    border-bottom:1px solid #444;
 }
 
 #right-container {
@@ -101,9 +101,9 @@ html, body {
 }
 
 #infovis {
-	width:100%;
-	height:100%;
-	float:left;
+    width:100%;
+    height:100%;
+    float:left;
     position:relative;
     margin:auto;
     overflow:hidden;

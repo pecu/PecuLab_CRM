@@ -33,59 +33,59 @@ Custom property | Description | Default
 -->
 
 <dom-module id="paper-input-error">
-	<template>
-		<style>
-			:host {
-				display: inline-block;
-				visibility: hidden;
+    <template>
+	<style>
+	    :host {
+		display: inline-block;
+		visibility: hidden;
 
-				color: var(--paper-input-container-invalid-color, --error-color);
+		color: var(--paper-input-container-invalid-color, --error-color);
 
-				@apply(--paper-font-caption);
-				@apply(--paper-input-error);
-				position: absolute;
-				left:0;
-				right:0;
-			}
+		@apply(--paper-font-caption);
+		@apply(--paper-input-error);
+		position: absolute;
+		left:0;
+		right:0;
+	    }
 
-			:host([invalid]) {
-				visibility: visible;
-			};
-		</style>
+	    :host([invalid]) {
+		visibility: visible;
+	    };
+	</style>
 
-		<content></content>
-	</template>
+	<content></content>
+    </template>
 </dom-module>
 
 <script>
-	Polymer({
-		is: 'paper-input-error',
-		behaviors: [
-			Polymer.PaperInputAddonBehavior
-		],
-		properties: {
-			/**
-			 * True if the error is showing.
-			 */
-			invalid: {
-				readOnly: true,
-				reflectToAttribute: true,
-				type: Boolean
-			}
-		},
-		/**
-		 * This overrides the update function in PaperInputAddonBehavior.
-		 * @param {{
-		 *   inputElement: (Element|undefined),
-		 *   value: (string|undefined),
-		 *   invalid: boolean
-		 * }} state -
-		 *     inputElement: The input element.
-		 *     value: The input value.
-		 *     invalid: True if the input value is invalid.
-		 */
-		update: function (state) {
-			this._setInvalid(state.invalid);
-		}
-	});
+    Polymer({
+	is: 'paper-input-error',
+	behaviors: [
+	    Polymer.PaperInputAddonBehavior
+	],
+	properties: {
+	    /**
+	     * True if the error is showing.
+	     */
+	    invalid: {
+		readOnly: true,
+		reflectToAttribute: true,
+		type: Boolean
+	    }
+	},
+	/**
+	 * This overrides the update function in PaperInputAddonBehavior.
+	 * @param {{
+	 *   inputElement: (Element|undefined),
+	 *   value: (string|undefined),
+	 *   invalid: boolean
+	 * }} state -
+	 *     inputElement: The input element.
+	 *     value: The input value.
+	 *     invalid: True if the input value is invalid.
+	 */
+	update: function (state) {
+	    this._setInvalid(state.invalid);
+	}
+    });
 </script>

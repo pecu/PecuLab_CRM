@@ -9,17 +9,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 */
 body {
-	font-family: 'Roboto', 'Noto', sans-serif;
-	font-size: 14px;
-	margin: 0;
-	padding: 24px;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 24px;
 }
 
 section {
-	padding: 20px 0;
+    padding: 20px 0;
 }
 
 section > div {
-	padding: 14px;
-	font-size: 16px;
+    padding: 14px;
+    font-size: 16px;
 }

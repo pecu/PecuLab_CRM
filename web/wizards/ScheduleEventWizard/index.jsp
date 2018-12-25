@@ -52,23 +52,23 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.opencrx.kernel.backend.*,
-		   org.openmdx.application.cci.*,
-		   org.openmdx.base.text.conversion.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.kernel.id.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*,
-		   org.openmdx.kernel.log.*
-		   " %>
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.opencrx.kernel.backend.*,
+	   org.openmdx.application.cci.*,
+	   org.openmdx.base.text.conversion.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.kernel.id.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*,
+	   org.openmdx.kernel.log.*
+	   " %>
 <%!
 
 	public static final int NUM_SLOTS = 8;
@@ -854,7 +854,7 @@
 				org.w3c.spi2.Datatypes.member(org.opencrx.kernel.base.jmi1.SendAlertParams.Member.resendDelayInSeconds, null),    		
 				org.w3c.spi2.Datatypes.member(org.opencrx.kernel.base.jmi1.SendAlertParams.Member.toUsers, notifyVoterUsername),	
 				org.w3c.spi2.Datatypes.member(org.opencrx.kernel.base.jmi1.SendAlertParams.Member.reference, reference)	
-           	);
+		);
 			// get current user's UserHome and send alert
 			org.opencrx.kernel.home1.jmi1.UserHome currentUserHome = (org.opencrx.kernel.home1.jmi1.UserHome)pm.getObjectById(app.getUserHomeIdentityAsPath());
 			currentUserHome.sendAlert(sendAlertParams);
@@ -1346,885 +1346,887 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
-	<head>
-		<title>openCRX - Schedule Event</title>
-		<link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.min.css">	
-		<link rel="stylesheet" href="../../_style/colors.css">
-		<link rel="stylesheet" href="../../_style/n2default.css">
-		<link rel="stylesheet" href="../../_style/ssf.css">
-		<script language="javascript" type="text/javascript" src="../../js/portal-all.js"></script>
-		<script language="javascript" type="text/javascript">
-			var OF = null;
-			try {
-				OF = self.opener.OF;
-			} catch (e) {
-				OF = null;
-			}
-			if (!OF) {
-				OF = new ObjectFinder();
-			}
-		</script>
-		<script language="javascript" type="text/javascript" src="../../js/balloon/balloon.config.js"></script>
-		<script language="javascript" type="text/javascript" src="../../js/balloon/balloon.js"></script>
-		<script language="javascript" type="text/javascript">
-			balloon = new Balloon;
+    <head>
+	<title>openCRX - Schedule Event</title>
+	<link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="../../_style/colors.css">
+	<link rel="stylesheet" href="../../_style/n2default.css">
+	<link rel="stylesheet" href="../../_style/ssf.css">
+	<script language="javascript" type="text/javascript" src="../../js/portal-all.js"></script>
+	<script language="javascript" type="text/javascript">
+	    var OF = null;
+	    try {
+		OF = self.opener.OF;
+	    } catch (e) {
+		OF = null;
+	    }
+	    if (!OF) {
+		OF = new ObjectFinder();
+	    }
+	</script>
+	<script language="javascript" type="text/javascript" src="../../js/balloon/balloon.config.js"></script>
+	<script language="javascript" type="text/javascript" src="../../js/balloon/balloon.js"></script>
+	<script language="javascript" type="text/javascript">
+	    balloon = new Balloon;
 
-			function trim(str) {
-				str = str.replace(/^[ ]+(.*)$/, '$1'); // Trims leading spaces
-				str = str.replace(/^(.*)[ ]+$/, '$1'); // Trims trailing spaces
-				return str;
-			}
+	    function trim(str) {
+		str = str.replace(/^[ ]+(.*)$/, '$1'); // Trims leading spaces
+		str = str.replace(/^(.*)[ ]+$/, '$1'); // Trims trailing spaces
+		return str;
+	    }
 
-			function validateForm(formName) {
-				try {
-					var els = Form.getElements(formName);
-					for (i = 0; i < els.length; i++) {
-						if (els[i].name.indexOf('org:opencrx:kernel:activity1:Activity:name') >= 0) {
-							if (trim(els[i].value).length > 0) {
-								return true;
-							} else {
-								els[i].style.backgroundColor = '#FFB69A';
-								els[i].focus();
-								return false;
-							}
-						}
-					}
-				} catch (e) {
-				}
+	    function validateForm(formName) {
+		try {
+		    var els = Form.getElements(formName);
+		    for (i = 0; i < els.length; i++) {
+			if (els[i].name.indexOf('org:opencrx:kernel:activity1:Activity:name') >= 0) {
+			    if (trim(els[i].value).length > 0) {
 				return true;
+			    } else {
+				els[i].style.backgroundColor = '#FFB69A';
+				els[i].focus();
+				return false;
+			    }
 			}
+		    }
+		} catch (e) {
+		}
+		return true;
+	    }
 
-			function updateCss(theClass, element, value) {
-				var cssRules;
-				if (document.all) {
-					cssRules = 'rules';
-				} else if (document.getElementById) {
-					cssRules = 'cssRules';
-				}
-				for (var S = 0; S < document.styleSheets.length; S++) {
-					for (var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
-						if (document.styleSheets[S][cssRules][R].selectorText == theClass) {
-							document.styleSheets[S][cssRules][R].style[element] = value;
-						}
-					}
-				}
+	    function updateCss(theClass, element, value) {
+		var cssRules;
+		if (document.all) {
+		    cssRules = 'rules';
+		} else if (document.getElementById) {
+		    cssRules = 'cssRules';
+		}
+		for (var S = 0; S < document.styleSheets.length; S++) {
+		    for (var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+			if (document.styleSheets[S][cssRules][R].selectorText == theClass) {
+			    document.styleSheets[S][cssRules][R].style[element] = value;
 			}
-		</script>
-		<link rel='shortcut icon' href='../../images/favicon.ico' />
-		<style>
-			html,body {
-				margin:0;
-				border:0;
-				padding:1;
-				background:white;
-			}
-			fieldset {
-				background-color:#F2F2F2;;
-				margin:10px 0px 10px 0px;
-			}
-			legend span {
-				font-size:14px;
-				vertical-align:baseline;
-			}
-			#wizMonth {
-				text-align:center;
-				white-space:nowrap;
-			}
-			<!-- Schedule -->
-			.schedule {
-				border-collapse:collapse;
-			}
-			#scheduleTable td {
-				vertical-align:top;
-			}
-			#scheduleTable .schedule tr td {
-				white-space:nowrap;
-				vertical-align:middle;
-				padding-right:2px;
-			}
-			#scheduleTable .schedule tr td img {
-				margin-right:8px;
-			}
-			input.bookable {
-				background-color:#C1C1FF;
-			}
-			input.bookable:hover {
-				background-color:#80FF00;
-			}
-			input.booked {
-				background-color:#80FF00;
-			}
-			input.booked:hover {
-				background-color:#FF9900;
-			}
-			input.disabled {
-				background-color:transparent;
-			}
-			input.disabled:hover {
-				background-color:transparent;
-			}
-			.hidden {
-				display:none;
-			}
-			.maxWidth {
-				width:100%;
-			}
-			.slot {
-				width:100%;
-				padding:1px 0;
-				border-style:solid;
-				border-width:1px;
-				border-color:#DDDDDD;
-			}
-			.trigger {
-				vertical-align:middle;
-				cursor:pointer;
-				padding-right:5px;
-			}
-			td.ticks {
-				vertical-align:middle;
-				text-align:right;
-				padding-right:20px;
-			}
-			td.ticks img {
-				vertical-align:top;
-			}
-			td.results {
-				background-color:#F9FB95;
-				border-top:1px solid grey;
-				padding-top:5px;
-				padding-bottom:5px;
-			}
-			#resultRowTop TD, #resultRowTop TH{
-				border-bottom:1px solid #ccc;
-				white-space:nowrap;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<div id="wrap">
-				<div id="header" style="height:90px;">
-					<div id="logoTable">
-						<table id="headerlayout">
-							<tr id="headRow">
-								<td id="head" colspan="2">
-									<table id="info">
-										<tr>
-											<td id="headerCellLeft"><img id="logoLeft" src="../../images/logoLeft.gif" alt="openCRX" title="" /></td>
-											<td id="headerCellSpacerLeft"></td>
-											<td id="headerCellMiddle">&nbsp;</td>
-											<td id="headerCellRight"><img id="logoRight" src="../../images/logoRight.gif" alt="" title="" /></td>
-										</tr>
-									</table>
-								</td>
+		    }
+		}
+	    }
+	</script>
+	<link rel='shortcut icon' href='../../images/favicon.ico' />
+	<style>
+	    html,body {
+		margin:0;
+		border:0;
+		padding:1;
+		background:white;
+	    }
+	    fieldset {
+		background-color:#F2F2F2;;
+		margin:10px 0px 10px 0px;
+	    }
+	    legend span {
+		font-size:14px;
+		vertical-align:baseline;
+	    }
+	    #wizMonth {
+		text-align:center;
+		white-space:nowrap;
+	    }
+	    <!-- Schedule -->
+	    .schedule {
+		border-collapse:collapse;
+	    }
+	    #scheduleTable td {
+		vertical-align:top;
+	    }
+	    #scheduleTable .schedule tr td {
+		white-space:nowrap;
+		vertical-align:middle;
+		padding-right:2px;
+	    }
+	    #scheduleTable .schedule tr td img {
+		margin-right:8px;
+	    }
+	    input.bookable {
+		background-color:#C1C1FF;
+	    }
+	    input.bookable:hover {
+		background-color:#80FF00;
+	    }
+	    input.booked {
+		background-color:#80FF00;
+	    }
+	    input.booked:hover {
+		background-color:#FF9900;
+	    }
+	    input.disabled {
+		background-color:transparent;
+	    }
+	    input.disabled:hover {
+		background-color:transparent;
+	    }
+	    .hidden {
+		display:none;
+	    }
+	    .maxWidth {
+		width:100%;
+	    }
+	    .slot {
+		width:100%;
+		padding:1px 0;
+		border-style:solid;
+		border-width:1px;
+		border-color:#DDDDDD;
+	    }
+	    .trigger {
+		vertical-align:middle;
+		cursor:pointer;
+		padding-right:5px;
+	    }
+	    td.ticks {
+		vertical-align:middle;
+		text-align:right;
+		padding-right:20px;
+	    }
+	    td.ticks img {
+		vertical-align:top;
+	    }
+	    td.results {
+		background-color:#F9FB95;
+		border-top:1px solid grey;
+		padding-top:5px;
+		padding-bottom:5px;
+	    }
+	    #resultRowTop TD, #resultRowTop TH{
+		border-bottom:1px solid #ccc;
+		white-space:nowrap;
+	    }
+	</style>
+    </head>
+    <body>
+	<div id="container">
+	    <div id="wrap">
+		<div id="header" style="height:90px;">
+		    <div id="logoTable">
+			<table id="headerlayout">
+			    <tr id="headRow">
+				<td id="head" colspan="2">
+				    <table id="info">
+					<tr>
+					    <td id="headerCellLeft"><img id="logoLeft" src="../../images/logoLeft.gif" alt="openCRX" title="" /></td>
+					    <td id="headerCellSpacerLeft"></td>
+					    <td id="headerCellMiddle">&nbsp;</td>
+					    <td id="headerCellRight"><img id="logoRight" src="../../images/logoRight.gif" alt="" title="" /></td>
+					</tr>
+				    </table>
+				</td>
+			    </tr>
+			</table>
+		    </div>
+		</div>
+		<div id="content-wrap">
+		    <div id="content" style="padding:100px 0.5em 0px 0.5em;">
+			<a name="<%= ANCHOR_TOP %>"></a>
+			<div id="printButton" style="background-color:transparent;" onClick="javascript:yuiPrint();">&nbsp;</div>
+			<h1><%= bundle.get("GeneralLabel") %></h1>
+			<form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" method="post" accept-charset="UTF-8" action="<%= "../.." + request.getServletPath() %>">
+			    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
+			    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= objectXri %>" />
+			    <input type="hidden" id="Mode" name="Mode" value="<%= formValues.get("Mode") %>" />
+			    <input type="hidden" id="Command" readonly name="Command" value="" />
+			    <%= bundle.get("WizardDescription") %>
+			    <div>&nbsp;</div>
+			    <fieldset>
+				<a name="<%= ANCHOR_CALENDAR %>"></a>
+				<legend><span><%= bundle.get("EventLabel") %></span></legend>
+				<%
+									if(!isEditMode) {
+				%>
+				<%= bundle.get("EMailCreatorDescription") %>
+				<table class="fieldGroup">
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("EMailCreatorLabel") %>:</span>
+					</td>
+					<td>
+					    <select id="emailCreator" name="emailCreator" class="valueL">
+						<%
+																org.opencrx.kernel.activity1.jmi1.ActivityType activityTypeEMails = org.opencrx.kernel.backend.Activities.getInstance().findActivityType(
+																	org.opencrx.kernel.backend.Activities.ACTIVITY_TYPE_NAME_EMAILS,
+																	activitySegment,
+																	pm
+																);
+																org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery emailCreatorQuery =
+																	(org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityCreator.class);
+																emailCreatorQuery.thereExistsActivityType().equalTo(activityTypeEMails);
+																emailCreatorQuery.orderByName().ascending();
+																for(Iterator i = activitySegment.getActivityCreator(emailCreatorQuery).iterator(); i.hasNext(); ) {
+																	org.opencrx.kernel.activity1.jmi1.ActivityCreator emailCreator = (org.opencrx.kernel.activity1.jmi1.ActivityCreator)i.next();
+						%>
+						<option <%= emailCreator.refGetPath().equals(formValues.get("emailCreator")) ? "selected" : "" %> value="<%= emailCreator.refMofId() %>"><%= new ObjectReference(emailCreator, app).getTitle() %></option>
+						<%
+																}
+						%>
+					    </select>
+					</td>
+					<td class="gap"/>
+				    </tr>
+				</table>
+				<div>&nbsp;</div>
+				<%
+									}
+									form.paint(
+										p,
+										null, // frame
+										true // forEditing
+									);
+									p.flush();
+
+				%>
+				<div>&nbsp;</div>
+			    </fieldset>
+			    <%
+							    // Dates and Times
+							    GregorianCalendar today = new GregorianCalendar(app.getCurrentLocale());
+							    today.setTimeZone(TimeZone.getTimeZone(app.getCurrentTimeZone()));
+							    Integer calendarYear = formValues.get("calendar.year") != null ?
+								    (Integer)formValues.get("calendar.year") :
+								    today.get(GregorianCalendar.YEAR);
+							    Integer calendarMonth = formValues.get("calendar.month") != null ?
+								    (Integer)formValues.get("calendar.month") :
+								    today.get(GregorianCalendar.MONTH);
+							    GregorianCalendar calendar = new GregorianCalendar(app.getCurrentLocale());
+							    calendar.setTimeZone(TimeZone.getTimeZone(app.getCurrentTimeZone()));
+							    calendar.setMinimalDaysInFirstWeek(4); // this conforms to DIN 1355/ISO 8601
+							    calendar.set(GregorianCalendar.YEAR, calendarYear);
+							    calendar.set(GregorianCalendar.MONTH, calendarMonth);
+							    calendar.set(GregorianCalendar.DAY_OF_MONTH, 1);
+							    SimpleDateFormat monthFormat = new java.text.SimpleDateFormat("MMMM", app.getCurrentLocale());
+							    SimpleDateFormat dayInWeekFormat = new java.text.SimpleDateFormat("E", app.getCurrentLocale());
+							    org.opencrx.kernel.activity1.jmi1.ActivityCreator tentativeCreator = null;
+			    %>
+
+			    <!-- Event Schedule -->
+			    <fieldset>
+				<legend><span><%= bundle.get("EventScheduleLabel") %></span></legend>
+				<div>&nbsp;</div>
+				<%= bundle.get("EventTrackerLabel") %>:
+				<select id="eventTracker" name="eventTracker" onchange="javascript:$('RefreshCal.Button').click();">
+				    <option value=""><%= bundle.get("PleaseSelect") %></option>
+				    <%
+										    org.opencrx.kernel.activity1.cci2.ActivityTrackerQuery eventTrackerQuery =
+											    (org.opencrx.kernel.activity1.cci2.ActivityTrackerQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityTracker.class);
+										    eventTrackerQuery.orderByName().ascending();
+										    for(Iterator i = activitySegment.getActivityTracker(eventTrackerQuery).iterator(); i.hasNext(); ) {
+											    org.opencrx.kernel.activity1.jmi1.ActivityTracker eventTracker = (org.opencrx.kernel.activity1.jmi1.ActivityTracker)i.next();
+											    boolean isSelectedTracker = eventTracker.refGetPath().equals(formValues.get("eventTracker"));
+											    if(isSelectedTracker) {
+												    try {
+													    tentativeCreator = eventTracker.getDefaultCreator();
+												    } catch (Exception e) {}
+											    }
+				    %>
+				    <option <%= isSelectedTracker ? "selected" : "none" %> value="<%= eventTracker.refGetPath().toXRI() %>"><%= new ObjectReference(eventTracker, app).getTitle() %></option>
+				    <%
+										    }
+				    %>
+				</select>
+				<%
+									if(tentativeCreator != null) {
+				%>
+				(<%= bundle.get("TentativeEventCreatorLabel") %>: <%= tentativeCreator.getName() != null ? tentativeCreator.getName() : "?" %>)
+				<%
+									}
+				%>
+				<div>&nbsp;</div>
+				<table id="scheduleTable">
+				    <tr>
+					<!--  Calendar -->
+					<td>
+					    <table>
+						<tr><td>
+							<div id="wizMonth" style="width:100%;">
+							    <table style="width:100%;">
+								<tr>
+								    <td>
+									<input id="Button.PrevYear" name="PrevYear" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&lt;&lt;" onclick="<%= SUBMIT_HANDLER %>" />
+									<input id="Button.PrevMonth" name="PrevMonth" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&nbsp;&nbsp;&lt;&nbsp;" onclick="<%= SUBMIT_HANDLER %>"  />
+								    </td>
+								    <td style="width:100%;vertical-align:middle;">
+									<span style="font-weight:bold;">&nbsp;<%= monthFormat.format(calendar.getTime()) + " " + calendarYear %>&nbsp;</span>
+								    </td>
+								    <td>
+									<input id="Button.NextMonth" name="NextMonth" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&nbsp;&gt;&nbsp;&nbsp;" onclick="<%= SUBMIT_HANDLER %>" />
+									<input id="Button.NextYear" name="NextYear" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&gt;&gt;" onclick="<%= SUBMIT_HANDLER %>"  />
+									<input type="hidden" name="calendar.year" tabindex="<%= tabIndex++ %>" value="<%= calendarYear %>"/>
+									<input type="hidden" name="calendar.month" tabindex="<%= tabIndex++ %>" value="<%= calendarMonth %>"/>
+								    </td>
+								</tr>
+							    </table>
+							</div>
+						    </td></tr>
+						<tr><td>
+							<table id="calWizard" cellspacing="1">
+							    <thead>
+								<tr>
+								    <th style="text-align:center;padding:0px 10px;font-size:7pt;">#</th>
+									<%
+																						GregorianCalendar dayInWeekCalendar = (GregorianCalendar)calendar.clone();
+																						while(dayInWeekCalendar.get(GregorianCalendar.DAY_OF_WEEK) != dayInWeekCalendar.getFirstDayOfWeek()) {
+																							dayInWeekCalendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
+																						}
+																						for(int i = 0; i < 7; i++) {
+									%>
+								    <th style="text-align:right;font-size:7pt;"><%= dayInWeekFormat.format(dayInWeekCalendar.getTime()) %>&nbsp;</th>
+									<%
+																							dayInWeekCalendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
+																						}
+									%>
+								</tr>
+							    </thead>
+							    <tbody>
+								<%
+																				Date yesterday = new Date(System.currentTimeMillis() - 86400000L);
+																				while(calendar.get(GregorianCalendar.MONTH) == calendarMonth) {
+								%>
+								<tr>
+								    <td style="text-align:right;font-size:7pt;vertical-align:middle;padding:0px 10px;"><%= calendar.get(GregorianCalendar.WEEK_OF_YEAR) %></td>
+								    <%
+																						    for(int i = 0; i < 7; i++) {
+																							    dayOfMonth = calendar.get(GregorianCalendar.DAY_OF_MONTH);
+																							    if(((i + calendar.getFirstDayOfWeek() - 1) % 7 + 1) != calendar.get(GregorianCalendar.DAY_OF_WEEK)) {
+								    %>
+								    <td>&nbsp;</td>
+								    <%
+																							    }
+																							    else {
+																								    if(calendar.get(GregorianCalendar.MONTH) != calendarMonth) {
+								    %>
+								    <td>&nbsp;</td>
+								    <%
+																								    }
+																								    else if(calendar.getTime().compareTo(yesterday) < 0) {
+								    %>
+								    <td style="text-align:right;"><input type="button" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> disabled" disabled /></td>
+									<%
+																									}
+																									else {
+																									String dateAsString = getDateAsString(
+																									calendarYear,
+																									calendarMonth + 1,
+																									dayOfMonth
+																									);
+																									if(selectedDates.contains(dateAsString)) {
+																									dateIndex = selectedDates.indexOf(dateAsString);
+									%>
+								    <td style="text-align:right;"><input id="DeleteDate.<%= dateIndex %>.Button" tabindex="<%= tabIndex++ %>" name="DeleteDate.<%= dateIndex %>" type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> booked" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" onclick="<%= SUBMIT_HANDLER %>"/></td>
+									<%
+																									}
+																									else {
+									%>
+								    <td style="text-align:right;"><input id="AddDate.<%= dayOfMonth %>.Button" tabindex="<%= tabIndex++ %>" name="AddDate.<%= dayOfMonth %>" type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> bookable" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" onclick="<%= SUBMIT_HANDLER %>"/></td>
+									<%
+																									}
+																									}
+																									calendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
+																								}
+																							}
+									%>
+								</tr>
+								<%
+																				}
+								%>
+							    </tbody>
+							</table>
+						    </td></tr>
+					    </table>
+					</td>
+					<td><img src="../../images/spacer.gif" height="20" width="50"/></td>
+					<!-- Selected dates -->
+					<td class="maxWidth">
+					    <%
+													    boolean makeHiddenVisible = false;
+													    if(!selectedDates.isEmpty()) {
+														    // Retrieve all events of eventTracker where scheduleStart/scheduledEnd
+														    // overlaps the period [first selected date, last selected date]
+														    org.w3c.format.DateTimeFormat dateFormat = org.w3c.format.DateTimeFormat.BASIC_UTC_FORMAT;
+														    Date start = new Date(getDateAsCalendar((String)selectedDates.get(0), app).getTime().getTime() - 86400000L);
+														    Date end = new Date(getDateAsCalendar((String)selectedDates.get(selectedDates.size() - 1), app).getTime().getTime() + 86400000L);
+														    org.opencrx.kernel.activity1.cci2.ActivityQuery eventQuery =
+															    (org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
+														    eventQuery.thereExistsScheduledStart().lessThanOrEqualTo(end);
+														    eventQuery.thereExistsScheduledEnd().greaterThanOrEqualTo(start);
+														    eventQuery.forAllDisabled().isFalse();
+														    org.opencrx.kernel.activity1.jmi1.ActivityTracker eventTracker = formValues.get("eventTracker") != null ? 
+															    (org.opencrx.kernel.activity1.jmi1.ActivityTracker)pm.getObjectById(
+																    formValues.get("eventTracker")
+															    ) : null;
+														    List events = eventTracker == null ?
+															    Collections.EMPTY_LIST :
+															    eventTracker.getFilteredActivity(eventQuery);
+					    %>
+					    <div>
+						<table class="schedule maxWidth">
+						    <thead>
+							<tr>
+							    <th colspan="2"><%= timezone.getID() %></th>
+								<%
+																					for(int i = 0; i < NUM_SLOTS; i++) {
+								%>
+							    <th <%= i >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>><%= bundle.get("Slot") + "&nbsp;" + (i+1) %></th>
+							    <th <%= i >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %> style="text-align:right;"><%= i+1 == NUM_SLOTS_INITIALLY_VISIBLE ? "<input id=\"Button.ExpandSlots\" name=\"ExpandSlots\" type=\"button\" tabindex=\"" + (tabIndex++) + "\" class=\"" + CssClass.btn.toString() + " " + CssClass.btnDefault.toString() + "\" value=\"&gt;&gt;\" onclick=\"javascript:updateCss('.hidden', 'display', '');this.style.display='none';return false;\"  />" : "" %></th>
+								<%
+																					}
+								%>
 							</tr>
-						</table>
-					</div>
-				</div>
-				<div id="content-wrap">
-					<div id="content" style="padding:100px 0.5em 0px 0.5em;">
-						<a name="<%= ANCHOR_TOP %>"></a>
-						<div id="printButton" style="background-color:transparent;" onClick="javascript:yuiPrint();">&nbsp;</div>
-						<h1><%= bundle.get("GeneralLabel") %></h1>
-						<form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" method="post" accept-charset="UTF-8" action="<%= "../.." + request.getServletPath() %>">
-							<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
-							<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= objectXri %>" />
-							<input type="hidden" id="Mode" name="Mode" value="<%= formValues.get("Mode") %>" />
-							<input type="hidden" id="Command" readonly name="Command" value="" />
-							<%= bundle.get("WizardDescription") %>
-							<div>&nbsp;</div>
-							<fieldset>
-								<a name="<%= ANCHOR_CALENDAR %>"></a>
-								<legend><span><%= bundle.get("EventLabel") %></span></legend>
-								<%
-													if(!isEditMode) {
-								%>
-								<%= bundle.get("EMailCreatorDescription") %>
-								<table class="fieldGroup">
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("EMailCreatorLabel") %>:</span>
-										</td>
-										<td>
-											<select id="emailCreator" name="emailCreator" class="valueL">
-												<%
-																						org.opencrx.kernel.activity1.jmi1.ActivityType activityTypeEMails = org.opencrx.kernel.backend.Activities.getInstance().findActivityType(
-																							org.opencrx.kernel.backend.Activities.ACTIVITY_TYPE_NAME_EMAILS,
-																							activitySegment,
-																							pm
-																						);
-																						org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery emailCreatorQuery =
-																							(org.opencrx.kernel.activity1.cci2.ActivityCreatorQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityCreator.class);
-																						emailCreatorQuery.thereExistsActivityType().equalTo(activityTypeEMails);
-																						emailCreatorQuery.orderByName().ascending();
-																						for(Iterator i = activitySegment.getActivityCreator(emailCreatorQuery).iterator(); i.hasNext(); ) {
-																							org.opencrx.kernel.activity1.jmi1.ActivityCreator emailCreator = (org.opencrx.kernel.activity1.jmi1.ActivityCreator)i.next();
-												%>
-												<option <%= emailCreator.refGetPath().equals(formValues.get("emailCreator")) ? "selected" : "" %> value="<%= emailCreator.refMofId() %>"><%= new ObjectReference(emailCreator, app).getTitle() %></option>
-												<%
-																						}
-												%>
-											</select>
-										</td>
-										<td class="gap"/>
-									</tr>
-								</table>
-								<div>&nbsp;</div>
-								<%
-													}
-													form.paint(
-														p,
-														null, // frame
-														true // forEditing
-													);
-													p.flush();
-
-								%>
-								<div>&nbsp;</div>
-							</fieldset>
+						    </thead>
+						    <tbody>
 							<%
-											// Dates and Times
-											GregorianCalendar today = new GregorianCalendar(app.getCurrentLocale());
-											today.setTimeZone(TimeZone.getTimeZone(app.getCurrentTimeZone()));
-											Integer calendarYear = formValues.get("calendar.year") != null ?
-												(Integer)formValues.get("calendar.year") :
-												today.get(GregorianCalendar.YEAR);
-											Integer calendarMonth = formValues.get("calendar.month") != null ?
-												(Integer)formValues.get("calendar.month") :
-												today.get(GregorianCalendar.MONTH);
-											GregorianCalendar calendar = new GregorianCalendar(app.getCurrentLocale());
-											calendar.setTimeZone(TimeZone.getTimeZone(app.getCurrentTimeZone()));
-											calendar.setMinimalDaysInFirstWeek(4); // this conforms to DIN 1355/ISO 8601
-											calendar.set(GregorianCalendar.YEAR, calendarYear);
-											calendar.set(GregorianCalendar.MONTH, calendarMonth);
-											calendar.set(GregorianCalendar.DAY_OF_MONTH, 1);
-											SimpleDateFormat monthFormat = new java.text.SimpleDateFormat("MMMM", app.getCurrentLocale());
-											SimpleDateFormat dayInWeekFormat = new java.text.SimpleDateFormat("E", app.getCurrentLocale());
-											org.opencrx.kernel.activity1.jmi1.ActivityCreator tentativeCreator = null;
-							%>
-
-							<!-- Event Schedule -->
-							<fieldset>
-								<legend><span><%= bundle.get("EventScheduleLabel") %></span></legend>
-								<div>&nbsp;</div>
-								<%= bundle.get("EventTrackerLabel") %>:
-								<select id="eventTracker" name="eventTracker" onchange="javascript:$('RefreshCal.Button').click();">
-									<option value=""><%= bundle.get("PleaseSelect") %></option>
-									<%
-															org.opencrx.kernel.activity1.cci2.ActivityTrackerQuery eventTrackerQuery =
-																(org.opencrx.kernel.activity1.cci2.ActivityTrackerQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityTracker.class);
-															eventTrackerQuery.orderByName().ascending();
-															for(Iterator i = activitySegment.getActivityTracker(eventTrackerQuery).iterator(); i.hasNext(); ) {
-																org.opencrx.kernel.activity1.jmi1.ActivityTracker eventTracker = (org.opencrx.kernel.activity1.jmi1.ActivityTracker)i.next();
-																boolean isSelectedTracker = eventTracker.refGetPath().equals(formValues.get("eventTracker"));
-																if(isSelectedTracker) {
-																	try {
-																		tentativeCreator = eventTracker.getDefaultCreator();
-																	} catch (Exception e) {}
-																}
-									%>
-									<option <%= isSelectedTracker ? "selected" : "none" %> value="<%= eventTracker.refGetPath().toXRI() %>"><%= new ObjectReference(eventTracker, app).getTitle() %></option>
-									<%
-															}
-									%>
-								</select>
-								<%
-													if(tentativeCreator != null) {
-								%>
-								(<%= bundle.get("TentativeEventCreatorLabel") %>: <%= tentativeCreator.getName() != null ? tentativeCreator.getName() : "?" %>)
-								<%
-													}
-								%>
-								<div>&nbsp;</div>
-								<table id="scheduleTable">
-									<tr>
-										<!--  Calendar -->
-										<td>
-											<table>
-												<tr><td>
-														<div id="wizMonth" style="width:100%;">
-															<table style="width:100%;">
-																<tr>
-																	<td>
-																		<input id="Button.PrevYear" name="PrevYear" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&lt;&lt;" onclick="<%= SUBMIT_HANDLER %>" />
-																		<input id="Button.PrevMonth" name="PrevMonth" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&nbsp;&nbsp;&lt;&nbsp;" onclick="<%= SUBMIT_HANDLER %>"  />
-																	</td>
-																	<td style="width:100%;vertical-align:middle;">
-																		<span style="font-weight:bold;">&nbsp;<%= monthFormat.format(calendar.getTime()) + " " + calendarYear %>&nbsp;</span>
-																	</td>
-																	<td>
-																		<input id="Button.NextMonth" name="NextMonth" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&nbsp;&gt;&nbsp;&nbsp;" onclick="<%= SUBMIT_HANDLER %>" />
-																		<input id="Button.NextYear" name="NextYear" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&gt;&gt;" onclick="<%= SUBMIT_HANDLER %>"  />
-																		<input type="hidden" name="calendar.year" tabindex="<%= tabIndex++ %>" value="<%= calendarYear %>"/>
-																		<input type="hidden" name="calendar.month" tabindex="<%= tabIndex++ %>" value="<%= calendarMonth %>"/>
-																	</td>
-																</tr>
-															</table>
-														</div>
-													</td></tr>
-												<tr><td>
-														<table id="calWizard" cellspacing="1">
-															<thead>
-																<tr>
-																	<th style="text-align:center;padding:0px 10px;font-size:7pt;">#</th>
-																		<%
-																															GregorianCalendar dayInWeekCalendar = (GregorianCalendar)calendar.clone();
-																															while(dayInWeekCalendar.get(GregorianCalendar.DAY_OF_WEEK) != dayInWeekCalendar.getFirstDayOfWeek()) {
-																																dayInWeekCalendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
-																															}
-																															for(int i = 0; i < 7; i++) {
-																		%>
-																	<th style="text-align:right;font-size:7pt;"><%= dayInWeekFormat.format(dayInWeekCalendar.getTime()) %>&nbsp;</th>
-																		<%
-																																dayInWeekCalendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
-																															}
-																		%>
-																</tr>
-															</thead>
-															<tbody>
-																<%
-																												Date yesterday = new Date(System.currentTimeMillis() - 86400000L);
-																												while(calendar.get(GregorianCalendar.MONTH) == calendarMonth) {
-																%>
-																<tr>
-																	<td style="text-align:right;font-size:7pt;vertical-align:middle;padding:0px 10px;"><%= calendar.get(GregorianCalendar.WEEK_OF_YEAR) %></td>
-																	<%
-																															for(int i = 0; i < 7; i++) {
-																																dayOfMonth = calendar.get(GregorianCalendar.DAY_OF_MONTH);
-																																if(((i + calendar.getFirstDayOfWeek() - 1) % 7 + 1) != calendar.get(GregorianCalendar.DAY_OF_WEEK)) {
-																	%>
-																	<td>&nbsp;</td>
-																	<%
-																																}
-																																else {
-																																	if(calendar.get(GregorianCalendar.MONTH) != calendarMonth) {
-																	%>
-																	<td>&nbsp;</td>
-																	<%
-																																	}
-																																	else if(calendar.getTime().compareTo(yesterday) < 0) {
-																	%>
-																	<td style="text-align:right;"><input type="button" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> disabled" disabled /></td>
-																		<%
-																																		}
-																																		else {
-																																			String dateAsString = getDateAsString(
-																																				calendarYear,
-																																				calendarMonth + 1,
-																																				dayOfMonth
-																																			);
-																																			if(selectedDates.contains(dateAsString)) {
-																																				dateIndex = selectedDates.indexOf(dateAsString);
-																		%>
-																	<td style="text-align:right;"><input id="DeleteDate.<%= dateIndex %>.Button" tabindex="<%= tabIndex++ %>" name="DeleteDate.<%= dateIndex %>" type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> booked" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" onclick="<%= SUBMIT_HANDLER %>"/></td>
-																		<%
-																																			}
-																																			else {
-																		%>
-																	<td style="text-align:right;"><input id="AddDate.<%= dayOfMonth %>.Button" tabindex="<%= tabIndex++ %>" name="AddDate.<%= dayOfMonth %>" type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> bookable" value="<%= dayOfMonth < 10 ? "  " : "" %><%= dayOfMonth %>&nbsp;" onclick="<%= SUBMIT_HANDLER %>"/></td>
-																		<%
-																																			}
-																																		}
-																																		calendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
-																																	}
-																																}
-																		%>
-																</tr>
-																<%
-																												}
-																%>
-															</tbody>
-														</table>
-													</td></tr>
-											</table>
-										</td>
-										<td><img src="../../images/spacer.gif" height="20" width="50"/></td>
-										<!-- Selected dates -->
-										<td class="maxWidth">
-											<%
-																			boolean makeHiddenVisible = false;
-																			if(!selectedDates.isEmpty()) {
-																				// Retrieve all events of eventTracker where scheduleStart/scheduledEnd
-																				// overlaps the period [first selected date, last selected date]
-																				org.w3c.format.DateTimeFormat dateFormat = org.w3c.format.DateTimeFormat.BASIC_UTC_FORMAT;
-																				Date start = new Date(getDateAsCalendar((String)selectedDates.get(0), app).getTime().getTime() - 86400000L);
-																				Date end = new Date(getDateAsCalendar((String)selectedDates.get(selectedDates.size() - 1), app).getTime().getTime() + 86400000L);
-																				org.opencrx.kernel.activity1.cci2.ActivityQuery eventQuery =
-																					(org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
-																				eventQuery.thereExistsScheduledStart().lessThanOrEqualTo(end);
-																				eventQuery.thereExistsScheduledEnd().greaterThanOrEqualTo(start);
-																				eventQuery.forAllDisabled().isFalse();
-																				org.opencrx.kernel.activity1.jmi1.ActivityTracker eventTracker = formValues.get("eventTracker") != null ? 
-																					(org.opencrx.kernel.activity1.jmi1.ActivityTracker)pm.getObjectById(
-																						formValues.get("eventTracker")
-																					) : null;
-																				List events = eventTracker == null ?
-																					Collections.EMPTY_LIST :
-																					eventTracker.getFilteredActivity(eventQuery);
-											%>
-											<div>
-												<table class="schedule maxWidth">
-													<thead>
-														<tr>
-															<th colspan="2"><%= timezone.getID() %></th>
-																<%
-																													for(int i = 0; i < NUM_SLOTS; i++) {
-																%>
-															<th <%= i >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>><%= bundle.get("Slot") + "&nbsp;" + (i+1) %></th>
-															<th <%= i >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %> style="text-align:right;"><%= i+1 == NUM_SLOTS_INITIALLY_VISIBLE ? "<input id=\"Button.ExpandSlots\" name=\"ExpandSlots\" type=\"button\" tabindex=\"" + (tabIndex++) + "\" class=\"" + CssClass.btn.toString() + " " + CssClass.btnDefault.toString() + "\" value=\"&gt;&gt;\" onclick=\"javascript:updateCss('.hidden', 'display', '');this.style.display='none';return false;\"  />" : "" %></th>
-																<%
-																													}
-																%>
-														</tr>
-													</thead>
-													<tbody>
-														<%
-																										int ii = 0;
-																										for(Iterator i = selectedDates.iterator(); i.hasNext(); ii++) {
-																											String dateAsString = (String)i.next();
-																											GregorianCalendar date = getDateAsCalendar(dateAsString, app);
-														%>
-														<tr>
-															<td>
-																<input id="DeleteDate.<%= ii %>.Button" name="DeleteDate.<%= ii %>" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>" />
-															</td>
-															<td>&nbsp;&nbsp;<%= new SimpleDateFormat("EEE, MMMM d, yyyy", app.getCurrentLocale()).format(date.getTime()) %></td>
-													<input type="hidden" name="calendar.selectedDate.<%= ii %>" value="<%= dateAsString %>"/>
-													<%
-																											for(int j = 0; j < NUM_SLOTS; j++) {
-																												String slotId = getSlotId(dateAsString, j);
-																												String event = (String)formValues.get(slotId);
-													%>
-													<td <%= j >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>>
-														<input type="text" class="slot" name="<%= slotId %>" tabindex="<%= tabIndex++ %>" value="<%= formatEvent(event, timeFormat) %>" />
-													</td>
-													<td <%= j >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>>
-														<%
-																														if(event != null && event.length() > 0) {
-																															if (j >= NUM_SLOTS_INITIALLY_VISIBLE) {
-																																makeHiddenVisible = true;
-																															}
-																															Date scheduledStart = dateFormat.parse(event.substring(0, 20));
-																															Date scheduledEnd = event.length() < 41 ? dateFormat.parse(event.substring(0, 20)) : dateFormat.parse(event.substring(21, 41));
-																															if(eventTracker != null) {
-																																// Activity for event already created.
-																																// If yes allow to remove it. If no allow to create a new activity.
-																																org.opencrx.kernel.activity1.cci2.ActivityQuery activityExistsQuery =
-																																	(org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
-																																	if(isEditMode) {
-																																		activityExistsQuery.thereExistsScheduledStart().greaterThanOrEqualTo(scheduledStart);
-																																		activityExistsQuery.thereExistsScheduledEnd().lessThanOrEqualTo(scheduledEnd);
-																																		activityExistsQuery.thereExistsExternalLink().equalTo(obj.refGetPath().getBase());
-																																		activityExistsQuery.forAllDisabled().isFalse();
-																																		if(!eventTracker.getFilteredActivity(activityExistsQuery).isEmpty()) {
-														%>
-														<input type="submit" id="DisableTentativeEvent.<%= event %>.Button" name="DisableTentativeEvent.<%= event %>" tabindex="<%= tabIndex++ %>" <%= eventTracker == null ? "disabled" : "" %> class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> booked"  title="<%= bundle.get("DisableTentativeEventTitle") %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>"/>
-														<%
-																																		}
-																																		else {
-														%>
-														<input type="submit" id="CreateTentativeEvent.<%= event %>.Button" name="CreateTentativeEvent.<%= event %>" tabindex="<%= tabIndex++ %>" <%= eventTracker == null || tentativeCreator == null || isEventWithoutTime(event) ? "disabled" : "class=\"" + CssClass.btn.toString() + " " + CssClass.btnDefault.toString() + " bookable\"" %> title="<%= bundle.get("AddTentativeEventTitle") %>" value="+" onclick="<%= SUBMIT_HANDLER %>"/>
-														<%
-																																		}
-																																	}
-																																// Conflicts
-																																org.opencrx.kernel.activity1.cci2.ActivityQuery eventHasConflictsQuery =
-																																	(org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
-																																eventHasConflictsQuery.thereExistsScheduledStart().lessThan(scheduledEnd);
-																																eventHasConflictsQuery.thereExistsScheduledEnd().greaterThan(scheduledStart);
-																																if(isEditMode) {
-																																	eventHasConflictsQuery.forAllExternalLink().notEqualTo(obj.refGetPath().getBase());
-																																}
-																																eventHasConflictsQuery.forAllDisabled().isFalse();
-																																org.opencrx.kernel.activity1.jmi1.Activity conflictingActivity = null;
-																																List conflictingActivities = eventTracker.getFilteredActivity(eventHasConflictsQuery);
-																																if(!conflictingActivities.isEmpty()) {
-																																	conflictingActivity = (org.opencrx.kernel.activity1.jmi1.Activity)conflictingActivities.iterator().next();
-																																}
-																																if(conflictingActivity != null) {
-																																	ObjectReference activityRef = new ObjectReference(conflictingActivity, app);
-																																	String tooltip =
-																																		"<div style=\\'border-bottom:1px solid grey;padding-bottom:4px;margin-bottom:8px;\\'>" + bundle.get("ConflictLabel") + ":</div>" +
-																																		"<a href=\\'../../" + activityRef.getSelectObjectAction().getEncodedHRef(requestId) + "\\' target=\\'_blank\\'><div>" +
-																																		"<strong>" + (activityRef.getTitle()).replace(" ", "&nbsp;") + "</strong><br />" +
-																																		("Start: " + localizedDateTimeFormat.format(conflictingActivity.getScheduledStart())).replace(" ", "&nbsp;") + "<br />" +
-																																		("End: " + localizedDateTimeFormat.format(conflictingActivity.getScheduledEnd())).replace(" ", "&nbsp;") + "</div></a>";
-														%>
-														<img class="trigger" src="../../images/sAlert.gif" onclick="balloon.showTooltip(event, '<%= tooltip %>', 1)" />
-														<%
-																																}
-																															}
-																														}
-														%>
-													</td>
-													<%
-																											}
-													%>
-													</tr>
-													<%
-																									}
-													%>
-													</tbody>
-												</table>
-											</div>
-											<div>&nbsp;</div>
-											<%
-																			}
-																			if (makeHiddenVisible) {
-											%>
-											<script language="javascript" type="text/javascript">
-												updateCss('.hidden', 'display', '');
-												$('Button.ExpandSlots').style.display = 'none';
-											</script>
-											<%
-																			}
-											%>
-											<input id="RefreshCal.Button" name="RefreshCal" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("RefreshLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
-											<input id="ApplyCal.Button" name="ApplyCal" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("ApplyLabel") %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
-											<input id="CopyFirstRow.Button" <%= selectedDates.isEmpty() ? "style='display:none;" : "" %> name="CopyFirstRow" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("CopyFirstRowLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
-										</td>
-									</tr>
-								</table>
-								<%= bundle.get("EventScheduleDescription") %>
-							</fieldset>
-							<!-- Poll -->
-							<fieldset>
-								<legend><span><%= bundle.get("PollInformationLabel") %></span></legend>
-								<div>&nbsp;</div>
-								<table class="fieldGroup">
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("ClosedGroupPollLabel") %>:</span>
-										</td>
-										<td>
-											<input type="checkbox" id="isClosedGroupPoll.Button" name="isClosedGroupPoll" <%= ((Boolean)formValues.get("isClosedGroupPoll")).booleanValue() ? "checked" : "" %>/>
-										</td>
-										<td class="gap"/>
-									</tr>
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("HiddenPollLabel") %>:</span>
-										</td>
-										<td>
-											<input type="checkbox" id="isHiddenPoll.Button" name="isHiddenPoll" <%= ((Boolean)formValues.get("isHiddenPoll")).booleanValue() ? "checked" : "" %>/>
-										</td>
-										<td class="gap"/>
-									</tr>
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("YesNoPollLabel") %>:</span>
-										</td>
-										<td>
-											<input type="checkbox" id="isYesNoPoll.Button" name="isYesNoPoll" <%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "checked" : "" %> onClick="javascript:if ($('isLimitTo1Poll.Button').checked) {
-														this.checked = true;
-														return false;
-													}
-													;" />
-										</td>
-										<td class="gap"/>
-									</tr>
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("LimitOksPollLabel") %>:</span>
-										</td>
-										<td>
-											<input type="checkbox" id="isLimitTo1Poll.Button" name="isLimitTo1Poll" <%= ((Boolean)formValues.get("isLimitTo1Poll")).booleanValue() ? "checked" : "" %> onClick="javascript:if (this.checked) {
-														$('isYesNoPoll.Button').checked = true;};" />
-										</td>
-										<td class="gap"/>
-									</tr>
-									<a name="<%= ANCHOR_PARTICIPANTS %>"></a>
-									<tr>
-										<td class="<%= CssClass.fieldLabel %>">
-											<span class="nw"><%= bundle.get("MessageToVotersLabel") %>:</span>
-										</td>
-										<td>
-											<%
-																			String messageBody = (String)formValues.get("messageBody");
-											%>
-											<textarea tabindex="<%= tabIndex++ %>" class="string" style="width: 100%;" rows="6" name="messageBody" id="messageBody"><%= messageBody == null ? "" : messageBody %></textarea>
-										</td>
-										<td class="gap"/>
-									</tr>
-								</table>
-								<div>&nbsp;</div>
-							</fieldset>
-							<fieldset>
-								<legend><span><%= bundle.get("VoterInformationLabel") %></span></legend>
-								<div style="padding:5px;<%= actionNotifyVoter && actionNotifyVoterCompleted ? "" : "display:none;" %>"><%= bundle.get("AlertToVoterSuccess") %>: <b><%= notifyVoterUsername != null ? notifyVoterUsername : "" %></b></div>
-								<%
-													if(voterCount > 0) {
-														int lastVoterIndex = -1;
-								%>
-								<!-- Participants -->
-								<div>&nbsp;</div>
-								<div class="fieldGroupName"><%= bundle.get("ClosedGroupVotersLabel") %></div>
-								<table>
-									<%
-																int i;
-																for(i = 0; i < voterCount; i++) {
-																	if(formValues.get("voter." + i) != null) {
-																		lastVoterIndex = i;
-																		org.opencrx.kernel.account1.jmi1.EMailAddress emailAddress = formValues.get("voter." + i) != null ?
-																			(org.opencrx.kernel.account1.jmi1.EMailAddress)pm.getObjectById(
-																				formValues.get("voter." + i)
-																			) : null;
-																		String subject = formValues.get("org:opencrx:kernel:activity1:Activity:name") != null
-																		  ? java.net.URLEncoder.encode((String)formValues.get("org:opencrx:kernel:activity1:Activity:name"), "UTF-8").replace("+", "%20")
-																		  : "";
-																		String body = formValues.get("messageBody") != null
-																		  ? java.net.URLEncoder.encode((String)formValues.get("messageBody"), "UTF-8").replace("+", "%20")
-																		  : "";
-																		// Browser limit
-																		if(messageBody != null && messageBody.length() > 1500) {
-																			messageBody = messageBody.substring(0, 1500);
-																		}
-																		if(i % 4 == 0) {
-									%>
-									<tr>
-										<%
-																			}
-										%>
-										<td><input class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" type="submit" id="DeleteVoter.<%= i %>.Button" name="DeleteVoter.<%= i %>" tabindex="<%= tabIndex++ %>" title="<%= bundle.get("RemoveVoterTitle") %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>"/></td>
-										<td style="vertical-align:middle">
-											<a href="mailto:<%= emailAddress.getEmailAddress() + "?subject=" + subject + "&body=" + body %>" title="<%= bundle.get("EmailToVoterTitle") %>"><%= emailAddress.getEmailAddress() %></a><input type="hidden" name="voter.<%= i %>" value="<%= emailAddress.refMofId() %>"/>
-											<%
-																					String userName = getUsername(pm, homeSegment, emailAddress.getEmailAddress());
-																					if (userName != null) {
-											%>
-											<button type="submit" id="NotifyVoter.<%= i %>.<%= userName %>.Button" name="NotifyVoter.<%= i %>.<%= userName %>" title="<%= bundle.get("AlertToVoterTitle") %>: <%= userName %>" class="trigger" tabindex="<%= tabIndex++ %>" value="&mdash;" onclick="<%= SUBMIT_HANDLER %>" style="border:0; background:transparent;" ><img src="../../images/sAlert.gif" /></button>
-												<%
-																						}
-												%>
-										</td>
-										<td class="addon"/>
-										<%
-																			if(i % 4 == 3) {
-										%>
-									</tr>
-									<%
-																		}
-																	}
-																}
-																while(i % 4 != 3) {
-									%>
-									<td />
-									<td />
-									<td />
-									<%
-																	i++;
-																}
-									%>
-								</table>
-								<%
-														voterCount = lastVoterIndex + 1;
-													}
-								%>
-								<!-- Add Voter -->
-								<div>&nbsp;</div>
-								<%
-													addVoterForm.paint(
-														p,
-														null, // frame
-														true // forEditing
-													);
-													p.flush();
-								%>
-								<input type="hidden" name="voter.count" id="voter.count" value="<%= voterCount %>" />
-								<input type="submit" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" name="AddVoter" id="AddVoter.Button" tabindex="<%= tabIndex++ %>" title="<%= bundle.get("AddSelectedVoterTitle") %>" value="+" onclick="<%= SUBMIT_HANDLER %>" />
-							</fieldset>
-							<a name="<%= ANCHOR_VOTES %>"></a>
-							<%
-											if(obj instanceof org.opencrx.kernel.activity1.jmi1.EMail) {
-												org.opencrx.kernel.activity1.jmi1.EMail email = (org.opencrx.kernel.activity1.jmi1.EMail)obj;
-							%>
-							<fieldset>
-								<legend><span><%= bundle.get("VotesLabel") %></span></legend>
-								<div>&nbsp;</div>
-								<table cellspacing="1">
-									<tr>
-										<th />
-										<th />
-										<%
-																			// Table head for Dates
-																			for(int i = 0; i < selectedDates.size(); i++) {
-																				String dateAsString = (String)selectedDates.get(i);
-																				int colspan = 0;
-																				for(int j = 0; j < NUM_SLOTS; j++) {
-																					String slotId = getSlotId(dateAsString, j);
-																					if((formValues.get(slotId)) != null && (((String)formValues.get(slotId)).length() > 0)) {
-																						colspan++;
-																					}
-																				}
+																			int ii = 0;
+																			for(Iterator i = selectedDates.iterator(); i.hasNext(); ii++) {
+																				String dateAsString = (String)i.next();
 																				GregorianCalendar date = getDateAsCalendar(dateAsString, app);
-										%>
-										<th style="background-color: lightblue" colspan="<%= colspan %>">&nbsp;<%= new SimpleDateFormat("EEE, MMMM d, yyyy", app.getCurrentLocale()).format(date.getTime()) %>&nbsp;</th>
-											<%
-																				}
-											%>
-									</tr>
-									<tr>
-										<th />
-										<th />
-										<%
-																			// Table head for Slots
-																			int nSlots = 0;
-																			for(int i = 0; i < selectedDates.size(); i++) {
-																				String dateAsString = (String)selectedDates.get(i);
-																				for(int j = 0; j < NUM_SLOTS; j++) {
-																					String slotId = getSlotId(dateAsString, j);
-																					String event = (String)formValues.get(slotId);
-																					if(event != null && event.length() > 0) {
-										%>
-										<th><input type="submit" id="CreateConfirmedEvent.<%= event %>.Button" name="CreateConfirmedEvent.<%= event %>" <%= isEditMode ? "" : "disabled" %> class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= formatEvent(event, timeFormat) %>" title="<%= bundle.get("CreateConfirmedEventTitle") %>" onclick="<%= SUBMIT_HANDLER %>"/></th>
-											<%
-																							nSlots++;
-																						}
-																					}
-																				}
-											%>
-									</tr>
-									<tr id="resultRowTop">
-										<th />
-										<th align="right">
-											<%= bundle.get("yesLabel") %>&nbsp;<br>
-											<%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "" : bundle.get("ifneedbeLabel") + "&nbsp;<br>" %>
-											<%= bundle.get("noLabel") %>&nbsp;
-										</th>
-										<%
-																			List yesVotes = new ArrayList();
-																			List noVotes = new ArrayList();
-																			List ifneedbeVotes = new ArrayList();
-																			// Place holders for total votes
-																			for(int i = 0; i < nSlots; i++) {
-																				yesVotes.add(new Integer(0));
-																				noVotes.add(new Integer(0));
-																				ifneedbeVotes.add(new Integer(0));
-										%>
-										<td class="results ticks"><span id="slot<%= i %>Votes"></span></td>
-											<%
-																				}
-											%>
-									</tr>
-									<%
-																	int ii = 0;
-																	org.opencrx.kernel.activity1.cci2.ActivityVoteQuery voteQuery = (org.opencrx.kernel.activity1.cci2.ActivityVoteQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityVote.class);
-																	voteQuery.orderByName().ascending();
-																	for(Iterator i = email.getVote(voteQuery).iterator(); i.hasNext(); ii++) {
-																		org.opencrx.kernel.activity1.jmi1.ActivityVote vote = (org.opencrx.kernel.activity1.jmi1.ActivityVote)i.next();
-																		ByteArrayInputStream in = new ByteArrayInputStream(vote.getDescription().getBytes("UTF-8"));
-																		Properties votes = new Properties();
-																		votes.loadFromXML(in);
-																		in.close();
-									%>
-									<tr <%= ii % 2 == 0 ? "style='background-color:#F4F4F4;'" : "" %>>
-										<td><img src="../../images/spacer.gif" height="20" width="0"/></td>
-										<td style="vertical-align:middle"><%= new ObjectReference(vote, app).getTitle() %></td>
-										<%
-																				int nSlot = 0;
-																				for(int j = 0; j < selectedDates.size(); j++) {
-																					String dateAsString = (String)selectedDates.get(j);
-																					for(int k = 0; k < NUM_SLOTS; k++) {
-																						String slotId = getSlotId(dateAsString, k);
-																						String event = (String)formValues.get(slotId);
-																						if((event != null && (event.length() > 0))) {
-										%>
-										<td class="ticks">
-											<%
-																									if(votes.get(event) != null) {
-																										if ("2".equals(votes.get(event)) || "true".equals(votes.get(event)) || "on".equals(votes.get(event))) {
-																											yesVotes.set(nSlot, ((Integer)yesVotes.get(nSlot))+1);
-											%>
-											<%= "<img src=\"../../images/checked.gif\"/>" %>
-											<%
-																										}
-																										else if ("1".equals(votes.get(event))) {
-																											ifneedbeVotes.set(nSlot, ((Integer)ifneedbeVotes.get(nSlot))+1);
-											%>
-											<%= "<img src=\"../../images/ifneedbe.gif\"/>" %>
-											<%
-																										}
-																										else {
-																											noVotes.set(nSlot, ((Integer)noVotes.get(nSlot))+1);
-											%>
-											<%= "<img src=\"../../images/notchecked.gif\"/>" %>
-											<%
-																										}
-																									}
-											%>
-										</td>
-										<%
-																							nSlot++;
-																						}
-																					}
-																				}
-										%>
-									</tr>
-									<%
-																	}
-									%>
-									<tr id="resultRowBottom" style="display:none;">
-										<th class="results" />
-										<th align="right">
-											<%= bundle.get("yesLabel") %>&nbsp;<br>
-											<%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "" : bundle.get("ifneedbeLabel") + "&nbsp;<br>" %>
-											<%= bundle.get("noLabel") %>&nbsp;
-										</th>
-										<%
-																			// Place holders for total votes
-																			for(int i = 0; i < nSlots; i++) {
-																				String results =
-																					"<div><b>" + ((Integer)yesVotes.get(i) == 0 ? "&nbsp;" : (Integer)yesVotes.get(i)) + " </b><img src=\"../../images/checked.gif\"/></div>" +
-																					(((Boolean)formValues.get("isYesNoPoll")).booleanValue()
-																						? ""
-																						: "<div><b>" + ((Integer)ifneedbeVotes.get(i) == 0 ? "&nbsp;" : (Integer)ifneedbeVotes.get(i)) + " </b><img src=\"../../images/ifneedbe.gif\"/></div>"
-																					) +
-																					"<div><b>" + ((Integer)noVotes.get(i) == 0 ? "&nbsp;" : (Integer)noVotes.get(i)) + " </b><img src=\"../../images/notchecked.gif\"/></div>";
-										%>
-										<td class="results ticks">
-											<%= results %>
-											<script language="javascript" type="text/javascript">
-												<%= ii == 0 ? "$('resultRowTop').style.display='none';" : "$('slot" + i + "Votes').replace('" + results + "');" %>
-											</script>
-										</td>
-										<%
-																			}
-										%>
-									</tr>
-								</table>
-								<div>&nbsp;</div>
-							</fieldset>
-							<%
-											}
 							%>
-							<br />
-							<a name="<%= ANCHOR_BOTTOM %>"></a>
-							<input id="Refresh.Button" name="Refresh" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("RefreshLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
-							<input id="Apply.Button" name="Apply" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("ApplyLabel") %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
-							<input id="Save.Button" name="Save" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= texts.getSaveTitle() %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
-							<input id="Cancel.Button" name="Cancel" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= texts.getCloseText() %>" onclick="<%= SUBMIT_HANDLER %>"/>
-							<br />
-							<br />
-						</form>
-					</div> <!-- content -->
-				</div> <!-- content-wrap -->
-			</div> <!-- wrap -->
-		</div> <!-- container -->
-		<script language="javascript" type="text/javascript">
-			<%
-				if (anchor != null) {
-			%>
-												window.location.hash = "<%= anchor %>";
-			<%
-				}
-			%>
-		</script>
-	</body>
-	<%
-	p.close(false);
-	if(pm != null) {
-		pm.close();
-	}
-	%>
+							<tr>
+							    <td>
+								<input id="DeleteDate.<%= ii %>.Button" name="DeleteDate.<%= ii %>" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>" />
+							    </td>
+							    <td>&nbsp;&nbsp;<%= new SimpleDateFormat("EEE, MMMM d, yyyy", app.getCurrentLocale()).format(date.getTime()) %></td>
+						    <input type="hidden" name="calendar.selectedDate.<%= ii %>" value="<%= dateAsString %>"/>
+						    <%
+																				    for(int j = 0; j < NUM_SLOTS; j++) {
+																					    String slotId = getSlotId(dateAsString, j);
+																					    String event = (String)formValues.get(slotId);
+						    %>
+						    <td <%= j >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>>
+							<input type="text" class="slot" name="<%= slotId %>" tabindex="<%= tabIndex++ %>" value="<%= formatEvent(event, timeFormat) %>" />
+						    </td>
+						    <td <%= j >= NUM_SLOTS_INITIALLY_VISIBLE ? "class='hidden' " : "" %>>
+							<%
+																							if(event != null && event.length() > 0) {
+																								if (j >= NUM_SLOTS_INITIALLY_VISIBLE) {
+																									makeHiddenVisible = true;
+																								}
+																								Date scheduledStart = dateFormat.parse(event.substring(0, 20));
+																								Date scheduledEnd = event.length() < 41 ? dateFormat.parse(event.substring(0, 20)) : dateFormat.parse(event.substring(21, 41));
+																								if(eventTracker != null) {
+																									// Activity for event already created.
+																									// If yes allow to remove it. If no allow to create a new activity.
+																									org.opencrx.kernel.activity1.cci2.ActivityQuery activityExistsQuery =
+																									(org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
+																									if(isEditMode) {
+																									activityExistsQuery.thereExistsScheduledStart().greaterThanOrEqualTo(scheduledStart);
+																									activityExistsQuery.thereExistsScheduledEnd().lessThanOrEqualTo(scheduledEnd);
+																									activityExistsQuery.thereExistsExternalLink().equalTo(obj.refGetPath().getBase());
+																									activityExistsQuery.forAllDisabled().isFalse();
+																									if(!eventTracker.getFilteredActivity(activityExistsQuery).isEmpty()) {
+							%>
+							<input type="submit" id="DisableTentativeEvent.<%= event %>.Button" name="DisableTentativeEvent.<%= event %>" tabindex="<%= tabIndex++ %>" <%= eventTracker == null ? "disabled" : "" %> class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %> booked"  title="<%= bundle.get("DisableTentativeEventTitle") %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>"/>
+							<%
+																									}
+																									else {
+							%>
+							<input type="submit" id="CreateTentativeEvent.<%= event %>.Button" name="CreateTentativeEvent.<%= event %>" tabindex="<%= tabIndex++ %>" <%= eventTracker == null || tentativeCreator == null || isEventWithoutTime(event) ? "disabled" : "class=\"" + CssClass.btn.toString() + " " + CssClass.btnDefault.toString() + " bookable\"" %> title="<%= bundle.get("AddTentativeEventTitle") %>" value="+" onclick="<%= SUBMIT_HANDLER %>"/>
+							<%
+																									}
+																									}
+																									// Conflicts
+																									org.opencrx.kernel.activity1.cci2.ActivityQuery eventHasConflictsQuery =
+																									(org.opencrx.kernel.activity1.cci2.ActivityQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.Activity.class);
+																									eventHasConflictsQuery.thereExistsScheduledStart().lessThan(scheduledEnd);
+																									eventHasConflictsQuery.thereExistsScheduledEnd().greaterThan(scheduledStart);
+																									if(isEditMode) {
+																									eventHasConflictsQuery.forAllExternalLink().notEqualTo(obj.refGetPath().getBase());
+																									}
+																									eventHasConflictsQuery.forAllDisabled().isFalse();
+																									org.opencrx.kernel.activity1.jmi1.Activity conflictingActivity = null;
+																									List conflictingActivities = eventTracker.getFilteredActivity(eventHasConflictsQuery);
+																									if(!conflictingActivities.isEmpty()) {
+																									conflictingActivity = (org.opencrx.kernel.activity1.jmi1.Activity)conflictingActivities.iterator().next();
+																									}
+																									if(conflictingActivity != null) {
+																									ObjectReference activityRef = new ObjectReference(conflictingActivity, app);
+																									String tooltip =
+																									"<div style=\\'border-bottom:1px solid grey;padding-bottom:4px;margin-bottom:8px;\\'>" + bundle.get("ConflictLabel") + ":</div>" +
+																									"<a href=\\'../../" + activityRef.getSelectObjectAction().getEncodedHRef(requestId) + "\\' target=\\'_blank\\'><div>" +
+																									"<strong>" + (activityRef.getTitle()).replace(" ", "&nbsp;") + "</strong><br />" +
+																									("Start: " + localizedDateTimeFormat.format(conflictingActivity.getScheduledStart())).replace(" ", "&nbsp;") + "<br />" +
+																									("End: " + localizedDateTimeFormat.format(conflictingActivity.getScheduledEnd())).replace(" ", "&nbsp;") + "</div></a>";
+							%>
+							<img class="trigger" src="../../images/sAlert.gif" onclick="balloon.showTooltip(event, '<%= tooltip %>', 1)" />
+							<%
+																									}
+																								}
+																							}
+							%>
+						    </td>
+						    <%
+																				    }
+						    %>
+						    </tr>
+						    <%
+																		    }
+						    %>
+						    </tbody>
+						</table>
+					    </div>
+					    <div>&nbsp;</div>
+					    <%
+													    }
+													    if (makeHiddenVisible) {
+					    %>
+					    <script language="javascript" type="text/javascript">
+						updateCss('.hidden', 'display', '');
+						$('Button.ExpandSlots').style.display = 'none';
+					    </script>
+					    <%
+													    }
+					    %>
+					    <input id="RefreshCal.Button" name="RefreshCal" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("RefreshLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
+					    <input id="ApplyCal.Button" name="ApplyCal" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("ApplyLabel") %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
+					    <input id="CopyFirstRow.Button" <%= selectedDates.isEmpty() ? "style='display:none;" : "" %> name="CopyFirstRow" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("CopyFirstRowLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
+					</td>
+				    </tr>
+				</table>
+				<%= bundle.get("EventScheduleDescription") %>
+			    </fieldset>
+			    <!-- Poll -->
+			    <fieldset>
+				<legend><span><%= bundle.get("PollInformationLabel") %></span></legend>
+				<div>&nbsp;</div>
+				<table class="fieldGroup">
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("ClosedGroupPollLabel") %>:</span>
+					</td>
+					<td>
+					    <input type="checkbox" id="isClosedGroupPoll.Button" name="isClosedGroupPoll" <%= ((Boolean)formValues.get("isClosedGroupPoll")).booleanValue() ? "checked" : "" %>/>
+					</td>
+					<td class="gap"/>
+				    </tr>
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("HiddenPollLabel") %>:</span>
+					</td>
+					<td>
+					    <input type="checkbox" id="isHiddenPoll.Button" name="isHiddenPoll" <%= ((Boolean)formValues.get("isHiddenPoll")).booleanValue() ? "checked" : "" %>/>
+					</td>
+					<td class="gap"/>
+				    </tr>
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("YesNoPollLabel") %>:</span>
+					</td>
+					<td>
+					    <input type="checkbox" id="isYesNoPoll.Button" name="isYesNoPoll" <%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "checked" : "" %> onClick="javascript:if ($('isLimitTo1Poll.Button').checked) {
+							this.checked = true;
+							return false;
+						    }
+						    ;" />
+					</td>
+					<td class="gap"/>
+				    </tr>
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("LimitOksPollLabel") %>:</span>
+					</td>
+					<td>
+					    <input type="checkbox" id="isLimitTo1Poll.Button" name="isLimitTo1Poll" <%= ((Boolean)formValues.get("isLimitTo1Poll")).booleanValue() ? "checked" : "" %> onClick="javascript:if (this.checked) {
+							$('isYesNoPoll.Button').checked = true;
+						    }
+						    ;" />
+					</td>
+					<td class="gap"/>
+				    </tr>
+				    <a name="<%= ANCHOR_PARTICIPANTS %>"></a>
+				    <tr>
+					<td class="<%= CssClass.fieldLabel %>">
+					    <span class="nw"><%= bundle.get("MessageToVotersLabel") %>:</span>
+					</td>
+					<td>
+					    <%
+													    String messageBody = (String)formValues.get("messageBody");
+					    %>
+					    <textarea tabindex="<%= tabIndex++ %>" class="string" style="width: 100%;" rows="6" name="messageBody" id="messageBody"><%= messageBody == null ? "" : messageBody %></textarea>
+					</td>
+					<td class="gap"/>
+				    </tr>
+				</table>
+				<div>&nbsp;</div>
+			    </fieldset>
+			    <fieldset>
+				<legend><span><%= bundle.get("VoterInformationLabel") %></span></legend>
+				<div style="padding:5px;<%= actionNotifyVoter && actionNotifyVoterCompleted ? "" : "display:none;" %>"><%= bundle.get("AlertToVoterSuccess") %>: <b><%= notifyVoterUsername != null ? notifyVoterUsername : "" %></b></div>
+				<%
+									if(voterCount > 0) {
+										int lastVoterIndex = -1;
+				%>
+				<!-- Participants -->
+				<div>&nbsp;</div>
+				<div class="fieldGroupName"><%= bundle.get("ClosedGroupVotersLabel") %></div>
+				<table>
+				    <%
+											    int i;
+											    for(i = 0; i < voterCount; i++) {
+												    if(formValues.get("voter." + i) != null) {
+													    lastVoterIndex = i;
+													    org.opencrx.kernel.account1.jmi1.EMailAddress emailAddress = formValues.get("voter." + i) != null ?
+														    (org.opencrx.kernel.account1.jmi1.EMailAddress)pm.getObjectById(
+															    formValues.get("voter." + i)
+														    ) : null;
+													    String subject = formValues.get("org:opencrx:kernel:activity1:Activity:name") != null
+													      ? java.net.URLEncoder.encode((String)formValues.get("org:opencrx:kernel:activity1:Activity:name"), "UTF-8").replace("+", "%20")
+													      : "";
+													    String body = formValues.get("messageBody") != null
+													      ? java.net.URLEncoder.encode((String)formValues.get("messageBody"), "UTF-8").replace("+", "%20")
+													      : "";
+													    // Browser limit
+													    if(messageBody != null && messageBody.length() > 1500) {
+														    messageBody = messageBody.substring(0, 1500);
+													    }
+													    if(i % 4 == 0) {
+				    %>
+				    <tr>
+					<%
+														}
+					%>
+					<td><input class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" type="submit" id="DeleteVoter.<%= i %>.Button" name="DeleteVoter.<%= i %>" tabindex="<%= tabIndex++ %>" title="<%= bundle.get("RemoveVoterTitle") %>" value="&ndash;" onclick="<%= SUBMIT_HANDLER %>"/></td>
+					<td style="vertical-align:middle">
+					    <a href="mailto:<%= emailAddress.getEmailAddress() + "?subject=" + subject + "&body=" + body %>" title="<%= bundle.get("EmailToVoterTitle") %>"><%= emailAddress.getEmailAddress() %></a><input type="hidden" name="voter.<%= i %>" value="<%= emailAddress.refMofId() %>"/>
+					    <%
+															    String userName = getUsername(pm, homeSegment, emailAddress.getEmailAddress());
+															    if (userName != null) {
+					    %>
+					    <button type="submit" id="NotifyVoter.<%= i %>.<%= userName %>.Button" name="NotifyVoter.<%= i %>.<%= userName %>" title="<%= bundle.get("AlertToVoterTitle") %>: <%= userName %>" class="trigger" tabindex="<%= tabIndex++ %>" value="&mdash;" onclick="<%= SUBMIT_HANDLER %>" style="border:0; background:transparent;" ><img src="../../images/sAlert.gif" /></button>
+						<%
+																}
+						%>
+					</td>
+					<td class="addon"/>
+					<%
+														if(i % 4 == 3) {
+					%>
+				    </tr>
+				    <%
+													    }
+												    }
+											    }
+											    while(i % 4 != 3) {
+				    %>
+				    <td />
+				    <td />
+				    <td />
+				    <%
+												    i++;
+											    }
+				    %>
+				</table>
+				<%
+										voterCount = lastVoterIndex + 1;
+									}
+				%>
+				<!-- Add Voter -->
+				<div>&nbsp;</div>
+				<%
+									addVoterForm.paint(
+										p,
+										null, // frame
+										true // forEditing
+									);
+									p.flush();
+				%>
+				<input type="hidden" name="voter.count" id="voter.count" value="<%= voterCount %>" />
+				<input type="submit" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" name="AddVoter" id="AddVoter.Button" tabindex="<%= tabIndex++ %>" title="<%= bundle.get("AddSelectedVoterTitle") %>" value="+" onclick="<%= SUBMIT_HANDLER %>" />
+			    </fieldset>
+			    <a name="<%= ANCHOR_VOTES %>"></a>
+			    <%
+							    if(obj instanceof org.opencrx.kernel.activity1.jmi1.EMail) {
+								    org.opencrx.kernel.activity1.jmi1.EMail email = (org.opencrx.kernel.activity1.jmi1.EMail)obj;
+			    %>
+			    <fieldset>
+				<legend><span><%= bundle.get("VotesLabel") %></span></legend>
+				<div>&nbsp;</div>
+				<table cellspacing="1">
+				    <tr>
+					<th />
+					<th />
+					<%
+														// Table head for Dates
+														for(int i = 0; i < selectedDates.size(); i++) {
+															String dateAsString = (String)selectedDates.get(i);
+															int colspan = 0;
+															for(int j = 0; j < NUM_SLOTS; j++) {
+																String slotId = getSlotId(dateAsString, j);
+																if((formValues.get(slotId)) != null && (((String)formValues.get(slotId)).length() > 0)) {
+																	colspan++;
+																}
+															}
+															GregorianCalendar date = getDateAsCalendar(dateAsString, app);
+					%>
+					<th style="background-color: lightblue" colspan="<%= colspan %>">&nbsp;<%= new SimpleDateFormat("EEE, MMMM d, yyyy", app.getCurrentLocale()).format(date.getTime()) %>&nbsp;</th>
+					    <%
+														    }
+					    %>
+				    </tr>
+				    <tr>
+					<th />
+					<th />
+					<%
+														// Table head for Slots
+														int nSlots = 0;
+														for(int i = 0; i < selectedDates.size(); i++) {
+															String dateAsString = (String)selectedDates.get(i);
+															for(int j = 0; j < NUM_SLOTS; j++) {
+																String slotId = getSlotId(dateAsString, j);
+																String event = (String)formValues.get(slotId);
+																if(event != null && event.length() > 0) {
+					%>
+					<th><input type="submit" id="CreateConfirmedEvent.<%= event %>.Button" name="CreateConfirmedEvent.<%= event %>" <%= isEditMode ? "" : "disabled" %> class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= formatEvent(event, timeFormat) %>" title="<%= bundle.get("CreateConfirmedEventTitle") %>" onclick="<%= SUBMIT_HANDLER %>"/></th>
+					    <%
+																	    nSlots++;
+																    }
+															    }
+														    }
+					    %>
+				    </tr>
+				    <tr id="resultRowTop">
+					<th />
+					<th align="right">
+					    <%= bundle.get("yesLabel") %>&nbsp;<br>
+					    <%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "" : bundle.get("ifneedbeLabel") + "&nbsp;<br>" %>
+					    <%= bundle.get("noLabel") %>&nbsp;
+					</th>
+					<%
+														List yesVotes = new ArrayList();
+														List noVotes = new ArrayList();
+														List ifneedbeVotes = new ArrayList();
+														// Place holders for total votes
+														for(int i = 0; i < nSlots; i++) {
+															yesVotes.add(new Integer(0));
+															noVotes.add(new Integer(0));
+															ifneedbeVotes.add(new Integer(0));
+					%>
+					<td class="results ticks"><span id="slot<%= i %>Votes"></span></td>
+					    <%
+														    }
+					    %>
+				    </tr>
+				    <%
+												    int ii = 0;
+												    org.opencrx.kernel.activity1.cci2.ActivityVoteQuery voteQuery = (org.opencrx.kernel.activity1.cci2.ActivityVoteQuery)pm.newQuery(org.opencrx.kernel.activity1.jmi1.ActivityVote.class);
+												    voteQuery.orderByName().ascending();
+												    for(Iterator i = email.getVote(voteQuery).iterator(); i.hasNext(); ii++) {
+													    org.opencrx.kernel.activity1.jmi1.ActivityVote vote = (org.opencrx.kernel.activity1.jmi1.ActivityVote)i.next();
+													    ByteArrayInputStream in = new ByteArrayInputStream(vote.getDescription().getBytes("UTF-8"));
+													    Properties votes = new Properties();
+													    votes.loadFromXML(in);
+													    in.close();
+				    %>
+				    <tr <%= ii % 2 == 0 ? "style='background-color:#F4F4F4;'" : "" %>>
+					<td><img src="../../images/spacer.gif" height="20" width="0"/></td>
+					<td style="vertical-align:middle"><%= new ObjectReference(vote, app).getTitle() %></td>
+					<%
+															int nSlot = 0;
+															for(int j = 0; j < selectedDates.size(); j++) {
+																String dateAsString = (String)selectedDates.get(j);
+																for(int k = 0; k < NUM_SLOTS; k++) {
+																	String slotId = getSlotId(dateAsString, k);
+																	String event = (String)formValues.get(slotId);
+																	if((event != null && (event.length() > 0))) {
+					%>
+					<td class="ticks">
+					    <%
+																			    if(votes.get(event) != null) {
+																				    if ("2".equals(votes.get(event)) || "true".equals(votes.get(event)) || "on".equals(votes.get(event))) {
+																					    yesVotes.set(nSlot, ((Integer)yesVotes.get(nSlot))+1);
+					    %>
+					    <%= "<img src=\"../../images/checked.gif\"/>" %>
+					    <%
+																				    }
+																				    else if ("1".equals(votes.get(event))) {
+																					    ifneedbeVotes.set(nSlot, ((Integer)ifneedbeVotes.get(nSlot))+1);
+					    %>
+					    <%= "<img src=\"../../images/ifneedbe.gif\"/>" %>
+					    <%
+																				    }
+																				    else {
+																					    noVotes.set(nSlot, ((Integer)noVotes.get(nSlot))+1);
+					    %>
+					    <%= "<img src=\"../../images/notchecked.gif\"/>" %>
+					    <%
+																				    }
+																			    }
+					    %>
+					</td>
+					<%
+																		nSlot++;
+																	}
+																}
+															}
+					%>
+				    </tr>
+				    <%
+												    }
+				    %>
+				    <tr id="resultRowBottom" style="display:none;">
+					<th class="results" />
+					<th align="right">
+					    <%= bundle.get("yesLabel") %>&nbsp;<br>
+					    <%= ((Boolean)formValues.get("isYesNoPoll")).booleanValue() ? "" : bundle.get("ifneedbeLabel") + "&nbsp;<br>" %>
+					    <%= bundle.get("noLabel") %>&nbsp;
+					</th>
+					<%
+														// Place holders for total votes
+														for(int i = 0; i < nSlots; i++) {
+															String results =
+																"<div><b>" + ((Integer)yesVotes.get(i) == 0 ? "&nbsp;" : (Integer)yesVotes.get(i)) + " </b><img src=\"../../images/checked.gif\"/></div>" +
+																(((Boolean)formValues.get("isYesNoPoll")).booleanValue()
+																	? ""
+																	: "<div><b>" + ((Integer)ifneedbeVotes.get(i) == 0 ? "&nbsp;" : (Integer)ifneedbeVotes.get(i)) + " </b><img src=\"../../images/ifneedbe.gif\"/></div>"
+																) +
+																"<div><b>" + ((Integer)noVotes.get(i) == 0 ? "&nbsp;" : (Integer)noVotes.get(i)) + " </b><img src=\"../../images/notchecked.gif\"/></div>";
+					%>
+					<td class="results ticks">
+					    <%= results %>
+					    <script language="javascript" type="text/javascript">
+						<%= ii == 0 ? "$('resultRowTop').style.display='none';" : "$('slot" + i + "Votes').replace('" + results + "');" %>
+					    </script>
+					</td>
+					<%
+														}
+					%>
+				    </tr>
+				</table>
+				<div>&nbsp;</div>
+			    </fieldset>
+			    <%
+							    }
+			    %>
+			    <br />
+			    <a name="<%= ANCHOR_BOTTOM %>"></a>
+			    <input id="Refresh.Button" name="Refresh" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("RefreshLabel") %>" onclick="<%= SUBMIT_HANDLER %>"/>
+			    <input id="Apply.Button" name="Apply" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= bundle.get("ApplyLabel") %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
+			    <input id="Save.Button" name="Save" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= texts.getSaveTitle() %>" onclick="<%= SUBMIT_HANDLER_WITH_CHECK %>"/>
+			    <input id="Cancel.Button" name="Cancel" type="submit" tabindex="<%= tabIndex++ %>" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="<%= texts.getCloseText() %>" onclick="<%= SUBMIT_HANDLER %>"/>
+			    <br />
+			    <br />
+			</form>
+		    </div> <!-- content -->
+		</div> <!-- content-wrap -->
+	    </div> <!-- wrap -->
+	</div> <!-- container -->
+	<script language="javascript" type="text/javascript">
+	    <%
+		    if (anchor != null) {
+	    %>
+						window.location.hash = "<%= anchor %>";
+	    <%
+		    }
+	    %>
+	</script>
+    </body>
+    <%
+    p.close(false);
+    if(pm != null) {
+	    pm.close();
+    }
+    %>
 </html>

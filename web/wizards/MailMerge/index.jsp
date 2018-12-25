@@ -55,23 +55,23 @@
  */
 %>
 <%@page session="true" import="
-		java.util.*,
-		java.io.*,
-		java.text.*,
-		org.opencrx.kernel.backend.*,
-		org.opencrx.kernel.portal.wizard.*,
-		org.opencrx.kernel.generic.*,
-		org.openmdx.kernel.id.cci.*,
-		org.openmdx.kernel.id.*,
-		org.openmdx.base.exception.*,
-		org.openmdx.base.accessor.jmi.cci.*,
-		org.openmdx.portal.servlet.*,
-		org.openmdx.portal.servlet.attribute.*,
-		org.openmdx.portal.servlet.component.*,
-		org.openmdx.portal.servlet.control.*,
-		org.openmdx.portal.servlet.wizards.*,
-		org.openmdx.base.naming.*
-		" %>
+	java.util.*,
+	java.io.*,
+	java.text.*,
+	org.opencrx.kernel.backend.*,
+	org.opencrx.kernel.portal.wizard.*,
+	org.opencrx.kernel.generic.*,
+	org.openmdx.kernel.id.cci.*,
+	org.openmdx.kernel.id.*,
+	org.openmdx.base.exception.*,
+	org.openmdx.base.accessor.jmi.cci.*,
+	org.openmdx.portal.servlet.*,
+	org.openmdx.portal.servlet.attribute.*,
+	org.openmdx.portal.servlet.component.*,
+	org.openmdx.portal.servlet.control.*,
+	org.openmdx.portal.servlet.wizards.*,
+	org.openmdx.base.naming.*
+	" %>
 <%
 	final String FORM_NAME = "MailMerge";
 	MailMergeController wc = new MailMergeController();
@@ -88,81 +88,81 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form name="<%= FORM_NAME %>" id="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-	<%
-		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-	%>
-	<div class="alert alert-danger" role="alert">
-		<table>
-			<tr>
-				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-				<td><%= wc.getErrorMessage() %></td>
-			</tr>
-		</table>
-	</div>
-	<%
-		}
-	%>
+    <%
+	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+    %>
+    <div class="alert alert-danger" role="alert">
+	<table>
+	    <tr>
+		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+		<td><%= wc.getErrorMessage() %></td>
+	    </tr>
+	</table>
+    </div>
+    <%
+	    }
+    %>
     <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
     <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-	<input type="hidden" name="Command" id="Command" value="" />    
-	<%
-		List<MailMergeController.MailMergeTemplate> mailMergeTemplates = wc.getMailMergeTemplates();
-		Action downloadFileAction = wc.getDownloadFileAction();
-		if(downloadFileAction != null) {
-	%>
-	<br />
-	<a href="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>"><%= downloadFileAction.getTitle() %></a>		
-	<br />
-	<%
-		} else if(!mailMergeTemplates.isEmpty()) {
-	%>
-	<table class="fieldGroup">
-		<tr>
-			<td class="<%= CssClass.fieldLabel %>"><span class="nw">Template:</span></td>
-			<td >
-				<select class="valueL" id="templateXri" name="templateXri" tabindex="100">
-					<%
-											for(MailMergeController.MailMergeTemplate mailMergeTemplate: mailMergeTemplates) {
-												boolean selected =
-													wc.getTemplateXri() != null &&
-													wc.getTemplateXri().equals(mailMergeTemplate.getMediaContentIdentity().toXRI());
-					%>
-					<option <%= selected ? "selected" : "" %> value="<%= mailMergeTemplate.getMediaContentIdentity().toXRI() %>"><%= mailMergeTemplate.getEntryName() == null ? "#" : mailMergeTemplate.getEntryName() %> / <%= mailMergeTemplate.getContentName() == null ? "*" : mailMergeTemplate.getContentName() %>
-						<%
-												}
-						%>
-				</select>
-			</td>
-			<td class="addon" >&nbsp;<br>&nbsp;</td>
-		</tr>
-	</table>
-	<br />
-	<div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
-	<div id="SubmitArea" style="display:none;">
-		<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;"/>
-		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="2000" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-	</div>
-	<%
-		} else {
-	%>
-	<br />
-	<p>No templates found. Document folder <%= MailMergeController.MAILMERGE_TEMPLATE_FOLDER_NAME %> does not exist or is empty.</p>
-	<%
-		}
-	%>
+    <input type="hidden" name="Command" id="Command" value="" />    
+    <%
+	    List<MailMergeController.MailMergeTemplate> mailMergeTemplates = wc.getMailMergeTemplates();
+	    Action downloadFileAction = wc.getDownloadFileAction();
+	    if(downloadFileAction != null) {
+    %>
+    <br />
+    <a href="<%= downloadFileAction.getEncodedHRef(wc.getRequestId()) %>"><%= downloadFileAction.getTitle() %></a>		
+    <br />
+    <%
+	    } else if(!mailMergeTemplates.isEmpty()) {
+    %>
+    <table class="fieldGroup">
+	<tr>
+	    <td class="<%= CssClass.fieldLabel %>"><span class="nw">Template:</span></td>
+	    <td >
+		<select class="valueL" id="templateXri" name="templateXri" tabindex="100">
+		    <%
+								    for(MailMergeController.MailMergeTemplate mailMergeTemplate: mailMergeTemplates) {
+									    boolean selected =
+										    wc.getTemplateXri() != null &&
+										    wc.getTemplateXri().equals(mailMergeTemplate.getMediaContentIdentity().toXRI());
+		    %>
+		    <option <%= selected ? "selected" : "" %> value="<%= mailMergeTemplate.getMediaContentIdentity().toXRI() %>"><%= mailMergeTemplate.getEntryName() == null ? "#" : mailMergeTemplate.getEntryName() %> / <%= mailMergeTemplate.getContentName() == null ? "*" : mailMergeTemplate.getContentName() %>
+			<%
+									}
+			%>
+		</select>
+	    </td>
+	    <td class="addon" >&nbsp;<br>&nbsp;</td>
+	</tr>
+    </table>
+    <br />
+    <div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
+    <div id="SubmitArea" style="display:none;">
+	<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="1000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;"/>
+	<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="2000" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+    </div>
+    <%
+	    } else {
+    %>
+    <br />
+    <p>No templates found. Document folder <%= MailMergeController.MAILMERGE_TEMPLATE_FOLDER_NAME %> does not exist or is empty.</p>
+    <%
+	    }
+    %>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-		$('<%= FORM_NAME %>').request({
-			onFailure: function () { },
-			onSuccess: function (t) {
-				$('UserDialog').update(t.responseText);
-			}
-		});
-		Event.stop(event);
+    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+	$('<%= FORM_NAME %>').request({
+	    onFailure: function () { },
+	    onSuccess: function (t) {
+		$('UserDialog').update(t.responseText);
+	    }
 	});
-	$('WaitIndicator').style.display = 'none';
-	$('SubmitArea').style.display = 'block';
+	Event.stop(event);
+    });
+    $('WaitIndicator').style.display = 'none';
+    $('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

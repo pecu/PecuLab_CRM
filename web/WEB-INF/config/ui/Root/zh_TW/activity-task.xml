@@ -1,297 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
-	<_object/>
-	<_content>
-		<provider>
-			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-				<_object/>
-				<_content>
-					<segment>
-						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
-							<_object/>
-							<_content>
-								<featureDefinition>
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 200 = Mobile -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Mobile!phoneNumberFull">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <!-- 500 = Business -->
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!emailAddress">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								</featureDefinition>														
+    <_object/>
+    <_content>
+	<provider>
+	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<_object/>
+		<_content>
+		    <segment>
+			<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+			    <_object/>
+			    <_content>
+				<featureDefinition>
+				    <!-- 500 = Business -->
+				    <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!phoneNumberFull">
+					<_object>
+					    <type>org:w3c:string</type>
+					    <multiplicity>0..1</multiplicity>
+					    <changeable>false</changeable>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.StructuralFeatureDefinition>
+				    <!-- 200 = Mobile -->
+				    <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Mobile!phoneNumberFull">
+					<_object>
+					    <type>org:w3c:string</type>
+					    <multiplicity>0..1</multiplicity>
+					    <changeable>false</changeable>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.StructuralFeatureDefinition>
+				    <!-- 500 = Business -->
+				    <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!emailAddress">
+					<_object>
+					    <type>org:w3c:string</type>
+					    <multiplicity>0..1</multiplicity>
+					    <changeable>false</changeable>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.StructuralFeatureDefinition>
+				</featureDefinition>														
 
-								<elementDefinition>
+				<elementDefinition>
 									
-									<!-- disable operation "Clone" -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:Pane:Op:Tab:clone">
-										<_object>
-											<active>false</active>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- disable operation "Clone" -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:Pane:Op:Tab:clone">
+					<_object>
+					    <active>false</active>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>任務</_item>
-											</toolTip>
-											<label>
-												<_item>任務</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-											<iconKey>Task</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:taskParty">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>涉及的帳戶</_item>
-											</toolTip>
-											<label>
-												<_item>涉及的帳戶</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>6</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--grid column definition-->
-									<!--FieldGroups in General Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:Pane:Attr:Tab:0:Group:20">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>額外資訊</_item>
-											</toolTip>
-											<label>
-												<_item>額外資訊</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:activityState">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>狀況</_item>
-											</toolTip>
-											<label>
-												<_item>狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--MeetingParty-->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>涉及的帳戶</_item>
-											</toolTip>
-											<label>
-												<_item>涉及的帳戶</_item>
-											</label>
-											<iconKey>Account</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--grid column definition-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:party">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>帳戶</_item>
-											</toolTip>
-											<label>
-												<_item>帳戶</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:emailHint">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>電子郵件提示</_item>
-											</toolTip>
-											<label>
-												<_item>電子郵件提示</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>200</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:partyType">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>類型</_item>
-											</toolTip>
-											<label>
-												<_item>類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:partyStatus">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>狀況</_item>
-											</toolTip>
-											<label>
-												<_item>狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>任務</_item>
+					    </toolTip>
+					    <label>
+						<_item>任務</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>30</_item>
+					    </order>
+					    <iconKey>Task</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:taskParty">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>涉及的帳戶</_item>
+					    </toolTip>
+					    <label>
+						<_item>涉及的帳戶</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>6</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--grid column definition-->
+				    <!--FieldGroups in General Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:Pane:Attr:Tab:0:Group:20">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>額外資訊</_item>
+					    </toolTip>
+					    <label>
+						<_item>額外資訊</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Task:activityState">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--MeetingParty-->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>涉及的帳戶</_item>
+					    </toolTip>
+					    <label>
+						<_item>涉及的帳戶</_item>
+					    </label>
+					    <iconKey>Account</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--grid column definition-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:party">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>帳戶</_item>
+					    </toolTip>
+					    <label>
+						<_item>帳戶</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:emailHint">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>電子郵件提示</_item>
+					    </toolTip>
+					    <label>
+						<_item>電子郵件提示</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>200</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:partyType">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:partyStatus">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!phoneNumberFull">
-										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
-                      <columnBreak>false</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>公司電話</_item>
-											</toolTip>
-											<label>
-												<_item>公司電話</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>12</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Mobile!phoneNumberFull">
-										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
-											<active>true</active>
-											<toolTip>
-												<_item>行動電話</_item>
-											</toolTip>
-											<label>
-												<_item>行動電話</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>14</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!emailAddress">
-										<_object>
-                      <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
-                      <columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>公司電子郵件</_item>
-											</toolTip>
-											<label>
-												<_item>公司電子郵件</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>80</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>16</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-								</elementDefinition>
-							</_content>
-						</org.openmdx.ui1.Segment>
-					</segment>
-				</_content>
-			</org.openmdx.base.Provider>
-		</provider>
-	</_content>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!phoneNumberFull">
+					<_object>
+					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500;automaticParsing=(boolean)true</dataBindingName>
+					    <columnBreak>false</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>公司電話</_item>
+					    </toolTip>
+					    <label>
+						<_item>公司電話</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>12</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Mobile!phoneNumberFull">
+					<_object>
+					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PhoneNumber;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)200;automaticParsing=(boolean)true</dataBindingName>
+					    <active>true</active>
+					    <toolTip>
+						<_item>行動電話</_item>
+					    </toolTip>
+					    <label>
+						<_item>行動電話</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>14</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:TaskParty:(party;address)*Business!emailAddress">
+					<_object>
+					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:EMailAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)500</dataBindingName>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>公司電子郵件</_item>
+					    </toolTip>
+					    <label>
+						<_item>公司電子郵件</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>80</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>16</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				</elementDefinition>
+			    </_content>
+			</org.openmdx.ui1.Segment>
+		    </segment>
+		</_content>
+	    </org.openmdx.base.Provider>
+	</provider>
+    </_content>
 </org.openmdx.base.Authority>

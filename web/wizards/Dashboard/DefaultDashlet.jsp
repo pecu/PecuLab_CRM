@@ -53,15 +53,15 @@
  */
 %>
 <%@ page session="true" import="
-		 java.util.*,
-		 java.util.zip.*,
-		 java.io.*,
-		 java.text.*,
-		 java.math.*,
-		 java.net.*,
-		 org.openmdx.portal.servlet.*,
-		 org.openmdx.kernel.log.*
-		 " %>
+	 java.util.*,
+	 java.util.zip.*,
+	 java.io.*,
+	 java.text.*,
+	 java.math.*,
+	 java.net.*,
+	 org.openmdx.portal.servlet.*,
+	 org.openmdx.kernel.log.*
+	 " %>
 <%
 	ApplicationContext app = (ApplicationContext)session.getValue(WebKeys.APPLICATION_KEY);
 	ViewsCache viewsCache = (ViewsCache)session.getValue(WebKeys.VIEW_CACHE_KEY_SHOW);
@@ -72,26 +72,26 @@
 		String dashletId = Action.getParameter(parameters, Action.PARAMETER_ID);
 %>
 <div>
-	<%				
-				if(xri != null && requestId != null && dashletId != null && viewsCache.getView(requestId) != null) {
+    <%				
+			    if(xri != null && requestId != null && dashletId != null && viewsCache.getView(requestId) != null) {
+    %>
+    <p>
+	<i>DefaultDashlet:</i>
+	<%
+				}
+				else {
 	%>
-	<p>
-		<i>DefaultDashlet:</i>
-		<%
-					}
-					else {
-		%>
-	<p>
-		<i>DefaultDashlet invoked with missing or invalid parameters:</i>
-		<%
-					}
-		%>		     
-	<ul>
-		<li><b>RequestId:</b> <%= requestId %></li>
-		<li><b>XRI:</b> <%= xri %></li>
-		<li><b>Dashlet-Id:</b> <%= dashletId %></li>
-	</ul>
-	<p>
+    <p>
+	<i>DefaultDashlet invoked with missing or invalid parameters:</i>
+	<%
+				}
+	%>		     
+    <ul>
+	<li><b>RequestId:</b> <%= requestId %></li>
+	<li><b>XRI:</b> <%= xri %></li>
+	<li><b>Dashlet-Id:</b> <%= dashletId %></li>
+    </ul>
+    <p>
 </div>
 <%			
 	}

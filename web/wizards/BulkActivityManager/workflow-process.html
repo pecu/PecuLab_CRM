@@ -61,15 +61,15 @@ openMDX (http://www.openmdx.org/)
 <link rel="import" href="../../js/polymer/components/paper-input/paper-input-container.html">
 <link rel="import" href="../../js/openmdx/portal/elements/portal-datetime-input/portal-datetime-input.html">
 <dom-module id="workflow-process">
-	<link rel="import" type="css" href="workflow-process.css">
+    <link rel="import" type="css" href="workflow-process.css">
     <template>
-		<div class="vertical justified layout">
-			<template is="dom-if" if="{{!data.isCompleted}}">
-				<paper-progress indeterminate value="0"></paper-progress>
-			</template>    			
-			<paper-button style="text-align:left;" noink>
-				<div class="card-content horizontal justified layout">
-					<pre class="layout flex one">
+	<div class="vertical justified layout">
+	    <template is="dom-if" if="{{!data.isCompleted}}">
+		<paper-progress indeterminate value="0"></paper-progress>
+	    </template>    			
+	    <paper-button style="text-align:left;" noink>
+		<div class="card-content horizontal justified layout">
+		    <pre class="layout flex one">
 {{metaInf.labelWfProcessInstanceName}}: {{data.wfProcessInstance.title}}
 {{metaInf.labelWfProcessState}}: {{data.processState}}
 <template is="dom-if" if="{{data.lastActivityOn}}">{{metaInf.labelLastActivityOn}}: {{data.lastActivityOn}}
@@ -78,35 +78,35 @@ openMDX (http://www.openmdx.org/)
 </template>---
 <template is="dom-repeat" items="{{data.logEntries}}">{{item}}
 </template></pre>
-				</div>
-			</paper-button>
 		</div>
+	    </paper-button>
+	</div>
     </template>
 </dom-module>
 <script>
-	Polymer({
-		is: 'workflow-process',
-		properties: {
-			url: {
-				type: String
-			},
-			xri: {
-				type: String
-			},
-			provider: {
-				type: String
-			},
-			segment: {
-				type: String
-			},
-			data: {
-				type: Object
-			},
-			metaInf: {
-				type: Object
-			}
-		},
-		ready: function () {
-		}
-	});
+    Polymer({
+	is: 'workflow-process',
+	properties: {
+	    url: {
+		type: String
+	    },
+	    xri: {
+		type: String
+	    },
+	    provider: {
+		type: String
+	    },
+	    segment: {
+		type: String
+	    },
+	    data: {
+		type: Object
+	    },
+	    metaInf: {
+		type: Object
+	    }
+	},
+	ready: function () {
+	}
+    });
 </script>

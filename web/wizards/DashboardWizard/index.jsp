@@ -52,21 +52,21 @@
  * license.
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.application.cci.*,
-		   org.openmdx.base.text.conversion.*,
-		   org.openmdx.base.accessor.cci.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.kernel.id.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.application.cci.*,
+	   org.openmdx.base.text.conversion.*,
+	   org.openmdx.base.accessor.cci.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.kernel.id.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*
 " %><%
 	final String FORM_NAME = "DashboardForm";
 	final String WIZARD_NAME = "DashboardWizard.jsp";
@@ -296,58 +296,58 @@
 	);
 %>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= "." + request.getServletPath() %>">
-	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
-	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= objectXri %>" />
-	<input type="hidden" id="Command" name="Command" value="" />									
-	<table cellspacing="8" class="<%= CssClass.tableLayout %>">
-		<tr>
-			<td class="<%= CssClass.cellObject %>">
-				<div class="<%= CssClass.panel %>" id="panel<%= FORM_NAME %>" style="display:block">
-					<%
-										Control dashboard = view.createControl(
-											"DashboardEdit",
-											DashboardControl.class
-										);
-										dashboard.paint(
-											p,
-											true
-										);
-										p.flush();
-					%>
-				</div>
-				<select name="SelectedDashlet">
-					<%
-										Set<String> paths = this.getServletContext().getResourcePaths("/wizards/Dashboard/");
-										for(String path: paths) {
-											String dashlet = path.substring(path.lastIndexOf("/") + 1);
-											if(dashlet.endsWith(".jsp")) {
-												dashlet = dashlet.substring(0, dashlet.indexOf(".jsp"));
-											}
-					%>
-					<option value="<%= dashlet %>"><%= dashlet %></option>
-					<%						
-										}
-					%>				
-				</select>
-				<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_ADD %>" tabindex="9020" value="+" onclick="javascript:$('Command').value = this.name;" />
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_APPLY %>" id="<%= COMMAND_APPLY %>" tabindex="9000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-				<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_CANCEL %>" id="<%= COMMAND_CANCEL %> %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-			</td>
-		</tr>
-	</table>
+    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
+    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= objectXri %>" />
+    <input type="hidden" id="Command" name="Command" value="" />									
+    <table cellspacing="8" class="<%= CssClass.tableLayout %>">
+	<tr>
+	    <td class="<%= CssClass.cellObject %>">
+		<div class="<%= CssClass.panel %>" id="panel<%= FORM_NAME %>" style="display:block">
+		    <%
+							    Control dashboard = view.createControl(
+								    "DashboardEdit",
+								    DashboardControl.class
+							    );
+							    dashboard.paint(
+								    p,
+								    true
+							    );
+							    p.flush();
+		    %>
+		</div>
+		<select name="SelectedDashlet">
+		    <%
+							    Set<String> paths = this.getServletContext().getResourcePaths("/wizards/Dashboard/");
+							    for(String path: paths) {
+								    String dashlet = path.substring(path.lastIndexOf("/") + 1);
+								    if(dashlet.endsWith(".jsp")) {
+									    dashlet = dashlet.substring(0, dashlet.indexOf(".jsp"));
+								    }
+		    %>
+		    <option value="<%= dashlet %>"><%= dashlet %></option>
+		    <%						
+							    }
+		    %>				
+		</select>
+		<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_ADD %>" tabindex="9020" value="+" onclick="javascript:$('Command').value = this.name;" />
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_APPLY %>" id="<%= COMMAND_APPLY %>" tabindex="9000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+		<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_CANCEL %>" id="<%= COMMAND_CANCEL %> %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+	    </td>
+	</tr>
+    </table>
 </form>
 <br />
 <script language="javascript" type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-		$('<%= FORM_NAME %>').request({
-			onFailure: function () { },
-			onSuccess: function (t) {
-				$('UserDialog').update(t.responseText);
-			}
-		});
-		Event.stop(event);
+    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+	$('<%= FORM_NAME %>').request({
+	    onFailure: function () { },
+	    onSuccess: function (t) {
+		$('UserDialog').update(t.responseText);
+	    }
 	});
+	Event.stop(event);
+    });
 </script>
 <%
 if(pm != null) {

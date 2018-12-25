@@ -68,49 +68,49 @@ element.
 -->
 
 <dom-module id="paper-dialog">
-	<template>
-		<style include="paper-dialog-shared-styles"></style>
-		<content></content>
-	</template>
+    <template>
+	<style include="paper-dialog-shared-styles"></style>
+	<content></content>
+    </template>
 </dom-module>
 
 <script>
 
-	(function () {
+    (function () {
 
-		Polymer({
-			is: 'paper-dialog',
-			behaviors: [
-				Polymer.PaperDialogBehavior,
-				Polymer.NeonAnimationRunnerBehavior
-			],
-			listeners: {
-				'neon-animation-finish': '_onNeonAnimationFinish'
-			},
-			_renderOpened: function () {
-				this.cancelAnimation();
-				if (this.withBackdrop) {
-					this.backdropElement.open();
-				}
-				this.playAnimation('entry');
-			},
-			_renderClosed: function () {
-				this.cancelAnimation();
-				if (this.withBackdrop) {
-					this.backdropElement.close();
-				}
-				this.playAnimation('exit');
-			},
-			_onNeonAnimationFinish: function () {
-				if (this.opened) {
-					this._finishRenderOpened();
-				} else {
-					this._finishRenderClosed();
-				}
-			}
+	Polymer({
+	    is: 'paper-dialog',
+	    behaviors: [
+		Polymer.PaperDialogBehavior,
+		Polymer.NeonAnimationRunnerBehavior
+	    ],
+	    listeners: {
+		'neon-animation-finish': '_onNeonAnimationFinish'
+	    },
+	    _renderOpened: function () {
+		this.cancelAnimation();
+		if (this.withBackdrop) {
+		    this.backdropElement.open();
+		}
+		this.playAnimation('entry');
+	    },
+	    _renderClosed: function () {
+		this.cancelAnimation();
+		if (this.withBackdrop) {
+		    this.backdropElement.close();
+		}
+		this.playAnimation('exit');
+	    },
+	    _onNeonAnimationFinish: function () {
+		if (this.opened) {
+		    this._finishRenderOpened();
+		} else {
+		    this._finishRenderClosed();
+		}
+	    }
 
-		});
+	});
 
-	})();
+    })();
 
 </script>

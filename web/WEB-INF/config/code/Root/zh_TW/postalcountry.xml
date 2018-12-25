@@ -1,2853 +1,2853 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:opencrx:kernel:code1" xsi:noNamespaceSchemaLocation="xri://+resource/org/opencrx/kernel/code1/xmi1/code1.xsd">
-	<_object />
-	<_content>
-		<provider>
-			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-				<_object />
-				<_content>
-					<segment>
-						<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
-							<_object />
-							<_content>
-								<valueContainer>
-									<org.opencrx.kernel.code1.CodeValueContainer name="country" _operation="set">
-										<_object>
-											<name>
-												<_item>country</_item>
-												<_item>org:opencrx:kernel:address1:PostalAddressable:postalCountry</_item>
-												<_item>org:opencrx:kernel:account1:SearchIndexEntry:postalCountry</_item>
-												<_item>org:opencrx:kernel:account1:Contact:citizenship</_item>
-												<_item>org:opencrx:kernel:account1:Contact:address!postalCountry</_item>
-												<_item>org:opencrx:kernel:account1:Account:address*Business!postalCountry</_item>
-												<_item>org:opencrx:kernel:product1:SalesTaxTypeGroup:taxAuthorityCountry</_item>
-											</name>
-										</_object>
-										<_content>
-											<entry>
-												<!-- sources: http://www.nationsonline.org/oneworld/country_code_list.htm http://www.iso.org/iso/support/country_codes/iso_3166_code_lists/iso-3166-1_decoding_table.htm#BQ ISO ALPHA-2 code ISO Numeric code UN M49 -->
-												<org.opencrx.kernel.code1.CodeValueEntry code="000" _operation="set">
-													<_object>
-														<shortText>
-															<_item>--無--</_item>
-														</shortText>
-														<longText>
-															<_item>--無--</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="004" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AF</_item>
-														</shortText>
-														<longText>
-															<_item>阿富汗</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="248" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AX</_item>
-														</shortText>
-														<longText>
-															<_item>奧蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="008" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AL</_item>
-														</shortText>
-														<longText>
-															<_item>阿爾巴尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="012" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DZ</_item>
-														</shortText>
-														<longText>
-															<_item>阿爾及利亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="016" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AS</_item>
-														</shortText>
-														<longText>
-															<_item>美屬薩摩亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="020" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AD</_item>
-														</shortText>
-														<longText>
-															<_item>安道爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="024" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AO</_item>
-														</shortText>
-														<longText>
-															<_item>安哥拉</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="660" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AI</_item>
-														</shortText>
-														<longText>
-															<_item>安圭拉</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="010" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AQ</_item>
-														</shortText>
-														<longText>
-															<_item>南極洲</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="028" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AG</_item>
-														</shortText>
-														<longText>
-															<_item>安提瓜和巴布達</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="032" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AR</_item>
-														</shortText>
-														<longText>
-															<_item>阿根廷</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="051" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AM</_item>
-														</shortText>
-														<longText>
-															<_item>亞美尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="533" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AW</_item>
-														</shortText>
-														<longText>
-															<_item>阿魯巴</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="036" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AU</_item>
-														</shortText>
-														<longText>
-															<_item>澳大利亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="040" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AT</_item>
-														</shortText>
-														<longText>
-															<_item>奧地利</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="031" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AZ</_item>
-														</shortText>
-														<longText>
-															<_item>阿塞拜疆</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="044" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BS</_item>
-														</shortText>
-														<longText>
-															<_item>巴哈馬</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="048" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BH</_item>
-														</shortText>
-														<longText>
-															<_item>巴林王國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="050" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BD</_item>
-														</shortText>
-														<longText>
-															<_item>孟加拉國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="052" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BB</_item>
-														</shortText>
-														<longText>
-															<_item>巴巴多斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="112" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BY</_item>
-														</shortText>
-														<longText>
-															<_item>白俄羅斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="056" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BE</_item>
-														</shortText>
-														<longText>
-															<_item>比利時</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="084" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BZ</_item>
-														</shortText>
-														<longText>
-															<_item>伯利茲</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="204" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BJ</_item>
-														</shortText>
-														<longText>
-															<_item>貝寧</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="060" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BM</_item>
-														</shortText>
-														<longText>
-															<_item>百慕達</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="064" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BT</_item>
-														</shortText>
-														<longText>
-															<_item>不丹</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="068" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BO</_item>
-														</shortText>
-														<longText>
-															<_item>玻利維亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="535" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BQ</_item>
-														</shortText>
-														<longText>
-															<_item>博內爾島，聖尤斯特歇斯島和薩巴島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="070" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BA</_item>
-														</shortText>
-														<longText>
-															<_item>波斯尼亞和黑塞哥維那</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="072" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BW</_item>
-														</shortText>
-														<longText>
-															<_item>博茨瓦納</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="074" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BV</_item>
-														</shortText>
-														<longText>
-															<_item>布維島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="076" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BR</_item>
-														</shortText>
-														<longText>
-															<_item>巴西</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="086" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IO</_item>
-														</shortText>
-														<longText>
-															<_item>英屬印度洋領地</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="096" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BN</_item>
-														</shortText>
-														<longText>
-															<_item>文萊</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="100" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BG</_item>
-														</shortText>
-														<longText>
-															<_item>保加利亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="854" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BF</_item>
-														</shortText>
-														<longText>
-															<_item>布基納法索</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="108" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BI</_item>
-														</shortText>
-														<longText>
-															<_item>布隆迪</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="116" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KH</_item>
-														</shortText>
-														<longText>
-															<_item>柬埔寨</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="120" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CM</_item>
-														</shortText>
-														<longText>
-															<_item>喀麥隆</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="124" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CA</_item>
-														</shortText>
-														<longText>
-															<_item>加拿大</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="132" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CV</_item>
-														</shortText>
-														<longText>
-															<_item>佛得角</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="136" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KY</_item>
-														</shortText>
-														<longText>
-															<_item>開曼群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="140" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CF</_item>
-														</shortText>
-														<longText>
-															<_item>中非共和國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="148" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TD</_item>
-														</shortText>
-														<longText>
-															<_item>乍得</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="152" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CL</_item>
-														</shortText>
-														<longText>
-															<_item>智利</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="156" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CN</_item>
-														</shortText>
-														<longText>
-															<_item>中國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="162" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CX</_item>
-														</shortText>
-														<longText>
-															<_item>聖誕島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="166" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CC</_item>
-														</shortText>
-														<longText>
-															<_item>科科斯 (基林) 群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="170" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CO</_item>
-														</shortText>
-														<longText>
-															<_item>哥倫比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="174" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KM</_item>
-														</shortText>
-														<longText>
-															<_item>科摩羅</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="178" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CG</_item>
-														</shortText>
-														<longText>
-															<_item>剛果 (布拉柴維爾)</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="180" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CD</_item>
-														</shortText>
-														<longText>
-															<_item>剛果 (金沙薩)</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="184" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CK</_item>
-														</shortText>
-														<longText>
-															<_item>庫克群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="188" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CR</_item>
-														</shortText>
-														<longText>
-															<_item>哥斯達黎加</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="384" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CI</_item>
-														</shortText>
-														<longText>
-															<_item>科特迪瓦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="191" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HR</_item>
-														</shortText>
-														<longText>
-															<_item>克羅地亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="192" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CU</_item>
-														</shortText>
-														<longText>
-															<_item>古巴</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="531" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CW</_item>
-														</shortText>
-														<longText>
-															<_item>庫拉索</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="196" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CY</_item>
-														</shortText>
-														<longText>
-															<_item>塞浦路斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="203" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CZ</_item>
-														</shortText>
-														<longText>
-															<_item>捷克共和國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="208" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DK</_item>
-														</shortText>
-														<longText>
-															<_item>丹麥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="262" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DJ</_item>
-														</shortText>
-														<longText>
-															<_item>吉布提</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="212" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DM</_item>
-														</shortText>
-														<longText>
-															<_item>多米尼加</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="214" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DO</_item>
-														</shortText>
-														<longText>
-															<_item>多明尼加共和國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="626" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TL</_item>
-														</shortText>
-														<longText>
-															<_item>東帝汶</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="218" _operation="set">
-													<_object>
-														<shortText>
-															<_item>EC</_item>
-														</shortText>
-														<longText>
-															<_item>厄瓜多爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="818" _operation="set">
-													<_object>
-														<shortText>
-															<_item>EG</_item>
-														</shortText>
-														<longText>
-															<_item>埃及</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="222" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SV</_item>
-														</shortText>
-														<longText>
-															<_item>薩爾瓦多</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="226" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GQ</_item>
-														</shortText>
-														<longText>
-															<_item>赤道幾內亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="232" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ER</_item>
-														</shortText>
-														<longText>
-															<_item>厄立特里亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="233" _operation="set">
-													<_object>
-														<shortText>
-															<_item>EE</_item>
-														</shortText>
-														<longText>
-															<_item>愛沙尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="231" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ET</_item>
-														</shortText>
-														<longText>
-															<_item>埃塞俄比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="238" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FK</_item>
-														</shortText>
-														<longText>
-															<_item>福克蘭群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="234" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FO</_item>
-														</shortText>
-														<longText>
-															<_item>法羅群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="242" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FJ</_item>
-														</shortText>
-														<longText>
-															<_item>斐國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="246" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FI</_item>
-														</shortText>
-														<longText>
-															<_item>芬蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="249" _operation="set">
-													<_object>
-														<validFrom>1990-01-01T00:00:00.000Z</validFrom>
-														<validTo>2002-11-22T00:00:00.000Z</validTo>
-														<shortText>
-															<_item>FX</_item>
-														</shortText>
-														<longText>
-															<_item>法國，大都會</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="250" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FR</_item>
-														</shortText>
-														<longText>
-															<_item>法國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="254" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GF</_item>
-														</shortText>
-														<longText>
-															<_item>法屬圭亞那</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="258" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PF</_item>
-														</shortText>
-														<longText>
-															<_item>法屬波利尼西亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="260" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TF</_item>
-														</shortText>
-														<longText>
-															<_item>法屬南部領土</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="266" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GA</_item>
-														</shortText>
-														<longText>
-															<_item>加蓬</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="270" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GM</_item>
-														</shortText>
-														<longText>
-															<_item>岡比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="268" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GE</_item>
-														</shortText>
-														<longText>
-															<_item>格魯吉亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="276" _operation="set">
-													<_object>
-														<shortText>
-															<_item>DE</_item>
-														</shortText>
-														<longText>
-															<_item>德國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="288" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GH</_item>
-														</shortText>
-														<longText>
-															<_item>加納</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="292" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GI</_item>
-														</shortText>
-														<longText>
-															<_item>直布羅陀</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="300" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GR</_item>
-														</shortText>
-														<longText>
-															<_item>希臘</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="304" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GL</_item>
-														</shortText>
-														<longText>
-															<_item>格陵蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="308" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GD</_item>
-														</shortText>
-														<longText>
-															<_item>格林納達</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="312" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GP</_item>
-														</shortText>
-														<longText>
-															<_item>瓜德羅普島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="316" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GU</_item>
-														</shortText>
-														<longText>
-															<_item>關島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="320" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GT</_item>
-														</shortText>
-														<longText>
-															<_item>瓜地馬拉</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="831" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GG</_item>
-														</shortText>
-														<longText>
-															<_item>根西島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="324" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GN</_item>
-														</shortText>
-														<longText>
-															<_item>幾內亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="624" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GW</_item>
-														</shortText>
-														<longText>
-															<_item>幾內亞比紹</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="328" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GY</_item>
-														</shortText>
-														<longText>
-															<_item>圭亞那</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="332" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HT</_item>
-														</shortText>
-														<longText>
-															<_item>海地</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="334" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HM</_item>
-														</shortText>
-														<longText>
-															<_item>赫德島和麥當勞群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="336" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VA</_item>
-														</shortText>
-														<longText>
-															<_item>梵蒂岡城</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="340" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HN</_item>
-														</shortText>
-														<longText>
-															<_item>洪都拉斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="344" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HK</_item>
-														</shortText>
-														<longText>
-															<_item>香港</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="348" _operation="set">
-													<_object>
-														<shortText>
-															<_item>HU</_item>
-														</shortText>
-														<longText>
-															<_item>匈牙利</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="352" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IS</_item>
-														</shortText>
-														<longText>
-															<_item>冰島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="356" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IN</_item>
-														</shortText>
-														<longText>
-															<_item>印度</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="360" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ID</_item>
-														</shortText>
-														<longText>
-															<_item>印度尼西亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="364" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IR</_item>
-														</shortText>
-														<longText>
-															<_item>伊朗</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="368" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IQ</_item>
-														</shortText>
-														<longText>
-															<_item>伊拉克</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="372" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IE</_item>
-														</shortText>
-														<longText>
-															<_item>愛爾蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="376" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IL</_item>
-														</shortText>
-														<longText>
-															<_item>以色列</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="380" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IT</_item>
-														</shortText>
-														<longText>
-															<_item>意大利</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="381" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KV</_item>
-														</shortText>
-														<longText>
-															<_item>科索沃</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="388" _operation="set">
-													<_object>
-														<shortText>
-															<_item>JM</_item>
-														</shortText>
-														<longText>
-															<_item>牙買加</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="392" _operation="set">
-													<_object>
-														<shortText>
-															<_item>JP</_item>
-														</shortText>
-														<longText>
-															<_item>日本</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="832" _operation="set">
-													<_object>
-														<shortText>
-															<_item>JE</_item>
-														</shortText>
-														<longText>
-															<_item>新澤西</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="400" _operation="set">
-													<_object>
-														<shortText>
-															<_item>JO</_item>
-														</shortText>
-														<longText>
-															<_item>約旦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="398" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KZ</_item>
-														</shortText>
-														<longText>
-															<_item>哈薩克斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="404" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KE</_item>
-														</shortText>
-														<longText>
-															<_item>肯亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="296" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KI</_item>
-														</shortText>
-														<longText>
-															<_item>基里巴斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="408" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KP</_item>
-														</shortText>
-														<longText>
-															<_item>北韓</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="410" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KR</_item>
-														</shortText>
-														<longText>
-															<_item>南韓</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="414" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KW</_item>
-														</shortText>
-														<longText>
-															<_item>科威特</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="417" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KG</_item>
-														</shortText>
-														<longText>
-															<_item>吉爾吉斯斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="418" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LA</_item>
-														</shortText>
-														<longText>
-															<_item>老撾人民民主共和國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="428" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LV</_item>
-														</shortText>
-														<longText>
-															<_item>拉脫維亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="422" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LB</_item>
-														</shortText>
-														<longText>
-															<_item>黎巴嫩</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="426" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LS</_item>
-														</shortText>
-														<longText>
-															<_item>萊索托</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="430" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LR</_item>
-														</shortText>
-														<longText>
-															<_item>利比里亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="434" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LY</_item>
-														</shortText>
-														<longText>
-															<_item>利比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="438" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LI</_item>
-														</shortText>
-														<longText>
-															<_item>列支敦士登</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="440" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LT</_item>
-														</shortText>
-														<longText>
-															<_item>立陶宛</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="442" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LU</_item>
-														</shortText>
-														<longText>
-															<_item>盧森堡</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="446" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MO</_item>
-														</shortText>
-														<longText>
-															<_item>澳門</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="807" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MK</_item>
-														</shortText>
-														<longText>
-															<_item>馬其頓</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="450" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MG</_item>
-														</shortText>
-														<longText>
-															<_item>馬達加斯加</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="454" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MW</_item>
-														</shortText>
-														<longText>
-															<_item>馬拉維</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="458" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MY</_item>
-														</shortText>
-														<longText>
-															<_item>馬來西亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="462" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MV</_item>
-														</shortText>
-														<longText>
-															<_item>馬爾地夫</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="466" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ML</_item>
-														</shortText>
-														<longText>
-															<_item>馬里</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="470" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MT</_item>
-														</shortText>
-														<longText>
-															<_item>馬耳他</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="584" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MH</_item>
-														</shortText>
-														<longText>
-															<_item>馬紹爾群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="474" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MQ</_item>
-														</shortText>
-														<longText>
-															<_item>馬提尼克</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="478" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MR</_item>
-														</shortText>
-														<longText>
-															<_item>毛里塔尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="480" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MU</_item>
-														</shortText>
-														<longText>
-															<_item>毛里求斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="175" _operation="set">
-													<_object>
-														<shortText>
-															<_item>YT</_item>
-														</shortText>
-														<longText>
-															<_item>馬約特</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="484" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MX</_item>
-														</shortText>
-														<longText>
-															<_item>墨西哥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="583" _operation="set">
-													<_object>
-														<shortText>
-															<_item>FM</_item>
-														</shortText>
-														<longText>
-															<_item>密克羅尼西亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="498" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MD</_item>
-														</shortText>
-														<longText>
-															<_item>摩爾多瓦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="492" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MC</_item>
-														</shortText>
-														<longText>
-															<_item>摩納哥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="496" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MN</_item>
-														</shortText>
-														<longText>
-															<_item>蒙古</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="499" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ME</_item>
-														</shortText>
-														<longText>
-															<_item>黑山</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="500" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MS</_item>
-														</shortText>
-														<longText>
-															<_item>蒙特塞拉特</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="504" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MA</_item>
-														</shortText>
-														<longText>
-															<_item>摩洛哥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="508" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MZ</_item>
-														</shortText>
-														<longText>
-															<_item>莫桑比克</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="104" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MM</_item>
-														</shortText>
-														<longText>
-															<_item>緬甸</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="516" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NA</_item>
-														</shortText>
-														<longText>
-															<_item>納米比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="520" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NR</_item>
-														</shortText>
-														<longText>
-															<_item>瑙魯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="524" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NP</_item>
-														</shortText>
-														<longText>
-															<_item>尼泊爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="528" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NL</_item>
-														</shortText>
-														<longText>
-															<_item>荷蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="530" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AN</_item>
-														</shortText>
-														<longText>
-															<_item>荷屬安的列斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="540" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NC</_item>
-														</shortText>
-														<longText>
-															<_item>新喀裡多尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="554" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NZ</_item>
-														</shortText>
-														<longText>
-															<_item>新西蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="558" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NI</_item>
-														</shortText>
-														<longText>
-															<_item>尼加拉瓜</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="562" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NE</_item>
-														</shortText>
-														<longText>
-															<_item>尼日爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="566" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NG</_item>
-														</shortText>
-														<longText>
-															<_item>尼日利亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="570" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NU</_item>
-														</shortText>
-														<longText>
-															<_item>紐埃</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="574" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NF</_item>
-														</shortText>
-														<longText>
-															<_item>諾福克島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="580" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MP</_item>
-														</shortText>
-														<longText>
-															<_item>北馬里亞納群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="578" _operation="set">
-													<_object>
-														<shortText>
-															<_item>NO</_item>
-														</shortText>
-														<longText>
-															<_item>挪威</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="512" _operation="set">
-													<_object>
-														<shortText>
-															<_item>OM</_item>
-														</shortText>
-														<longText>
-															<_item>阿曼</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="586" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PK</_item>
-														</shortText>
-														<longText>
-															<_item>巴基斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="585" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PW</_item>
-														</shortText>
-														<longText>
-															<_item>帕勞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="275" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PS</_item>
-														</shortText>
-														<longText>
-															<_item>巴勒斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="591" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PA</_item>
-														</shortText>
-														<longText>
-															<_item>巴拿馬</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="598" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PG</_item>
-														</shortText>
-														<longText>
-															<_item>巴布亞新幾內亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="600" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PY</_item>
-														</shortText>
-														<longText>
-															<_item>巴拉圭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="604" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PE</_item>
-														</shortText>
-														<longText>
-															<_item>秘魯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="608" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PH</_item>
-														</shortText>
-														<longText>
-															<_item>菲律賓</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="612" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PN</_item>
-														</shortText>
-														<longText>
-															<_item>皮特凱恩</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="616" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PL</_item>
-														</shortText>
-														<longText>
-															<_item>波蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="620" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PT</_item>
-														</shortText>
-														<longText>
-															<_item>葡萄牙</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="630" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PR</_item>
-														</shortText>
-														<longText>
-															<_item>波多黎各</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="634" _operation="set">
-													<_object>
-														<shortText>
-															<_item>QA</_item>
-														</shortText>
-														<longText>
-															<_item>卡塔爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="638" _operation="set">
-													<_object>
-														<shortText>
-															<_item>RE</_item>
-														</shortText>
-														<longText>
-															<_item>俄羅斯聯邦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="642" _operation="set">
-													<_object>
-														<shortText>
-															<_item>RO</_item>
-														</shortText>
-														<longText>
-															<_item>羅馬尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="643" _operation="set">
-													<_object>
-														<shortText>
-															<_item>RU</_item>
-														</shortText>
-														<longText>
-															<_item>俄國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="646" _operation="set">
-													<_object>
-														<shortText>
-															<_item>RW</_item>
-														</shortText>
-														<longText>
-															<_item>盧旺達</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="652" _operation="set">
-													<_object>
-														<shortText>
-															<_item>BL</_item>
-														</shortText>
-														<longText>
-															<_item>聖巴泰勒米</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="654" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SH</_item>
-														</shortText>
-														<longText>
-															<_item>聖赫勒拿島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="659" _operation="set">
-													<_object>
-														<shortText>
-															<_item>KN</_item>
-														</shortText>
-														<longText>
-															<_item>聖基茨和尼維斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="662" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LC</_item>
-														</shortText>
-														<longText>
-															<_item>聖盧西亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="663" _operation="set">
-													<_object>
-														<shortText>
-															<_item>MF</_item>
-														</shortText>
-														<longText>
-															<_item>法屬聖馬丁</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="666" _operation="set">
-													<_object>
-														<shortText>
-															<_item>PM</_item>
-														</shortText>
-														<longText>
-															<_item>聖皮埃爾和密克隆</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="670" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VC</_item>
-														</shortText>
-														<longText>
-															<_item>聖文森特和格林納丁斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="882" _operation="set">
-													<_object>
-														<shortText>
-															<_item>WS</_item>
-														</shortText>
-														<longText>
-															<_item>薩摩亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="674" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SM</_item>
-														</shortText>
-														<longText>
-															<_item>聖馬力諾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="678" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ST</_item>
-														</shortText>
-														<longText>
-															<_item>聖多美和普林西比</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="682" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SA</_item>
-														</shortText>
-														<longText>
-															<_item>沙特阿拉伯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="686" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SN</_item>
-														</shortText>
-														<longText>
-															<_item>塞內加爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="688" _operation="set">
-													<_object>
-														<shortText>
-															<_item>RS</_item>
-														</shortText>
-														<longText>
-															<_item>塞爾維亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="690" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SC</_item>
-														</shortText>
-														<longText>
-															<_item>塞舌爾</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="694" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SL</_item>
-														</shortText>
-														<longText>
-															<_item>塞拉利昂</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="702" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SG</_item>
-														</shortText>
-														<longText>
-															<_item>新加坡</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="534" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SX</_item>
-														</shortText>
-														<longText>
-															<_item>荷屬聖馬丁島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="703" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SK</_item>
-														</shortText>
-														<longText>
-															<_item>斯洛伐克</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="705" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SI</_item>
-														</shortText>
-														<longText>
-															<_item>斯洛文尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="090" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SB</_item>
-														</shortText>
-														<longText>
-															<_item>所羅門群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="706" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SO</_item>
-														</shortText>
-														<longText>
-															<_item>索馬里</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="710" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ZA</_item>
-														</shortText>
-														<longText>
-															<_item>南非</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="239" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GS</_item>
-														</shortText>
-														<longText>
-															<_item>南喬治亞島和南桑威奇群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="724" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ES</_item>
-														</shortText>
-														<longText>
-															<_item>西班牙</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="144" _operation="set">
-													<_object>
-														<shortText>
-															<_item>LK</_item>
-														</shortText>
-														<longText>
-															<_item>斯里蘭卡</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="736" _operation="set">
-													<_object>
-														<validFrom>1990-01-01T00:00:00.000Z</validFrom>
-														<validTo>2011-08-16T00:00:00.000Z</validTo>
-														<!-- this country was split into 728 and 729 -->
-														<shortText>
-															<_item>SD (disabled on 16-AUG-2011)</_item>
-														</shortText>
-														<longText>
-															<_item>蘇丹(2011年8月16日失效)</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="728" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SS</_item>
-														</shortText>
-														<longText>
-															<_item>南蘇丹</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="729" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SD</_item>
-														</shortText>
-														<longText>
-															<_item>蘇丹</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="740" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SR</_item>
-														</shortText>
-														<longText>
-															<_item>蘇里南</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="744" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SJ</_item>
-														</shortText>
-														<longText>
-															<_item>斯瓦爾巴和揚馬延</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="748" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SZ</_item>
-														</shortText>
-														<longText>
-															<_item>斯威士蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="752" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SE</_item>
-														</shortText>
-														<longText>
-															<_item>瑞典</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="756" _operation="set">
-													<_object>
-														<shortText>
-															<_item>CH</_item>
-														</shortText>
-														<longText>
-															<_item>瑞士</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="760" _operation="set">
-													<_object>
-														<shortText>
-															<_item>SY</_item>
-														</shortText>
-														<longText>
-															<_item>敘利亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="158" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TW</_item>
-														</shortText>
-														<longText>
-															<_item>台灣 (中國台北)</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="762" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TJ</_item>
-														</shortText>
-														<longText>
-															<_item>塔吉克斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="834" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TZ</_item>
-														</shortText>
-														<longText>
-															<_item>坦桑尼亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="764" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TH</_item>
-														</shortText>
-														<longText>
-															<_item>泰國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="768" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TG</_item>
-														</shortText>
-														<longText>
-															<_item>多哥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="772" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TK</_item>
-														</shortText>
-														<longText>
-															<_item>托克勞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="776" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TO</_item>
-														</shortText>
-														<longText>
-															<_item>湯加</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="780" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TT</_item>
-														</shortText>
-														<longText>
-															<_item>特立尼達和多巴哥</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="788" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TN</_item>
-														</shortText>
-														<longText>
-															<_item>突尼斯</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="792" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TR</_item>
-														</shortText>
-														<longText>
-															<_item>土耳其</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="795" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TM</_item>
-														</shortText>
-														<longText>
-															<_item>土庫曼斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="796" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TC</_item>
-														</shortText>
-														<longText>
-															<_item>特克斯和凱科斯群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="798" _operation="set">
-													<_object>
-														<shortText>
-															<_item>TV</_item>
-														</shortText>
-														<longText>
-															<_item>圖瓦盧</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="800" _operation="set">
-													<_object>
-														<shortText>
-															<_item>UG</_item>
-														</shortText>
-														<longText>
-															<_item>烏干達</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="804" _operation="set">
-													<_object>
-														<shortText>
-															<_item>UA</_item>
-														</shortText>
-														<longText>
-															<_item>烏克蘭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="784" _operation="set">
-													<_object>
-														<shortText>
-															<_item>AE</_item>
-														</shortText>
-														<longText>
-															<_item>阿拉伯聯合酋長國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="826" _operation="set">
-													<_object>
-														<shortText>
-															<_item>GB</_item>
-														</shortText>
-														<longText>
-															<_item>大不列顛</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="833" _operation="set">
-													<_object>
-														<shortText>
-															<_item>IM</_item>
-														</shortText>
-														<longText>
-															<_item>馬恩島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="840" _operation="set">
-													<_object>
-														<shortText>
-															<_item>US</_item>
-														</shortText>
-														<longText>
-															<_item>美國</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="581" _operation="set">
-													<_object>
-														<shortText>
-															<_item>UM</_item>
-														</shortText>
-														<longText>
-															<_item>美國本土外小島嶼</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="858" _operation="set">
-													<_object>
-														<shortText>
-															<_item>UY</_item>
-														</shortText>
-														<longText>
-															<_item>烏拉圭</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="860" _operation="set">
-													<_object>
-														<shortText>
-															<_item>UZ</_item>
-														</shortText>
-														<longText>
-															<_item>烏茲別克斯坦</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="548" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VU</_item>
-														</shortText>
-														<longText>
-															<_item>瓦努阿圖</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="862" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VE</_item>
-														</shortText>
-														<longText>
-															<_item>委內瑞拉</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="704" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VN</_item>
-														</shortText>
-														<longText>
-															<_item>越南</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="850" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VI</_item>
-														</shortText>
-														<longText>
-															<_item>美屬維爾京群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="092" _operation="set">
-													<_object>
-														<shortText>
-															<_item>VG</_item>
-														</shortText>
-														<longText>
-															<_item>英屬維爾京群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="876" _operation="set">
-													<_object>
-														<shortText>
-															<_item>WF</_item>
-														</shortText>
-														<longText>
-															<_item>瓦利斯和富圖納群島</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="732" _operation="set">
-													<_object>
-														<shortText>
-															<_item>EH</_item>
-														</shortText>
-														<longText>
-															<_item>撒哈拉沙漠西部</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="887" _operation="set">
-													<_object>
-														<shortText>
-															<_item>YE</_item>
-														</shortText>
-														<longText>
-															<_item>葉門</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="891" _operation="set">
-													<_object>
-														<validFrom>1900-01-01T00:00:00.000Z</validFrom>
-														<validTo>2003-07-23T00:00:00.000Z</validTo>
-														<!-- this country was split into Serbia 688 and Montenegro 499 -->
-														<shortText>
-															<_item>YU</_item>
-														</shortText>
-														<longText>
-															<_item>南斯拉夫</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="894" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ZM</_item>
-														</shortText>
-														<longText>
-															<_item>內比亞</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-												<org.opencrx.kernel.code1.CodeValueEntry code="716" _operation="set">
-													<_object>
-														<shortText>
-															<_item>ZW</_item>
-														</shortText>
-														<longText>
-															<_item>津巴布韋</_item>
-														</longText>
-													</_object>
-													<_content />
-												</org.opencrx.kernel.code1.CodeValueEntry>
-											</entry>
-										</_content>
-									</org.opencrx.kernel.code1.CodeValueContainer>
-								</valueContainer>
-							</_content>
-						</org.opencrx.kernel.code1.Segment>
-					</segment>
-				</_content>
-			</org.openmdx.base.Provider>
-		</provider>
-	</_content>
+    <_object />
+    <_content>
+	<provider>
+	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<_object />
+		<_content>
+		    <segment>
+			<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
+			    <_object />
+			    <_content>
+				<valueContainer>
+				    <org.opencrx.kernel.code1.CodeValueContainer name="country" _operation="set">
+					<_object>
+					    <name>
+						<_item>country</_item>
+						<_item>org:opencrx:kernel:address1:PostalAddressable:postalCountry</_item>
+						<_item>org:opencrx:kernel:account1:SearchIndexEntry:postalCountry</_item>
+						<_item>org:opencrx:kernel:account1:Contact:citizenship</_item>
+						<_item>org:opencrx:kernel:account1:Contact:address!postalCountry</_item>
+						<_item>org:opencrx:kernel:account1:Account:address*Business!postalCountry</_item>
+						<_item>org:opencrx:kernel:product1:SalesTaxTypeGroup:taxAuthorityCountry</_item>
+					    </name>
+					</_object>
+					<_content>
+					    <entry>
+						<!-- sources: http://www.nationsonline.org/oneworld/country_code_list.htm http://www.iso.org/iso/support/country_codes/iso_3166_code_lists/iso-3166-1_decoding_table.htm#BQ ISO ALPHA-2 code ISO Numeric code UN M49 -->
+						<org.opencrx.kernel.code1.CodeValueEntry code="000" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>--無--</_item>
+							</shortText>
+							<longText>
+							    <_item>--無--</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="004" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AF</_item>
+							</shortText>
+							<longText>
+							    <_item>阿富汗</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="248" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AX</_item>
+							</shortText>
+							<longText>
+							    <_item>奧蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="008" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AL</_item>
+							</shortText>
+							<longText>
+							    <_item>阿爾巴尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="012" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DZ</_item>
+							</shortText>
+							<longText>
+							    <_item>阿爾及利亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="016" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AS</_item>
+							</shortText>
+							<longText>
+							    <_item>美屬薩摩亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="020" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AD</_item>
+							</shortText>
+							<longText>
+							    <_item>安道爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="024" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AO</_item>
+							</shortText>
+							<longText>
+							    <_item>安哥拉</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="660" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AI</_item>
+							</shortText>
+							<longText>
+							    <_item>安圭拉</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="010" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AQ</_item>
+							</shortText>
+							<longText>
+							    <_item>南極洲</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="028" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AG</_item>
+							</shortText>
+							<longText>
+							    <_item>安提瓜和巴布達</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="032" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AR</_item>
+							</shortText>
+							<longText>
+							    <_item>阿根廷</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="051" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AM</_item>
+							</shortText>
+							<longText>
+							    <_item>亞美尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="533" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AW</_item>
+							</shortText>
+							<longText>
+							    <_item>阿魯巴</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="036" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AU</_item>
+							</shortText>
+							<longText>
+							    <_item>澳大利亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="040" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AT</_item>
+							</shortText>
+							<longText>
+							    <_item>奧地利</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="031" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AZ</_item>
+							</shortText>
+							<longText>
+							    <_item>阿塞拜疆</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="044" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BS</_item>
+							</shortText>
+							<longText>
+							    <_item>巴哈馬</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="048" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BH</_item>
+							</shortText>
+							<longText>
+							    <_item>巴林王國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="050" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BD</_item>
+							</shortText>
+							<longText>
+							    <_item>孟加拉國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="052" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BB</_item>
+							</shortText>
+							<longText>
+							    <_item>巴巴多斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="112" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BY</_item>
+							</shortText>
+							<longText>
+							    <_item>白俄羅斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="056" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BE</_item>
+							</shortText>
+							<longText>
+							    <_item>比利時</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="084" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BZ</_item>
+							</shortText>
+							<longText>
+							    <_item>伯利茲</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="204" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BJ</_item>
+							</shortText>
+							<longText>
+							    <_item>貝寧</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="060" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BM</_item>
+							</shortText>
+							<longText>
+							    <_item>百慕達</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="064" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BT</_item>
+							</shortText>
+							<longText>
+							    <_item>不丹</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="068" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BO</_item>
+							</shortText>
+							<longText>
+							    <_item>玻利維亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="535" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BQ</_item>
+							</shortText>
+							<longText>
+							    <_item>博內爾島，聖尤斯特歇斯島和薩巴島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="070" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BA</_item>
+							</shortText>
+							<longText>
+							    <_item>波斯尼亞和黑塞哥維那</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="072" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BW</_item>
+							</shortText>
+							<longText>
+							    <_item>博茨瓦納</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="074" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BV</_item>
+							</shortText>
+							<longText>
+							    <_item>布維島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="076" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BR</_item>
+							</shortText>
+							<longText>
+							    <_item>巴西</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="086" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IO</_item>
+							</shortText>
+							<longText>
+							    <_item>英屬印度洋領地</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="096" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BN</_item>
+							</shortText>
+							<longText>
+							    <_item>文萊</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="100" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BG</_item>
+							</shortText>
+							<longText>
+							    <_item>保加利亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="854" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BF</_item>
+							</shortText>
+							<longText>
+							    <_item>布基納法索</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="108" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BI</_item>
+							</shortText>
+							<longText>
+							    <_item>布隆迪</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="116" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KH</_item>
+							</shortText>
+							<longText>
+							    <_item>柬埔寨</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="120" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CM</_item>
+							</shortText>
+							<longText>
+							    <_item>喀麥隆</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="124" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CA</_item>
+							</shortText>
+							<longText>
+							    <_item>加拿大</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="132" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CV</_item>
+							</shortText>
+							<longText>
+							    <_item>佛得角</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="136" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KY</_item>
+							</shortText>
+							<longText>
+							    <_item>開曼群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="140" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CF</_item>
+							</shortText>
+							<longText>
+							    <_item>中非共和國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="148" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TD</_item>
+							</shortText>
+							<longText>
+							    <_item>乍得</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="152" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CL</_item>
+							</shortText>
+							<longText>
+							    <_item>智利</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="156" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CN</_item>
+							</shortText>
+							<longText>
+							    <_item>中國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="162" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CX</_item>
+							</shortText>
+							<longText>
+							    <_item>聖誕島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="166" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CC</_item>
+							</shortText>
+							<longText>
+							    <_item>科科斯 (基林) 群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="170" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CO</_item>
+							</shortText>
+							<longText>
+							    <_item>哥倫比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="174" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KM</_item>
+							</shortText>
+							<longText>
+							    <_item>科摩羅</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="178" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CG</_item>
+							</shortText>
+							<longText>
+							    <_item>剛果 (布拉柴維爾)</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="180" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CD</_item>
+							</shortText>
+							<longText>
+							    <_item>剛果 (金沙薩)</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="184" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CK</_item>
+							</shortText>
+							<longText>
+							    <_item>庫克群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="188" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CR</_item>
+							</shortText>
+							<longText>
+							    <_item>哥斯達黎加</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="384" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CI</_item>
+							</shortText>
+							<longText>
+							    <_item>科特迪瓦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="191" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HR</_item>
+							</shortText>
+							<longText>
+							    <_item>克羅地亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="192" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CU</_item>
+							</shortText>
+							<longText>
+							    <_item>古巴</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="531" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CW</_item>
+							</shortText>
+							<longText>
+							    <_item>庫拉索</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="196" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CY</_item>
+							</shortText>
+							<longText>
+							    <_item>塞浦路斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="203" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CZ</_item>
+							</shortText>
+							<longText>
+							    <_item>捷克共和國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="208" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DK</_item>
+							</shortText>
+							<longText>
+							    <_item>丹麥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="262" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DJ</_item>
+							</shortText>
+							<longText>
+							    <_item>吉布提</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="212" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DM</_item>
+							</shortText>
+							<longText>
+							    <_item>多米尼加</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="214" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DO</_item>
+							</shortText>
+							<longText>
+							    <_item>多明尼加共和國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="626" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TL</_item>
+							</shortText>
+							<longText>
+							    <_item>東帝汶</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="218" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>EC</_item>
+							</shortText>
+							<longText>
+							    <_item>厄瓜多爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="818" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>EG</_item>
+							</shortText>
+							<longText>
+							    <_item>埃及</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="222" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SV</_item>
+							</shortText>
+							<longText>
+							    <_item>薩爾瓦多</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="226" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GQ</_item>
+							</shortText>
+							<longText>
+							    <_item>赤道幾內亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="232" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ER</_item>
+							</shortText>
+							<longText>
+							    <_item>厄立特里亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="233" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>EE</_item>
+							</shortText>
+							<longText>
+							    <_item>愛沙尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="231" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ET</_item>
+							</shortText>
+							<longText>
+							    <_item>埃塞俄比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="238" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FK</_item>
+							</shortText>
+							<longText>
+							    <_item>福克蘭群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="234" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FO</_item>
+							</shortText>
+							<longText>
+							    <_item>法羅群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="242" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FJ</_item>
+							</shortText>
+							<longText>
+							    <_item>斐國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="246" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FI</_item>
+							</shortText>
+							<longText>
+							    <_item>芬蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="249" _operation="set">
+						    <_object>
+							<validFrom>1990-01-01T00:00:00.000Z</validFrom>
+							<validTo>2002-11-22T00:00:00.000Z</validTo>
+							<shortText>
+							    <_item>FX</_item>
+							</shortText>
+							<longText>
+							    <_item>法國，大都會</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="250" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FR</_item>
+							</shortText>
+							<longText>
+							    <_item>法國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="254" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GF</_item>
+							</shortText>
+							<longText>
+							    <_item>法屬圭亞那</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="258" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PF</_item>
+							</shortText>
+							<longText>
+							    <_item>法屬波利尼西亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="260" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TF</_item>
+							</shortText>
+							<longText>
+							    <_item>法屬南部領土</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="266" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GA</_item>
+							</shortText>
+							<longText>
+							    <_item>加蓬</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="270" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GM</_item>
+							</shortText>
+							<longText>
+							    <_item>岡比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="268" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GE</_item>
+							</shortText>
+							<longText>
+							    <_item>格魯吉亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="276" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>DE</_item>
+							</shortText>
+							<longText>
+							    <_item>德國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="288" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GH</_item>
+							</shortText>
+							<longText>
+							    <_item>加納</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="292" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GI</_item>
+							</shortText>
+							<longText>
+							    <_item>直布羅陀</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="300" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GR</_item>
+							</shortText>
+							<longText>
+							    <_item>希臘</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="304" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GL</_item>
+							</shortText>
+							<longText>
+							    <_item>格陵蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="308" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GD</_item>
+							</shortText>
+							<longText>
+							    <_item>格林納達</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="312" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GP</_item>
+							</shortText>
+							<longText>
+							    <_item>瓜德羅普島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="316" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GU</_item>
+							</shortText>
+							<longText>
+							    <_item>關島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="320" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GT</_item>
+							</shortText>
+							<longText>
+							    <_item>瓜地馬拉</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="831" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GG</_item>
+							</shortText>
+							<longText>
+							    <_item>根西島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="324" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GN</_item>
+							</shortText>
+							<longText>
+							    <_item>幾內亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="624" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GW</_item>
+							</shortText>
+							<longText>
+							    <_item>幾內亞比紹</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="328" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GY</_item>
+							</shortText>
+							<longText>
+							    <_item>圭亞那</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="332" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HT</_item>
+							</shortText>
+							<longText>
+							    <_item>海地</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="334" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HM</_item>
+							</shortText>
+							<longText>
+							    <_item>赫德島和麥當勞群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="336" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VA</_item>
+							</shortText>
+							<longText>
+							    <_item>梵蒂岡城</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="340" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HN</_item>
+							</shortText>
+							<longText>
+							    <_item>洪都拉斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="344" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HK</_item>
+							</shortText>
+							<longText>
+							    <_item>香港</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="348" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>HU</_item>
+							</shortText>
+							<longText>
+							    <_item>匈牙利</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="352" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IS</_item>
+							</shortText>
+							<longText>
+							    <_item>冰島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="356" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IN</_item>
+							</shortText>
+							<longText>
+							    <_item>印度</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="360" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ID</_item>
+							</shortText>
+							<longText>
+							    <_item>印度尼西亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="364" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IR</_item>
+							</shortText>
+							<longText>
+							    <_item>伊朗</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="368" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IQ</_item>
+							</shortText>
+							<longText>
+							    <_item>伊拉克</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="372" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IE</_item>
+							</shortText>
+							<longText>
+							    <_item>愛爾蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="376" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IL</_item>
+							</shortText>
+							<longText>
+							    <_item>以色列</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="380" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IT</_item>
+							</shortText>
+							<longText>
+							    <_item>意大利</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="381" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KV</_item>
+							</shortText>
+							<longText>
+							    <_item>科索沃</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="388" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>JM</_item>
+							</shortText>
+							<longText>
+							    <_item>牙買加</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="392" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>JP</_item>
+							</shortText>
+							<longText>
+							    <_item>日本</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="832" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>JE</_item>
+							</shortText>
+							<longText>
+							    <_item>新澤西</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="400" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>JO</_item>
+							</shortText>
+							<longText>
+							    <_item>約旦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="398" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KZ</_item>
+							</shortText>
+							<longText>
+							    <_item>哈薩克斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="404" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KE</_item>
+							</shortText>
+							<longText>
+							    <_item>肯亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="296" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KI</_item>
+							</shortText>
+							<longText>
+							    <_item>基里巴斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="408" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KP</_item>
+							</shortText>
+							<longText>
+							    <_item>北韓</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="410" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KR</_item>
+							</shortText>
+							<longText>
+							    <_item>南韓</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="414" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KW</_item>
+							</shortText>
+							<longText>
+							    <_item>科威特</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="417" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KG</_item>
+							</shortText>
+							<longText>
+							    <_item>吉爾吉斯斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="418" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LA</_item>
+							</shortText>
+							<longText>
+							    <_item>老撾人民民主共和國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="428" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LV</_item>
+							</shortText>
+							<longText>
+							    <_item>拉脫維亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="422" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LB</_item>
+							</shortText>
+							<longText>
+							    <_item>黎巴嫩</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="426" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LS</_item>
+							</shortText>
+							<longText>
+							    <_item>萊索托</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="430" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LR</_item>
+							</shortText>
+							<longText>
+							    <_item>利比里亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="434" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LY</_item>
+							</shortText>
+							<longText>
+							    <_item>利比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="438" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LI</_item>
+							</shortText>
+							<longText>
+							    <_item>列支敦士登</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="440" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LT</_item>
+							</shortText>
+							<longText>
+							    <_item>立陶宛</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="442" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LU</_item>
+							</shortText>
+							<longText>
+							    <_item>盧森堡</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="446" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MO</_item>
+							</shortText>
+							<longText>
+							    <_item>澳門</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="807" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MK</_item>
+							</shortText>
+							<longText>
+							    <_item>馬其頓</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="450" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MG</_item>
+							</shortText>
+							<longText>
+							    <_item>馬達加斯加</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="454" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MW</_item>
+							</shortText>
+							<longText>
+							    <_item>馬拉維</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="458" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MY</_item>
+							</shortText>
+							<longText>
+							    <_item>馬來西亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="462" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MV</_item>
+							</shortText>
+							<longText>
+							    <_item>馬爾地夫</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="466" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ML</_item>
+							</shortText>
+							<longText>
+							    <_item>馬里</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="470" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MT</_item>
+							</shortText>
+							<longText>
+							    <_item>馬耳他</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="584" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MH</_item>
+							</shortText>
+							<longText>
+							    <_item>馬紹爾群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="474" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MQ</_item>
+							</shortText>
+							<longText>
+							    <_item>馬提尼克</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="478" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MR</_item>
+							</shortText>
+							<longText>
+							    <_item>毛里塔尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="480" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MU</_item>
+							</shortText>
+							<longText>
+							    <_item>毛里求斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="175" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>YT</_item>
+							</shortText>
+							<longText>
+							    <_item>馬約特</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="484" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MX</_item>
+							</shortText>
+							<longText>
+							    <_item>墨西哥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="583" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>FM</_item>
+							</shortText>
+							<longText>
+							    <_item>密克羅尼西亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="498" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MD</_item>
+							</shortText>
+							<longText>
+							    <_item>摩爾多瓦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="492" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MC</_item>
+							</shortText>
+							<longText>
+							    <_item>摩納哥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="496" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MN</_item>
+							</shortText>
+							<longText>
+							    <_item>蒙古</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="499" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ME</_item>
+							</shortText>
+							<longText>
+							    <_item>黑山</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="500" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MS</_item>
+							</shortText>
+							<longText>
+							    <_item>蒙特塞拉特</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="504" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MA</_item>
+							</shortText>
+							<longText>
+							    <_item>摩洛哥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="508" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MZ</_item>
+							</shortText>
+							<longText>
+							    <_item>莫桑比克</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="104" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MM</_item>
+							</shortText>
+							<longText>
+							    <_item>緬甸</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="516" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NA</_item>
+							</shortText>
+							<longText>
+							    <_item>納米比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="520" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NR</_item>
+							</shortText>
+							<longText>
+							    <_item>瑙魯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="524" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NP</_item>
+							</shortText>
+							<longText>
+							    <_item>尼泊爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="528" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NL</_item>
+							</shortText>
+							<longText>
+							    <_item>荷蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="530" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AN</_item>
+							</shortText>
+							<longText>
+							    <_item>荷屬安的列斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="540" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NC</_item>
+							</shortText>
+							<longText>
+							    <_item>新喀裡多尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="554" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NZ</_item>
+							</shortText>
+							<longText>
+							    <_item>新西蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="558" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NI</_item>
+							</shortText>
+							<longText>
+							    <_item>尼加拉瓜</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="562" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NE</_item>
+							</shortText>
+							<longText>
+							    <_item>尼日爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="566" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NG</_item>
+							</shortText>
+							<longText>
+							    <_item>尼日利亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="570" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NU</_item>
+							</shortText>
+							<longText>
+							    <_item>紐埃</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="574" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NF</_item>
+							</shortText>
+							<longText>
+							    <_item>諾福克島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="580" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MP</_item>
+							</shortText>
+							<longText>
+							    <_item>北馬里亞納群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="578" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>NO</_item>
+							</shortText>
+							<longText>
+							    <_item>挪威</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="512" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>OM</_item>
+							</shortText>
+							<longText>
+							    <_item>阿曼</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="586" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PK</_item>
+							</shortText>
+							<longText>
+							    <_item>巴基斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="585" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PW</_item>
+							</shortText>
+							<longText>
+							    <_item>帕勞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="275" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PS</_item>
+							</shortText>
+							<longText>
+							    <_item>巴勒斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="591" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PA</_item>
+							</shortText>
+							<longText>
+							    <_item>巴拿馬</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="598" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PG</_item>
+							</shortText>
+							<longText>
+							    <_item>巴布亞新幾內亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="600" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PY</_item>
+							</shortText>
+							<longText>
+							    <_item>巴拉圭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="604" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PE</_item>
+							</shortText>
+							<longText>
+							    <_item>秘魯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="608" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PH</_item>
+							</shortText>
+							<longText>
+							    <_item>菲律賓</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="612" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PN</_item>
+							</shortText>
+							<longText>
+							    <_item>皮特凱恩</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="616" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PL</_item>
+							</shortText>
+							<longText>
+							    <_item>波蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="620" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PT</_item>
+							</shortText>
+							<longText>
+							    <_item>葡萄牙</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="630" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PR</_item>
+							</shortText>
+							<longText>
+							    <_item>波多黎各</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="634" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>QA</_item>
+							</shortText>
+							<longText>
+							    <_item>卡塔爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="638" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>RE</_item>
+							</shortText>
+							<longText>
+							    <_item>俄羅斯聯邦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="642" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>RO</_item>
+							</shortText>
+							<longText>
+							    <_item>羅馬尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="643" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>RU</_item>
+							</shortText>
+							<longText>
+							    <_item>俄國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="646" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>RW</_item>
+							</shortText>
+							<longText>
+							    <_item>盧旺達</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="652" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>BL</_item>
+							</shortText>
+							<longText>
+							    <_item>聖巴泰勒米</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="654" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SH</_item>
+							</shortText>
+							<longText>
+							    <_item>聖赫勒拿島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="659" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>KN</_item>
+							</shortText>
+							<longText>
+							    <_item>聖基茨和尼維斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="662" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LC</_item>
+							</shortText>
+							<longText>
+							    <_item>聖盧西亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="663" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>MF</_item>
+							</shortText>
+							<longText>
+							    <_item>法屬聖馬丁</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="666" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>PM</_item>
+							</shortText>
+							<longText>
+							    <_item>聖皮埃爾和密克隆</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="670" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VC</_item>
+							</shortText>
+							<longText>
+							    <_item>聖文森特和格林納丁斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="882" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>WS</_item>
+							</shortText>
+							<longText>
+							    <_item>薩摩亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="674" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SM</_item>
+							</shortText>
+							<longText>
+							    <_item>聖馬力諾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="678" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ST</_item>
+							</shortText>
+							<longText>
+							    <_item>聖多美和普林西比</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="682" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SA</_item>
+							</shortText>
+							<longText>
+							    <_item>沙特阿拉伯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="686" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SN</_item>
+							</shortText>
+							<longText>
+							    <_item>塞內加爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="688" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>RS</_item>
+							</shortText>
+							<longText>
+							    <_item>塞爾維亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="690" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SC</_item>
+							</shortText>
+							<longText>
+							    <_item>塞舌爾</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="694" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SL</_item>
+							</shortText>
+							<longText>
+							    <_item>塞拉利昂</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="702" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SG</_item>
+							</shortText>
+							<longText>
+							    <_item>新加坡</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="534" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SX</_item>
+							</shortText>
+							<longText>
+							    <_item>荷屬聖馬丁島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="703" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SK</_item>
+							</shortText>
+							<longText>
+							    <_item>斯洛伐克</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="705" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SI</_item>
+							</shortText>
+							<longText>
+							    <_item>斯洛文尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="090" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SB</_item>
+							</shortText>
+							<longText>
+							    <_item>所羅門群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="706" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SO</_item>
+							</shortText>
+							<longText>
+							    <_item>索馬里</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="710" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ZA</_item>
+							</shortText>
+							<longText>
+							    <_item>南非</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="239" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GS</_item>
+							</shortText>
+							<longText>
+							    <_item>南喬治亞島和南桑威奇群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="724" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ES</_item>
+							</shortText>
+							<longText>
+							    <_item>西班牙</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="144" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>LK</_item>
+							</shortText>
+							<longText>
+							    <_item>斯里蘭卡</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="736" _operation="set">
+						    <_object>
+							<validFrom>1990-01-01T00:00:00.000Z</validFrom>
+							<validTo>2011-08-16T00:00:00.000Z</validTo>
+							<!-- this country was split into 728 and 729 -->
+							<shortText>
+							    <_item>SD (disabled on 16-AUG-2011)</_item>
+							</shortText>
+							<longText>
+							    <_item>蘇丹(2011年8月16日失效)</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="728" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SS</_item>
+							</shortText>
+							<longText>
+							    <_item>南蘇丹</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="729" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SD</_item>
+							</shortText>
+							<longText>
+							    <_item>蘇丹</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="740" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SR</_item>
+							</shortText>
+							<longText>
+							    <_item>蘇里南</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="744" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SJ</_item>
+							</shortText>
+							<longText>
+							    <_item>斯瓦爾巴和揚馬延</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="748" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SZ</_item>
+							</shortText>
+							<longText>
+							    <_item>斯威士蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="752" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SE</_item>
+							</shortText>
+							<longText>
+							    <_item>瑞典</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="756" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>CH</_item>
+							</shortText>
+							<longText>
+							    <_item>瑞士</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="760" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>SY</_item>
+							</shortText>
+							<longText>
+							    <_item>敘利亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="158" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TW</_item>
+							</shortText>
+							<longText>
+							    <_item>台灣 (中國台北)</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="762" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TJ</_item>
+							</shortText>
+							<longText>
+							    <_item>塔吉克斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="834" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TZ</_item>
+							</shortText>
+							<longText>
+							    <_item>坦桑尼亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="764" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TH</_item>
+							</shortText>
+							<longText>
+							    <_item>泰國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="768" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TG</_item>
+							</shortText>
+							<longText>
+							    <_item>多哥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="772" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TK</_item>
+							</shortText>
+							<longText>
+							    <_item>托克勞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="776" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TO</_item>
+							</shortText>
+							<longText>
+							    <_item>湯加</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="780" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TT</_item>
+							</shortText>
+							<longText>
+							    <_item>特立尼達和多巴哥</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="788" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TN</_item>
+							</shortText>
+							<longText>
+							    <_item>突尼斯</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="792" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TR</_item>
+							</shortText>
+							<longText>
+							    <_item>土耳其</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="795" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TM</_item>
+							</shortText>
+							<longText>
+							    <_item>土庫曼斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="796" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TC</_item>
+							</shortText>
+							<longText>
+							    <_item>特克斯和凱科斯群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="798" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>TV</_item>
+							</shortText>
+							<longText>
+							    <_item>圖瓦盧</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="800" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>UG</_item>
+							</shortText>
+							<longText>
+							    <_item>烏干達</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="804" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>UA</_item>
+							</shortText>
+							<longText>
+							    <_item>烏克蘭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="784" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>AE</_item>
+							</shortText>
+							<longText>
+							    <_item>阿拉伯聯合酋長國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="826" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>GB</_item>
+							</shortText>
+							<longText>
+							    <_item>大不列顛</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="833" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>IM</_item>
+							</shortText>
+							<longText>
+							    <_item>馬恩島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="840" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>US</_item>
+							</shortText>
+							<longText>
+							    <_item>美國</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="581" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>UM</_item>
+							</shortText>
+							<longText>
+							    <_item>美國本土外小島嶼</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="858" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>UY</_item>
+							</shortText>
+							<longText>
+							    <_item>烏拉圭</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="860" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>UZ</_item>
+							</shortText>
+							<longText>
+							    <_item>烏茲別克斯坦</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="548" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VU</_item>
+							</shortText>
+							<longText>
+							    <_item>瓦努阿圖</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="862" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VE</_item>
+							</shortText>
+							<longText>
+							    <_item>委內瑞拉</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="704" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VN</_item>
+							</shortText>
+							<longText>
+							    <_item>越南</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="850" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VI</_item>
+							</shortText>
+							<longText>
+							    <_item>美屬維爾京群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="092" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>VG</_item>
+							</shortText>
+							<longText>
+							    <_item>英屬維爾京群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="876" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>WF</_item>
+							</shortText>
+							<longText>
+							    <_item>瓦利斯和富圖納群島</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="732" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>EH</_item>
+							</shortText>
+							<longText>
+							    <_item>撒哈拉沙漠西部</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="887" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>YE</_item>
+							</shortText>
+							<longText>
+							    <_item>葉門</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="891" _operation="set">
+						    <_object>
+							<validFrom>1900-01-01T00:00:00.000Z</validFrom>
+							<validTo>2003-07-23T00:00:00.000Z</validTo>
+							<!-- this country was split into Serbia 688 and Montenegro 499 -->
+							<shortText>
+							    <_item>YU</_item>
+							</shortText>
+							<longText>
+							    <_item>南斯拉夫</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="894" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ZM</_item>
+							</shortText>
+							<longText>
+							    <_item>內比亞</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+						<org.opencrx.kernel.code1.CodeValueEntry code="716" _operation="set">
+						    <_object>
+							<shortText>
+							    <_item>ZW</_item>
+							</shortText>
+							<longText>
+							    <_item>津巴布韋</_item>
+							</longText>
+						    </_object>
+						    <_content />
+						</org.opencrx.kernel.code1.CodeValueEntry>
+					    </entry>
+					</_content>
+				    </org.opencrx.kernel.code1.CodeValueContainer>
+				</valueContainer>
+			    </_content>
+			</org.opencrx.kernel.code1.Segment>
+		    </segment>
+		</_content>
+	    </org.openmdx.base.Provider>
+	</provider>
+    </_content>
 </org.openmdx.base.Authority>

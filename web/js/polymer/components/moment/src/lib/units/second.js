@@ -1,21 +1,21 @@
 import {
-	makeGetSet
+makeGetSet
 }
 from
-'../moment/get-set';
-		import { addFormatToken } from
-'../format/format';
-		import { addUnitAlias } from
-'./aliases';
-		import { addRegexToken, match1to2, match2 } from
-'../parse/regex';
-		import { addParseToken } from
-'../parse/token';
-		import { SECOND } from
-'./constants';
+	'../moment/get-set';
+import { addFormatToken } from
+	'../format/format';
+import { addUnitAlias } from
+	'./aliases';
+import { addRegexToken, match1to2, match2 } from
+	'../parse/regex';
+import { addParseToken } from
+	'../parse/token';
+import { SECOND } from
+	'./constants';
 // FORMATTING
 
-		addFormatToken('s', ['ss', 2], 0, 'second');
+addFormatToken('s', ['ss', 2], 0, 'second');
 
 // ALIASES
 

@@ -54,21 +54,21 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.base.exception.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.action.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*,
-		   org.openmdx.kernel.log.*,
-		   org.openmdx.kernel.id.*
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.base.exception.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.action.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*,
+	   org.openmdx.kernel.log.*,
+	   org.openmdx.kernel.id.*
 " %><%!
 
 	public static class CreateActivityController extends org.openmdx.portal.servlet.AbstractWizardController {
@@ -110,47 +110,47 @@
 <link rel="import" href="wizards/CreateActivity/create-activity.html">
 <link rel="import" href="js/polymer/components/paper-button/paper-button.html">
 <dom-module id="create-activity-wizard">
-	<template>
-		<div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
-		<form id="form" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-			<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-			<input type="hidden" id="<%= Action.PARAMETER_OBJECTXRI %>" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-			<input type="hidden" id="Command" name="Command" value="" />											
-			<table class="tableLayout">
-				<tr>
-					<td class="cellObject">
-						<div class="panel" style="display:block;overflow:visible;">
-							<create-activity id="createActivity" url="<%= wizardPath %>" title="<%= wc.getToolTip() %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>" on-complete="doOK"></create-activity>
-						</div>
-						<div id="SubmitArea" style="float:left;">	
-							<paper-button raised on-tap="doCreate"><%= app.getTexts().getNewText() %></paper-button>
-							<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</form>
-		<br />
-	</template>
-	<script type="text/javascript">
-		HTMLImports.whenReady(function () {
-			Polymer({
-				is: 'create-activity-wizard',
-				doCancel: function (event) {
-					this.$.Command.value = "Cancel";
-					this.$.form.submit();
-				},
-				doCreate: function (event) {
-					this.$.createActivity.doCreate();
-				},
-				doOK: function (event) {
-					this.$.Command.value = "OK";
-					this.$.xri.value = event.detail.activity.xri;
-					this.$.form.submit();
-				}
-			});
-		});
-	</script>
-	<dom-module>
-		<create-activity-wizard></create-activity-wizard>
-			<t:wizardClose controller="<%= wc %>" />
+    <template>
+	<div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
+	<form id="form" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
+	    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	    <input type="hidden" id="<%= Action.PARAMETER_OBJECTXRI %>" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	    <input type="hidden" id="Command" name="Command" value="" />											
+	    <table class="tableLayout">
+		<tr>
+		    <td class="cellObject">
+			<div class="panel" style="display:block;overflow:visible;">
+			    <create-activity id="createActivity" url="<%= wizardPath %>" title="<%= wc.getToolTip() %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>" on-complete="doOK"></create-activity>
+			</div>
+			<div id="SubmitArea" style="float:left;">	
+			    <paper-button raised on-tap="doCreate"><%= app.getTexts().getNewText() %></paper-button>
+			    <paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
+			</div>
+		    </td>
+		</tr>
+	    </table>
+	</form>
+	<br />
+    </template>
+    <script type="text/javascript">
+	HTMLImports.whenReady(function () {
+	    Polymer({
+		is: 'create-activity-wizard',
+		doCancel: function (event) {
+		    this.$.Command.value = "Cancel";
+		    this.$.form.submit();
+		},
+		doCreate: function (event) {
+		    this.$.createActivity.doCreate();
+		},
+		doOK: function (event) {
+		    this.$.Command.value = "OK";
+		    this.$.xri.value = event.detail.activity.xri;
+		    this.$.form.submit();
+		}
+	    });
+	});
+    </script>
+    <dom-module>
+	<create-activity-wizard></create-activity-wizard>
+	    <t:wizardClose controller="<%= wc %>" />

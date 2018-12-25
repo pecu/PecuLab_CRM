@@ -54,21 +54,21 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.base.exception.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.action.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*,
-		   org.openmdx.kernel.log.*,
-		   org.openmdx.kernel.id.*
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.base.exception.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.action.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*,
+	   org.openmdx.kernel.log.*,
+	   org.openmdx.kernel.id.*
 " %><%!
 
 	public static class BulkActivityManagerController extends org.openmdx.portal.servlet.AbstractWizardController {
@@ -103,42 +103,42 @@
 <link rel="import" href="wizards/BulkActivityManager/bulk-activity-manager.html">
 <link rel="import" href="js/polymer/components/paper-button/paper-button.html">
 <dom-module id="bulk-activity-manager-wizard">
-	<template>
-		<div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
-		<form id="form" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-			<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-			<input type="hidden" id="<%= Action.PARAMETER_OBJECTXRI %>" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-			<input type="hidden" id="Command" name="Command" value="" />											
-			<table class="tableLayout">
-				<tr>
-					<td class="cellObject">
-						<div class="panel" style="display:block;overflow:visible;">
-							<bulk-activity-manager id="bulkActivityManager" url="<%= wizardPath %>" title="<%= wc.getToolTip() %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>"></bulk-activity-manager>
-						</div>
-						<div id="SubmitArea" style="float:left;">	
-							<paper-button raised on-tap="doReload"><%= app.getTexts().getReloadText() %></paper-button>
-							<paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</form>
-		<br />
-	</template>
-	<script type="text/javascript">
-		HTMLImports.whenReady(function () {
-			Polymer({
-				is: 'bulk-activity-manager-wizard',
-				doCancel: function (event) {
-					this.$.Command.value = "Cancel";
-					this.$.form.submit();
-				},
-				doReload: function (event) {
-					this.$.bulkActivityManager.doReload();
-				}
-			});
-		});
-	</script>
-	<dom-module>
-		<bulk-activity-manager-wizard></bulk-activity-manager-wizard>
-			<t:wizardClose controller="<%= wc %>" />
+    <template>
+	<div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
+	<form id="form" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
+	    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	    <input type="hidden" id="<%= Action.PARAMETER_OBJECTXRI %>" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	    <input type="hidden" id="Command" name="Command" value="" />											
+	    <table class="tableLayout">
+		<tr>
+		    <td class="cellObject">
+			<div class="panel" style="display:block;overflow:visible;">
+			    <bulk-activity-manager id="bulkActivityManager" url="<%= wizardPath %>" title="<%= wc.getToolTip() %>" xri="<%= wc.getObjectIdentity().toXRI() %>" provider="<%= wc.getProviderName() %>" segment="<%= wc.getSegmentName() %>"></bulk-activity-manager>
+			</div>
+			<div id="SubmitArea" style="float:left;">	
+			    <paper-button raised on-tap="doReload"><%= app.getTexts().getReloadText() %></paper-button>
+			    <paper-button raised on-tap="doCancel"><%= app.getTexts().getCancelTitle() %></paper-button>
+			</div>
+		    </td>
+		</tr>
+	    </table>
+	</form>
+	<br />
+    </template>
+    <script type="text/javascript">
+	HTMLImports.whenReady(function () {
+	    Polymer({
+		is: 'bulk-activity-manager-wizard',
+		doCancel: function (event) {
+		    this.$.Command.value = "Cancel";
+		    this.$.form.submit();
+		},
+		doReload: function (event) {
+		    this.$.bulkActivityManager.doReload();
+		}
+	    });
+	});
+    </script>
+    <dom-module>
+	<bulk-activity-manager-wizard></bulk-activity-manager-wizard>
+	    <t:wizardClose controller="<%= wc %>" />

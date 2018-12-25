@@ -1,1179 +1,1179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
-	<_object></_object>
-	<_content>
-		<provider>
-			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-				<_object></_object>
-				<_content>
-					<segment>
-						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
-							<_object></_object>
-							<_content>
-								<featureDefinition>
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								  <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
-									<_object>
-									  <type>org:w3c:string</type>
-									  <multiplicity>0..1</multiplicity>
-									  <changeable>false</changeable>
-									</_object>
-									<_content/>
-								  </org.openmdx.ui1.StructuralFeatureDefinition>
-								</featureDefinition>							
-								<elementDefinition>
-									<!-- Segment -->
-									<!-- Grid Tab -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Segment:activityProcess">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>所有活動流程</_item>
-											</toolTip>
-											<label>
-												<_item>活動流程</_item>
-											</label>
-											<order>
-												<_item>40</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-											<maxMember>3</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- ActivityFollowUp -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>追蹤活動</_item>
-											</toolTip>
-											<label>
-												<_item>追蹤活動</_item>
-											</label>
-											<iconKey>ActivityFollowUp</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>子活動</_item>
-											</toolTip>
-											<label>
-												<_item>子活動</_item>
-											</label>
-											<iconKey>SubActivity</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definition-->
-									<!--FieldGroups in General Tab-->
-									<!-- ElementDefinition -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:title">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>標題</_item>
-											</toolTip>
-											<label>
-												<_item>標題</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>50</_item>
-												<_item>0</_item>
-											</orderObjectContainer>											
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:title">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>標題</_item>
-											</toolTip>
-											<label>
-												<_item>標題</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>50</_item>
-												<_item>0</_item>
-											</orderObjectContainer>											
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:assignedTo">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>回報自</_item>
-											</toolTip>
-											<label>
-												<_item>回報自</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>30</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:transition">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>轉換</_item>
-											</toolTip>
-											<label>
-												<_item>轉換</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>25</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>轉換資訊</_item>
-											</toolTip>
-											<label>
-												<_item>轉換資訊</_item>
-											</label>
-											<order>
-												<_item>90</_item>
-												<_item>70</_item>
-												<_item>5</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>5</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<dataBindingName>org.opencrx.kernel.portal.FormattedFollowUpDataBinding</dataBindingName>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>標題 / 文字</_item>
-											</toolTip>
-											<label>
-												<_item>標題 / 文字</_item>
-											</label>
-											<order>
-												<_item>90</_item>
-												<_item>70</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<dataBindingName>org.opencrx.kernel.portal.FormattedNoteDataBinding</dataBindingName>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:modifiedAt">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>物件最後被編輯的日期與時間</_item>
-											</toolTip>
-											<label>
-												<_item>編輯在</_item>
-											</label>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>40</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:createdAt">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>物件被建立的日期與時間 (永遠不會被編輯)</_item>
-											</toolTip>
-											<label>
-												<_item>建立在</_item>
-											</label>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>45</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:text">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>文字</_item>
-											</toolTip>
-											<label>
-												<_item>文字</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>60</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:text">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>文字</_item>
-											</toolTip>
-											<label>
-												<_item>文字</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>60</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:activity">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動</_item>
-											</toolTip>
-											<label>
-												<_item>活動</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>70</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:activity">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動</_item>
-											</toolTip>
-											<label>
-												<_item>活動</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>70</_item>
-												<_item>0</_item>
-											</orderObjectContainer>																						
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- ActivityProcess-->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動流程</_item>
-											</toolTip>
-											<label>
-												<_item>活動流程</_item>
-											</label>
-											<iconKey>ActivityProcess</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:state">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>所有狀況</_item>
-											</toolTip>
-											<label>
-												<_item>狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>2</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:transition">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>所有轉換</_item>
-											</toolTip>
-											<label>
-												<_item>轉換</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>7</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:startState">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>開始狀態</_item>
-											</toolTip>
-											<label>
-												<_item>開始狀態</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:description">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+    <_object></_object>
+    <_content>
+	<provider>
+	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<_object></_object>
+		<_content>
+		    <segment>
+			<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+			    <_object></_object>
+			    <_content>
+				<featureDefinition>
+				    <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
+					<_object>
+					    <type>org:w3c:string</type>
+					    <multiplicity>0..1</multiplicity>
+					    <changeable>false</changeable>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.StructuralFeatureDefinition>
+				    <org.openmdx.ui1.StructuralFeatureDefinition qualifiedName="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
+					<_object>
+					    <type>org:w3c:string</type>
+					    <multiplicity>0..1</multiplicity>
+					    <changeable>false</changeable>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.StructuralFeatureDefinition>
+				</featureDefinition>							
+				<elementDefinition>
+				    <!-- Segment -->
+				    <!-- Grid Tab -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:Segment:activityProcess">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>所有活動流程</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動流程</_item>
+					    </label>
+					    <order>
+						<_item>40</_item>
+						<_item>0</_item>
+						<_item>30</_item>
+					    </order>
+					    <maxMember>3</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityFollowUp -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>追蹤活動</_item>
+					    </toolTip>
+					    <label>
+						<_item>追蹤活動</_item>
+					    </label>
+					    <iconKey>ActivityFollowUp</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>子活動</_item>
+					    </toolTip>
+					    <label>
+						<_item>子活動</_item>
+					    </label>
+					    <iconKey>SubActivity</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definition-->
+				    <!--FieldGroups in General Tab-->
+				    <!-- ElementDefinition -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:title">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>標題</_item>
+					    </toolTip>
+					    <label>
+						<_item>標題</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>50</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>											
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:title">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>標題</_item>
+					    </toolTip>
+					    <label>
+						<_item>標題</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>50</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>											
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:assignedTo">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>回報自</_item>
+					    </toolTip>
+					    <label>
+						<_item>回報自</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>30</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:transition">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>轉換</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>25</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:formattedFollowUp">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>轉換資訊</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換資訊</_item>
+					    </label>
+					    <order>
+						<_item>90</_item>
+						<_item>70</_item>
+						<_item>5</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>5</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <dataBindingName>org.opencrx.kernel.portal.FormattedFollowUpDataBinding</dataBindingName>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:formattedNote">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>標題 / 文字</_item>
+					    </toolTip>
+					    <label>
+						<_item>標題 / 文字</_item>
+					    </label>
+					    <order>
+						<_item>90</_item>
+						<_item>70</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <dataBindingName>org.opencrx.kernel.portal.FormattedNoteDataBinding</dataBindingName>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:modifiedAt">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>物件最後被編輯的日期與時間</_item>
+					    </toolTip>
+					    <label>
+						<_item>編輯在</_item>
+					    </label>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>40</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:createdAt">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>物件被建立的日期與時間 (永遠不會被編輯)</_item>
+					    </toolTip>
+					    <label>
+						<_item>建立在</_item>
+					    </label>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>45</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:text">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>文字</_item>
+					    </toolTip>
+					    <label>
+						<_item>文字</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>60</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:text">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>文字</_item>
+					    </toolTip>
+					    <label>
+						<_item>文字</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>60</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityFollowUp:activity">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>70</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivity:activity">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>70</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>																						
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityProcess-->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動流程</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動流程</_item>
+					    </label>
+					    <iconKey>ActivityProcess</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:state">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>所有狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>2</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:transition">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>所有轉換</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>7</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:startState">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>開始狀態</_item>
+					    </toolTip>
+					    <label>
+						<_item>開始狀態</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcess:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- ActivityProcessState -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動流程狀況</_item>
-											</toolTip>
-											<label>
-												<_item>活動流程狀況</_item>
-											</label>
-											<iconKey>ActivityProcessState</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState:description">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityProcessState -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動流程狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動流程狀況</_item>
+					    </label>
+					    <iconKey>ActivityProcessState</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessState:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- ActivityProcessTransition-->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動流程轉換</_item>
-											</toolTip>
-											<label>
-												<_item>活動流程轉換</_item>
-											</label>
-											<iconKey>ActivityProcessTransition</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:action">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>所有動作</_item>
-											</toolTip>
-											<label>
-												<_item>動作</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>14</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:description">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:prevState">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>先前狀況</_item>
-											</toolTip>
-											<label>
-												<_item>先前狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:nextState">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>下個狀況</_item>
-											</toolTip>
-											<label>
-												<_item>下個狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:errState">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>錯誤狀況/_item>
-											</toolTip>
-											<label>
-												<_item>錯誤狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>30</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:newActivityState">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>新活動狀況</_item>
-											</toolTip>
-											<label>
-												<_item>新活動狀況</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:newPercentComplete">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>新 % 完成</_item>
-											</toolTip>
-											<label>
-												<_item>新 % 完成</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityProcessTransition-->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動流程轉換</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動流程轉換</_item>
+					    </label>
+					    <iconKey>ActivityProcessTransition</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:action">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>所有動作</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>14</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:prevState">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>先前狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>先前狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:nextState">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>下個狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>下個狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:errState">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>錯誤狀況/_item>
+					    </toolTip>
+					    <label>
+						<_item>錯誤狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>30</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:newActivityState">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>新活動狀況</_item>
+					    </toolTip>
+					    <label>
+						<_item>新活動狀況</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessTransition:newPercentComplete">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>新 % 完成</_item>
+					    </toolTip>
+					    <label>
+						<_item>新 % 完成</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- SubActivityTransition-->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>子活動 轉換</_item>
-											</toolTip>
-											<label>
-												<_item>子活動 轉換</_item>
-											</label>
-											<iconKey>SubActivityTransition</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:subActivityNamePattern">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>${A} 活動名稱, ${N} 轉換名稱, ${F} 追縱標題, ${G} 活動群名稱</_item>
-											</toolTip>
-											<label>
-												<_item>子活動名稱模式</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:templateNamePattern">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>${A} 活動名稱, ${N} 轉換名稱, ${F} 追縱標題, ${G} 活動群名稱</_item>
-											</toolTip>
-											<label>
-												<_item>範本名稱模式</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:activityCreator">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>活動創造工具</_item>
-											</toolTip>
-											<label>
-												<_item>活動創造工具</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:useCreatorAsTemplate">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>將創造工具當作範本使用</_item>
-											</toolTip>
-											<label>
-												<_item>將創造工具當作範本使用</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- SubActivityTransition-->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>子活動 轉換</_item>
+					    </toolTip>
+					    <label>
+						<_item>子活動 轉換</_item>
+					    </label>
+					    <iconKey>SubActivityTransition</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:subActivityNamePattern">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>${A} 活動名稱, ${N} 轉換名稱, ${F} 追縱標題, ${G} 活動群名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>子活動名稱模式</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:templateNamePattern">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>${A} 活動名稱, ${N} 轉換名稱, ${F} 追縱標題, ${G} 活動群名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>範本名稱模式</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:activityCreator">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動創造工具</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動創造工具</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SubActivityTransition:useCreatorAsTemplate">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>將創造工具當作範本使用</_item>
+					    </toolTip>
+					    <label>
+						<_item>將創造工具當作範本使用</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- ActivityProcessAction -->
-									<!--Inspector Definitions-->
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessAction:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessAction:description">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityProcessAction -->
+				    <!--Inspector Definitions-->
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessAction:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityProcessAction:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- SetAssignedToAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 設定分配到</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 設定分配到</_item>
-											</label>
-											<iconKey>SetAssignedToAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:contactFeatureName">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>聯繫功能名稱</_item>
-											</toolTip>
-											<label>
-												<_item>聯繫功能名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:resourceOrder">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>資源訂單</_item>
-											</toolTip>
-											<label>
-												<_item>資源訂單</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:resourceRole">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>資源角色</_item>
-											</toolTip>
-											<label>
-												<_item>資源角色</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>80</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>11</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- SetAssignedToAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 設定分配到</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 設定分配到</_item>
+					    </label>
+					    <iconKey>SetAssignedToAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:contactFeatureName">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>聯繫功能名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>聯繫功能名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:resourceOrder">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>資源訂單</_item>
+					    </toolTip>
+					    <label>
+						<_item>資源訂單</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetAssignedToAction:resourceRole">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>資源角色</_item>
+					    </toolTip>
+					    <label>
+						<_item>資源角色</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>80</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>11</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- SetActualStartAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualStartAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 設真實開始</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 設真實開始</_item>
-											</label>
-											<iconKey>SetActualStartAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualStartAction:resetToNull">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>重設成未定義</_item>
-											</toolTip>
-											<label>
-												<_item>重設成未定義</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>17</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- SetActualStartAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualStartAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 設真實開始</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 設真實開始</_item>
+					    </label>
+					    <iconKey>SetActualStartAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualStartAction:resetToNull">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>重設成未定義</_item>
+					    </toolTip>
+					    <label>
+						<_item>重設成未定義</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>17</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- SetActualEndAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualEndAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 設真實結束</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 設真實結束</_item>
-											</label>
-											<iconKey>SetActualEndAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualEndAction:resetToNull">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>重設成未定義</_item>
-											</toolTip>
-											<label>
-												<_item>重設成未定義</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>18</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- SetActualEndAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualEndAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 設真實結束</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 設真實結束</_item>
+					    </label>
+					    <iconKey>SetActualEndAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:SetActualEndAction:resetToNull">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>重設成未定義</_item>
+					    </toolTip>
+					    <label>
+						<_item>重設成未定義</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>18</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- WfAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:WfAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 工作流</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 工作流</_item>
-											</label>
-											<iconKey>WfAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:WfAction:wfProcess">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>工作流</_item>
-											</toolTip>
-											<label>
-												<_item>工作流</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>15</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- WfAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:WfAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 工作流</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 工作流</_item>
+					    </label>
+					    <iconKey>WfAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:WfAction:wfProcess">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>工作流</_item>
+					    </toolTip>
+					    <label>
+						<_item>工作流</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>15</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- ActivityCreationAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 活動創造</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 活動創造</_item>
-											</label>
-											<iconKey>ActivityCreationAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityCreator">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動創造工具</_item>
-											</toolTip>
-											<label>
-												<_item>活動創造工具</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>28</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityName">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動名稱</_item>
-											</toolTip>
-											<label>
-												<_item>活動名稱</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>29</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityDescription">
-										<_object>
-											<active>true</active>
-											<spanRow>15</spanRow>
-											<toolTip>
-												<_item>活動描述</_item>
-											</toolTip>
-											<label>
-												<_item>活動描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>30</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- ActivityCreationAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 活動創造</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 活動創造</_item>
+					    </label>
+					    <iconKey>ActivityCreationAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityCreator">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動創造工具</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動創造工具</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>28</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityName">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動名稱</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>29</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:ActivityCreationAction:activityDescription">
+					<_object>
+					    <active>true</active>
+					    <spanRow>15</spanRow>
+					    <toolTip>
+						<_item>活動描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>30</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- LinkedActivityFollowUpAction -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>動作: 追蹤</_item>
-											</toolTip>
-											<label>
-												<_item>動作: 追蹤</_item>
-											</label>
-											<iconKey>LinkedActivityFollowUpAction</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:activityLinkType">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活動連結類型</_item>
-											</toolTip>
-											<label>
-												<_item>活動連結類型</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>5</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transition">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>轉換</_item>
-											</toolTip>
-											<label>
-												<_item>轉換</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>80</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>6</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transitionTitle">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>轉換標題</_item>
-											</toolTip>
-											<label>
-												<_item>轉換標題</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transitionText">
-										<_object>
-											<active>true</active>
-											<spanRow>20</spanRow>
-											<toolTip>
-												<_item>轉換文字</_item>
-											</toolTip>
-											<label>
-												<_item>轉換文字</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>20</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- LinkedActivityFollowUpAction -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>動作: 追蹤</_item>
+					    </toolTip>
+					    <label>
+						<_item>動作: 追蹤</_item>
+					    </label>
+					    <iconKey>LinkedActivityFollowUpAction</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:activityLinkType">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活動連結類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>活動連結類型</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>5</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transition">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>轉換</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>80</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>6</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transitionTitle">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>轉換標題</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換標題</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:activity1:LinkedActivityFollowUpAction:transitionText">
+					<_object>
+					    <active>true</active>
+					    <spanRow>20</spanRow>
+					    <toolTip>
+						<_item>轉換文字</_item>
+					    </toolTip>
+					    <label>
+						<_item>轉換文字</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>20</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Operations -->
-								</elementDefinition>
-							</_content>
-						</org.openmdx.ui1.Segment>
-					</segment>
-				</_content>
-			</org.openmdx.base.Provider>
-		</provider>
-	</_content>
+				    <!-- Operations -->
+				</elementDefinition>
+			    </_content>
+			</org.openmdx.ui1.Segment>
+		    </segment>
+		</_content>
+	    </org.openmdx.base.Provider>
+	</provider>
+    </_content>
 </org.openmdx.base.Authority>

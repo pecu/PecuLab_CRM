@@ -24,51 +24,51 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="x-app">
 
-	<template>
+    <template>
 
-		<style>
+	<style>
 
-			app-header {
-				background-color: #00897B;
-				color: #fff;
-			}
+	    app-header {
+		background-color: #00897B;
+		color: #fff;
+	    }
 
-			app-header paper-icon-button {
-				--paper-icon-button-ink-color: white;
-			}
+	    app-header paper-icon-button {
+		--paper-icon-button-ink-color: white;
+	    }
 
-		</style>
+	</style>
 
-		<app-drawer-layout>
+	<app-drawer-layout>
 
-			<app-drawer>
-				<app-toolbar>Getting Started</app-toolbar>
-			</app-drawer>
+	    <app-drawer>
+		<app-toolbar>Getting Started</app-toolbar>
+	    </app-drawer>
 
-			<app-header-layout>
+	    <app-header-layout>
 
-				<app-header reveals effects="waterfall">
-					<app-toolbar>
-						<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-						<div main-title>Title</div>
-					</app-toolbar>
-				</app-header>
+		<app-header reveals effects="waterfall">
+		    <app-toolbar>
+			<paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+			<div main-title>Title</div>
+		    </app-toolbar>
+		</app-header>
 
-				<sample-content size="100"></sample-content>
+		<sample-content size="100"></sample-content>
 
-			</app-header-layout>
+	    </app-header-layout>
 
-		</app-drawer-layout>
+	</app-drawer-layout>
 
-	</template>
+    </template>
 
-	<script>
+    <script>
 
-		Polymer({
-			is: 'x-app'
+	Polymer({
+	    is: 'x-app'
 
-		});
+	});
 
-	</script>
+    </script>
 
 </dom-module>

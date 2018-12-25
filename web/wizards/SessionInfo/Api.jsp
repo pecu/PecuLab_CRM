@@ -53,21 +53,21 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.base.exception.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.action.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*,
-		   org.openmdx.kernel.log.*,
-		   org.openmdx.kernel.id.*
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.base.exception.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.action.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*,
+	   org.openmdx.kernel.log.*,
+	   org.openmdx.kernel.id.*
 " %><%!
 
 	public static class SessionInfoApiController extends org.opencrx.kernel.portal.wizard.SessionInfoApiController {

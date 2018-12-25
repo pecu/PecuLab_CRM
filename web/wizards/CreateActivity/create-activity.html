@@ -62,200 +62,200 @@ openMDX (http://www.openmdx.org/)
 <link rel="import" href="../../js/openmdx/portal/elements/portal-autocomplete-input/portal-autocomplete-input.html">
 <link rel="import" href="../../js/openmdx/portal/elements/portal-datetime-input/portal-datetime-input.html">
 <dom-module id="create-activity">
-	<link rel="import" type="css" href="create-activity.css">
+    <link rel="import" type="css" href="create-activity.css">
     <template>
-		<iron-ajax
-			id="getMetaInf" 
-			url="{{url}}/Api.jsp?xri={{xri}}/getMetaInf" 
-			withcredentials=""
-			handle-as="json"
-			method="get"
-			on-response="getMetaInfResponse">
-		</iron-ajax>
-		<iron-ajax
-			id="getData"
-			url="{{url}}/Api.jsp?xri={{xri}}/getData" 
-			withcredentials=""
-			handle-as="json"
-			method="get"
-			on-response="getDataResponse">
-		</iron-ajax>
-		<iron-ajax
-			id="putData"
-			url="{{url}}/Api.jsp?xri={{xri}}/putData" 
-			withcredentials=""
-			handle-as="json"
-			contenttype="application/json"
-			method="put"
-			on-response="putDataResponse">
-		</iron-ajax>
-		<div class="vertical justified layout">
-			<paper-card elevation="0">
-				<div class="field-group-header card-header">{{metaInf.labelFieldGroupActivity}}</div>
-				<div class="card-content horizontal justified layout">
-					<div class="field-group vertical layout flex one">
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelName}}:</label>
-							<input type="text" is="iron-input" value="{{data.name::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelActivityCreator}}:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityCreators" selected-item="{{data.activityCreator}}"></portal-autocomplete-input>
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelAssignedTo}}:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getContacts" selected-item="{{data.assignedTo}}"></portal-autocomplete-input>
-						</paper-input-container>
-					</div>
-					<div class="field-group vertical layout flex one">
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelReportingContact}}:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getContacts" selected-item="{{data.reportingContact}}"></portal-autocomplete-input>
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelReportingAccount}}:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getAccounts" selected-item="{{data.reportingAccount}}"></portal-autocomplete-input>
-						</paper-input-container>
-					</div>
-				</div>
-			</paper-card>
-			<paper-card elevation="0">
-				<div class="field-group-header card-header">{{metaInf.labelFieldGroupDetails}}</div>
-				<div class="card-content horizontal justified layout">   	
-					<div class="field-group vertical layout flex one">
-						<paper-dropdown-menu label="{{metaInf.labelPriority}}:" always-float-label="true" no-animations>
-							<paper-menu class="dropdown-content" on-iron-select="prioritySelected">
-								<template is="dom-repeat" items="{{metaInf.optionsPriority}}">
-									<paper-item value="{{item.value}}">{{item.title}}</paper-item>
-								</template>
-							</paper-menu>
-						</paper-dropdown-menu>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelDueBy}}:</label>
-							<portal-datetime-input class="paper-input-input" value="{{data.dueBy}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelScheduledStart}}:</label>
-							<portal-datetime-input class="paper-input-input" value="{{data.scheduledStart}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelScheduledEnd}}:</label>
-							<portal-datetime-input class="paper-input-input" value="{{data.scheduledEnd}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
-						</paper-input-container>
-					</div>
-					<div class="field-group vertical layout flex one">
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelMisc1}}:</label>
-							<input type="text" is="iron-input" value="{{data.misc1::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelMisc2}}:</label>
-							<input type="text" is="iron-input" value="{{data.misc2::input}}">
-						</paper-input-container>
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelMisc3}}:</label>
-							<input type="text" is="iron-input" value="{{data.misc3::input}}">
-						</paper-input-container>
-					</div>
-				</div>
-			</paper-card>
-			<paper-card elevation="0">
-				<div class="field-group-header card-header">&nbsp;</div>
-				<div class="card-content horizontal justified layout">
-					<div class="field-group vertical layout flex one">
-						<paper-textarea always-float-label="true" label="{{metaInf.labelDescription}}:" value="{{data.description::input}}"></paper-textarea>
-						<paper-textarea always-float-label="true" label="{{metaInf.labelDetailedDescription}}:" value="{{data.detailedDescription::input}}"></paper-textarea>
-					</div>
-				</div>
-			</paper-card>
-			<paper-card elevation="0">
-				<div class="field-group-header card-header">&nbsp;</div>
-				<div class="card-content horizontal justified layout">
-					<div class="field-group vertical layout flex one">
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelActivityGroup}} #1:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup1}}"></portal-autocomplete-input>
-						</paper-input-container>					
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelActivityGroup}} #2:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup2}}"></portal-autocomplete-input>
-						</paper-input-container>					
-						<paper-input-container always-float-label="true">
-							<label>{{metaInf.labelActivityGroup}} #3:</label>
-							<portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup3}}"></portal-autocomplete-input>
-						</paper-input-container>					
-					</div>
-				</div>
-			</paper-card>
-			<template is="dom-if" if="{{data.errors}}">
-				<paper-card elevation="0">
-					<div class="card-content horizontal justified layout">
-						<div class="field-group vertical layout flex one error">
-							<template is="dom-repeat" items="{{data.errors}}">
-								<pre>{{item}}</pre>
-							</template>
-						</div>
-					</div>
-				</paper-card>
-			</template>
+	<iron-ajax
+	    id="getMetaInf" 
+	    url="{{url}}/Api.jsp?xri={{xri}}/getMetaInf" 
+	    withcredentials=""
+	    handle-as="json"
+	    method="get"
+	    on-response="getMetaInfResponse">
+	</iron-ajax>
+	<iron-ajax
+	    id="getData"
+	    url="{{url}}/Api.jsp?xri={{xri}}/getData" 
+	    withcredentials=""
+	    handle-as="json"
+	    method="get"
+	    on-response="getDataResponse">
+	</iron-ajax>
+	<iron-ajax
+	    id="putData"
+	    url="{{url}}/Api.jsp?xri={{xri}}/putData" 
+	    withcredentials=""
+	    handle-as="json"
+	    contenttype="application/json"
+	    method="put"
+	    on-response="putDataResponse">
+	</iron-ajax>
+	<div class="vertical justified layout">
+	    <paper-card elevation="0">
+		<div class="field-group-header card-header">{{metaInf.labelFieldGroupActivity}}</div>
+		<div class="card-content horizontal justified layout">
+		    <div class="field-group vertical layout flex one">
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelName}}:</label>
+			    <input type="text" is="iron-input" value="{{data.name::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelActivityCreator}}:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityCreators" selected-item="{{data.activityCreator}}"></portal-autocomplete-input>
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelAssignedTo}}:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getContacts" selected-item="{{data.assignedTo}}"></portal-autocomplete-input>
+			</paper-input-container>
+		    </div>
+		    <div class="field-group vertical layout flex one">
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelReportingContact}}:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getContacts" selected-item="{{data.reportingContact}}"></portal-autocomplete-input>
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelReportingAccount}}:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getAccounts" selected-item="{{data.reportingAccount}}"></portal-autocomplete-input>
+			</paper-input-container>
+		    </div>
 		</div>
+	    </paper-card>
+	    <paper-card elevation="0">
+		<div class="field-group-header card-header">{{metaInf.labelFieldGroupDetails}}</div>
+		<div class="card-content horizontal justified layout">   	
+		    <div class="field-group vertical layout flex one">
+			<paper-dropdown-menu label="{{metaInf.labelPriority}}:" always-float-label="true" no-animations>
+			    <paper-menu class="dropdown-content" on-iron-select="prioritySelected">
+				<template is="dom-repeat" items="{{metaInf.optionsPriority}}">
+				    <paper-item value="{{item.value}}">{{item.title}}</paper-item>
+				</template>
+			    </paper-menu>
+			</paper-dropdown-menu>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelDueBy}}:</label>
+			    <portal-datetime-input class="paper-input-input" value="{{data.dueBy}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelScheduledStart}}:</label>
+			    <portal-datetime-input class="paper-input-input" value="{{data.scheduledStart}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelScheduledEnd}}:</label>
+			    <portal-datetime-input class="paper-input-input" value="{{data.scheduledEnd}}" locale="{{metaInf.locale}}" timezone="{{metaInf.timezone}}"></portal-datetime-input>
+			</paper-input-container>
+		    </div>
+		    <div class="field-group vertical layout flex one">
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelMisc1}}:</label>
+			    <input type="text" is="iron-input" value="{{data.misc1::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelMisc2}}:</label>
+			    <input type="text" is="iron-input" value="{{data.misc2::input}}">
+			</paper-input-container>
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelMisc3}}:</label>
+			    <input type="text" is="iron-input" value="{{data.misc3::input}}">
+			</paper-input-container>
+		    </div>
+		</div>
+	    </paper-card>
+	    <paper-card elevation="0">
+		<div class="field-group-header card-header">&nbsp;</div>
+		<div class="card-content horizontal justified layout">
+		    <div class="field-group vertical layout flex one">
+			<paper-textarea always-float-label="true" label="{{metaInf.labelDescription}}:" value="{{data.description::input}}"></paper-textarea>
+			<paper-textarea always-float-label="true" label="{{metaInf.labelDetailedDescription}}:" value="{{data.detailedDescription::input}}"></paper-textarea>
+		    </div>
+		</div>
+	    </paper-card>
+	    <paper-card elevation="0">
+		<div class="field-group-header card-header">&nbsp;</div>
+		<div class="card-content horizontal justified layout">
+		    <div class="field-group vertical layout flex one">
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelActivityGroup}} #1:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup1}}"></portal-autocomplete-input>
+			</paper-input-container>					
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelActivityGroup}} #2:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup2}}"></portal-autocomplete-input>
+			</paper-input-container>					
+			<paper-input-container always-float-label="true">
+			    <label>{{metaInf.labelActivityGroup}} #3:</label>
+			    <portal-autocomplete-input class="paper-input-input" url="{{url}}/Api.jsp?xri={{xri}}/getActivityGroups" selected-item="{{data.activityGroup3}}"></portal-autocomplete-input>
+			</paper-input-container>					
+		    </div>
+		</div>
+	    </paper-card>
+	    <template is="dom-if" if="{{data.errors}}">
+		<paper-card elevation="0">
+		    <div class="card-content horizontal justified layout">
+			<div class="field-group vertical layout flex one error">
+			    <template is="dom-repeat" items="{{data.errors}}">
+				<pre>{{item}}</pre>
+			    </template>
+			</div>
+		    </div>
+		</paper-card>
+	    </template>
+	</div>
     </template>
 </dom-module>
 <script>
-	Polymer({
-		is: 'create-activity',
-		properties: {
-			title: {
-				type: String
-			},
-			xri: {
-				type: String
-			},
-			provider: {
-				type: String
-			},
-			segment: {
-				type: String
-			},
-			data: {
-				type: Object
-			},
-			metaInf: {
-				type: Object
-			}
-		},
-		ready: function () {
-			this.$.getMetaInf.generateRequest();
-			this.$.getData.generateRequest();
-		},
-		getDataResponse: function (event, response) {
-			if (response == null || response.response == null) {
-				this.data = null;
-			} else {
-				this.data = response.response;
-			}
-		},
-		putDataResponse: function (event, response) {
-			if (response != null && response.response != null) {
-				this.set('data', response.response);
-				if (this.data.activity != null && this.data.activity.xri != null) {
-					this.fire('complete', {"activity": this.data.activity});
-				}
-			}
-		},
-		getMetaInfResponse: function (event, response) {
-			if (response == null || response.response == null) {
-				this.metaInf = null;
-			} else {
-				this.metaInf = response.response;
-			}
-		},
-		prioritySelected: function (event) {
-			this.data.priority = parseInt(event.target.selectedItem.value);
-		},
-		doCreate: function () {
-			this.$.putData.body = JSON.stringify(this.data);
-			this.$.putData.generateRequest();
+    Polymer({
+	is: 'create-activity',
+	properties: {
+	    title: {
+		type: String
+	    },
+	    xri: {
+		type: String
+	    },
+	    provider: {
+		type: String
+	    },
+	    segment: {
+		type: String
+	    },
+	    data: {
+		type: Object
+	    },
+	    metaInf: {
+		type: Object
+	    }
+	},
+	ready: function () {
+	    this.$.getMetaInf.generateRequest();
+	    this.$.getData.generateRequest();
+	},
+	getDataResponse: function (event, response) {
+	    if (response == null || response.response == null) {
+		this.data = null;
+	    } else {
+		this.data = response.response;
+	    }
+	},
+	putDataResponse: function (event, response) {
+	    if (response != null && response.response != null) {
+		this.set('data', response.response);
+		if (this.data.activity != null && this.data.activity.xri != null) {
+		    this.fire('complete', {"activity": this.data.activity});
 		}
-	});
+	    }
+	},
+	getMetaInfResponse: function (event, response) {
+	    if (response == null || response.response == null) {
+		this.metaInf = null;
+	    } else {
+		this.metaInf = response.response;
+	    }
+	},
+	prioritySelected: function (event) {
+	    this.data.priority = parseInt(event.target.selectedItem.value);
+	},
+	doCreate: function () {
+	    this.$.putData.body = JSON.stringify(this.data);
+	    this.$.putData.generateRequest();
+	}
+    });
 </script>

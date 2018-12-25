@@ -55,23 +55,23 @@
  */
 %>
 <%@page session="true" import="
-		java.util.*,
-		java.io.*,
-		java.text.*,
-		org.opencrx.kernel.backend.*,
-		org.opencrx.kernel.portal.wizard.*,
-		org.opencrx.kernel.generic.*,
-		org.openmdx.kernel.id.cci.*,
-		org.openmdx.kernel.id.*,
-		org.openmdx.base.exception.*,
-		org.openmdx.base.accessor.jmi.cci.*,
-		org.openmdx.portal.servlet.*,
-		org.openmdx.portal.servlet.attribute.*,
-		org.openmdx.portal.servlet.component.*,
-		org.openmdx.portal.servlet.control.*,
-		org.openmdx.portal.servlet.wizards.*,
-		org.openmdx.base.naming.*
-		" %>
+	java.util.*,
+	java.io.*,
+	java.text.*,
+	org.opencrx.kernel.backend.*,
+	org.opencrx.kernel.portal.wizard.*,
+	org.opencrx.kernel.generic.*,
+	org.openmdx.kernel.id.cci.*,
+	org.openmdx.kernel.id.*,
+	org.openmdx.base.exception.*,
+	org.openmdx.base.accessor.jmi.cci.*,
+	org.openmdx.portal.servlet.*,
+	org.openmdx.portal.servlet.attribute.*,
+	org.openmdx.portal.servlet.component.*,
+	org.openmdx.portal.servlet.control.*,
+	org.openmdx.portal.servlet.wizards.*,
+	org.openmdx.base.naming.*
+	" %>
 <%
 	final String FORM_NAME = "editDocumentRevisionForm";
 	EditDocumentRevisionWizardController wc = new EditDocumentRevisionWizardController();
@@ -89,52 +89,52 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-	<%
-		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-	%>
-	<div class="alert alert-danger" role="alert">
-		<table>
-			<tr>
-				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-				<td><%= wc.getErrorMessage() %></td>
-			</tr>
-		</table>
-	</div>
-	<%
-		}
-	%>
-	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-	<input type="hidden" id="Command" name="Command" value="" />
-	<input type="checkbox" style="display:none;" id="isInitialized" name="isInitialized" checked />
-	<table class="tableLayout">
-		<tr>
-			<td class="cellObject">
-				<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
-					<%
-										wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
-										viewPort.flush();
-					%>
-				</div>
-
-				<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getReloadText() %>" style="display:none;" onclick="javascript:$('Command').value = this.name;" />
-				<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-				<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-			</td>
-		</tr>
+    <%
+	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+    %>
+    <div class="alert alert-danger" role="alert">
+	<table>
+	    <tr>
+		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+		<td><%= wc.getErrorMessage() %></td>
+	    </tr>
 	</table>
+    </div>
+    <%
+	    }
+    %>
+    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+    <input type="hidden" id="Command" name="Command" value="" />
+    <input type="checkbox" style="display:none;" id="isInitialized" name="isInitialized" checked />
+    <table class="tableLayout">
+	<tr>
+	    <td class="cellObject">
+		<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
+		    <%
+							    wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
+							    viewPort.flush();
+		    %>
+		</div>
+
+		<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getReloadText() %>" style="display:none;" onclick="javascript:$('Command').value = this.name;" />
+		<input type="submit" name="OK" id="OK.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getOkTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+	    </td>
+	</tr>
+    </table>
 </form>
 <br />
 <script type="text/javascript">
-	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-		$('<%= FORM_NAME %>').request({
-			onFailure: function () { },
-			onSuccess: function (t) {
-				$('UserDialog').update(t.responseText);
-			}
-		});
-		Event.stop(event);
+    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+	$('<%= FORM_NAME %>').request({
+	    onFailure: function () { },
+	    onSuccess: function (t) {
+		$('UserDialog').update(t.responseText);
+	    }
 	});
+	Event.stop(event);
+    });
 </script>
 <t:wizardClose controller="<%= wc %>" />
 

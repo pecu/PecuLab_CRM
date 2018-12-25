@@ -52,21 +52,21 @@
  * license.
  */
 %><%@ page session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.application.cci.*,
-		   org.openmdx.base.text.conversion.*,
-		   org.openmdx.base.accessor.cci.*,
-		   org.openmdx.kernel.id.cci.*,
-		   org.openmdx.kernel.id.*,
-		   org.openmdx.base.accessor.jmi.cci.*,
-		   org.openmdx.portal.servlet.*,
-		   org.openmdx.portal.servlet.attribute.*,
-		   org.openmdx.portal.servlet.component.*,
-		   org.openmdx.portal.servlet.control.*,
-		   org.openmdx.portal.servlet.wizards.*,
-		   org.openmdx.base.naming.*
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.application.cci.*,
+	   org.openmdx.base.text.conversion.*,
+	   org.openmdx.base.accessor.cci.*,
+	   org.openmdx.kernel.id.cci.*,
+	   org.openmdx.kernel.id.*,
+	   org.openmdx.base.accessor.jmi.cci.*,
+	   org.openmdx.portal.servlet.*,
+	   org.openmdx.portal.servlet.attribute.*,
+	   org.openmdx.portal.servlet.component.*,
+	   org.openmdx.portal.servlet.control.*,
+	   org.openmdx.portal.servlet.wizards.*,
+	   org.openmdx.base.naming.*
 " %><%
 
 	final int MAX_WORKSPACES = 10;
@@ -159,98 +159,98 @@
 			}
 %>
 <div id="<%= dashletId %>Content" style=>
-	<form id="<%= dashletId %>Form" name="<%= dashletId %>Form">
-		<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
-		<input id="<%= WebKeys.REQUEST_PARAMETER %>" name="<%= WebKeys.REQUEST_PARAMETER %>" type="hidden" value="<%= parameters %>" />
-		<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= xri %>" />
-		<input type="hidden" id="<%= FIELD_NAME_COMMAND %>" name="<%= FIELD_NAME_COMMAND %>" value="" />
-		<input type="hidden" id="<%= FIELD_NAME_PARAM %>" name="<%= FIELD_NAME_PARAM %>" value="" />
-		<table class="<%= CssClass.tableLayout %>">
-			<tr>
-				<td class="<%= CssClass.cellObject %>">
-					<div id="panel<%= dashletId %>" style="display:block;background-color:inherit;">
-						<%
-														if(isAdmin && actionEdit) {
-															for(int i = 0; i < MAX_WORKSPACES; i++) {
-																String workspaceId = "W" + i;
-																String workspaceName = settings.getProperty(
-																	PROPERTY_WORKSPACE + "." + workspaceId + "." + PROPERTY_WORKSPACE_LABEL
-																);
-																if(workspaceName == null) {
-																	workspaceName = "";
-																}
-																if(i == 0 && workspaceName.isEmpty()) {
-																	workspaceName = "Default";
-																}
-						%>				
-						<div>
-							<%= i %>:<input type="text" name="<%= workspaceId + "." + FIELD_WORKSPACE_NAME %>" value="<%= workspaceName %>" />
-						</div>
-						<%										
-															}
-						%>									
-						<div>
-							<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_APPLY %>" tabindex="9010" value="<%= texts.getSaveTitle() %>" onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_APPLY %>';<%= submitFormScriptlet %>;" />
-							<input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_CANCEL %>" tabindex="9020" value="<%= texts.getCancelTitle() %>" onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_CANCEL %>';<%= submitFormScriptlet %>;" />
-						</div>
-						<%
-														}
-														else {
-															Properties adminSettings = isAdmin ? settings : app.getUserSettings(userHomeAdminIdentity);
-															String workspaceIdsAsString = adminSettings.getProperty(
-																PROPERTY_WORKSPACES
-															);
-															List<String> workspaceIds = new ArrayList<String>(
-																workspaceIdsAsString == null ? 
-																	Collections.<String>emptyList() :
-																		Arrays.asList(workspaceIdsAsString.split(";"))
-															);
-															if(!workspaceIds.contains("W0")) {
-																workspaceIds.add(0, "W0");
-															}
-															for(int i = 0; i < workspaceIds.size(); i++) {
-																String workspaceId = workspaceIds.get(i);
-																String workspaceName = adminSettings.getProperty(
-																	PROPERTY_WORKSPACE + "." + workspaceId + "." + PROPERTY_WORKSPACE_LABEL
-																);
-																if(workspaceName == null) {
-																	workspaceName = "";
-																}
-																if(i == 0 && workspaceName.isEmpty()) {
-																	workspaceName = "Default";
-																}
-						%>
-						<div><a <%= workspaceId.equals(app.getCurrentWorkspace()) ? "class=\"" + CssClass.hilite + "\"" : "" %> onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_SELECT %>';
-								$('<%= FIELD_NAME_PARAM %>').value = '<%= workspaceId %>';<%= submitFormScriptlet %>"><%= workspaceName %></a></div>
-							<%
-																}
-															}
-							%>
-					</div>
-					<%
-												if(isAdmin && !actionEdit) {
-					%>	            	
-					<div id="<%= dashletId %>.EditMode">
-						<a onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_EDIT %>';<%= submitFormScriptlet %>"><img src="./images/<%= WebKeys.ICON_EDIT %>" style="border:0;align:absmiddle;" /></a>
-					</div>
-					<%
+    <form id="<%= dashletId %>Form" name="<%= dashletId %>Form">
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= requestId %>" />
+	<input id="<%= WebKeys.REQUEST_PARAMETER %>" name="<%= WebKeys.REQUEST_PARAMETER %>" type="hidden" value="<%= parameters %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= xri %>" />
+	<input type="hidden" id="<%= FIELD_NAME_COMMAND %>" name="<%= FIELD_NAME_COMMAND %>" value="" />
+	<input type="hidden" id="<%= FIELD_NAME_PARAM %>" name="<%= FIELD_NAME_PARAM %>" value="" />
+	<table class="<%= CssClass.tableLayout %>">
+	    <tr>
+		<td class="<%= CssClass.cellObject %>">
+		    <div id="panel<%= dashletId %>" style="display:block;background-color:inherit;">
+			<%
+											if(isAdmin && actionEdit) {
+												for(int i = 0; i < MAX_WORKSPACES; i++) {
+													String workspaceId = "W" + i;
+													String workspaceName = settings.getProperty(
+														PROPERTY_WORKSPACE + "." + workspaceId + "." + PROPERTY_WORKSPACE_LABEL
+													);
+													if(workspaceName == null) {
+														workspaceName = "";
+													}
+													if(i == 0 && workspaceName.isEmpty()) {
+														workspaceName = "Default";
+													}
+			%>				
+			<div>
+			    <%= i %>:<input type="text" name="<%= workspaceId + "." + FIELD_WORKSPACE_NAME %>" value="<%= workspaceName %>" />
+			</div>
+			<%										
 												}
-					%>				            
-				</td>
-			</tr>
-		</table>
-	</form>
+			%>									
+			<div>
+			    <input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_APPLY %>" tabindex="9010" value="<%= texts.getSaveTitle() %>" onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_APPLY %>';<%= submitFormScriptlet %>;" />
+			    <input type="submit" class="<%= CssClass.btn.toString() + " " + CssClass.btnDefault.toString() %>" name="<%= COMMAND_CANCEL %>" tabindex="9020" value="<%= texts.getCancelTitle() %>" onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_CANCEL %>';<%= submitFormScriptlet %>;" />
+			</div>
+			<%
+											}
+											else {
+												Properties adminSettings = isAdmin ? settings : app.getUserSettings(userHomeAdminIdentity);
+												String workspaceIdsAsString = adminSettings.getProperty(
+													PROPERTY_WORKSPACES
+												);
+												List<String> workspaceIds = new ArrayList<String>(
+													workspaceIdsAsString == null ? 
+														Collections.<String>emptyList() :
+															Arrays.asList(workspaceIdsAsString.split(";"))
+												);
+												if(!workspaceIds.contains("W0")) {
+													workspaceIds.add(0, "W0");
+												}
+												for(int i = 0; i < workspaceIds.size(); i++) {
+													String workspaceId = workspaceIds.get(i);
+													String workspaceName = adminSettings.getProperty(
+														PROPERTY_WORKSPACE + "." + workspaceId + "." + PROPERTY_WORKSPACE_LABEL
+													);
+													if(workspaceName == null) {
+														workspaceName = "";
+													}
+													if(i == 0 && workspaceName.isEmpty()) {
+														workspaceName = "Default";
+													}
+			%>
+			<div><a <%= workspaceId.equals(app.getCurrentWorkspace()) ? "class=\"" + CssClass.hilite + "\"" : "" %> onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_SELECT %>';
+				$('<%= FIELD_NAME_PARAM %>').value = '<%= workspaceId %>';<%= submitFormScriptlet %>"><%= workspaceName %></a></div>
+			    <%
+												    }
+											    }
+			    %>
+		    </div>
+		    <%
+									    if(isAdmin && !actionEdit) {
+		    %>	            	
+		    <div id="<%= dashletId %>.EditMode">
+			<a onclick="javascript:$('<%= FIELD_NAME_COMMAND %>').value = '<%= COMMAND_EDIT %>';<%= submitFormScriptlet %>"><img src="./images/<%= WebKeys.ICON_EDIT %>" style="border:0;align:absmiddle;" /></a>
+		    </div>
+		    <%
+									    }
+		    %>				            
+		</td>
+	    </tr>
+	</table>
+    </form>
 </div>
 <%				
 		}
 		else {
 %>
 <p>
-	<i>WorkspacesDashlet invoked with missing or invalid parameters:</i>
+    <i>WorkspacesDashlet invoked with missing or invalid parameters:</i>
 <ul>
-	<li><b>RequestId:</b> <%= requestId %></li>
-	<li><b>XRI:</b> <%= xri %></li>
-	<li><b>Dashlet-Id:</b> <%= dashletId %></li>
+    <li><b>RequestId:</b> <%= requestId %></li>
+    <li><b>XRI:</b> <%= xri %></li>
+    <li><b>Dashlet-Id:</b> <%= dashletId %></li>
 </ul>
 <%
 		}

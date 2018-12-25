@@ -1,1988 +1,1988 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
-	<_object/>
-	<_content>
-		<provider>
-			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-				<_object/>
-				<_content>
-					<segment>
-						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
-							<_object/>
-							<_content>
-								<elementDefinition>
-									<!--Segment Definition-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>產品</_item>
-											</toolTip>
-											<label>
-												<_item>產品s</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<iconKey>產品</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definitions Pane1-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:product">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>所有產品</_item>
-											</toolTip>
-											<label>
-												<_item>»所有產品</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>500</_item>
-											</order>
-											<maxMember>5</maxMember>
-										</_object>
-										<_content>
-											<additionalElementDefinition>
-												<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
-													<_object>
-														<toolTip>
-														  <_item>產品</_item>
-														</toolTip>
-														<label>
-														  <_item>產品</_item>
-														</label>
-														<order>
-														  <_item>0</_item>
-														  <_item>0</_item>
+    <_object/>
+    <_content>
+	<provider>
+	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<_object/>
+		<_content>
+		    <segment>
+			<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+			    <_object/>
+			    <_content>
+				<elementDefinition>
+				    <!--Segment Definition-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品s</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <iconKey>產品</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definitions Pane1-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:product">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>所有產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>»所有產品</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>500</_item>
+					    </order>
+					    <maxMember>5</maxMember>
+					</_object>
+					<_content>
+					    <additionalElementDefinition>
+						<org.openmdx.ui1.AdditionalElementDefinition id="9998" _operation="create">
+						    <_object>
+							<toolTip>
+							    <_item>產品</_item>
+							</toolTip>
+							<label>
+							    <_item>產品</_item>
+							</label>
+							<order>
+							    <_item>0</_item>
+							    <_item>0</_item>
+							    <_item>20</_item>
+							</order>
+							<iconKey>產品</iconKey>
+							<maxMember>25</maxMember>
+							<showMaxMember>3</showMaxMember>
+						    </_object>
+						    <_content/>
+						</org.openmdx.ui1.AdditionalElementDefinition>
+
+						<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
+						    <_object>
+							<toolTip>
+							    <_item>產品 (停用)</_item>
+							</toolTip>
+							<label>
+							    <_item>»產品 (停用)</_item>
+							</label>
+							<order>
+							    <_item>0</_item>
+							    <_item>0</_item>
+							    <_item>510</_item>
+							</order>
+							<maxMember>5</maxMember>
+						    </_object>
+						    <_content/>
+						</org.openmdx.ui1.AdditionalElementDefinition>
+					    </additionalElementDefinition>
+					</_content>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:configurationTypeSet">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品配置類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品配置類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>50</_item>
+					    </order>
+					    <maxMember>2</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:productClassification">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品分類</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品分類</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>0</_item>
+						<_item>100</_item>
+					    </order>
+					    <iconKey>ProductClassification</iconKey>
+					    <maxMember>2</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+
+				    <!-- Abstract產品 -->
+				    <!--Inspector Definitions-->
+				    <!--Tab Definition-->
+				    <!-- Abstract產品 -->
+				    <!-- Grid -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:basePrice">
+					<_object>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>基本價格</_item>
+					    </toolTip>
+					    <label>
+						<_item>基本價格</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					    <maxMember>8</maxMember>
+					</_object>
+					<_content>
+					    <additionalElementDefinition>
+						<org.openmdx.ui1.AdditionalElementDefinition id="0" _operation="create">
+						    <_object>
+							<toolTip>
+							    <_item>啟用基本價格</_item>
+							</toolTip>
+							<label>
+							    <_item>啟用基本價格</_item>
+							</label>
+							<order>
+							    <_item>0</_item>
+							    <_item>0</_item>
+							    <_item>10</_item>
+							</order>
+							<maxMember>8</maxMember>
+						    </_object>
+						    <_content/>
+						</org.openmdx.ui1.AdditionalElementDefinition>
+					    </additionalElementDefinition>
+					</_content>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:priceUom">
+					<_object>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>價格UOMs</_item>
+					    </toolTip>
+					    <label>
+						<_item>價格UOMs</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>30</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>99</_item>
+						<_item>0</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <maxMember>7</maxMember>
+					    <iconKey>Uom</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:salesTaxTypeAssignment">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>銷售稅類型分配</_item>
+					    </toolTip>
+					    <label>
+						<_item>銷售稅類型分配</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>40</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>99</_item>
+						<_item>0</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <maxMember>4</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:classification">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品分類</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品分類</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>99</_item>
+						<_item>0</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <maxMember>2</maxMember>
+					    <iconKey>ProductClassification</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:assignedAccount">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>帳戶分配</_item>
+					    </toolTip>
+					    <label>
+						<_item>帳戶分配</_item>
+					    </label>
+					    <order>
+						<_item>40</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <orderObjectContainer>
+						<_item>99</_item>
+						<_item>0</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					    <iconKey>產品</iconKey>
+					    <maxMember>4</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--FieldGroups in Details Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:Pane:Attr:Tab:0:Group:60">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item/>
+					    </toolTip>
+					    <label>
+						<_item>&amp;nbsp;</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Element Definitions Details Tab -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:description">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productState">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品狀態</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品狀態</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>30</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>20</_item>
+						<_item>0</_item>
+						<_item>1</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productNumber">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品編號</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品編號</_item>
+					    </label>
+					    <shortLabel>
+						<_item>產品 #</_item>
+					    </shortLabel>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>5</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:activeOn">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>活躍/有效來自</_item>
+					    </toolTip>
+					    <label>
+						<_item>活躍/有效來自</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:expiresOn">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>過期於</_item>
+					    </toolTip>
+					    <label>
+						<_item>過期於</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>100</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:defaultPriceLevel">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>預設價格水平</_item>
+					    </toolTip>
+					    <label>
+						<_item>預設價格水平</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:salesTaxType">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>銷售稅類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>銷售稅類型</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>10</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>30</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:depotAssignmentGroup">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>倉庫分配組</_item>
+					    </toolTip>
+					    <label>
+						<_item>倉庫分配組</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>10</_item>
+						<_item>30</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:defaultUom">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>測量單位</_item>
+					    </toolTip>
+					    <label>
+						<_item>測量單位</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>10</_item>
+						<_item>10</_item>
+						<_item>80</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>25</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:alternate產品Number">
+					<_object>
+					    <spanRow>5</spanRow>
+					    <active>true</active>
+					    <toolTip>
+						<_item>替代產品 #</_item>
+					    </toolTip>
+					    <label>
+						<_item>替代產品 #</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>20</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- removed since openCRX v1.10
+											  <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:competitor">
+												  <_object>
+													  <active>true</active>
+													  <toolTip>
+														  <_item>競爭者</_item>
+													  </toolTip>
+													  <label>
+														  <_item>競爭者</_item>
+													  </label>
+													  <order>
+														  <_item>10</_item>
 														  <_item>20</_item>
-														</order>
-														<iconKey>產品</iconKey>
-														<maxMember>25</maxMember>
-														<showMaxMember>3</showMaxMember>
-													</_object>
-													<_content/>
-												</org.openmdx.ui1.AdditionalElementDefinition>
+														  <_item>120</_item>
+													  </order>
+												  </_object>
+												  <_content/>
+											  </org.openmdx.ui1.ElementDefinition>
+				    -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productUsage">
+					<_object>
+					    <active>true</active>
+					    <columnBreak>true</columnBreak>
+					    <toolTip>
+						<_item>產品用途</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品用途</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>20</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:detailedDescription">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>詳細說明</_item>
+					    </toolTip>
+					    <label>
+						<_item>詳細說明</_item>
+					    </label>
+					    <spanRow>5</spanRow>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>60</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>20</_item>
+						<_item>0</_item>
+						<_item>999</_item>
+					    </orderObjectContainer>
+					    <!--
+					    <order>
+						    <_item>0</_item>
+						    <_item>0</_item>
+						    <_item>30</_item>
+					    </order>
+					    -->
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-												<org.openmdx.ui1.AdditionalElementDefinition id="9999" _operation="create">
-													<_object>
-														<toolTip>
-															<_item>產品 (停用)</_item>
-														</toolTip>
-														<label>
-															<_item>»產品 (停用)</_item>
-														</label>
-														<order>
-															<_item>0</_item>
-															<_item>0</_item>
-															<_item>510</_item>
-														</order>
-														<maxMember>5</maxMember>
-													</_object>
-													<_content/>
-												</org.openmdx.ui1.AdditionalElementDefinition>
-											</additionalElementDefinition>
-										</_content>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:configurationTypeSet">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品配置類型</_item>
-											</toolTip>
-											<label>
-												<_item>產品配置類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>50</_item>
-											</order>
-											<maxMember>2</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Segment:productClassification">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品分類</_item>
-											</toolTip>
-											<label>
-												<_item>產品分類</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>100</_item>
-											</order>
-											<iconKey>ProductClassification</iconKey>
-											<maxMember>2</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品 -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <iconKey>產品</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Grid -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productPhase">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品階段</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品階段</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>0</_item>
+						<_item>30</_item>
+					    </order>
+					    <maxMember>5</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:related產品">
+					<_object>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>相關產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>相關產品</_item>
+					    </label>
+					    <order>
+						<_item>40</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>9</maxMember>
+					    <showMaxMember>4</showMaxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productMembership">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>相關產品 (境內)</_item>
+					    </toolTip>
+					    <label>
+						<_item>相關產品 (境內)</_item>
+					    </label>
+					    <order>
+						<_item>40</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					    <maxMember>9</maxMember>
+					    <showMaxMember>5</showMaxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Abstract產品 -->
-									<!--Inspector Definitions-->
-									<!--Tab Definition-->
-									<!-- Abstract產品 -->
-									<!-- Grid -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:basePrice">
-										<_object>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>基本價格</_item>
-											</toolTip>
-											<label>
-												<_item>基本價格</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-											<maxMember>8</maxMember>
-										</_object>
-										<_content>
-											<additionalElementDefinition>
-												<org.openmdx.ui1.AdditionalElementDefinition id="0" _operation="create">
-													<_object>
-														<toolTip>
-															<_item>啟用基本價格</_item>
-														</toolTip>
-														<label>
-															<_item>啟用基本價格</_item>
-														</label>
-														<order>
-															<_item>0</_item>
-															<_item>0</_item>
-															<_item>10</_item>
-														</order>
-														<maxMember>8</maxMember>
-													</_object>
-													<_content/>
-												</org.openmdx.ui1.AdditionalElementDefinition>
-											</additionalElementDefinition>
-										</_content>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:priceUom">
-										<_object>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>價格UOMs</_item>
-											</toolTip>
-											<label>
-												<_item>價格UOMs</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>99</_item>
-												<_item>0</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<maxMember>7</maxMember>
-											<iconKey>Uom</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:salesTaxTypeAssignment">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>銷售稅類型分配</_item>
-											</toolTip>
-											<label>
-												<_item>銷售稅類型分配</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>40</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>99</_item>
-												<_item>0</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<maxMember>4</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:classification">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品分類</_item>
-											</toolTip>
-											<label>
-												<_item>產品分類</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>99</_item>
-												<_item>0</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<maxMember>2</maxMember>
-											<iconKey>ProductClassification</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:assignedAccount">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>帳戶分配</_item>
-											</toolTip>
-											<label>
-												<_item>帳戶分配</_item>
-											</label>
-											<order>
-												<_item>40</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<orderObjectContainer>
-												<_item>99</_item>
-												<_item>0</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-											<iconKey>產品</iconKey>
-											<maxMember>4</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--FieldGroups in Details Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:Pane:Attr:Tab:0:Group:60">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item/>
-											</toolTip>
-											<label>
-												<_item>&amp;nbsp;</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Element Definitions Details Tab -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:description">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productState">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品狀態</_item>
-											</toolTip>
-											<label>
-												<_item>產品狀態</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>20</_item>
-												<_item>0</_item>
-												<_item>1</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productNumber">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>產品編號</_item>
-											</toolTip>
-											<label>
-												<_item>產品編號</_item>
-											</label>
-											<shortLabel>
-												<_item>產品 #</_item>
-											</shortLabel>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>5</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:activeOn">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>活躍/有效來自</_item>
-											</toolTip>
-											<label>
-												<_item>活躍/有效來自</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:expiresOn">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>過期於</_item>
-											</toolTip>
-											<label>
-												<_item>過期於</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>100</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:defaultPriceLevel">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>預設價格水平</_item>
-											</toolTip>
-											<label>
-												<_item>預設價格水平</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:salesTaxType">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>銷售稅類型</_item>
-											</toolTip>
-											<label>
-												<_item>銷售稅類型</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>10</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>30</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:depotAssignmentGroup">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>倉庫分配組</_item>
-											</toolTip>
-											<label>
-												<_item>倉庫分配組</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>10</_item>
-												<_item>30</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:defaultUom">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>測量單位</_item>
-											</toolTip>
-											<label>
-												<_item>測量單位</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>10</_item>
-												<_item>10</_item>
-												<_item>80</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>25</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:alternate產品Number">
-										<_object>
-											<spanRow>5</spanRow>
-											<active>true</active>
-											<toolTip>
-												<_item>替代產品 #</_item>
-											</toolTip>
-											<label>
-												<_item>替代產品 #</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>20</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- removed since openCRX v1.10
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:competitor">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>競爭者</_item>
-											</toolTip>
-											<label>
-												<_item>競爭者</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>20</_item>
-												<_item>120</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-                  -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:productUsage">
-										<_object>
-											<active>true</active>
-											<columnBreak>true</columnBreak>
-											<toolTip>
-												<_item>產品用途</_item>
-											</toolTip>
-											<label>
-												<_item>產品用途</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>20</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品:detailedDescription">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>詳細說明</_item>
-											</toolTip>
-											<label>
-												<_item>詳細說明</_item>
-											</label>
-											<spanRow>5</spanRow>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>60</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>20</_item>
-												<_item>0</_item>
-												<_item>999</_item>
-											</orderObjectContainer>
-											<!--
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-											-->
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definition-->
+				    <!--FieldGroups in General Tab-->
+				    <!--FieldGroups in Details Tab-->
+				    <!--Element Definitions in Field Group 產品-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:isStockItem">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>是庫存物品</_item>
+					    </toolTip>
+					    <label>
+						<_item>是庫存物品</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>10</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- picture -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:pictureContent">
+					<_object>
+					    <columnBreak>false</columnBreak>
+					    <spanRow>6</spanRow>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>圖片</_item>
+					    </toolTip>
+					    <label>
+						<_item>圖片</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>10</_item>
+						<_item>30</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>99</_item>
+						<_item>0</_item>
+						<_item>0</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:picture">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>標題/來源</_item>
+					    </toolTip>
+					    <label>
+						<_item>標題/來源</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>30</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productDimension">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品尺寸</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品尺寸</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>30</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:grossWeightKilogram">
+					<_object>
+					    <active>true</active>
+					    <decimalPlaces>3</decimalPlaces>
+					    <hasThousandsSeparator>true</hasThousandsSeparator>
+					    <toolTip>
+						<_item>毛重公斤</_item>
+					    </toolTip>
+					    <label>
+						<_item>毛重公斤</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>30</_item>
+						<_item>100</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:netWeightKilogram">
+					<_object>
+					    <active>true</active>
+					    <decimalPlaces>3</decimalPlaces>
+					    <hasThousandsSeparator>true</hasThousandsSeparator>
+					    <toolTip>
+						<_item>淨重公斤</_item>
+					    </toolTip>
+					    <label>
+						<_item>淨重公斤</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>30</_item>
+						<_item>110</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品 -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品</_item>
-											</toolTip>
-											<label>
-												<_item>產品</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<iconKey>產品</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Grid -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productPhase">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品階段</_item>
-											</toolTip>
-											<label>
-												<_item>產品階段</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>30</_item>
-											</order>
-											<maxMember>5</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:related產品">
-										<_object>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>相關產品</_item>
-											</toolTip>
-											<label>
-												<_item>相關產品</_item>
-											</label>
-											<order>
-												<_item>40</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>9</maxMember>
-											<showMaxMember>4</showMaxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productMembership">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>相關產品 (境內)</_item>
-											</toolTip>
-											<label>
-												<_item>相關產品 (境內)</_item>
-											</label>
-											<order>
-												<_item>40</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-											<maxMember>9</maxMember>
-											<showMaxMember>5</showMaxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品Phase -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品階段</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品階段</_item>
+					    </label>
+					    <iconKey>ProductPhase</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Grid -->
+				    <!--Tab Definition-->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definitions in Field Group 產品-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:productPhaseKey">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品階段金鑰</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品階段金鑰</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:validFrom">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>有效自</_item>
+					    </toolTip>
+					    <label>
+						<_item>有效自</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:validTo">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>有效到</_item>
+					    </toolTip>
+					    <label>
+						<_item>有效到</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>10</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!--Tab Definition-->
-									<!--FieldGroups in General Tab-->
-									<!--FieldGroups in Details Tab-->
-									<!--Element Definitions in Field Group 產品-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:isStockItem">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>是庫存物品</_item>
-											</toolTip>
-											<label>
-												<_item>是庫存物品</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>10</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- picture -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:pictureContent">
-										<_object>
-											<columnBreak>false</columnBreak>
-											<spanRow>6</spanRow>
-											<active>true</active>
-											<changeable>false</changeable>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>圖片</_item>
-											</toolTip>
-											<label>
-												<_item>圖片</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>10</_item>
-												<_item>30</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>99</_item>
-												<_item>0</_item>
-												<_item>0</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:picture">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>標題/來源</_item>
-											</toolTip>
-											<label>
-												<_item>標題/來源</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>30</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:productDimension">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品尺寸</_item>
-											</toolTip>
-											<label>
-												<_item>產品尺寸</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>30</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:grossWeightKilogram">
-										<_object>
-											<active>true</active>
-											<decimalPlaces>3</decimalPlaces>
-											<hasThousandsSeparator>true</hasThousandsSeparator>
-											<toolTip>
-												<_item>毛重公斤</_item>
-											</toolTip>
-											<label>
-												<_item>毛重公斤</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>30</_item>
-												<_item>100</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:netWeightKilogram">
-										<_object>
-											<active>true</active>
-											<decimalPlaces>3</decimalPlaces>
-											<hasThousandsSeparator>true</hasThousandsSeparator>
-											<toolTip>
-												<_item>淨重公斤</_item>
-											</toolTip>
-											<label>
-												<_item>淨重公斤</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>30</_item>
-												<_item>110</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- SalesTaxTypeAssignment -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>銷售稅類型分配</_item>
+					    </toolTip>
+					    <label>
+						<_item>銷售稅類型分配</_item>
+					    </label>
+					    <iconKey>SalesTaxTypeAssignment</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <!-- Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>10</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:salesTaxType">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>銷售稅類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>銷售稅類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:uom">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>UOM</_item>
+					    </toolTip>
+					    <label>
+						<_item>UOM</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品Phase -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品階段</_item>
-											</toolTip>
-											<label>
-												<_item>產品階段</_item>
-											</label>
-											<iconKey>ProductPhase</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Grid -->
-									<!--Tab Definition-->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definitions in Field Group 產品-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:productPhaseKey">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品階段金鑰</_item>
-											</toolTip>
-											<label>
-												<_item>產品階段金鑰</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:validFrom">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>有效自</_item>
-											</toolTip>
-											<label>
-												<_item>有效自</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:validTo">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>有效到</_item>
-											</toolTip>
-											<label>
-												<_item>有效到</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Phase:description">
-										<_object>
-											<active>true</active>
-											<spanRow>10</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品Classification -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品分類</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品分類</_item>
+					    </label>
+					    <iconKey>產品Classification</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:relationship">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>關係</_item>
+					    </toolTip>
+					    <label>
+						<_item>關係</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>4</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:product">
+					    <_object>
+						    <active>true</active>
+						    <toolTip>
+							    <_item>產品s</_item>
+						    </toolTip>
+						    <label>
+							    <_item>產品s</_item>
+						    </label>
+						    <order>
+							    <_item>0</_item>
+							    <_item>0</_item>
+							    <_item>20</_item>
+						    </order>
+					    </_object>
+					    <_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    -->
+				    <!-- Tab Definitions -->
+				    <!-- Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:description">
+					<_object>
+					    <active>true</active>
+					    <spanRow>10</spanRow>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- SalesTaxTypeAssignment -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>銷售稅類型分配</_item>
-											</toolTip>
-											<label>
-												<_item>銷售稅類型分配</_item>
-											</label>
-											<iconKey>SalesTaxTypeAssignment</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<!-- Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:description">
-										<_object>
-											<active>true</active>
-											<spanRow>10</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:salesTaxType">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>銷售稅類型</_item>
-											</toolTip>
-											<label>
-												<_item>銷售稅類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:SalesTaxTypeAssignment:uom">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>UOM</_item>
-											</toolTip>
-											<label>
-												<_item>UOM</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品ClassificationRelationship -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品分類關係</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品分類關係</_item>
+					    </label>
+					    <iconKey>產品ClassificationRelationship</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <!-- Tab Definitions -->
+				    <!-- Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:description">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:relationshipTo">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>與...的關係</_item>
+					    </toolTip>
+					    <label>
+						<_item>與...的關係</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:relationshipType">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>關係類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>關係類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品Classification -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品分類</_item>
-											</toolTip>
-											<label>
-												<_item>產品分類</_item>
-											</label>
-											<iconKey>產品Classification</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:relationship">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>關係</_item>
-											</toolTip>
-											<label>
-												<_item>關係</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>4</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:product">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品s</_item>
-											</toolTip>
-											<label>
-												<_item>產品s</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									-->
-									<!-- Tab Definitions -->
-									<!-- Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Classification:description">
-										<_object>
-											<active>true</active>
-											<spanRow>10</spanRow>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- Related 產品 -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>相關產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>相關產品</_item>
+					    </label>
+					    <iconKey>RelatedProduct</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <!-- Tab Definitions -->
+				    <!-- Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:description">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:relationshipType">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>關係類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>關係類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:product">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品ClassificationRelationship -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品分類關係</_item>
-											</toolTip>
-											<label>
-												<_item>產品分類關係</_item>
-											</label>
-											<iconKey>產品ClassificationRelationship</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<!-- Tab Definitions -->
-									<!-- Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:description">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:relationshipTo">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>與...的關係</_item>
-											</toolTip>
-											<label>
-												<_item>與...的關係</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品ClassificationRelationship:relationshipType">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>關係類型</_item>
-											</toolTip>
-											<label>
-												<_item>關係類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品Membership -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>相關產品 (境內)</_item>
+					    </toolTip>
+					    <label>
+						<_item>相關產品 (境內)</_item>
+					    </label>
+					    <iconKey>產品Membership</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <!-- Tab Definitions -->
+				    <!-- Element Definitions -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:name">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:description">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:relationshipType">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>關係類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>關係類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:productFrom">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>產品自</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品自</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>25</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:productTo">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>產品到</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品到</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>100</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>28</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:related產品">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>相關產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>相關產品</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Related 產品 -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>相關產品</_item>
-											</toolTip>
-											<label>
-												<_item>相關產品</_item>
-											</label>
-											<iconKey>RelatedProduct</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<!-- Tab Definitions -->
-									<!-- Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:description">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:relationshipType">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>關係類型</_item>
-											</toolTip>
-											<label>
-												<_item>關係類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Related產品:product">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品</_item>
-											</toolTip>
-											<label>
-												<_item>產品</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- AccountAssignment產品 -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AccountAssignment產品">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>帳戶分配</_item>
+					    </toolTip>
+					    <label>
+						<_item>帳戶分配</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <iconKey>AccountAssignment產品</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid Tabs -->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definition Contact-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AccountAssignment產品:accountRole">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>角色</_item>
+					    </toolTip>
+					    <label>
+						<_item>角色</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品Membership -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>相關產品 (境內)</_item>
-											</toolTip>
-											<label>
-												<_item>相關產品 (境內)</_item>
-											</label>
-											<iconKey>產品Membership</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<!-- Tab Definitions -->
-									<!-- Element Definitions -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:name">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:description">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:relationshipType">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>關係類型</_item>
-											</toolTip>
-											<label>
-												<_item>關係類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:productFrom">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>產品自</_item>
-											</toolTip>
-											<label>
-												<_item>產品自</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>25</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:productTo">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>產品到</_item>
-											</toolTip>
-											<label>
-												<_item>產品到</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>100</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>28</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Membership:related產品">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>相關產品</_item>
-											</toolTip>
-											<label>
-												<_item>相關產品</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-
-									<!-- AccountAssignment產品 -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AccountAssignment產品">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>帳戶分配</_item>
-											</toolTip>
-											<label>
-												<_item>帳戶分配</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<iconKey>AccountAssignment產品</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid Tabs -->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definition Contact-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:AccountAssignment產品:accountRole">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>角色</_item>
-											</toolTip>
-											<label>
-												<_item>角色</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-
-									<!-- 產品配置Set -->
-									<!--Inspector Definitions-->
-									<!--FieldGroups in General Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Attr:Tab:0:Group:15">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item/>
-											</toolTip>
-											<label>
-												<_item>&amp;nbsp;</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:configuration">
-										<_object>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>產品配置</_item>
-											</toolTip>
-											<label>
-												<_item>產品配置</_item>
-											</label>
-											<order>
-												<_item>10</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>5</maxMember>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:configType">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>配置類型</_item>
-											</toolTip>
-											<label>
-												<_item>配置類型</_item>
-											</label>
-											<shortLabel>
-												<_item>配置類型</_item>
-											</shortLabel>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品配置Set -->
+				    <!--Inspector Definitions-->
+				    <!--FieldGroups in General Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Attr:Tab:0:Group:15">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item/>
+					    </toolTip>
+					    <label>
+						<_item>&amp;nbsp;</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:configuration">
+					<_object>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>產品配置</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品配置</_item>
+					    </label>
+					    <order>
+						<_item>10</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>5</maxMember>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:configType">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>配置類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>配置類型</_item>
+					    </label>
+					    <shortLabel>
+						<_item>配置類型</_item>
+					    </shortLabel>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
 
-									<!-- 產品配置TypeSet -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品配置類型集</_item>
-											</toolTip>
-											<label>
-												<_item>產品配置類型集</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<iconKey>產品配置TypeSet</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Grid -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:configurationType">
-										<_object>
-											<active>true</active>
-											<inPlace>true</inPlace>
-											<toolTip>
-												<_item>配置類型</_item>
-											</toolTip>
-											<label>
-												<_item>配置類型</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<maxMember>5</maxMember>
-											<iconKey>產品配置Type</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Tab Definition-->
-									<!--FieldGroups in General Tab-->
-									<!--FieldGroups in Details Tab-->
-									<!--Element Definitions in Field Group 產品-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:description">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品配置TypeSet -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品配置類型集</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品配置類型集</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <iconKey>產品配置TypeSet</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Grid -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:configurationType">
+					<_object>
+					    <active>true</active>
+					    <inPlace>true</inPlace>
+					    <toolTip>
+						<_item>配置類型</_item>
+					    </toolTip>
+					    <label>
+						<_item>配置類型</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <maxMember>5</maxMember>
+					    <iconKey>產品配置Type</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Tab Definition-->
+				    <!--FieldGroups in General Tab-->
+				    <!--FieldGroups in Details Tab-->
+				    <!--Element Definitions in Field Group 產品-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置TypeSet:description">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Abstract產品配置 -->
-									<!--Inspector Definitions-->
-									<!-- Grid -->
-									<!--FieldGroups in General Tab-->
-									<!--Element Definition -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:name">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>名稱</_item>
-											</toolTip>
-											<label>
-												<_item>名稱</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:isDefault">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>是預設的</_item>
-											</toolTip>
-											<label>
-												<_item>是預設的</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:validFrom">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<toolTip>
-												<_item>有效自</_item>
-											</toolTip>
-											<label>
-												<_item>有效自</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:validTo">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>有效到</_item>
-											</toolTip>
-											<label>
-												<_item>有效到</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>90</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:description">
-										<_object>
-											<spanRow>5</spanRow>
-											<active>true</active>
-											<toolTip>
-												<_item>描述</_item>
-											</toolTip>
-											<label>
-												<_item>描述</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- Abstract產品配置 -->
+				    <!--Inspector Definitions-->
+				    <!-- Grid -->
+				    <!--FieldGroups in General Tab-->
+				    <!--Element Definition -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:name">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>名稱</_item>
+					    </toolTip>
+					    <label>
+						<_item>名稱</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:isDefault">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>是預設的</_item>
+					    </toolTip>
+					    <label>
+						<_item>是預設的</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:validFrom">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <toolTip>
+						<_item>有效自</_item>
+					    </toolTip>
+					    <label>
+						<_item>有效自</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:validTo">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>有效到</_item>
+					    </toolTip>
+					    <label>
+						<_item>有效到</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>90</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Abstract產品配置:description">
+					<_object>
+					    <spanRow>5</spanRow>
+					    <active>true</active>
+					    <toolTip>
+						<_item>描述</_item>
+					    </toolTip>
+					    <label>
+						<_item>描述</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品配置Type -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Type">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>產品配置型態</_item>
-											</label>
-											<iconKey>產品配置Type</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品配置Type -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Type">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品配置型態</_item>
+					    </label>
+					    <iconKey>產品配置Type</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品配置 -->
-									<!--Inspector Definitions-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品配置</_item>
-											</toolTip>
-											<label>
-												<_item>產品配置</_item>
-											</label>
-											<iconKey>產品配置</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!-- Grid -->
-									<!--FieldGroups in General Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Attr:Tab:0:Group:15">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item/>
-											</toolTip>
-											<label>
-												<_item>&amp;nbsp;</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Element Definition -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:configType">
-										<_object>
-											<active>true</active>
-											<changeable>false</changeable>
-											<toolTip>
-												<_item>配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>配置型態</_item>
-											</label>
-											<shortLabel>
-												<_item>Config type</_item>
-											</shortLabel>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品配置 -->
+				    <!--Inspector Definitions-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品配置</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品配置</_item>
+					    </label>
+					    <iconKey>產品配置</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!-- Grid -->
+				    <!--FieldGroups in General Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Attr:Tab:0:Group:15">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item/>
+					    </toolTip>
+					    <label>
+						<_item>&amp;nbsp;</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Element Definition -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:configType">
+					<_object>
+					    <active>true</active>
+					    <changeable>false</changeable>
+					    <toolTip>
+						<_item>配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>配置型態</_item>
+					    </label>
+					    <shortLabel>
+						<_item>Config type</_item>
+					    </shortLabel>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- 產品Descriptor -->
-									<!--Inspector Definitions-->
-									<!-- Grid -->
-									<!--FieldGroups in General Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Descriptor:Pane:Attr:Tab:0:Group:15">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item/>
-											</toolTip>
-											<label>
-												<_item>&amp;nbsp;</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<!--Element Definition -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Descriptor:product">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>產品</_item>
-											</toolTip>
-											<label>
-												<_item>產品</_item>
-											</label>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>10</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>10</_item>
-												<_item>5</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- 產品Descriptor -->
+				    <!--Inspector Definitions-->
+				    <!-- Grid -->
+				    <!--FieldGroups in General Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Descriptor:Pane:Attr:Tab:0:Group:15">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item/>
+					    </toolTip>
+					    <label>
+						<_item>&amp;nbsp;</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <!--Element Definition -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品Descriptor:product">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>產品</_item>
+					    </toolTip>
+					    <label>
+						<_item>產品</_item>
+					    </label>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>10</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>10</_item>
+						<_item>5</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Configured產品 -->
-									<!--Inspector Definitions-->
-									<!-- Grid -->
-									<!--FieldGroups in General Tab-->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:Pane:Attr:Tab:0:Group:15">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item/>
-											</toolTip>
-											<label>
-												<_item>&amp;nbsp;</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:currentConfig">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>當前配置</_item>
-											</toolTip>
-											<label>
-												<_item>當前配置</_item>
-											</label>
-											<shortLabel>
-												<_item>Current config</_item>
-											</shortLabel>
-											<orderFieldGroup>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderFieldGroup>
-											<orderObjectContainer>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>20</_item>
-											</orderObjectContainer>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:productSerialNumber">
-										<_object>
-											<columnBreak>true</columnBreak>
-											<active>true</active>
-											<spanRow>2</spanRow>
-											<toolTip>
-												<_item>序列號</_item>
-											</toolTip>
-											<label>
-												<_item>序列號</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>15</_item>
-												<_item>80</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- Configured產品 -->
+				    <!--Inspector Definitions-->
+				    <!-- Grid -->
+				    <!--FieldGroups in General Tab-->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:Pane:Attr:Tab:0:Group:15">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item/>
+					    </toolTip>
+					    <label>
+						<_item>&amp;nbsp;</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:currentConfig">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>當前配置</_item>
+					    </toolTip>
+					    <label>
+						<_item>當前配置</_item>
+					    </label>
+					    <shortLabel>
+						<_item>Current config</_item>
+					    </shortLabel>
+					    <orderFieldGroup>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderFieldGroup>
+					    <orderObjectContainer>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>20</_item>
+					    </orderObjectContainer>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Configured產品:productSerialNumber">
+					<_object>
+					    <columnBreak>true</columnBreak>
+					    <active>true</active>
+					    <spanRow>2</spanRow>
+					    <toolTip>
+						<_item>序列號</_item>
+					    </toolTip>
+					    <label>
+						<_item>序列號</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>15</_item>
+						<_item>80</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<!-- Operations -->
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>設定配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>設定配置型態</_item>
-											</label>
-											<order>
-												<_item>500</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-											<iconKey>配置Type</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type:Group:in">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>輸入</_item>
-											</toolTip>
-											<label>
-												<_item>輸入</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Set配置TypeParams:configurationType">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>配置型態</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type:Group:result">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>結果</_item>
-											</toolTip>
-											<label>
-												<_item>結果</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <!-- Operations -->
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>設定配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>設定配置型態</_item>
+					    </label>
+					    <order>
+						<_item>500</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					    <iconKey>配置Type</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type:Group:in">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>輸入</_item>
+					    </toolTip>
+					    <label>
+						<_item>輸入</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:Set配置TypeParams:configurationType">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>配置型態</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品:Pane:Op:Tab:set配置Type:Group:result">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>結果</_item>
+					    </toolTip>
+					    <label>
+						<_item>結果</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>解除配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>解除配置型態</_item>
-											</label>
-											<order>
-												<_item>500</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-											<iconKey>配置Type</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type:Group:in">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>輸入</_item>
-											</toolTip>
-											<label>
-												<_item>輸入</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type:Group:result">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>結果</_item>
-											</toolTip>
-											<label>
-												<_item>結果</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>解除配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>解除配置型態</_item>
+					    </label>
+					    <order>
+						<_item>500</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					    <iconKey>配置Type</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type:Group:in">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>輸入</_item>
+					    </toolTip>
+					    <label>
+						<_item>輸入</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置Set:Pane:Op:Tab:unset配置Type:Group:result">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>結果</_item>
+					    </toolTip>
+					    <label>
+						<_item>結果</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
 
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>解除配置型態</_item>
-											</toolTip>
-											<label>
-												<_item>解除配置型態</_item>
-											</label>
-											<order>
-												<_item>500</_item>
-												<_item>0</_item>
-												<_item>20</_item>
-											</order>
-											<iconKey>配置Type</iconKey>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type:Group:in">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>輸入</_item>
-											</toolTip>
-											<label>
-												<_item>輸入</_item>
-											</label>
-											<order>
-												<_item>0</_item>
-												<_item>0</_item>
-												<_item>10</_item>
-											</order>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type:Group:result">
-										<_object>
-											<active>true</active>
-											<toolTip>
-												<_item>結果</_item>
-											</toolTip>
-											<label>
-												<_item>結果</_item>
-											</label>
-										</_object>
-										<_content/>
-									</org.openmdx.ui1.ElementDefinition>
-								</elementDefinition>
-							</_content>
-						</org.openmdx.ui1.Segment>
-					</segment>
-				</_content>
-			</org.openmdx.base.Provider>
-		</provider>
-	</_content>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>解除配置型態</_item>
+					    </toolTip>
+					    <label>
+						<_item>解除配置型態</_item>
+					    </label>
+					    <order>
+						<_item>500</_item>
+						<_item>0</_item>
+						<_item>20</_item>
+					    </order>
+					    <iconKey>配置Type</iconKey>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type:Group:in">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>輸入</_item>
+					    </toolTip>
+					    <label>
+						<_item>輸入</_item>
+					    </label>
+					    <order>
+						<_item>0</_item>
+						<_item>0</_item>
+						<_item>10</_item>
+					    </order>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				    <org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:product1:產品配置:Pane:Op:Tab:unset配置Type:Group:result">
+					<_object>
+					    <active>true</active>
+					    <toolTip>
+						<_item>結果</_item>
+					    </toolTip>
+					    <label>
+						<_item>結果</_item>
+					    </label>
+					</_object>
+					<_content/>
+				    </org.openmdx.ui1.ElementDefinition>
+				</elementDefinition>
+			    </_content>
+			</org.openmdx.ui1.Segment>
+		    </segment>
+		</_content>
+	    </org.openmdx.base.Provider>
+	</provider>
+    </_content>
 </org.openmdx.base.Authority>

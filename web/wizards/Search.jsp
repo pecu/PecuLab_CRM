@@ -54,20 +54,20 @@
  */
 %>
 <%@ page session="true" import="
-		 java.net.*,
-		 java.util.*,
-		 java.io.*,
-		 java.text.*,
-		 org.openmdx.base.naming.*,
-		 org.openmdx.base.query.*,
-		 org.openmdx.base.accessor.jmi.cci.*,
-		 org.openmdx.base.exception.*,
-		 org.openmdx.portal.servlet.*,
-		 org.openmdx.portal.servlet.attribute.*,
-		 org.openmdx.portal.servlet.component.*,
-		 org.openmdx.portal.servlet.control.*,
-		 org.openmdx.portal.servlet.wizards.*
-		 " %>
+	 java.net.*,
+	 java.util.*,
+	 java.io.*,
+	 java.text.*,
+	 org.openmdx.base.naming.*,
+	 org.openmdx.base.query.*,
+	 org.openmdx.base.accessor.jmi.cci.*,
+	 org.openmdx.base.exception.*,
+	 org.openmdx.portal.servlet.*,
+	 org.openmdx.portal.servlet.attribute.*,
+	 org.openmdx.portal.servlet.component.*,
+	 org.openmdx.portal.servlet.control.*,
+	 org.openmdx.portal.servlet.wizards.*
+	 " %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	ApplicationContext app = (ApplicationContext)session.getValue("ObjectInspectorServlet.ApplicationContext");
@@ -84,83 +84,83 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
-	<head>
-		<title><%= app.getApplicationName() + " - Search" %></title>
-		<meta name="label" content="Search">
-		<meta name="toolTip" content="Search">
-		<meta name="targetType" content="_blank">
-		<meta name="order" content="9999">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link href="../../_style/colors.css" rel="stylesheet" type="text/css">
-		<link href="../../_style/n2default.css" rel="stylesheet" type="text/css">
-		<link rel='shortcut icon' href='../../images/favicon.ico' />
-	</head>
-	<body>
-		<table><tr><td>
-					<%
-						try {
-							String searchExpression = request.getParameter("searchExpression");
-							// Lookup object by its XRI
-							if(searchExpression.startsWith("xri:")) {
-								try {
-									RefObject_1_0 object = (RefObject_1_0)pm.getObjectById(new Path((searchExpression.trim()).replace("+", "%2B")));
-									Action nextAction = new ObjectReference(object, app).getSelectObjectAction();
-									response.sendRedirect(
-										request.getContextPath() + "/" + nextAction.getEncodedHRef()
-									);
-									return;
-								} catch(Exception e) {}
-							}
-							// Search by expression
-							else {
-								// Get home1 package
-								org.opencrx.kernel.home1.jmi1.UserHome userHome = null;
-								try {
-									userHome = (org.opencrx.kernel.home1.jmi1.UserHome)pm.getObjectById(app.getUserHomeIdentityAsPath());
-								} catch(Exception e) {
-								  // no or broken userhome --> would not be able to build ObjectFinder
-								response.sendRedirect(
-									request.getContextPath() + "/" + WebKeys.SERVLET_NAME
-							  );
-									return;
-								}
-								org.opencrx.kernel.home1.jmi1.SearchResult searchResult = null;
-								try {
-									pm.currentTransaction().begin();
-									org.opencrx.kernel.home1.jmi1.SearchBasicParams params = org.w3c.spi2.Structures.create(
-											org.opencrx.kernel.home1.jmi1.SearchBasicParams.class, 
-										org.w3c.spi2.Datatypes.member(org.opencrx.kernel.home1.jmi1.SearchBasicParams.Member.searchExpression, searchExpression)
-									);
-									searchResult = userHome.searchBasic(params);
-									pm.currentTransaction().commit();
-								} catch(Exception e) {
-									System.out.println(e.getCause());
-									try {
-										pm.currentTransaction().rollback();
-									} catch(Exception e0) {}
-								}
-								if((searchResult != null) && (searchResult.getObjectFinder() != null)) {
-									org.opencrx.kernel.home1.jmi1.ObjectFinder objectFinder =
-										(org.opencrx.kernel.home1.jmi1.ObjectFinder)pm.getObjectById(new Path(searchResult.getObjectFinder().refMofId()));
-									Action nextAction = new ObjectReference(objectFinder, app).getSelectObjectAction();
-									response.sendRedirect(
-										request.getContextPath() + "/" + nextAction.getEncodedHRef()
-									);
-									return;
-								}
-							}
-							response.sendRedirect(
-								request.getContextPath() + "/" + WebKeys.SERVLET_NAME
-							);
-						}
-					  catch (Exception e) {
-							new ServiceException(e).log();
-					  } finally {
-						  if(pm != null) {
-							  pm.close();
-						  }
-					  }
-					%>
-				</td></tr></table>
-	</body>
+    <head>
+	<title><%= app.getApplicationName() + " - Search" %></title>
+	<meta name="label" content="Search">
+	<meta name="toolTip" content="Search">
+	<meta name="targetType" content="_blank">
+	<meta name="order" content="9999">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="../../_style/colors.css" rel="stylesheet" type="text/css">
+	<link href="../../_style/n2default.css" rel="stylesheet" type="text/css">
+	<link rel='shortcut icon' href='../../images/favicon.ico' />
+    </head>
+    <body>
+	<table><tr><td>
+		    <%
+			    try {
+				    String searchExpression = request.getParameter("searchExpression");
+				    // Lookup object by its XRI
+				    if(searchExpression.startsWith("xri:")) {
+					    try {
+						    RefObject_1_0 object = (RefObject_1_0)pm.getObjectById(new Path((searchExpression.trim()).replace("+", "%2B")));
+						    Action nextAction = new ObjectReference(object, app).getSelectObjectAction();
+						    response.sendRedirect(
+							    request.getContextPath() + "/" + nextAction.getEncodedHRef()
+						    );
+						    return;
+					    } catch(Exception e) {}
+				    }
+				    // Search by expression
+				    else {
+					    // Get home1 package
+					    org.opencrx.kernel.home1.jmi1.UserHome userHome = null;
+					    try {
+						    userHome = (org.opencrx.kernel.home1.jmi1.UserHome)pm.getObjectById(app.getUserHomeIdentityAsPath());
+					    } catch(Exception e) {
+					      // no or broken userhome --> would not be able to build ObjectFinder
+					    response.sendRedirect(
+						    request.getContextPath() + "/" + WebKeys.SERVLET_NAME
+				      );
+						    return;
+					    }
+					    org.opencrx.kernel.home1.jmi1.SearchResult searchResult = null;
+					    try {
+						    pm.currentTransaction().begin();
+						    org.opencrx.kernel.home1.jmi1.SearchBasicParams params = org.w3c.spi2.Structures.create(
+								    org.opencrx.kernel.home1.jmi1.SearchBasicParams.class, 
+							    org.w3c.spi2.Datatypes.member(org.opencrx.kernel.home1.jmi1.SearchBasicParams.Member.searchExpression, searchExpression)
+						    );
+						    searchResult = userHome.searchBasic(params);
+						    pm.currentTransaction().commit();
+					    } catch(Exception e) {
+						    System.out.println(e.getCause());
+						    try {
+							    pm.currentTransaction().rollback();
+						    } catch(Exception e0) {}
+					    }
+					    if((searchResult != null) && (searchResult.getObjectFinder() != null)) {
+						    org.opencrx.kernel.home1.jmi1.ObjectFinder objectFinder =
+							    (org.opencrx.kernel.home1.jmi1.ObjectFinder)pm.getObjectById(new Path(searchResult.getObjectFinder().refMofId()));
+						    Action nextAction = new ObjectReference(objectFinder, app).getSelectObjectAction();
+						    response.sendRedirect(
+							    request.getContextPath() + "/" + nextAction.getEncodedHRef()
+						    );
+						    return;
+					    }
+				    }
+				    response.sendRedirect(
+					    request.getContextPath() + "/" + WebKeys.SERVLET_NAME
+				    );
+			    }
+		      catch (Exception e) {
+				    new ServiceException(e).log();
+		      } finally {
+			      if(pm != null) {
+				      pm.close();
+			      }
+		      }
+		    %>
+		</td></tr></table>
+    </body>
 </html>

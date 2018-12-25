@@ -52,15 +52,15 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page buffer="32kb" session="true" import="
-		   java.util.*,
-		   java.io.*,
-		   java.text.*,
-		   org.openmdx.base.exception.*,
-		   java.io.PrintWriter,
-		   java.net.HttpURLConnection,
-		   java.net.MalformedURLException,
-		   java.net.URL
-		   " %>
+	   java.util.*,
+	   java.io.*,
+	   java.text.*,
+	   org.openmdx.base.exception.*,
+	   java.io.PrintWriter,
+	   java.net.HttpURLConnection,
+	   java.net.MalformedURLException,
+	   java.net.URL
+	   " %>
 <%
 	/**
 	 *	The WizardInvoker is invoked with the following URL parameters:
@@ -84,100 +84,100 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<title>WizardInvoker</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	</head>
-	<body>
-		<%
-			final boolean LOG_TRACE = true;
-			String objectInspectorServlet = "/" + org.openmdx.portal.servlet.WebKeys.SERVLET_NAME;
-			String urlBase = (request.getRequestURL().toString()).substring(0, (request.getRequestURL().toString()).indexOf(request.getServletPath().toString()));
+    <head>
+	<title>WizardInvoker</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+	<%
+		final boolean LOG_TRACE = true;
+		String objectInspectorServlet = "/" + org.openmdx.portal.servlet.WebKeys.SERVLET_NAME;
+		String urlBase = (request.getRequestURL().toString()).substring(0, (request.getRequestURL().toString()).indexOf(request.getServletPath().toString()));
 
+		if (LOG_TRACE) {
+			System.out.println(">---------" + request.getServletPath() + "----------(invocationBegin)");
+		}
+		try {
+			String providerName = request.getParameter("provider");
+			String segmentName = request.getParameter("segment");
+			String xri = request.getParameter("xri");
+			String wizard = request.getParameter("wizard");
+			if ((providerName == null) || (providerName.length() == 0) || (segmentName == null) || (segmentName.length() == 0)) {
+				if (LOG_TRACE) {
+					System.out.println(new java.util.Date().toString() + ": providerName [=" + providerName + "] or segmentName [=" + segmentName + "] missing");
+				}
+				return;
+			}
+			wizard += "?provider=" + providerName + "&segment=" + segmentName + "&xri=" + xri;
+			// get optional/additional parameters
+			int paraIdx = 0;
+			while (request.getParameter("para_" + paraIdx) != null) {
+				wizard += "&" + request.getParameter("para_" + paraIdx);
+				paraIdx += 1;
+			}
+			String userId = request.getParameter("user");
+			String passwd = request.getParameter("password");
+			System.out.println("user=" + userId + "; password=???");
+			URL url = new URL(urlBase + wizard);
+			URL urlObjectInspectorServlet = new URL(urlBase + objectInspectorServlet);
+
+			// ObjectInspectorServlet to get session Cookie
+			HttpURLConnection connection = (HttpURLConnection)urlObjectInspectorServlet.openConnection();
+			int rc = connection.getResponseCode();
+			if(LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlObjectInspectorServlet + ")");
+			}
+			String cookie = connection.getHeaderField("Set-Cookie");
 			if (LOG_TRACE) {
-				System.out.println(">---------" + request.getServletPath() + "----------(invocationBegin)");
+				System.out.println(new java.util.Date().toString() + ": Cookie: " + cookie);
 			}
-			try {
-				String providerName = request.getParameter("provider");
-				String segmentName = request.getParameter("segment");
-				String xri = request.getParameter("xri");
-				String wizard = request.getParameter("wizard");
-				if ((providerName == null) || (providerName.length() == 0) || (segmentName == null) || (segmentName.length() == 0)) {
-					if (LOG_TRACE) {
-						System.out.println(new java.util.Date().toString() + ": providerName [=" + providerName + "] or segmentName [=" + segmentName + "] missing");
-					}
-					return;
-				}
-				wizard += "?provider=" + providerName + "&segment=" + segmentName + "&xri=" + xri;
-				// get optional/additional parameters
-				int paraIdx = 0;
-				while (request.getParameter("para_" + paraIdx) != null) {
-					wizard += "&" + request.getParameter("para_" + paraIdx);
-					paraIdx += 1;
-				}
-				String userId = request.getParameter("user");
-				String passwd = request.getParameter("password");
-				System.out.println("user=" + userId + "; password=???");
-				URL url = new URL(urlBase + wizard);
-				URL urlObjectInspectorServlet = new URL(urlBase + objectInspectorServlet);
+			connection.disconnect();
 
-				// ObjectInspectorServlet to get session Cookie
-				HttpURLConnection connection = (HttpURLConnection)urlObjectInspectorServlet.openConnection();
-				int rc = connection.getResponseCode();
-				if(LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlObjectInspectorServlet + ")");
-				}
-				String cookie = connection.getHeaderField("Set-Cookie");
-				if (LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": Cookie: " + cookie);
-				}
-				connection.disconnect();
-
-				// j_security_check
-				String urlJSecurityCheck = urlBase + "/j_security_check" + "?j_username=" + userId + "&j_password=" + passwd;
-				connection = (HttpURLConnection) new URL(urlJSecurityCheck).openConnection();
-				connection.setRequestMethod("POST");
-				connection.setRequestProperty("Cookie", cookie);
-				connection.setInstanceFollowRedirects(false);
-				rc = connection.getResponseCode();
-				if(LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlJSecurityCheck + ")");
-				}
-				if(LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": Cookie: " + cookie);
-				}
-				connection.disconnect();
-
-				// ./ObjectInspectorServlet to initialize session
-				connection = (HttpURLConnection)urlObjectInspectorServlet.openConnection();
-				connection.setRequestProperty("Cookie", cookie);
-				rc = connection.getResponseCode();
-				if(LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": Header fields: " + connection.getHeaderFields());
-				}
-				if (LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlObjectInspectorServlet + ")");
-				}
-				cookie = connection.getHeaderField("Set-Cookie");
-				connection.disconnect();
-
-				// Invoke wizard
-				connection = (HttpURLConnection)url.openConnection();
-				connection.setRequestProperty("Cookie", cookie);
-				rc = connection.getResponseCode();
-				if(LOG_TRACE) {
-					System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + url + ")");
-					System.out.println("<---------" + request.getServletPath() + "----------(invocationEnd)");
-				}
-				ByteArrayOutputStream bos = new ByteArrayOutputStream();
-				org.w3c.cci2.BinaryLargeObjects.streamCopy(connection.getInputStream(), 0L, bos);
-				out.print(bos.toString("UTF-8"));
-				connection.disconnect();
+			// j_security_check
+			String urlJSecurityCheck = urlBase + "/j_security_check" + "?j_username=" + userId + "&j_password=" + passwd;
+			connection = (HttpURLConnection) new URL(urlJSecurityCheck).openConnection();
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Cookie", cookie);
+			connection.setInstanceFollowRedirects(false);
+			rc = connection.getResponseCode();
+			if(LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlJSecurityCheck + ")");
 			}
-			catch (Exception ex) {
-				System.out.println("Exception WizardInvoker");
-				new ServiceException(ex).log();
+			if(LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": Cookie: " + cookie);
 			}
-		%>
-	</body>
+			connection.disconnect();
+
+			// ./ObjectInspectorServlet to initialize session
+			connection = (HttpURLConnection)urlObjectInspectorServlet.openConnection();
+			connection.setRequestProperty("Cookie", cookie);
+			rc = connection.getResponseCode();
+			if(LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": Header fields: " + connection.getHeaderFields());
+			}
+			if (LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + urlObjectInspectorServlet + ")");
+			}
+			cookie = connection.getHeaderField("Set-Cookie");
+			connection.disconnect();
+
+			// Invoke wizard
+			connection = (HttpURLConnection)url.openConnection();
+			connection.setRequestProperty("Cookie", cookie);
+			rc = connection.getResponseCode();
+			if(LOG_TRACE) {
+				System.out.println(new java.util.Date().toString() + ": " + rc + " - (" + url + ")");
+				System.out.println("<---------" + request.getServletPath() + "----------(invocationEnd)");
+			}
+			ByteArrayOutputStream bos = new ByteArrayOutputStream();
+			org.w3c.cci2.BinaryLargeObjects.streamCopy(connection.getInputStream(), 0L, bos);
+			out.print(bos.toString("UTF-8"));
+			connection.disconnect();
+		}
+		catch (Exception ex) {
+			System.out.println("Exception WizardInvoker");
+			new ServiceException(ex).log();
+		}
+	%>
+    </body>
 </html>
