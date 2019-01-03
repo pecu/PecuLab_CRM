@@ -525,10 +525,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>搜尋條件 - 由聯絡人的回報</_item>
+						<_item>搜尋條件 - 由聯絡資訊的回報</_item>
 					    </toolTip>
 					    <label>
-						<_item>搜尋條件 - 由聯絡人的回報</_item>
+						<_item>搜尋條件 - 由聯絡資訊的回報</_item>
 					    </label>
 					    <iconKey>ReportedByContactFilterProperty</iconKey>
 					</_object>

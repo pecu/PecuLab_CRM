@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:opencrx:kernel:code1" xsi:noNamespaceSchemaLocation="xri://+resource/org/opencrx/kernel/code1/xmi1/code1.xsd">
-    <_object/>
-    <_content>
+	<_object/>
+	<_content>
 	<provider>
-	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
 		<_object/>
 		<_content>
-		    <segment>
+			<segment>
 			<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
-			    <_object/>
-			    <_content>
+				<_object/>
+				<_content>
 				<valueContainer>
-				    <org.opencrx.kernel.code1.CodeValueContainer name="locale" _operation="set">
+					<org.opencrx.kernel.code1.CodeValueContainer name="locale" _operation="set">
 					<_object>
-					    <name>
+						<name>
 						<_item>locale</_item>
 						<_item>org:opencrx:kernel:account1:ExportVCardParams:locale</_item>
 						<_item>org:opencrx:kernel:activity1:ExportICalendarParams:locale</_item>
 						<_item>org:opencrx:kernel:generic:LocalizedField:locale</_item>
-					    </name>
+						</name>
 					</_object>
 					<_content>
-					    <entry>
+						<entry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="00" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>en_US</_item>
+								<_item>en_US</_item>
 							</shortText>
 							<longText>
-							    <_item> English (en_US)</_item>
+								<_item> English (en_US)</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
-					    </entry>
-					    <entry>
+						</entry>
+						<entry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="01" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>zh_TW</_item>
+								<_item>zh_TW</_item>
 							</shortText>
 							<longText>
-							    <_item> Chinese (zh_TW)</_item>
+								<_item> Chinese (zh_TW)</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
-					    </entry>
+						</entry>
 					</_content>
-				    </org.opencrx.kernel.code1.CodeValueContainer>
+					</org.opencrx.kernel.code1.CodeValueContainer>
 				</valueContainer>
-			    </_content>
+				</_content>
 			</org.opencrx.kernel.code1.Segment>
-		    </segment>
+			</segment>
 		</_content>
-	    </org.openmdx.base.Provider>
+		</org.openmdx.base.Provider>
 	</provider>
-    </_content>
+	</_content>
 </org.openmdx.base.Authority>

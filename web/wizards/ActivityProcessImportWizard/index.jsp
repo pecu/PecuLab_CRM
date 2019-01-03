@@ -116,8 +116,8 @@
 		%>				
 		<pre>
 Report:<%
-															int n = 0;
-															for(String reportLine: wc.getReport()) {
+																				int n = 0;
+																				for(String reportLine: wc.getReport()) {
 		    %>
 		    <%= n + ": " + reportLine %><%
 								    n++;

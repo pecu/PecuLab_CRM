@@ -1493,31 +1493,31 @@ exists or setup the property manually. For example like this:
     <target depends="init,-pre-debug-fix,-do-debug-fix-test" if="netbeans.home" name="debug-fix-test"/>
     <!--
                 
-	CLEANUP SECTION
-    -->
+                CLEANUP SECTION
+            -->
     <target depends="init" name="deps-clean" unless="no.deps"/>
     <target depends="init" name="do-clean">
-	<condition property="build.dir.to.clean" value="${build.web.dir}">
-	    <isset property="dist.ear.dir"/>
-	</condition>
-	<property name="build.dir.to.clean" value="${build.web.dir}"/>
-	<delete includeEmptyDirs="true" quiet="true">
-	    <fileset dir="${build.dir.to.clean}/WEB-INF/lib"/>
-	</delete>
-	<delete dir="${build.dir}"/>
-	<available file="${build.dir.to.clean}/WEB-INF/lib" property="status.clean-failed" type="dir"/>
-	<delete dir="${dist.dir}"/>
+        <condition property="build.dir.to.clean" value="${build.web.dir}">
+            <isset property="dist.ear.dir"/>
+        </condition>
+        <property name="build.dir.to.clean" value="${build.web.dir}"/>
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${build.dir.to.clean}/WEB-INF/lib"/>
+        </delete>
+        <delete dir="${build.dir}"/>
+        <available file="${build.dir.to.clean}/WEB-INF/lib" property="status.clean-failed" type="dir"/>
+        <delete dir="${dist.dir}"/>
     </target>
     <target depends="do-clean" if="status.clean-failed" name="check-clean">
-	<echo message="Warning: unable to delete some files in ${build.web.dir}/WEB-INF/lib - they are probably locked by the J2EE server. "/>
-	<echo level="info" message="To delete all files undeploy the module from Server Registry in Runtime tab and then use Clean again."/>
+        <echo message="Warning: unable to delete some files in ${build.web.dir}/WEB-INF/lib - they are probably locked by the J2EE server. "/>
+        <echo level="info" message="To delete all files undeploy the module from Server Registry in Runtime tab and then use Clean again."/>
     </target>
     <target depends="init" if="netbeans.home" name="undeploy-clean">
-	<nbundeploy failOnError="false" startServer="false"/>
+        <nbundeploy failOnError="false" startServer="false"/>
     </target>
     <target name="-post-clean">
-	<!-- Empty placeholder for easier customization. -->
-	<!-- You can override this target in the ../build.xml file. -->
+        <!-- Empty placeholder for easier customization. -->
+        <!-- You can override this target in the ../build.xml file. -->
     </target>
     <target depends="init,undeploy-clean,deps-clean,do-clean,check-clean,-post-clean" description="Clean build products." name="clean"/>
     <target depends="clean" description="Clean build products." name="clean-ear"/>

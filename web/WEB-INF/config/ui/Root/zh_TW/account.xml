@@ -396,10 +396,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>聯絡人</_item>
+						<_item>聯絡資訊</_item>
 					    </toolTip>
 					    <label>
-						<_item>»聯絡人</_item>
+						<_item>»聯絡資訊</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -1213,10 +1213,10 @@
 					    <active>true</active>
 					    <changeable>false</changeable>
 					    <toolTip>
-						<_item>帳戶分配 [聯絡人]</_item>
+						<_item>帳戶分配 [聯絡資訊]</_item>
 					    </toolTip>
 					    <label>
-						<_item>帳戶分配 [聯絡人]</_item>
+						<_item>帳戶分配 [聯絡資訊]</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>

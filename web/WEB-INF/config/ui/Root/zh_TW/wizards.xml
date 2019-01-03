@@ -398,10 +398,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>新聯絡人</_item>
+						<_item>新聯絡資訊</_item>
 					    </toolTip>
 					    <label>
-						<_item>新聯絡人</_item>
+						<_item>新聯絡資訊</_item>
 					    </label>
 					    <order>
 						<_item>100</_item>

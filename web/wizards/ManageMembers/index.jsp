@@ -848,19 +848,19 @@
 			<div id="topnavi">
 			    <ul id="<%=CssClass.ssfNavigation %>" class="<%=CssClass.ssfNavigation %>" onmouseover="sfinit(this);">
 				<li class="<%= mode.compareTo("0")==0 ? "selected" : "" %>"><a href="#" onclick="javascript:try {
-					    $('mode').value = '0';
-					} catch (e) {
-					}
-					;
-					setTimeout('disableSubmit()', 10);
-					$('Reload.Button').click();";><span>Manage Members</span></a></li>
+				    $('mode').value = '0';
+				    } catch (e) {
+				    }
+				    ;
+				    setTimeout('disableSubmit()', 10);
+				    $('Reload.Button').click();";><span>Manage Members</span></a></li>
 				<li class="<%= mode.compareTo("1")==0 ? "selected" : "" %>"><a href="#" onclick="javascript:try {
-					    $('mode').value = '1';
-					} catch (e) {
-					}
-					;
-					setTimeout('disableSubmit()', 10);
-					$('Reload.Button').click();";><span>Add Members</span></a></li>
+				    $('mode').value = '1';
+				    } catch (e) {
+				    }
+				    ;
+				    setTimeout('disableSubmit()', 10);
+				    $('Reload.Button').click();";><span>Add Members</span></a></li>
 			    </ul>
 			    <%
 									    NumberFormat formatter = new DecimalFormat("0");
@@ -1281,9 +1281,9 @@
 				    <td id="submitButtons" style="font-weight:bold;background-color:#E4E4E4;padding-bottom:3px;">
 					<div style="padding:8px 3px;">
 					    <%= app.getTexts().getSelectAllText() %> <select <%= mode.compareTo("0")==0 ? "disabled" : "" %> id="accountSelectorType" name="accountSelectorType" onchange="javascript:$('waitMsg').style.visibility = 'visible';
-						    $('submitButtons').style.visibility = 'hidden';
-						    $('isSelectionChange').checked = true;
-						    $('Reload.Button').click();" >
+						$('submitButtons').style.visibility = 'hidden';
+						$('isSelectionChange').checked = true;
+						$('Reload.Button').click();" >
 						<%
 													if (mode.compareTo("0") == 0) {
 						%>
@@ -1315,18 +1315,18 @@
 					    <input type="text" name="searchString" id="searchString" tabindex="<%= tabIndex++ %>" value="<%= searchString %>" />
 					    <inpput type="hidden" name="previousSearchString" id="previousSearchString" tabindex="<%= tabIndex++ %>" value="<%= searchString %>" />
 					    <input type="submit" name="go" id="go" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" title="<%= app.getTexts().getSearchText() %>" tabindex="<%= tabIndex++ %>" value=">>" onclick="setTimeout('disableSubmit()', 10);
-						    $('Reload.Button').click();" />
+						$('Reload.Button').click();" />
 					    <%
 												    } else {
 													    if (!membersOnly) {
 					    %>
 					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectAccount            ? "checked" : "" %> value="selectAccount"            onchange="javascript:setTimeout('disableSubmit()', 10);
-						    $('isSelectionChange').checked = true;
-						    $('Reload.Button').click();" /> *
-					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectContact            ? "checked" : "" %> value="selectContact"            onchange="javascript:setTimeout('disableSubmit()', 10);$('isSelectionChange').checked = true;$('Reload.Button').click();" /> <%= app.getLabel(CONTACT_CLASS) %>
-					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectLegalEntity        ? "checked" : "" %> value="selectLegalEntity"        onchange="javascript:setTimeout('disableSubmit()', 10);$('isSelectionChange').checked = true;$('Reload.Button').click();" /> <%= app.getLabel(LEGALENTITY_CLASS) %>
-					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectGroup              ? "checked" : "" %> value="selectGroup"              onchange="javascript:setTimeout('disableSubmit()', 10);$('isSelectionChange').checked = true;$('Reload.Button').click();" /> <%= app.getLabel(GROUP_CLASS) %>
-					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectUnspecifiedAccount ? "checked" : "" %> value="selectUnspecifiedAccount" onchange="javascript:setTimeout('disableSubmit()', 10);$('isSelectionChange').checked = true;$('Reload.Button').click();" /> <%= app.getLabel(UNSPECIFIEDACCOUNT_CLASS) %>
+						$('isSelectionChange').checked = true;
+						$('Reload.Button').click();" /> *
+					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectContact            ? "checked" : "" %> value="selectContact"            onchange="javascript:setTimeout('disableSubmit()', 10); $('isSelectionChange').checked = true; $('Reload.Button').click();" /> <%= app.getLabel(CONTACT_CLASS) %>
+					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectLegalEntity        ? "checked" : "" %> value="selectLegalEntity"        onchange="javascript:setTimeout('disableSubmit()', 10); $('isSelectionChange').checked = true; $('Reload.Button').click();" /> <%= app.getLabel(LEGALENTITY_CLASS) %>
+					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectGroup              ? "checked" : "" %> value="selectGroup"              onchange="javascript:setTimeout('disableSubmit()', 10); $('isSelectionChange').checked = true; $('Reload.Button').click();" /> <%= app.getLabel(GROUP_CLASS) %>
+					    &nbsp;&nbsp;<input type="radio" name="accountSelector" <%= selectUnspecifiedAccount ? "checked" : "" %> value="selectUnspecifiedAccount" onchange="javascript:setTimeout('disableSubmit()', 10); $('isSelectionChange').checked = true; $('Reload.Button').click();" /> <%= app.getLabel(UNSPECIFIEDACCOUNT_CLASS) %>
 					    <%
 													    }
 												    }
@@ -1337,7 +1337,7 @@
 						<td>
 						    <input type="Submit" id="Reload.Button" name="Reload.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="<%= tabIndex++ %>" value="<%= app.getTexts().getReloadText() %>" onmouseup="javascript:setTimeout('disableSubmit()', 10);" />
 						    <input type="Button" name="Print.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="<%= tabIndex++ %>" value="Print" onClick="javascript:window.print();
-							    return false;" />
+							return false;" />
 						    <input type="Submit" name="ACTION.exportXLS" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="<%= tabIndex++ %>" value="Export" onmouseup="javascript:setTimeout('disableSubmit()', 10);" />
 						    <%
 																    if (downloadAction != null) {
@@ -1360,35 +1360,35 @@
 					    <tr>
 						<td>
 						    <a href="#" onclick="javascript:try {
-								$('paging').value = '--';
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif" style="padding-top:5px;"></a>
+							$('paging').value = '--';
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif" style="padding-top:5px;"></a>
 						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)--;
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous.gif" style="padding-top:5px;"></a>
+							($('displayStart').value)--;
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous.gif" style="padding-top:5px;"></a>
 						    <span id="displayStartSelector">...</span>
 						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)++;
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next.gif" style="padding-top:5px;"></a>
+							($('displayStart').value)++;
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next.gif" style="padding-top:5px;"></a>
 						    <a href="#" onclick="javascript:try {
-								$('paging').value = '++';
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif" style="padding-top:5px;"></a>
+							$('paging').value = '++';
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif" style="padding-top:5px;"></a>
 						    &nbsp;&nbsp;&nbsp;
 						    <select id="pageSize" name="pageSize" style="text-align:right;" onchange="javascript:$('waitMsg').style.visibility = 'visible';
-							    $('submitButtons').style.visibility = 'hidden';
-							    $('isSelectionChange').checked = true;
-							    $('Reload.Button').click();" >
+							$('submitButtons').style.visibility = 'hidden';
+							$('isSelectionChange').checked = true;
+							$('Reload.Button').click();" >
 							<option <%= pageSize ==  10 ? "selected" : "" %> value="10">10&nbsp;</option>
 							<option <%= pageSize ==  20 ? "selected" : "" %> value="20">20&nbsp;</option>
 							<option <%= pageSize ==  50 ? "selected" : "" %> value="50">50&nbsp;</option>
@@ -1431,54 +1431,54 @@
 					<table id="resultTable" class="gridTableFull">
 					    <tr class="gridTableHeaderFull"><!-- 10 columns -->
 						<td align="right"><a href="#" onclick="javascript:try {
-							    $('paging').value = '--';
+						    $('paging').value = '--';
+						    } catch (e) {
+						    }
+						    ;
+						    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif"></a>
+						    <a href="#" onclick="javascript:try {
+							($('displayStart').value)--; } catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous.gif"></a>
+						    #
+						    <a href="#" onclick="javascript:try {
+							($('displayStart').value)++;
 							} catch (e) {
 							}
 							;
-							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif"></a>
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next.gif"></a>
 						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)--;} catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous.gif"></a>
-						    #
-						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)++;
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next.gif"></a>
-						    <a href="#" onclick="javascript:try {
-								$('paging').value = '++';
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif"></a></td>
+							$('paging').value = '++';
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif"></a></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(ACCOUNT_CLASS) %></b></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(EMAILADDRESS_CLASS) %></b></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(POSTALADDRESS_CLASS) %></b></td>
 						<td align="left" nowrap>
 						    <!-- <img src="../../images/NumberReplacement.gif" alt="" align="top" /> -->
 						    <INPUT type="submit" name="addvisible"     id="addvisible"     title="add/enable visible" tabindex="<%= tabIndex++ %>" value="+"       onclick="javascript:$('executemulti').style.visibility = 'visible';
-							    $('executemulti').name = this.name;
-							    $('disablevisible').style.display = 'none';
-							    $('deletevisible').style.display = 'none';
-							    return false;" onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
+							$('executemulti').name = this.name;
+							$('disablevisible').style.display = 'none';
+							$('deletevisible').style.display = 'none';
+							return false;" onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
 						    <INPUT type="submit" name="disablevisible" id="disablevisible" title="disable visible"    tabindex="<%= tabIndex++ %>" value="&ndash;" onclick="javascript:$('executemulti').style.visibility = 'visible';
-							    $('executemulti').name = this.name;$('addvisible').style.display = 'none';
-							    $('deletevisible').style.display = 'none';
-							    return false;"     onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
+							$('executemulti').name = this.name; $('addvisible').style.display = 'none';
+							$('deletevisible').style.display = 'none';
+							return false;"     onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
 						    <INPUT type="submit" name="deletevisible"  id="deletevisible"  title="delete visible"     tabindex="<%= tabIndex++ %>" value="X"       onclick="javascript:$('executemulti').style.visibility = 'visible';
-							    $('executemulti').name = this.name;
-							    $('addvisible').style.display = 'none';
-							    $('disablevisible').style.display = 'none';
-							    return false;"    onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
+							$('executemulti').name = this.name;
+							$('addvisible').style.display = 'none';
+							$('disablevisible').style.display = 'none';
+							return false;"    onmouseup="this.style.border = '3px solid red';" style="font-size:10px;font-weight:bold;" />
 						    <INPUT type="submit" name="executemulti"   id="executemulti"   title="<%= app.getTexts().getOkTitle() %>" style="visibility:hidden;" tabindex="<%= tabIndex++ %>" value="<%= app.getTexts().getOkTitle() %>" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    $('addvisible').style.display = 'none';
-							    $('disablevisible').style.display = 'none';
-							    $('deletevisible').style.display = 'none';
-							    this.style.display = 'none';
-							    this.name = 'ACTION.' + this.name;" style="font-size:10px;font-weight:bold;" /><br>
+							$('addvisible').style.display = 'none';
+							$('disablevisible').style.display = 'none';
+							$('deletevisible').style.display = 'none';
+							this.style.display = 'none';
+							this.name = 'ACTION.' + this.name;" style="font-size:10px;font-weight:bold;" /><br>
 						    <b><%= app.getLabel(MEMBERSHIP_CLASS) %></b>
 						</td>
 						<td align="center">&nbsp;<b><%= userView.getFieldLabel(MEMBER_CLASS, "memberRole", app.getCurrentLocaleAsIndex()) %></b></td>
@@ -1782,11 +1782,11 @@
 						    %>
 						<td align="left" title="<%= app.getLabel(MEMBER_CLASS) %>">
 						    <button type="submit" name="disable" tabindex="<%= tabIndex++ %>" value="&mdash;" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/checked.gif" /></button>&nbsp;&nbsp;
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/checked.gif" /></button>&nbsp;&nbsp;
 						    <button type="submit" name="delete" tabindex="<%= tabIndex++ %>" value="X" title="<%= app.getTexts().getDeleteTitle() %>" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/delete.gif" /></button>
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/delete.gif" /></button>
 						</td>
 						<td align="left" <%= isMember ? "onclick='javascript:window.open(\"" + memberHref + "\");'" : "" %>><%= memberRoles %></td>
 						<td align="center" <%= isMember ? "onclick='javascript:window.open(\"" + memberHref + "\");'" : "" %>><%= member.getValidFrom() != null ? timeFormat.format(member.getValidFrom()) : "--" %></td>
@@ -1799,11 +1799,11 @@
 						%>
 						<td align="left" title="<%= app.getLabel(MEMBER_CLASS) %> (<%= userView.getFieldLabel(MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %>)">
 						    <button type="submit" name="enable" tabindex="<%= tabIndex++ %>" value="*" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/ifneedbe.gif" /></button> (<%= userView.getFieldLabel(MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %>)&nbsp;&nbsp;
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/ifneedbe.gif" /></button> (<%= userView.getFieldLabel(MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %>)&nbsp;&nbsp;
 						    <button type="submit" name="delete" tabindex="<%= tabIndex++ %>" value="X" title="<%= app.getTexts().getDeleteTitle() %>" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/delete.gif" /></button>
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= member.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/delete.gif" /></button>
 						</td>
 						<td align="left" <%= isMember ? "onclick='javascript:window.open(\"" + memberHref + "\");'" : "" %>><%= memberRoles %></td>
 						<td align="center" <%= isMember ? "onclick='javascript:window.open(\"" + memberHref + "\");'" : "" %>><%= member.getValidFrom() != null ? timeFormat.format(member.getValidFrom()) : "--" %></td>
@@ -1815,7 +1815,7 @@
 											  // not a member
 						%>
 						<td align="left"><button type="submit" name="create" tabindex="<%= tabIndex++ %>" value="+" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							this.name = 'ACTION.' + this.name;this.value = '<%= account.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/notchecked.gif" /></button></td>
+						    this.name = 'ACTION.' + this.name; this.value = '<%= account.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/notchecked.gif" /></button></td>
 						<td align="left"></td>
 						<td colspan="4">&nbsp;</td>
 						<%
@@ -1858,14 +1858,14 @@
 													      if (isEnabled) {
 						    %>
 						    <button type="submit" name="disable" tabindex="<%= tabIndex++ %>" value="&mdash;" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= currentMember.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/checked.gif" /></button>
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= currentMember.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/checked.gif" /></button>
 							<%
 														  } else {
 							%>
 						    <button type="submit" name="enable" tabindex="<%= tabIndex++ %>" value="*" onmouseup="javascript:setTimeout('disableSubmit()', 10);
-							    this.name = 'ACTION.' + this.name;
-							    this.value = '<%= currentMember.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/ifneedbe.gif" /></button>
+							this.name = 'ACTION.' + this.name;
+							this.value = '<%= currentMember.refMofId() %>';" style="border:0; background:transparent;font-size:10px;font-weight:bold;" ><img src="../../images/ifneedbe.gif" /></button>
 						    (<%= userView.getFieldLabel(MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %>)
 						    <%
 													      }
@@ -1974,30 +1974,30 @@
 					    %>
 					    <tr class="gridTableHeaderFull"><!-- 7 columns -->
 						<td align="right"><a href="#" onclick="javascript:try {
-							    $('paging').value = '--';
+						    $('paging').value = '--';
+						    } catch (e) {
+						    }
+						    ;
+						    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif"></a>
+						    <a href="#" onclick="javascript:try {
+							($('displayStart').value)--
 							} catch (e) {
 							}
 							;
-							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/previous_fast.gif"></a>
-						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)--
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();"><img border="0" align="top" alt="&lt;" src="../../images/previous.gif"></a>
+							$('Reload.Button').click();"><img border="0" align="top" alt="&lt;" src="../../images/previous.gif"></a>
 						    #
 						    <a href="#" onclick="javascript:try {
-								($('displayStart').value)++
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();"><img border="0" align="top" alt="&lt;" src="../../images/next.gif"></a>
+							($('displayStart').value)++
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();"><img border="0" align="top" alt="&lt;" src="../../images/next.gif"></a>
 						    <a href="#" onclick="javascript:try {
-								$('paging').value = '++';
-							    } catch (e) {
-							    }
-							    ;
-							    $('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif"></a></td>
+							$('paging').value = '++';
+							} catch (e) {
+							}
+							;
+							$('Reload.Button').click();" onmouseup="javascript:setTimeout('disableSubmit()', 10);" ><img border="0" align="top" alt="&lt;" src="../../images/next_fast.gif"></a></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(ACCOUNT_CLASS) %></b></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(EMAILADDRESS_CLASS) %></b></td>
 						<td align="left">&nbsp;<b><%= app.getLabel(POSTALADDRESS_CLASS) %></b></td>
@@ -2039,21 +2039,20 @@
 			    %>
 			    <script language='javascript' type='text/javascript'>
 				try {
-				    $('displayStartSelector').innerHTML = "<%= displayStartSelector %>";
-				    $('highAccount').value = "<%= formatter.format(highAccount) %>";
-				    $('submitButtons').style.visibility = 'visible';
+				$('displayStartSelector').innerHTML = "<%= displayStartSelector %>";
+				$('highAccount').value = "<%= formatter.format(highAccount) %>";
+				$('submitButtons').style.visibility = 'visible';
 				} catch (e) {
 				}
 				;
-
 				function disableSubmit() {
-				    $('waitMsg').style.display = 'block';
-				    $('submitButtons').style.display = 'none';
+				$('waitMsg').style.display = 'block';
+				$('submitButtons').style.display = 'none';
 				}
 			    </script>
 			    <br />
 			    <input type="Button" name="Print.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="<%= tabIndex++ %>" value="Print" onClick="javascript:window.print();
-				    return false;" />
+				return false;" />
 			    <input type="Submit" name="Cancel.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="<%= tabIndex++ %>" value="<%= app.getTexts().getCloseText() %>" onClick="javascript:window.close();" />
 			    <br />&nbsp;
 			    <%

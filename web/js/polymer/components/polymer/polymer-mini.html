@@ -9,19 +9,18 @@ Code distributed by Google as part of the polymer project is also
 	    --><link rel="import" href="polymer-micro.html">
 
 
-	    <script>Polymer.Base._addFeature({
+<script>Polymer.Base._addFeature({
 	    _prepTemplate: function () {     if (this._template === undefined) {
 	    this._template = Polymer.DomModule.import(this.is, 'template');
     }
-    if (this._template && this._template.hasAttribute('is')) {
+	    if (this._template && this._template.hasAttribute('is')) {
 	    this._warn(this._logf('_prepTemplate', 'top-level Polymer template ' + 'must not be a type-extension, found', this._template, 'Move inside simple <template>.'));
     }
 	    if (this._template && !this._template.content && window.HTMLTemplateElement && HTMLTemplateElement.decorate) {
 	    HTMLTemplateElement.decorate(this._template);
-    }
+	    }
     },
-	    _stampTemplate: function () {
-	    if (this._template) {
+	    _stampTemplate: function () { 	    if (this._template) {
 	    this.root = this.instanceTemplate(this._template);
 	    }
 	    },
@@ -30,9 +29,9 @@ Code distributed by Google as part of the polymer project is also
     return dom;
 	    }
     }); (function () {
-	    var baseAttachedCallback = Polymer.Base.attachedCallback;
+    var baseAttachedCallback = Polymer.Base.attachedCallback;
 	    Polymer.Base._addFeature({
-    _hostStack: [],
+	    _hostStack: [],
 	    ready: function () {
 	    },
 	    _registerHost: function (host) {
@@ -45,8 +44,7 @@ Code distributed by Google as part of the polymer project is also
 	    },
 	    _beginHosting: function () {
 	    Polymer.Base._hostStack.push(this);
-	    if (!this._clients) {
-	    this._clients = [];
+	    if (!this._clients) { 	    this._clients = [];
 	    }
 	    },
 	    _endHosting: function () {
@@ -69,8 +67,7 @@ Code distributed by Google as part of the polymer project is also
 	    this._clientsReadied = true;
 	    this._clients = null;
 	    this._afterClientsReady();
-	    this._readySelf();
-	    },
+	    this._readySelf(); },
 	    _readyClients: function () { 	 	this._beginDistribute();
 	    var c$ = this._clients;
 	    if (c$) {
@@ -96,13 +93,12 @@ Code distributed by Google as part of the polymer project is also
 	    attachedCallback: function () {
 	    if (this._readied) {
 	    this._beforeAttached();
-    baseAttachedCallback.call(this);
-    } else { 	    this._attachedPending = true;
+    baseAttachedCallback.call(this); 	    } else { 	    this._attachedPending = true;
 	    }
 	    }
     });
     }()); Polymer.ArraySplice = function () {     function newSplice(index, removed, addedCount) {
-    return {
+	    return {
     index: index, removed: removed,
     addedCount: addedCount     };
     }
@@ -110,48 +106,39 @@ Code distributed by Google as part of the polymer project is also
     var EDIT_UPDATE = 1;
     var EDIT_ADD = 2;
     var EDIT_DELETE = 3;
-    function ArraySplice() {
-    }
+    function ArraySplice() {     }
     ArraySplice.prototype = { 	calcEditDistances: function (current, currentStart, currentEnd, old, oldStart, oldEnd) {
     var rowCount = oldEnd - oldStart + 1;
     var columnCount = currentEnd - currentStart + 1;
     var distances = new Array(rowCount);
     for (var i = 0; i < rowCount; i++) {
-	    distances[i] = new Array(columnCount);
+    distances[i] = new Array(columnCount);
     distances[i] [0] = i;
     }
     for (var j = 0; j < columnCount; j++)
-    distances[0][j] = j;
+	    distances[0][j] = j;
     for (i = 1; i < rowCount; i++) {
-	    for (j = 1; j < columnCount; j++) {
-    if (this.equals(current[currentStart + j - 1], old[oldStart + i - 1]))
-    distances[i][j] = distances[i - 1][j - 1];
-    else {     var north = distances[i - 1][j] + 1;
+    for (j = 1; j < columnCount; j++) {
+	    if (this.equals(current[currentStart + j - 1], old[oldStart + i - 1]))
+    distances[i][j] = distances[i - 1][j - 1];     else {     var north = distances[i - 1][j] + 1;
     var west = distances[i][j - 1] + 1;
     distances[i][j] = north < west ? north : west; }
     }
-    } 	return distances;
+    }  return distances;
     }, spliceOperationsFromEditDistances: function (distances) {
     var i = distances.length - 1;
-    var j = distances[0].length - 1;     var current = distances[i][j];
-    var edits = [];
-    while (i > 0 || j > 0) {
-    if (i == 0) {
-    edits.push(EDIT_ADD);
-    j--; continue; } 	    if (j == 0) {     edits.push(EDIT_DELETE);
+    var j = distances[0].length - 1; var current = distances[i][j]; var edits = [];
+    while (i > 0 || j > 0) {     if (i == 0) {
+    edits.push(EDIT_ADD); j--; continue; } 	    if (j == 0) {     edits.push(EDIT_DELETE);
     i--;
     continue; }
     var northWest = distances[i - 1][j - 1];
-	    var west = distances[i - 1][j]; var north = distances[i][j - 1];
+    var west = distances[i - 1][j]; var north = distances[i][j - 1];
     var min;
-	    if (west < north)
-    min = west < northWest ? west : northWest; else
-    min = north < northWest ? north : northWest;
-    if (min == northWest) {
-    if (northWest == current) {
+    if (west < north) 	    min = west < northWest ? west : northWest; else 	    min = north < northWest ? north : northWest; if (min == northWest) {     if (northWest == current) {
     edits.push(EDIT_LEAVE);
     } else {
-    edits.push(EDIT_UPDATE);     current = northWest; } 	 	i--;
+    edits.push(EDIT_UPDATE); current = northWest; } 	 	i--;
     j--; } else if (min == west) { 	    edits.push(EDIT_DELETE);
     i--;
     current = west;
@@ -160,30 +147,24 @@ Code distributed by Google as part of the polymer project is also
     j--;
     current = north;
     }
-    }
-    edits.reverse();
+    }     edits.reverse();
     return edits;
     }, calcSplices: function (current, currentStart, currentEnd, old, oldStart, oldEnd) {     var prefixCount = 0;
     var suffixCount = 0;
     var minLength = Math.min(currentEnd - currentStart, oldEnd - oldStart);
-	    if (currentStart == 0 && oldStart == 0)
-    prefixCount = this.sharedPrefix(current, old, minLength);
+    if (currentStart == 0 && oldStart == 0) 	    prefixCount = this.sharedPrefix(current, old, minLength);
 	    if (currentEnd == current.length && oldEnd == old.length)
-    suffixCount = this.sharedSuffix(current, old, minLength - prefixCount); currentStart += prefixCount;
-    oldStart += prefixCount;
-    currentEnd -= suffixCount;     oldEnd -= suffixCount; if (currentEnd - currentStart == 0 && oldEnd - oldStart == 0)
-	    return [];
+    suffixCount = this.sharedSuffix(current, old, minLength - prefixCount); currentStart += prefixCount;     oldStart += prefixCount;
+	    currentEnd -= suffixCount; oldEnd -= suffixCount; if (currentEnd - currentStart == 0 && oldEnd - oldStart == 0)
+    return [];
     if (currentStart == currentEnd) {
     var splice = newSplice(currentStart, [], 0);
 	    while (oldStart < oldEnd)
-	    splice.removed.push(old[oldStart++]);     return [splice]; } else if (oldStart == oldEnd)
-    return [newSplice(currentStart, [], currentEnd - currentStart)];
-    var ops = this.spliceOperationsFromEditDistances(this.calcEditDistances(current, currentStart, currentEnd, old, oldStart, oldEnd));
-    splice = undefined;
+	    splice.removed.push(old[oldStart++]); return [splice]; } else if (oldStart == oldEnd)
+    return [newSplice(currentStart, [], currentEnd - currentStart)]; var ops = this.spliceOperationsFromEditDistances(this.calcEditDistances(current, currentStart, currentEnd, old, oldStart, oldEnd));     splice = undefined;
     var splices = [];
     var index = currentStart;
-    var oldIndex = oldStart; for (var i = 0; i < ops.length; i++) {
-    switch (ops[i]) {
+    var oldIndex = oldStart; for (var i = 0; i < ops.length; i++) {     switch (ops[i]) {
 	    case EDIT_LEAVE:
     if (splice) {
     splices.push(splice);
@@ -191,58 +172,50 @@ Code distributed by Google as part of the polymer project is also
     }
     index++; oldIndex++;
     break;
-	    case EDIT_UPDATE: 	    if (!splice)
-    splice = newSplice(index, [], 0);
+    case EDIT_UPDATE: 	    if (!splice) 	    splice = newSplice(index, [], 0);
     splice.addedCount++;
     index++;
     splice.removed.push(old[oldIndex]);
     oldIndex++; break;
 	    case EDIT_ADD: 				 if (!splice)
-    splice = newSplice(index, [], 0);
-    splice.addedCount++;
+    splice = newSplice(index, [], 0); splice.addedCount++;
     index++;
     break;
-	    case EDIT_DELETE:
-	    if (!splice)
-    splice = newSplice(index, [], 0);
+    case EDIT_DELETE: 	    if (!splice) 	    splice = newSplice(index, [], 0);
     splice.removed.push(old[oldIndex]);
     oldIndex++;
     break;
     }
-    }
-    if (splice) {
+    }     if (splice) {
     splices.push(splice);
     }
-	    return splices;
-    },
+    return splices;
+	    },
 		    sharedPrefix: function (current, old, searchLength) {  	 for (var i = 0; i < searchLength; i++)
-	    if (!this.equals(current[i], old[i]))
-		    return i;
+		    if (!this.equals(current[i], old[i]))
+	    return i;
 	    return searchLength;
 	    },
 	    sharedSuffix: function (current, old, searchLength) {
 	    var index1 = current.length;
 	    var index2 = old.length;
 	    var count = 0;
-	    while (count < searchLength && this.equals(current[--index1], old[--index2]))
+		    while (count < searchLength && this.equals(current[--index1], old[--index2]))
     count++; return count; }, calculateSplices: function (current, previous) {
 	    return this.calcSplices(current, 0, current.length, previous, 0, previous.length);
     },
-	    equals: function (currentValue, previousValue) {
-    return currentValue === previousValue;
+    equals: function (currentValue, previousValue) { 	    return currentValue === previousValue;
     }
     };
     return new ArraySplice();
-    }(); Polymer.domInnerHTML = function () {     var escapeAttrRegExp = /[&\u00A0"]/g;
-    var escapeDataRegExp = /[&\u00A0<>]/g;
+    }(); Polymer.domInnerHTML = function () {     var escapeAttrRegExp = /[&\u00A0"]/g;     var escapeDataRegExp = /[&\u00A0<>]/g;
     function escapeReplace(c) {
     s witch (c) {
     case '&': 			return '&amp;';
 	    case '<':
     return '&lt;';
 	    case '>':
-    return '&gt;';
-	    case '"':
+	    return '&gt;'; case '"':
     return '&quot;';
 	    case '\xA0':
     return '&nbsp;';
@@ -269,8 +242,7 @@ Code distributed by Google as part of the polymer project is also
 	    'hr',
 	    'img',
 	    'input',
-	    'keygen',
-	    'link',
+	    'keygen', 'link',
 	    'meta',
 	    'param',
 	    'source',
@@ -289,7 +261,7 @@ Code distributed by Google as part of the polymer project is also
     ]);
     function getOuterHTML(node, parentNode, composed) {
     switch (node.nodeType) {
-	    case Node.ELEMENT_NODE:
+    case Node.ELEMENT_NODE:
     var tagName = node.localName;
     var s = '<' + tagName;
     var attrs = node.attributes;
@@ -1720,7 +1692,7 @@ Code distributed by Google as part of the polymer project is also
 	    } else {
 	    if (!this.shadyRoot._hasDistributed) {
 	    TreeApi.Composed.clearChildNodes(this);
-  this.appendChild(this.shadyRoot);
+	    this.appendChild(this.shadyRoot);
 	    } else {
 	    var children = this._composeNode(this);
 	    this._updateChildNodes(this, children);
@@ -1741,36 +1713,36 @@ Code distributed by Google as part of the polymer project is also
 	    for (var i = 0; i < children.length; i++) {
 	    var child = children[i];
 	    if (child._destinationInsertionPoints) {
-	child._destinationInsertionPoints = undefined;
-			}
-			if (isInsertionPoint(child)) {
-			clearDistributedDestinationInsertionPoints(child);
-			}
-			}
-			var root = this.shadyRoot;
-			var p$ = root._insertionPoints;
-			for (var j = 0; j < p$.length; j++) {
-			p$[j]._distributedNodes = [];
-			}
-			},
-			_collectPool: function () {
-			var pool = [];
-			var children = TreeApi.Logical.getChildNodes(this);
-			for (var i = 0; i < children.length; i++) {
-			var child = children[i];
-			if (isInsertionPoint(child)) {
-			pool.push.apply(pool, child._distributedNodes);
-			} else {
-			pool.push(child);
-			}
-			}
-			return pool;
-			},
-			_distributePool: function (node, pool) {
-			var p$ = node._insertionPoints;
-			for (var i = 0, l = p$.length, p; i < l && (p = p$[i]); i++) {
-			this._distributeInsertionPoint(p, pool);
-			maybeRedistributeParent(p, this);
+	    child._destinationInsertionPoints = undefined;
+	    }
+	    if (isInsertionPoint(child)) {
+	    clearDistributedDestinationInsertionPoints(child);
+	    }
+	    }
+	    var root = this.shadyRoot;
+	    var p$ = root._insertionPoints;
+	    for (var j = 0; j < p$.length; j++) {
+	    p$[j]._distributedNodes = [];
+	    }
+	    },
+	    _collectPool: function () {
+	    var pool = [];
+	    var children = TreeApi.Logical.getChildNodes(this);
+	    for (var i = 0; i < children.length; i++) {
+	    var child = children[i];
+	    if (isInsertionPoint(child)) {
+	    pool.push.apply(pool, child._distributedNodes);
+	    } else {
+	    pool.push(child);
+	    }
+	    }
+	    return pool;
+	    },
+	    _distributePool: function (node, pool) {
+	    var p$ = node._insertionPoints;
+	    for (var i = 0, l = p$.length, p; i < l && (p = p$[i]); i++) {
+	    this._distributeInsertionPoint(p, pool);
+	    maybeRedistributeParent(p, this);
 }
 },
 _distributeInsertionPoint: function (content, pool) {

@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:opencrx:kernel:code1" xsi:noNamespaceSchemaLocation="xri://+resource/org/opencrx/kernel/code1/xmi1/code1.xsd">
-    <_object/>
-    <_content>
+	<_object/>
+	<_content>
 	<provider>
-	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+		<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
 		<_object/>
 		<_content>
-		    <segment>
+			<segment>
 			<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
-			    <_object/>
-			    <_content>
+				<_object/>
+				<_content>
 				<valueContainer>
-				    <org.opencrx.kernel.code1.CodeValueContainer name="accountState" _operation="set">
+					<org.opencrx.kernel.code1.CodeValueContainer name="accountState" _operation="set">
 					<_object>
-					    <name>
+						<name>
 						<_item>accountState</_item>
 						<_item>org:opencrx:kernel:account1:Account:accountState</_item>
 						<_item>org:opencrx:kernel:account1:SearchIndexEntry:accountState</_item>
-					    </name>
+						</name>
 					</_object>
 					<_content>
-					    <entry>
+						<entry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>--none--</_item>
+								<_item>--none--</_item>
 							</shortText>
 							<longText>
-							    <_item>--none--</_item>
+								<_item>--none--</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="1" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Active</_item>
+								<_item>Active</_item>
 							</shortText>
 							<longText>
-							    <_item>Active</_item>
+								<_item>Active</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="2" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Not active</_item>
+								<_item>Not active</_item>
 							</shortText>
 							<longText>
-							    <_item>Not active</_item>
+								<_item>Not active</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="3" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Activation pending</_item>
+								<_item>Activation pending</_item>
 							</shortText>
 							<longText>
-							    <_item>Activation pending</_item>
+								<_item>Activation pending</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="4" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Active - new</_item>
+								<_item>Active - new</_item>
 							</shortText>
 							<longText>
-							    <_item>Active - new</_item>
+								<_item>Active - new</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="5" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Active - dormant</_item>
+								<_item>Active - dormant</_item>
 							</shortText>
 							<longText>
-							    <_item>Active - dormant</_item>
+								<_item>Active - dormant</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
 						<org.opencrx.kernel.code1.CodeValueEntry code="6" _operation="set">
-						    <_object>
+							<_object>
 							<shortText>
-							    <_item>Deactivation pending</_item>
+								<_item>Deactivation pending</_item>
 							</shortText>
 							<longText>
-							    <_item>Deactivation pending</_item>
+								<_item>Deactivation pending</_item>
 							</longText>
-						    </_object>
-						    <_content/>
+							</_object>
+							<_content/>
 						</org.opencrx.kernel.code1.CodeValueEntry>
-					    </entry>
+						</entry>
 					</_content>
-				    </org.opencrx.kernel.code1.CodeValueContainer>
+					</org.opencrx.kernel.code1.CodeValueContainer>
 				</valueContainer>
-			    </_content>
+				</_content>
 			</org.opencrx.kernel.code1.Segment>
-		    </segment>
+			</segment>
 		</_content>
-	    </org.openmdx.base.Provider>
+		</org.openmdx.base.Provider>
 	</provider>
-    </_content>
+	</_content>
 </org.openmdx.base.Authority>

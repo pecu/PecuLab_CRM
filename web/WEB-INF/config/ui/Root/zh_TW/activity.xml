@@ -558,10 +558,10 @@
 					    <sortable>false</sortable>
 					    <skipRow>1</skipRow>
 					    <toolTip>
-						<_item>報告聯絡人</_item>
+						<_item>報告聯絡資訊</_item>
 					    </toolTip>
 					    <label>
-						<_item>報告聯絡人</_item>
+						<_item>報告聯絡資訊</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -3671,10 +3671,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>回報聯絡人</_item>
+						<_item>回報聯絡資訊</_item>
 					    </toolTip>
 					    <label>
-						<_item>回報聯絡人</_item>
+						<_item>回報聯絡資訊</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>

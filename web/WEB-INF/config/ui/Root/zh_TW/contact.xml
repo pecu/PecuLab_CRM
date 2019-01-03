@@ -113,10 +113,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Accounts</_item>
+						<_item>帳戶</_item>
 					    </toolTip>
 					    <label>
-						<_item>»Accounts</_item>
+						<_item>»帳戶</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -135,10 +135,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Accounts</_item>
+						<_item>帳戶</_item>
 					    </toolTip>
 					    <label>
-						<_item>»Accounts</_item>
+						<_item>»帳戶</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -158,10 +158,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Contact Person</_item>
+						<_item>聯絡人</_item>
 					    </toolTip>
 					    <label>
-						<_item>Contact</_item>
+						<_item>聯絡資訊</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -177,10 +177,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person</_item>
+						<_item>個人</_item>
 					    </toolTip>
 					    <label>
-						<_item>Person</_item>
+						<_item>個人</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -189,10 +189,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Contact information</_item>
+						<_item>聯絡資訊</_item>
 					    </toolTip>
 					    <label>
-						<_item>Contact information</_item>
+						<_item>聯絡資訊</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -215,10 +215,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's salutation code</_item>
+						<_item>個人salutation代碼</_item>
 					    </toolTip>
 					    <label>
-						<_item>Salutation code</_item>
+						<_item>Salutation代碼</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -254,10 +254,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's first name</_item>
+						<_item>人員名字</_item>
 					    </toolTip>
 					    <label>
-						<_item>First Name</_item>
+						<_item>名字</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -276,10 +276,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's middle name</_item>
+						<_item>人員中間名</_item>
 					    </toolTip>
 					    <label>
-						<_item>Middle Name</_item>
+						<_item>中間名</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -299,10 +299,10 @@
 					    <active>true</active>
 					    <mandatory>true</mandatory>
 					    <toolTip>
-						<_item>Person's last name</_item>
+						<_item>姓氏</_item>
 					    </toolTip>
 					    <label>
-						<_item>Last Name</_item>
+						<_item>姓氏</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -321,10 +321,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's original or maiden name</_item>
+						<_item>人員的原始或婚前姓名</_item>
 					    </toolTip>
 					    <label>
-						<_item>Original Name</_item>
+						<_item>原名</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -338,10 +338,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's suffix</_item>
+						<_item>人員後綴</_item>
 					    </toolTip>
 					    <label>
-						<_item>Suffix</_item>
+						<_item>後綴</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -355,10 +355,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's nick name</_item>
+						<_item>人員的後綴</_item>
 					    </toolTip>
 					    <label>
-						<_item>Nick Name</_item>
+						<_item>綽號</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -397,10 +397,10 @@
 					    <dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?[isMain=(boolean)true];usage=(short)400;automaticParsing=(boolean)true</dataBindingName>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Phone home</_item>
+						<_item>家庭電話</_item>
 					    </toolTip>
 					    <label>
-						<_item>Phone home</_item>
+						<_item>家庭電話</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -415,10 +415,10 @@
 					    <dataBindingName>org.opencrx.kernel.portal.PhoneNumberDataBinding?[isMain=(boolean)true];usage=(short)430;automaticParsing=(boolean)true</dataBindingName>
 					    <active>false</active>
 					    <toolTip>
-						<_item>Fax home</_item>
+						<_item>家庭傳真</_item>
 					    </toolTip>
 					    <label>
-						<_item>Fax home</_item>
+						<_item>家庭傳真</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -433,10 +433,10 @@
 					    <dataBindingName>org.opencrx.kernel.portal.EmailAddressDataBinding?[isMain=(boolean)true];usage=(short)400;[emailType=(short)1]</dataBindingName>
 					    <active>true</active>
 					    <toolTip>
-						<_item>E-mail home</_item>
+						<_item>個人電子郵件</_item>
 					    </toolTip>
 					    <label>
-						<_item>E-mail home</_item>
+						<_item>個人電子郵件</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -451,10 +451,10 @@
 					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:WebAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)400</dataBindingName>
 					    <active>false</active>
 					    <toolTip>
-						<_item>Web page home</_item>
+						<_item>個人網頁</_item>
 					    </toolTip>
 					    <label>
-						<_item>Web page home</_item>
+						<_item>個人網頁</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -473,10 +473,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Postal Address Business / Home</_item>
+						<_item>郵寄地址 Business / Home</_item>
 					    </toolTip>
 					    <label>
-						<_item>Postal Address Business / Home</_item>
+						<_item>郵寄地址 Business / Home</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -489,10 +489,10 @@
 					    <spanRow>3</spanRow>
 					    <multiplicity>0..3</multiplicity> <!-- can be increased if more lines are needed -->
 					    <toolTip>
-						<_item>Address line(s)</_item>
+						<_item>地址欄</_item>
 					    </toolTip>
 					    <label>
-						<_item>Address line(s)</_item>
+						<_item>地址欄</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -527,10 +527,10 @@
 					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)400</dataBindingName>
 					    <active>true</active>
 					    <toolTip>
-						<_item>State</_item>
+						<_item>州</_item>
 					    </toolTip>
 					    <label>
-						<_item>State</_item>
+						<_item>州</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -581,10 +581,10 @@
 					    <dataBindingName>org.openmdx.portal.servlet.databinding.CompositeObjectDataBinding?type=org:opencrx:kernel:account1:PostalAddress;disabled=(boolean)false;[isMain=(boolean)true];usage=(short)400?zeroAsNull=true</dataBindingName>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Country/Region</_item>
+						<_item>國家/地區</_item>
 					    </toolTip>
 					    <label>
-						<_item>Country/Region</_item>
+						<_item>國家/地區</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>

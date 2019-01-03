@@ -11,8 +11,8 @@ Code distributed by Google as part of the polymer project is also
 <link rel="import" href="../polymer/polymer.html">
 
 <script>
-     
-     /**
+
+    /**
      * `Polymer.IronScrollTargetBehavior` allows an element to respond to scroll events from a
      * designated scroll target.
      *
@@ -23,9 +23,9 @@ Code distributed by Google as part of the polymer project is also
      * @demo demo/document.html Document Element
      * @polymerBehavior
      */
-    Polymer.IronScrollTargetBehavior = {
+     Polymer.IronScrollTargetBehavior = {
 
-    properties: {
+     properties: {
 
     /**
      * Specifies the element that will handle the scroll event
@@ -194,50 +194,50 @@ Code distributed by Google as part of the polymer project is also
     }
     return 0;
     },
-	    /**
-	     * Gets the height of the scroll target.
-	     *
-	     * @type {number}
-	     */
-	    get _scrollTargetHeight() {
-      if (this._isValidScrollTarget()) {
-        return this.scrollTarget === this._doc ? window.innerHeight : this.scrollTarget.offsetHeight;
-      }
-      return 0;
-    },
+/**
+	* Gets the height of the scroll target.
+	*
+	* @type {number}
+	*/
+       get _scrollTargetHeight() {
+ if (this._isValidScrollTarget()) {
+   return this.scrollTarget === this._doc ? window.innerHeight : this.scrollTarget.offsetHeight;
+ }
+ return 0;
+},
 
-    /**
-     * Returns true if the scroll target is a valid HTMLElement.
-     *
-     * @return {boolean}
-     */
-    _isValidScrollTarget: function() {
-      return this.scrollTarget instanceof HTMLElement;
-    },
+/**
+* Returns true if the scroll target is a valid HTMLElement.
+*
+* @return {boolean}
+*/
+_isValidScrollTarget: function() {
+ return this.scrollTarget instanceof HTMLElement;
+},
 
-    _toggleScrollListener: function(yes, scrollTarget) {
-      if (!this._boundScrollHandler) {
-        return;
-      }
-      var eventTarget = scrollTarget === this._doc ? window : scrollTarget;
+_toggleScrollListener: function(yes, scrollTarget) {
+ if (!this._boundScrollHandler) {
+   return;
+ }
+ var eventTarget = scrollTarget === this._doc ? window : scrollTarget;
 
-      if (yes) {
-        eventTarget.addEventListener('scroll', this._boundScrollHandler);
-      } else {
-        eventTarget.removeEventListener('scroll', this._boundScrollHandler);
-      }
-    },
+ if (yes) {
+   eventTarget.addEventListener('scroll', this._boundScrollHandler);
+ } else {
+   eventTarget.removeEventListener('scroll', this._boundScrollHandler);
+ }
+},
 
-    /**
-     * Enables or disables the scroll event listener.
-     *
-     * @param {boolean} yes True to add the event, False to remove it.
-     */
-    toggleScrollListener: function(yes) {
-      this._shouldHaveListener = yes;
-      this._toggleScrollListener(yes, this.scrollTarget);
-    }
+/**
+* Enables or disables the scroll event listener.
+*
+* @param {boolean} yes True to add the event, False to remove it.
+*/
+toggleScrollListener: function(yes) {
+ this._shouldHaveListener = yes;
+ this._toggleScrollListener(yes, this.scrollTarget);
+}
 
-  };
+};
 
 </script>
