@@ -2,182 +2,178 @@
 <project xmlns="http://www.netbeans.org/ns/project/1">
     <type>org.netbeans.modules.web.project</type>
     <configuration>
-	<data xmlns="http://www.netbeans.org/ns/web-project/3">
-	    <name>PecuLab_CRM</name>
-	    <minimum-ant-version>1.6.5</minimum-ant-version>
-	    <web-module-libraries>
-		<library dirs="200">
-		    <file>${file.reference.bcprov.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.commons-collections.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.commons-compiler.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.commons-lang.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.dom4j.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.fontbox.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.groovy.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.gson.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.itext.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.janino.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.libphonenumber.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-application.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-extension.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-kernel.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-mail.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-resources.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.opencrx-security.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.openjpa.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.openmdx-base.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.openmdx-portal.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.openmdx-security.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.pdfbox-tools.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.pdfbox.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.poi-excelant.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.poi-ooxml-schemas.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.poi-ooxml.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.poi-scratchpad.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.poi.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.preflight.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.protobuf-javanano.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.smack.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.smackx-debug.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.smackx-jingle.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.smackx.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.ws-commons-util.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.xmlbeans.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.xmlrpc-client.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.xmlrpc-common.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.xmlrpc-server.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.xmpbox.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-		<library dirs="200">
-		    <file>${file.reference.zxing-core.jar}</file>
-		    <path-in-war>WEB-INF/lib</path-in-war>
-		</library>
-	    </web-module-libraries>
-	    <web-module-additional-libraries/>
-	    <source-roots>
-		<root id="src.dir"/>
-	    </source-roots>
-	    <test-roots>
-		<root id="test.src.dir"/>
-	    </test-roots>
-	</data>
+        <data xmlns="http://www.netbeans.org/ns/web-project/3">
+            <name>PecuLab_CRM</name>
+            <minimum-ant-version>1.6.5</minimum-ant-version>
+            <web-module-libraries>
+                <library dirs="200">
+                    <file>${file.reference.bcprov.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.commons-collections.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.commons-compiler.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.commons-lang.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.dom4j.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.fontbox.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.groovy.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.gson.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.itext.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.janino.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.libphonenumber.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.opencrx-kernel.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.opencrx-mail.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.opencrx-resources.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.opencrx-security.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.openjpa.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.openmdx-base.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.openmdx-portal.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.openmdx-security.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.pdfbox-tools.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.pdfbox.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.poi-excelant.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.poi-ooxml-schemas.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.poi-ooxml.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.poi-scratchpad.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.poi.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.preflight.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.protobuf-javanano.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.smack.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.smackx-debug.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.smackx-jingle.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.smackx.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.ws-commons-util.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmlbeans.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmlrpc-client.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmlrpc-common.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmlrpc-server.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.xmpbox.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.zxing-core.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.opencrx-application.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+            </web-module-libraries>
+            <web-module-additional-libraries/>
+            <source-roots>
+                <root id="src.dir"/>
+            </source-roots>
+            <test-roots>
+                <root id="test.src.dir"/>
+            </test-roots>
+        </data>
     </configuration>
 </project>
