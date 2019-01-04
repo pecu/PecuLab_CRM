@@ -634,10 +634,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's preferred spoken language</_item>
+						<_item>人員會說的語言</_item>
 					    </toolTip>
 					    <label>
-						<_item>Spoken language</_item>
+						<_item>會說的語言</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -651,10 +651,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's preferred written language</_item>
+						<_item>人員會寫的語言</_item>
 					    </toolTip>
 					    <label>
-						<_item>Written language</_item>
+						<_item>會寫的語言</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -824,10 +824,10 @@
 					    <active>true</active>
 					    <columnBreak>true</columnBreak>
 					    <toolTip>
-						<_item>Organization</_item>
+						<_item>組織</_item>
 					    </toolTip>
 					    <label>
-						<_item>Organization</_item>
+						<_item>組織</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -846,10 +846,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Department</_item>
+						<_item>部門</_item>
 					    </toolTip>
 					    <label>
-						<_item>Department</_item>
+						<_item>部門</_item>
 					    </label>
 					    <orderFieldGroup>
 						<_item>0</_item>
@@ -933,10 +933,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Person's gender</_item>
+						<_item>人員性別</_item>
 					    </toolTip>
 					    <label>
-						<_item>Gender</_item>
+						<_item>性別</_item>
 					    </label>
 					    <order>
 						<_item>10</_item>

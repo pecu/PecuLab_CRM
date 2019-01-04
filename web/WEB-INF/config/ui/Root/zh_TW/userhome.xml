@@ -699,10 +699,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>州</_item>
+						<_item>狀況</_item>
 					    </toolTip>
 					    <label>
-						<_item>州</_item>
+						<_item>狀況</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>

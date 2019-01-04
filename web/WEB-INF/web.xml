@@ -143,7 +143,7 @@
 	    <param-value>en_US</param-value>
 	</init-param>
 	<init-param>
-	    <param-name>locale[1]</param-name>
+	    <param-name>locale[26]</param-name>
 	    <param-value>zh_TW</param-value>
 	</init-param>
 	<!-- mimeTypes -->

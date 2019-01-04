@@ -2568,10 +2568,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>File</_item>
+						<_item>檔案</_item>
 					    </toolTip>
 					    <label>
-						<_item>File</_item>
+						<_item>檔案</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2580,10 +2580,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Edit</_item>
+						<_item>編輯</_item>
 					    </toolTip>
 					    <label>
-						<_item>Edit</_item>
+						<_item>編輯</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2592,10 +2592,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>View</_item>
+						<_item>檢視</_item>
 					    </toolTip>
 					    <label>
-						<_item>View</_item>
+						<_item>檢視</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2604,10 +2604,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Tools</_item>
+						<_item>工具</_item>
 					    </toolTip>
 					    <label>
-						<_item>Tools</_item>
+						<_item>工具</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2616,10 +2616,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Actions</_item>
+						<_item>動作</_item>
 					    </toolTip>
 					    <label>
-						<_item>Actions</_item>
+						<_item>動作</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2628,10 +2628,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Templates</_item>
+						<_item>模板</_item>
 					    </toolTip>
 					    <label>
-						<_item>Templates</_item>
+						<_item>模板</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2652,10 +2652,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Other</_item>
+						<_item>其他</_item>
 					    </toolTip>
 					    <label>
-						<_item>Other</_item>
+						<_item>其他</_item>
 					    </label>
 					</_object>
 					<_content />
@@ -2705,10 +2705,10 @@
 					    <columnBreak>true</columnBreak>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Active</_item>
+						<_item>活躍</_item>
 					    </toolTip>
 					    <label>
-						<_item>Active</_item>
+						<_item>活躍</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -2883,10 +2883,10 @@
 					<_object>
 					    <active>true</active>
 					    <toolTip>
-						<_item>Count</_item>
+						<_item>數</_item>
 					    </toolTip>
 					    <label>
-						<_item>Count</_item>
+						<_item>數</_item>
 					    </label>
 					    <order>
 						<_item>0</_item>
@@ -2901,7 +2901,7 @@
 					<_object>
 					    <active>false</active>
 					    <toolTip>
-						<_item>Import Item</_item>
+						<_item>匯入項目</_item>
 					    </toolTip>
 					    <label>
 						<_item>匯入</_item>
