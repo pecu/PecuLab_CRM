@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:openmdx:ui1" xsi:noNamespaceSchemaLocation="xri://+resource/org/openmdx/ui1/xmi1/ui1.xsd">
+	<_object/>
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object/>
+				<_content>
+					<segment>
+						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
+							<_object/>
+							<_content>
+								<elementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean0">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>網路會員資格</_item>
+											</toolTip>
+											<label>
+												<_item>網路會員資格</_item>
+											</label>
+											<order>
+												<_item>0</_item> <!-- tab -->
+												<_item>0</_item> <!-- field group -->
+												<_item>75</_item> <!-- position -->
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean1">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>網路交易戶</_item>
+											</toolTip>
+											<label>
+												<_item>網路交易戶</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>80</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean2">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>EC-下單</_item>
+											</toolTip>
+											<label>
+												<_item>EC-下單</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>85</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean3">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>網路下單</_item>
+											</toolTip>
+											<label>
+												<_item>網路下單</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>90</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean4">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>僅供債劵基金交易</_item>
+											</toolTip>
+											<label>
+												<_item>傳真交易</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>95</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean5">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>高收益債風險預告書</_item>
+											</toolTip>
+											<label>
+												<_item>高收益債風險預告書</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>100</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+									<org.openmdx.ui1.ElementDefinition name="org:opencrx:kernel:account1:Contact:extBoolean6">
+										<_object>
+											<active>true</active>
+											<toolTip>
+												<_item>同意個資提供</_item>
+											</toolTip>
+											<label>
+												<_item>同意個資提供</_item>
+											</label>
+											<order>
+												<_item>0</_item>
+												<_item>0</_item>
+												<_item>105</_item>
+											</order>
+										</_object>
+										<_content/>
+									</org.openmdx.ui1.ElementDefinition>
+								</elementDefinition>
+							</_content>
+						</org.openmdx.ui1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
+</org.openmdx.base.Authority>
