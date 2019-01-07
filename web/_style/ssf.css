@@ -265,8 +265,8 @@ select.hide { visibility: hidden; }
 
 #ssf-navv li { /* all list items */
     /*
-	    float : left;
-	    line-height: 1.15em;
+		float : left;
+		line-height: 1.15em;
     */
     width: auto; /* width needed or else Opera goes nuts */
 }

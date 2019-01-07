@@ -52,15 +52,15 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page buffer="32kb" session="true" import="
-	   java.util.*,
-	   java.io.*,
-	   java.text.*,
-	   org.openmdx.base.exception.*,
-	   java.io.PrintWriter,
-	   java.net.HttpURLConnection,
-	   java.net.MalformedURLException,
-	   java.net.URL
-	   " %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.openmdx.base.exception.*,
+		   java.io.PrintWriter,
+		   java.net.HttpURLConnection,
+		   java.net.MalformedURLException,
+		   java.net.URL
+		   " %>
 <%
 	/**
 	 *	The WizardInvoker is invoked with the following URL parameters:
@@ -85,14 +85,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-	<title>WizardInvoker</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>WizardInvoker</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     <body>
-	<%
-		final boolean LOG_TRACE = true;
-		String objectInspectorServlet = "/" + org.openmdx.portal.servlet.WebKeys.SERVLET_NAME;
-		String urlBase = (request.getRequestURL().toString()).substring(0, (request.getRequestURL().toString()).indexOf(request.getServletPath().toString()));
+		<%
+			final boolean LOG_TRACE = true;
+			String objectInspectorServlet = "/" + org.openmdx.portal.servlet.WebKeys.SERVLET_NAME;
+			String urlBase = (request.getRequestURL().toString()).substring(0, (request.getRequestURL().toString()).indexOf(request.getServletPath().toString()));
 
 		if (LOG_TRACE) {
 			System.out.println(">---------" + request.getServletPath() + "----------(invocationBegin)");
@@ -178,6 +178,6 @@
 			System.out.println("Exception WizardInvoker");
 			new ServiceException(ex).log();
 		}
-	%>
-    </body>
+		%>
+	</body>
 </html>

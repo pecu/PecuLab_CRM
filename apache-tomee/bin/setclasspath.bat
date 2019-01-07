@@ -26,17 +26,16 @@ rem In debug mode we need a real JDK (JAVA_HOME)
 if ""%1"" == ""debug"" goto needJavaHome
 
 rem Otherwise either JRE or JDK are fine
-if not "%JRE_HOME%" == "" goto gotJreHome
-if not "%JAVA_HOME%" == "" goto gotJavaHome
+if DEFINED JRE_HOME goto gotJreHome
+if DEFINED JAVA_HOME goto gotJavaHome
 echo Neither the JAVA_HOME nor the JRE_HOME environment variable is defined
 echo At least one of these environment variable is needed to run this program
 goto exit
 
 :needJavaHome
 rem Check if we have a usable JDK
-if "%JAVA_HOME%" == "" goto noJavaHome
+if NOT DEFINED JAVA_HOME goto noJavaHome
 if not exist "%JAVA_HOME%\bin\java.exe" goto noJavaHome
-if not exist "%JAVA_HOME%\bin\javaw.exe" goto noJavaHome
 if not exist "%JAVA_HOME%\bin\jdb.exe" goto noJavaHome
 if not exist "%JAVA_HOME%\bin\javac.exe" goto noJavaHome
 set "JRE_HOME=%JAVA_HOME%"
@@ -55,7 +54,6 @@ set "JRE_HOME=%JAVA_HOME%"
 :gotJreHome
 rem Check if we have a usable JRE
 if not exist "%JRE_HOME%\bin\java.exe" goto noJreHome
-if not exist "%JRE_HOME%\bin\javaw.exe" goto noJreHome
 goto okJava
 
 :noJreHome
@@ -67,12 +65,15 @@ goto exit
 :okJava
 rem Don't override the endorsed dir if the user has set it previously
 if not "%JAVA_ENDORSED_DIRS%" == "" goto gotEndorseddir
-rem Set the default -Djava.endorsed.dirs argument
+rem Java 9 no longer supports the java.endorsed.dirs
+rem system property. Only try to use it if
+rem CATALINA_HOME/endorsed exists.
+if not exist "%CATALINA_HOME%\endorsed" goto gotEndorseddir
 set "JAVA_ENDORSED_DIRS=%CATALINA_HOME%\endorsed"
 :gotEndorseddir
 
 rem Don't override _RUNJAVA if the user has set it previously
-if not "%_RUNJAVA%" == "" goto gotRunJava
+if DEFINED _RUNJAVA goto gotRunJava
 rem Set standard command for invoking Java.
 rem Also note the quoting as JRE_HOME may contain spaces.
 set _RUNJAVA="%JRE_HOME%\bin\java.exe"
@@ -80,7 +81,7 @@ set _RUNJAVA="%JRE_HOME%\bin\java.exe"
 
 rem Don't override _RUNJDB if the user has set it previously
 rem Also note the quoting as JAVA_HOME may contain spaces.
-if not "%_RUNJDB%" == "" goto gotRunJdb
+if DEFINED _RUNJDB goto gotRunJdb
 set _RUNJDB="%JAVA_HOME%\bin\jdb.exe"
 :gotRunJdb
 

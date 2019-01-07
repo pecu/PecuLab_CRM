@@ -4,13 +4,13 @@
 
 <html>
 
-    <head>
-	<title>openCRX IMAP Server</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    </head>
+	<head>
+		<title>openCRX IMAP Server</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
 
-    <%
-	    response.sendRedirect(request.getContextPath().replace("-core-", "-imap-") + "/IMAPServlet/");
-    %>
+	<%
+		response.sendRedirect(request.getContextPath().replace("-core-", "-imap-") + "/IMAPServlet/");
+	%>
 
 </html>

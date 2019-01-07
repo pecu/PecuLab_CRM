@@ -54,20 +54,19 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-	   java.util.*,
-	   java.io.*,
-	   java.net.*,
-	   java.math.*,
-	   java.sql.*,
-	   java.text.*,
-	   javax.xml.transform.stream.*,
-	   org.opencrx.kernel.portal.wizard.*,
-	   org.opencrx.kernel.backend.*,
-	   org.openmdx.base.exception.*,
-	   org.openmdx.portal.servlet.*,
-	   org.openmdx.kernel.id.*,
-	   org.openmdx.kernel.exception.*
-	   "%>
+		   java.util.*,
+		   java.io.*,
+		   java.net.*,
+		   java.math.*,
+		   java.sql.*,
+		   java.text.*,
+		   javax.xml.transform.stream.*,
+		   org.opencrx.portal.wizard.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.kernel.id.*,
+		   org.openmdx.kernel.exception.*
+		   "%>
 <%
 	AddressGroupRemoveDuplicateMembersController wc = new AddressGroupRemoveDuplicateMembersController();
 %>

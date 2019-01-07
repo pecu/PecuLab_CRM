@@ -54,22 +54,22 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-	   java.util.*,
-	   java.io.*,
-	   java.text.*,
-	   org.openmdx.kernel.id.cci.*,
-	   org.openmdx.base.accessor.jmi.cci.*,
-	   org.openmdx.base.exception.*,
-	   org.openmdx.portal.servlet.*,
-	   org.openmdx.portal.servlet.attribute.*,
-	   org.openmdx.portal.servlet.component.*,
-	   org.openmdx.portal.servlet.control.*,
-	   org.openmdx.portal.servlet.action.*,
-	   org.openmdx.portal.servlet.wizards.*,
-	   org.openmdx.base.naming.*,
-	   org.openmdx.kernel.log.*,
-	   org.openmdx.kernel.id.*
-	   " %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.action.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*,
+		   org.openmdx.kernel.log.*,
+		   org.openmdx.kernel.id.*
+		   " %>
 <%!
 
 	public static class WebCalendarsWizardController extends org.openmdx.portal.servlet.AbstractWizardController {
@@ -130,57 +130,57 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	<input type="hidden" id="Command" name="Command" value="" />
+	<table class="tableLayout">
+		<tr>
+			<td class="cellObject">
+				<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
+					<ul class="nav nav-pills">
+						<%
+												for(org.opencrx.kernel.home1.jmi1.CalendarProfile calendarProfile: wc.getCalendarProfiles()) {
+						%>
+						<li><a target="_blank" href="..<%= wc.getRedirectUrl(calendarProfile) %>"><%= calendarProfile.getName() %></a></li>
+							<%
+													}
+							%>
+					</ul>
+				</div>
+				<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
+				<div id="SubmitArea" style="float:left;display:none;">
+					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
+				</div>
+			</td>
+		</tr>
 	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-    <input type="hidden" id="Command" name="Command" value="" />
-    <table class="tableLayout">
-	<tr>
-	    <td class="cellObject">
-		<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
-		    <ul class="nav nav-pills">
-			<%
-									for(org.opencrx.kernel.home1.jmi1.CalendarProfile calendarProfile: wc.getCalendarProfiles()) {
-			%>
-			<li><a target="_blank" href="..<%= wc.getRedirectUrl(calendarProfile) %>"><%= calendarProfile.getName() %></a></li>
-			    <%
-									    }
-			    %>
-		    </ul>
-		</div>
-		<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
-		<div id="SubmitArea" style="float:left;display:none;">
-		    <input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
-		</div>
-	    </td>
-	</tr>
-    </table>
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
-    $('WaitIndicator').style.display = 'none';
-    $('SubmitArea').style.display = 'block';
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

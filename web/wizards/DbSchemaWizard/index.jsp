@@ -55,23 +55,22 @@
  */
 %>
 <%@ page session="true" import="
-	 java.util.*,
-	 java.io.*,
-	 java.text.*,
-	 org.opencrx.kernel.backend.*,
-	 org.opencrx.kernel.portal.wizard.*,
-	 org.opencrx.kernel.generic.*,
-	 org.openmdx.kernel.id.cci.*,
-	 org.openmdx.kernel.id.*,
-	 org.openmdx.base.exception.*,
-	 org.openmdx.base.accessor.jmi.cci.*,
-	 org.openmdx.portal.servlet.*,
-	 org.openmdx.portal.servlet.attribute.*,
-	 org.openmdx.portal.servlet.component.*,
-	 org.openmdx.portal.servlet.control.*,
-	 org.openmdx.portal.servlet.wizards.*,
-	 org.openmdx.base.naming.*
-	 "%>
+		 java.util.*,
+		 java.io.*,
+		 java.text.*,
+		 org.opencrx.portal.wizard.*,
+		 org.opencrx.kernel.generic.*,
+		 org.openmdx.kernel.id.cci.*,
+		 org.openmdx.kernel.id.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.portal.servlet.attribute.*,
+		 org.openmdx.portal.servlet.component.*,
+		 org.openmdx.portal.servlet.control.*,
+		 org.openmdx.portal.servlet.wizards.*,
+		 org.openmdx.base.naming.*
+		 "%>
 <%
 	final String FORM_NAME = "DbSchemaForm";
 	final String WIZARD_NAME = "DbSchemaWizard.jsp";
@@ -90,37 +89,37 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
-	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-    <input type="hidden" id="Command" name="Command" value="" />
-    <table class="tableLayout">
-	<tr>
-	    <td class="cellObject">
-		<div>
-		    The wizard does NOT drop or remove any tables, columns or data.
-		</div>
-		<br />
-		<div id="contentArea">
-		    <table>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
 			<tr>
-			    <td>Connection URL:</td>
-			    <td>
-				<input type="text" name="connectionUrl" id="connectionUrl" tabIndex="9000" style="width:50em;" value="<%= wc.getFormFields().getConnectionUrl() == null ? "java:comp/env/jdbc_opencrx_" + wc.getProviderName() : wc.getFormFields().getConnectionUrl() %>" />
-				<pre>Examples:
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	<input type="hidden" id="Command" name="Command" value="" />
+	<table class="tableLayout">
+		<tr>
+			<td class="cellObject">
+				<div>
+					The wizard does NOT drop or remove any tables, columns or data.
+				</div>
+				<br />
+				<div id="contentArea">
+					<table>
+						<tr>
+							<td>Connection URL:</td>
+							<td>
+								<input type="text" name="connectionUrl" id="connectionUrl" tabIndex="9000" style="width:50em;" value="<%= wc.getFormFields().getConnectionUrl() == null ? "java:comp/env/jdbc_opencrx_" + wc.getProviderName() : wc.getFormFields().getConnectionUrl() %>" />
+								<pre>Examples:
 * java:comp/env/jdbc_opencrx_CRX
 * jdbc:postgresql://127.0.0.1/CRX
 * jdbc:mysql://127.0.0.1/CRX
@@ -128,85 +127,85 @@
 * jdbc:db2://127.0.0.1:50000/CRX
 * jdbc:oracle:thin:@127.0.0.1:1521:XE
 * jdbc:sqlserver://127.0.0.1:1433;databaseName=CRX;selectMethod=cursor</pre>
-			    </td>
-			</tr>
-			<tr>	
-			    <td>User (for jdbc: URLs only):</td>
-			    <td><input type="text" name="userName" id="userName" tabIndex="9001" style="width:20em;" value="<%= wc.getFormFields().getUserName() == null ? "" : wc.getFormFields().getUserName() %>" /></td>
-			</tr>
-			<tr>
-			    <td>Password (for jdbc: URLs only):</td>
-			    <td><input type="password" name="password" id="password" tabIndex="9002" style="width:20em;" value="<%= wc.getFormFields().getPassword() == null ? "" : wc.getFormFields().getPassword() %>" /></td>
-			</tr>
-		    </table>
-		    <br />
-		    <div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
-		    <div id="SubmitArea" style="display:none;">									
-			<input type="submit" name="Validate" id="Validate.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Validate" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
-			<input type="submit" name="ValidateAndFix" id="ValidateAndFix.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="Validate & Fix" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
-			<%
-									if(System.getProperty("org.opencrx.mediadir." + wc.getProviderName()) != null) {
-			%>						
-			<input type="submit" name="ValidateMedia" id="ValidateMedia.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Validate Media" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
-			<input type="submit" name="MigrateMediaToFS" id="MigrateMediaToFS.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Migrate Media to FS" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
-			<input type="submit" name="MigrateMediaToDB" id="MigrateMediaToDB.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="Migrate Media to DB" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
-			<%
-									}
-			%>	
-			<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-		    </div>
-		    <div id="ReportArea">
-			<%
-									if(!wc.getReport().isEmpty()) {
-			%>				
-			<br />
-			<table>
-			    <tr>
-				<td><h3>Report + <%= new java.util.Date() %>:</h3></td>
-			    </tr>
-			    <tr>
-				<td><pre>
-					<%
-															int n = 0;
-															for(String reportLine: wc.getReport()) {
-																String markerTag = reportLine.startsWith("OK") 
-																	? "<img src=\"./images/checked.gif\" /> " 
-																	: reportLine.startsWith("ERROR") 
-																		? "<img src=\"./images/cancel.gif\" /> " 
-																		: reportLine.startsWith("SQL")
-																			? "<img src=\"./images/next_fast.gif\" /> "
-																			: reportLine.startsWith("FIX")
-																				? "<img src=\"./images/next.gif\" /> "
-																				: "<img src=\"./images/help.gif\" /> ";
-					%><%= markerTag %><%= reportLine %><br /><%
-																n++;
-															}
-					%>
-				    </pre></td>
-			    </tr>							
-			</table>
-			<%
-									}
-			%>
-		    </div>
-		</div>				
-	    </td>
-	</tr>
-    </table>
+							</td>
+						</tr>
+						<tr>	
+							<td>User (for jdbc: URLs only):</td>
+							<td><input type="text" name="userName" id="userName" tabIndex="9001" style="width:20em;" value="<%= wc.getFormFields().getUserName() == null ? "" : wc.getFormFields().getUserName() %>" /></td>
+						</tr>
+						<tr>
+							<td>Password (for jdbc: URLs only):</td>
+							<td><input type="password" name="password" id="password" tabIndex="9002" style="width:20em;" value="<%= wc.getFormFields().getPassword() == null ? "" : wc.getFormFields().getPassword() %>" /></td>
+						</tr>
+					</table>
+					<br />
+					<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
+					<div id="SubmitArea" style="display:none;">									
+						<input type="submit" name="Validate" id="Validate.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Validate" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
+						<input type="submit" name="ValidateAndFix" id="ValidateAndFix.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="Validate & Fix" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
+						<%
+												if(System.getProperty("org.opencrx.mediadir." + wc.getProviderName()) != null) {
+						%>						
+						<input type="submit" name="ValidateMedia" id="ValidateMedia.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Validate Media" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
+						<input type="submit" name="MigrateMediaToFS" id="MigrateMediaToFS.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Migrate Media to FS" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
+						<input type="submit" name="MigrateMediaToDB" id="MigrateMediaToDB.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="Migrate Media to DB" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('ReportArea').style.display = 'none';$('Command').value = this.name;" />
+						<%
+												}
+						%>	
+						<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+					</div>
+					<div id="ReportArea">
+						<%
+												if(!wc.getReport().isEmpty()) {
+						%>				
+						<br />
+						<table>
+							<tr>
+								<td><h3>Report + <%= new java.util.Date() %>:</h3></td>
+							</tr>
+							<tr>
+								<td><pre>
+										<%
+																				int n = 0;
+																				for(String reportLine: wc.getReport()) {
+																					String markerTag = reportLine.startsWith("OK") 
+																						? "<img src=\"./images/checked.gif\" /> " 
+																						: reportLine.startsWith("ERROR") 
+																							? "<img src=\"./images/cancel.gif\" /> " 
+																							: reportLine.startsWith("SQL")
+																								? "<img src=\"./images/next_fast.gif\" /> "
+																								: reportLine.startsWith("FIX")
+																									? "<img src=\"./images/next.gif\" /> "
+																									: "<img src=\"./images/help.gif\" /> ";
+										%><%= markerTag %><%= reportLine %><br /><%
+																					n++;
+																				}
+										%>
+									</pre></td>
+							</tr>							
+						</table>
+						<%
+												}
+						%>
+					</div>
+				</div>				
+			</td>
+		</tr>
+	</table>
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
-    $('WaitIndicator').style.display = 'none';
-    $('SubmitArea').style.display = 'block';
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />
 

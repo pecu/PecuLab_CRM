@@ -53,33 +53,33 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-	   java.util.*,
-	   java.util.regex.*,
-	   java.io.*,
-	   java.text.*,
-	   java.math.*,
-	   java.net.URL,
-	   java.net.URLEncoder,
-	   java.net.MalformedURLException,
-	   java.io.UnsupportedEncodingException,
-	   org.opencrx.kernel.backend.*,
-	   org.opencrx.kernel.portal.*,
-	   org.openmdx.kernel.id.*,
-	   org.openmdx.portal.servlet.databinding.*,
-	   org.openmdx.base.accessor.jmi.cci.*,
-	   org.openmdx.base.exception.*,
-	   org.openmdx.portal.servlet.*,
-	   org.openmdx.portal.servlet.attribute.*,
-	   org.openmdx.portal.servlet.component.*,
-	   org.openmdx.portal.servlet.control.*,
-	   org.openmdx.portal.servlet.wizards.*,
-	   org.openmdx.base.naming.*,
-	   org.openmdx.base.query.*,
-	   org.openmdx.kernel.log.*,
-	   org.apache.poi.hssf.usermodel.*,
-	   org.apache.poi.hssf.util.*,
-	   org.apache.poi.poifs.filesystem.POIFSFileSystem
-	   " %>
+		   java.util.*,
+		   java.util.regex.*,
+		   java.io.*,
+		   java.text.*,
+		   java.math.*,
+		   java.net.URL,
+		   java.net.URLEncoder,
+		   java.net.MalformedURLException,
+		   java.io.UnsupportedEncodingException,
+		   org.opencrx.kernel.portal.*,
+		   org.openmdx.kernel.id.*,
+		   org.openmdx.portal.servlet.databinding.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*,
+		   org.openmdx.base.query.*,
+		   org.openmdx.kernel.log.*,
+		   org.apache.poi.ss.usermodel.*,
+		   org.apache.poi.hssf.usermodel.*,
+		   org.apache.poi.hssf.util.*,
+		   org.apache.poi.poifs.filesystem.POIFSFileSystem
+		   " %>
 <%!
 	private static HSSFSheet addSheet(
     HSSFWorkbook wb,
@@ -792,148 +792,148 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-    <head>
-	<title>Export Accounts to XLS</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel='shortcut icon' href='../../images/favicon.ico' />
-    </head>
+	<head>
+		<title>Export Accounts to XLS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel='shortcut icon' href='../../images/favicon.ico' />
+	</head>
 
-    <body class="ytheme-gray">
-	<%
-		String formAction = "openCRX_Accounts.jsp";
-		String filename = "openCRX_Accounts.xls";
-		String sheetName = "Accounts";
-		short largeFontSize = 12;
-		short titleFontSize = 17;
-		try {
-				Codes codes = app.getCodes();
-				UserDefinedView userView = new UserDefinedView(
-					pm.getObjectById(new Path(objectXri)),
-					app,
-					viewsCache.getView(requestId)
-				);
+	<body class="ytheme-gray">
+		<%
+			String formAction = "openCRX_Accounts.jsp";
+			String filename = "openCRX_Accounts.xls";
+			String sheetName = "Accounts";
+			short largeFontSize = 12;
+			short titleFontSize = 17;
+			try {
+					Codes codes = app.getCodes();
+					UserDefinedView userView = new UserDefinedView(
+						pm.getObjectById(new Path(objectXri)),
+						app,
+						viewsCache.getView(requestId)
+					);
 
-			// Timezone is reusable
-			final TimeZone timeZone = TimeZone.getTimeZone(app.getCurrentTimeZone());
-			// DateFormat is not multi-thread-safe!
-			DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-			dateTimeFormat.setLenient(false); // if the timestamp string is always complete
-			dateTimeFormat.setTimeZone(timeZone);
+				// Timezone is reusable
+				final TimeZone timeZone = TimeZone.getTimeZone(app.getCurrentTimeZone());
+				// DateFormat is not multi-thread-safe!
+				DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+				dateTimeFormat.setLenient(false); // if the timestamp string is always complete
+				dateTimeFormat.setTimeZone(timeZone);
 
-			SimpleDateFormat exceldate = new SimpleDateFormat("dd-MM-yyyy");
-				exceldate.setTimeZone(timeZone);
+				SimpleDateFormat exceldate = new SimpleDateFormat("dd-MM-yyyy");
+					exceldate.setTimeZone(timeZone);
 
-			// Get account1 package
-				org.opencrx.kernel.account1.jmi1.Account1Package accountPkg = org.opencrx.kernel.utils.Utils.getAccountPackage(pm);
+				// Get account1 package
+					org.opencrx.kernel.account1.jmi1.Account1Package accountPkg = org.opencrx.kernel.utils.Utils.getAccountPackage(pm);
 			
-			RefObject_1_0 obj = (RefObject_1_0)pm.getObjectById(new Path(objectXri));
+				RefObject_1_0 obj = (RefObject_1_0)pm.getObjectById(new Path(objectXri));
 	
-			Path objPath = new Path(obj.refMofId());
-			String providerName = objPath.get(2);
-			String segmentName = objPath.get(4);
-			//String providerName = "ISSA";
-			//String segmentName = "Standard";
+				Path objPath = new Path(obj.refMofId());
+				String providerName = objPath.get(2);
+				String segmentName = objPath.get(4);
+				//String providerName = "ISSA";
+				//String segmentName = "Standard";
 
-			boolean exportSingleAccount = false;
-			Iterator i = null;
-			if (obj instanceof org.opencrx.kernel.account1.jmi1.Contact || obj instanceof org.opencrx.kernel.account1.jmi1.LegalEntity) {
-				exportSingleAccount = true;
-			} else {
-				if (obj instanceof org.opencrx.kernel.account1.jmi1.Group) {
-				i = ((org.opencrx.kernel.account1.jmi1.Group)obj).getMember().iterator();
-				} else if (obj instanceof org.opencrx.kernel.account1.jmi1.AccountFilterGlobal) {
-				i = ((org.opencrx.kernel.account1.jmi1.AccountFilterGlobal)obj).getFilteredAccount().iterator();
+				boolean exportSingleAccount = false;
+				Iterator i = null;
+				if (obj instanceof org.opencrx.kernel.account1.jmi1.Contact || obj instanceof org.opencrx.kernel.account1.jmi1.LegalEntity) {
+					exportSingleAccount = true;
+				} else {
+					if (obj instanceof org.opencrx.kernel.account1.jmi1.Group) {
+					i = ((org.opencrx.kernel.account1.jmi1.Group)obj).getMember().iterator();
+					} else if (obj instanceof org.opencrx.kernel.account1.jmi1.AccountFilterGlobal) {
+					i = ((org.opencrx.kernel.account1.jmi1.AccountFilterGlobal)obj).getFilteredAccount().iterator();
+					}
 				}
-			}
 	
-			// Generate report
-			String location = UUIDs.getGenerator().next().toString();
-			File f = new File(
-				app.getTempFileName(location, "")
-			);
-			FileOutputStream os = new FileOutputStream(f);
+				// Generate report
+				String location = UUIDs.getGenerator().next().toString();
+				File f = new File(
+					app.getTempFileName(location, "")
+				);
+				FileOutputStream os = new FileOutputStream(f);
 
-			HSSFWorkbook wb = new HSSFWorkbook();
+				HSSFWorkbook wb = new HSSFWorkbook();
 
-				// Header Style (black background, orange/bold font)
-				HSSFFont headerfont = wb.createFont();
-				headerfont.setFontHeightInPoints((short)10);
-				headerfont.setFontName("Tahoma");
-				headerfont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-				headerfont.setColor(HSSFColor.ORANGE.index);
+					// Header Style (black background, orange/bold font)
+					HSSFFont headerfont = wb.createFont();
+					headerfont.setFontHeightInPoints((short)10);
+					headerfont.setFontName("Tahoma");
+					headerfont.setBold(true);
+					headerfont.setColor(HSSFColor.ORANGE.index);
 
-				HSSFCellStyle headerStyle = wb.createCellStyle();
-				headerStyle.setFillForegroundColor(HSSFColor.BLACK.index);
-				headerStyle.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
-				headerStyle.setFont(headerfont);
+					HSSFCellStyle headerStyle = wb.createCellStyle();
+					headerStyle.setFillForegroundColor(HSSFColor.BLACK.index);
+					headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+					headerStyle.setFont(headerfont);
 			
-				// Wrapped Style
-				HSSFCellStyle wrappedStyle = wb.createCellStyle();
-				wrappedStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_TOP);
-				wrappedStyle.setWrapText(true);
+					// Wrapped Style
+					HSSFCellStyle wrappedStyle = wb.createCellStyle();
+					wrappedStyle.setVerticalAlignment(VerticalAlignment.TOP);
+					wrappedStyle.setWrapText(true);
 			
-				// TopAligned Style
-				HSSFCellStyle topAlignedStyle = wb.createCellStyle();
-				topAlignedStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_TOP);
+					// TopAligned Style
+					HSSFCellStyle topAlignedStyle = wb.createCellStyle();
+					topAlignedStyle.setVerticalAlignment(VerticalAlignment.TOP);
 			
-				HSSFSheet sheetAccounts = addSheet(wb, "Accounts", true, headerStyle);
-		  short spreadSheetRow = 1;
+					HSSFSheet sheetAccounts = addSheet(wb, "Accounts", true, headerStyle);
+			  short spreadSheetRow = 1;
 	    
-			while (
-			  ((i != null) && (i.hasNext())) ||
-			  exportSingleAccount
-			) {
-				try {
-				  org.opencrx.kernel.account1.jmi1.Account account = null;
-						if (exportSingleAccount) {
-								account = (org.opencrx.kernel.account1.jmi1.Account)obj;
-								exportSingleAccount = false;
-					  } else {
-							try {
-									org.opencrx.kernel.generic.jmi1.CrxObject crxObject =	(org.opencrx.kernel.generic.jmi1.CrxObject)i.next();
-									if (crxObject instanceof org.opencrx.kernel.account1.jmi1.Member) {
-											org.opencrx.kernel.account1.jmi1.Member member = (org.opencrx.kernel.account1.jmi1.Member)crxObject;
-											if (member.getAccount() != null) {
-												account = (org.opencrx.kernel.account1.jmi1.Account)member.getAccount();
+				while (
+				  ((i != null) && (i.hasNext())) ||
+				  exportSingleAccount
+				) {
+					try {
+					  org.opencrx.kernel.account1.jmi1.Account account = null;
+							if (exportSingleAccount) {
+									account = (org.opencrx.kernel.account1.jmi1.Account)obj;
+									exportSingleAccount = false;
+						  } else {
+								try {
+										org.opencrx.kernel.generic.jmi1.CrxObject crxObject =	(org.opencrx.kernel.generic.jmi1.CrxObject)i.next();
+										if (crxObject instanceof org.opencrx.kernel.account1.jmi1.Member) {
+												org.opencrx.kernel.account1.jmi1.Member member = (org.opencrx.kernel.account1.jmi1.Member)crxObject;
+												if (member.getAccount() != null) {
+													account = (org.opencrx.kernel.account1.jmi1.Account)member.getAccount();
+												}
+										} else if (crxObject instanceof org.opencrx.kernel.account1.jmi1.Account) {
+												account = (org.opencrx.kernel.account1.jmi1.Account)crxObject;
 											}
-									} else if (crxObject instanceof org.opencrx.kernel.account1.jmi1.Account) {
-											account = (org.opencrx.kernel.account1.jmi1.Account)crxObject;
-										}
-							} catch (Exception e) {
-									new ServiceException(e).log();
-							}
-				  }
-						if (account == null) {continue;}
-						spreadSheetRow = addAccount(sheetAccounts, account, spreadSheetRow, wrappedStyle, topAlignedStyle, exceldate, app, codes);
+								} catch (Exception e) {
+										new ServiceException(e).log();
+								}
+					  }
+							if (account == null) {continue;}
+							spreadSheetRow = addAccount(sheetAccounts, account, spreadSheetRow, wrappedStyle, topAlignedStyle, exceldate, app, codes);
  					
-				} catch (Exception e) {
-					new ServiceException(e).log();
+					} catch (Exception e) {
+						new ServiceException(e).log();
+					}
 				}
-			}
 		  
-				wb.write(os);
+					wb.write(os);
 	
-				os.flush();
-				os.close();
+					os.flush();
+					os.close();
 	
-				Action downloadAction =
-						new Action(
-								Action.EVENT_DOWNLOAD_FROM_LOCATION,
-								new Action.Parameter[]{
-										new Action.Parameter(Action.PARAMETER_LOCATION, location),
-										new Action.Parameter(Action.PARAMETER_NAME, filename),
-										new Action.Parameter(Action.PARAMETER_MIME_TYPE, "application/vnd.ms-excel")
-								},
-								app.getTexts().getClickToDownloadText() + " " + filename,
-								true
-				);
-				response.sendRedirect(
-					request.getContextPath() + "/" + downloadAction.getEncodedHRef(requestId)
-				);
-	%>
-	Download report from <a href="../<%= downloadAction.getEncodedHRef(requestId) %>">here</a>
-    </body>
+					Action downloadAction =
+							new Action(
+									Action.EVENT_DOWNLOAD_FROM_LOCATION,
+									new Action.Parameter[]{
+											new Action.Parameter(Action.PARAMETER_LOCATION, location),
+											new Action.Parameter(Action.PARAMETER_NAME, filename),
+											new Action.Parameter(Action.PARAMETER_MIME_TYPE, "application/vnd.ms-excel")
+									},
+									app.getTexts().getClickToDownloadText() + " " + filename,
+									true
+					);
+					response.sendRedirect(
+						request.getContextPath() + "/" + downloadAction.getEncodedHRef(requestId)
+					);
+		%>
+		Download report from <a href="../<%= downloadAction.getEncodedHRef(requestId) %>">here</a>
+	</body>
 </html>
 <%
 	}

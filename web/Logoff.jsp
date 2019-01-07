@@ -50,112 +50,112 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-	<meta http-equiv="Content-Type" content="text/html;CHARSET=utf-8">
-	<title>Logoff</title>
-	<link href="<%=request.getContextPath()%>/_style/n2default.css" rel="stylesheet" type="text/css">
-    </head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;CHARSET=utf-8">
+		<title>Logoff</title>
+		<link href="<%=request.getContextPath()%>/_style/n2default.css" rel="stylesheet" type="text/css">
+	</head>
 
-    <%@ page import="
-	     java.util.*,
-	     java.net.*,
-	     java.io.*,
-	     javax.servlet.*,
-	     org.openmdx.portal.servlet.*
-	     "%>
-    <%
-    request.setCharacterEncoding("UTF-8");
-    %>
-    <body style="border:0px solid white;">
+	<%@ page import="
+			 java.util.*,
+			 java.net.*,
+			 java.io.*,
+			 javax.servlet.*,
+			 org.openmdx.portal.servlet.*
+			 "%>
 	<%
-		String localeStr = null;
-		try {
-				localeStr = (String)session.getAttribute("locale");
-		} catch (Exception e) {}
-		if(localeStr != null && localeStr.length() > 5) {
-			localeStr = localeStr.substring(0, 5);
-		}
-		// Load locale-specific texts (overload texts.properties with custom-specific texts)
-		java.util.Properties texts = new java.util.Properties();
-		String textsDir = "/WEB-INF/config/texts/" + localeStr + "/";
-		texts.load(
-			new java.io.InputStreamReader(
-				request.getServletContext().getResourceAsStream(textsDir + "texts.properties"),
-				"UTF-8"
-			)
-		);
-		for(String textsPath: new TreeSet<String>(request.getServletContext().getResourcePaths(textsDir))) {
-			if(!textsPath.endsWith("/texts.properties")) {
-				texts.load(
-					new java.io.InputStreamReader(
-						request.getServletContext().getResourceAsStream(textsPath),
-						"UTF-8"
-					)
+	request.setCharacterEncoding("UTF-8");
+	%>
+	<body style="border:0px solid white;">
+		<%
+			String localeStr = null;
+			try {
+					localeStr = (String)session.getAttribute("locale");
+			} catch (Exception e) {}
+			if(localeStr != null && localeStr.length() > 5) {
+				localeStr = localeStr.substring(0, 5);
+			}
+			// Load locale-specific texts (overload texts.properties with custom-specific texts)
+			java.util.Properties texts = new java.util.Properties();
+			String textsDir = "/WEB-INF/config/texts/" + localeStr + "/";
+			texts.load(
+				new java.io.InputStreamReader(
+					request.getServletContext().getResourceAsStream(textsDir + "texts.properties"),
+					"UTF-8"
+				)
+			);
+			for(String textsPath: new TreeSet<String>(request.getServletContext().getResourcePaths(textsDir))) {
+				if(!textsPath.endsWith("/texts.properties")) {
+					texts.load(
+						new java.io.InputStreamReader(
+							request.getServletContext().getResourceAsStream(textsPath),
+							"UTF-8"
+						)
+					);
+				}
+			}	
+			String defaultLocale = "en_US";
+			Map<String,String> activeLocales = new LinkedHashMap<String,String>();
+			boolean wasAuthenticated = false;
+
+			if(request.getSession().getAttribute("ObjectInspectorServlet.ApplicationContext") != null) {
+				wasAuthenticated = true;
+				System.out.println(new Date() + ": Logoff: removing application context");
+				request.getSession().removeAttribute("ObjectInspectorServlet.ApplicationContext");
+			}
+			if(request.getSession().getAttribute("processingLogin") != null) {
+				request.getSession().setAttribute("processingLogin", "false");
+			}
+			System.out.println(new Date() + ": Logoff: requestURL=" + request.getRequestURL());
+			String locale = request.getParameter(org.openmdx.portal.servlet.WebKeys.LOCALE_KEY);
+			if(locale == null) {
+				locale = (String)request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.LOCALE_KEY);  
+			}
+			String timezone = request.getParameter(org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY);
+			if(timezone == null) {
+				timezone = (String)request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY);  
+			}
+			Object initialScale = request.getParameter(org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY);
+			if(initialScale == null) {
+				initialScale = request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY);
+			}
+			System.out.println(new Date() + ": Logoff: invalidate session. locale=" + locale + "; timezone=" + timezone);  
+			session.invalidate();
+			if(wasAuthenticated) {
+				// NO session management beyond this point.
+				// Otherwise WebSphere 5 fails
+				response.sendRedirect(
+					"Login.jsp?" +
+					org.openmdx.portal.servlet.WebKeys.LOCALE_KEY + "=" + locale + 
+					(timezone == null ? "" : "&" + org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY + "=" + URLEncoder.encode(timezone)) +
+					(initialScale == null ? "" : "&" + org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY + "=" + initialScale.toString()) +
+					("&loginFailed=false")	
 				);
 			}
-		}	
-		String defaultLocale = "en_US";
-		Map<String,String> activeLocales = new LinkedHashMap<String,String>();
-		boolean wasAuthenticated = false;
+		%>
+		<%@ include file="login-locales.jsp" %>
+		<div id="header" style="height:90px;">
+			<div id="logoTable" style="padding-left:10px;">
+				<table dir="ltr" id="headerlayout" style="position:relative;">
+					<tr id="headRow">
+						<td id="head" colspan="2">
+							<table id="info">
+								<tr>
+									<td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
+									<td id="headerCellMiddle"></td>
+									<td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="login" style="position:relative;text-align:center;margin-left:auto;margin-right:auto;padding-top:10em;">
+			<%@ include file="login-header.html" %>
+		</div>
 
-		if(request.getSession().getAttribute("ObjectInspectorServlet.ApplicationContext") != null) {
-			wasAuthenticated = true;
-			System.out.println(new Date() + ": Logoff: removing application context");
-			request.getSession().removeAttribute("ObjectInspectorServlet.ApplicationContext");
-		}
-		if(request.getSession().getAttribute("processingLogin") != null) {
-			request.getSession().setAttribute("processingLogin", "false");
-		}
-		System.out.println(new Date() + ": Logoff: requestURL=" + request.getRequestURL());
-		String locale = request.getParameter(org.openmdx.portal.servlet.WebKeys.LOCALE_KEY);
-		if(locale == null) {
-			locale = (String)request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.LOCALE_KEY);  
-		}
-		String timezone = request.getParameter(org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY);
-		if(timezone == null) {
-			timezone = (String)request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY);  
-		}
-		Object initialScale = request.getParameter(org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY);
-		if(initialScale == null) {
-			initialScale = request.getSession().getAttribute(org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY);
-		}
-		System.out.println(new Date() + ": Logoff: invalidate session. locale=" + locale + "; timezone=" + timezone);  
-		session.invalidate();
-		if(wasAuthenticated) {
-			// NO session management beyond this point.
-			// Otherwise WebSphere 5 fails
-			response.sendRedirect(
-				"Login.jsp?" +
-				org.openmdx.portal.servlet.WebKeys.LOCALE_KEY + "=" + locale + 
-				(timezone == null ? "" : "&" + org.openmdx.portal.servlet.WebKeys.TIMEZONE_KEY + "=" + URLEncoder.encode(timezone)) +
-				(initialScale == null ? "" : "&" + org.openmdx.portal.servlet.WebKeys.INITIAL_SCALE_KEY + "=" + initialScale.toString()) +
-				("&loginFailed=false")	
-			);
-		}
-	%>
-	<%@ include file="login-locales.jsp" %>
-	<div id="header" style="height:90px;">
-	    <div id="logoTable" style="padding-left:10px;">
-		<table dir="ltr" id="headerlayout" style="position:relative;">
-		    <tr id="headRow">
-			<td id="head" colspan="2">
-			    <table id="info">
-				<tr>
-				    <td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
-				    <td id="headerCellMiddle"></td>
-				    <td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
-				</tr>
-			    </table>
-			</td>
-		    </tr>
-		</table>
-	    </div>
-	</div>
-	<div id="login" style="position:relative;text-align:center;margin-left:auto;margin-right:auto;padding-top:10em;">
-	    <%@ include file="login-header.html" %>
-	</div>
+		&nbsp;&nbsp;<input class="<%= CssClass.submit %>" type="submit" name="button" value="<%= texts.get("LoginText") == null ? "Login" :  texts.get("LoginText") %>" onclick="javascript:window.location.href = 'Login.jsp';" >
 
-	&nbsp;&nbsp;<input class="<%= CssClass.submit %>" type="submit" name="button" value="<%= texts.get("LoginText") == null ? "Login" :  texts.get("LoginText") %>" onclick="javascript:window.location.href = 'Login.jsp';" >
-
-    </body>
+	</body>
 </html>

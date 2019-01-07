@@ -1,330 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.openmdx.base.Authority xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="org:opencrx:kernel:code1" xsi:noNamespaceSchemaLocation="xri://+resource/org/opencrx/kernel/code1/xmi1/code1.xsd">
-    <_object/>
-    <_content>
-	<provider>
-	    <org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
-		<_object/>
-		<_content>
-		    <segment>
-			<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
-			    <_object/>
-			    <_content>
-				<valueContainer>
-				    <org.opencrx.kernel.code1.CodeValueContainer name="workAndExpenseTypeExpenseOnly" _operation="set">
-					<_object>
-					    <name>
-						<_item>workAndExpenseTypeExpenseOnly</_item>
-						<_item>org:opencrx:kernel:activity1:ActivityAddExpenseRecordParams:recordType</_item>
-						<_item>org:opencrx:kernel:activity1:ResourceAddExpenseRecordParams:recordType</_item>
-					    </name>
-					</_object>
-					<_content>
-					    <entry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>--無--</_item>
-							</shortText>
-							<longText>
-							    <_item>--無--</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="100" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="101" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 其他</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 其他</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="102" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 機票</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 機票</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="103" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 火車</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 火車</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="104" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 公車 / 巴士</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 公車 / 巴士</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="105" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 擺渡車</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 擺渡車</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="106" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 計程車</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 計程車</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="107" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>差旅費 - 汽車</_item>
-							</shortText>
-							<longText>
-							    <_item>差旅費 - 汽車</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+	<_object/>
+	<_content>
+		<provider>
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
+				<_object/>
+				<_content>
+					<segment>
+						<org.opencrx.kernel.code1.Segment qualifiedName="Root" _operation="null">
+							<_object/>
+							<_content>
+								<valueContainer>
+									<org.opencrx.kernel.code1.CodeValueContainer name="workAndExpenseTypeExpenseOnly" _operation="set">
+										<_object>
+											<name>
+												<_item>workAndExpenseTypeExpenseOnly</_item>
+												<_item>org:opencrx:kernel:activity1:ActivityAddExpenseRecordParams:recordType</_item>
+												<_item>org:opencrx:kernel:activity1:ResourceAddExpenseRecordParams:recordType</_item>
+											</name>
+										</_object>
+										<_content>
+											<entry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="0" _operation="set">
+													<_object>
+														<shortText>
+															<_item>--無--</_item>
+														</shortText>
+														<longText>
+															<_item>--無--</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="100" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="101" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 其他</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 其他</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="102" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 機票</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 機票</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="103" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 火車</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 火車</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="104" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 公車 / 巴士</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 公車 / 巴士</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="105" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 擺渡車</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 擺渡車</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="106" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 計程車</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 計程車</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="107" _operation="set">
+													<_object>
+														<shortText>
+															<_item>差旅費 - 汽車</_item>
+														</shortText>
+														<longText>
+															<_item>差旅費 - 汽車</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="200" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>住宿費</_item>
-							</shortText>
-							<longText>
-							    <_item>住宿費</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="201" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>住宿費 - 其他</_item>
-							</shortText>
-							<longText>
-							    <_item>住宿費 - 其他</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="202" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>住宿費 - 旅館 / 汽車旅館</_item>
-							</shortText>
-							<longText>
-							    <_item>住宿費 - 旅館 / 汽車旅館</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="200" _operation="set">
+													<_object>
+														<shortText>
+															<_item>住宿費</_item>
+														</shortText>
+														<longText>
+															<_item>住宿費</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="201" _operation="set">
+													<_object>
+														<shortText>
+															<_item>住宿費 - 其他</_item>
+														</shortText>
+														<longText>
+															<_item>住宿費 - 其他</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="202" _operation="set">
+													<_object>
+														<shortText>
+															<_item>住宿費 - 旅館 / 汽車旅館</_item>
+														</shortText>
+														<longText>
+															<_item>住宿費 - 旅館 / 汽車旅館</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="300" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>餐飲費</_item>
-							</shortText>
-							<longText>
-							    <_item>餐飲費</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="301" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>餐飲費 - 其他</_item>
-							</shortText>
-							<longText>
-							    <_item>餐飲費 - 其他</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="302" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>餐飲費 - 雜項</_item>
-							</shortText>
-							<longText>
-							    <_item>餐飲費 - 雜項</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="303" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>餐飲費 - 外食</_item>
-							</shortText>
-							<longText>
-							    <_item>餐飲費 - 外食</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="300" _operation="set">
+													<_object>
+														<shortText>
+															<_item>餐飲費</_item>
+														</shortText>
+														<longText>
+															<_item>餐飲費</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="301" _operation="set">
+													<_object>
+														<shortText>
+															<_item>餐飲費 - 其他</_item>
+														</shortText>
+														<longText>
+															<_item>餐飲費 - 其他</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="302" _operation="set">
+													<_object>
+														<shortText>
+															<_item>餐飲費 - 雜項</_item>
+														</shortText>
+														<longText>
+															<_item>餐飲費 - 雜項</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="303" _operation="set">
+													<_object>
+														<shortText>
+															<_item>餐飲費 - 外食</_item>
+														</shortText>
+														<longText>
+															<_item>餐飲費 - 外食</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="400" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>招待客戶費用</_item>
-							</shortText>
-							<longText>
-							    <_item>招待客戶費用</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="401" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>招待客戶費用 - 其他</_item>
-							</shortText>
-							<longText>
-							    <_item>招待客戶費用 - 其他</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="402" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>招待客戶費用 - 費用 / 門票</_item>
-							</shortText>
-							<longText>
-							    <_item>招待客戶費用 - 費用 / 門票</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="403" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>招待客戶費用 - 餐點 / 飲料</_item>
-							</shortText>
-							<longText>
-							    <_item>招待客戶費用 - 餐點 / 飲料</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
-						<org.opencrx.kernel.code1.CodeValueEntry code="404" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>招待客戶費用 - 禮品</_item>
-							</shortText>
-							<longText>
-							    <_item>招待客戶費用 - 禮品</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="400" _operation="set">
+													<_object>
+														<shortText>
+															<_item>招待客戶費用</_item>
+														</shortText>
+														<longText>
+															<_item>招待客戶費用</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="401" _operation="set">
+													<_object>
+														<shortText>
+															<_item>招待客戶費用 - 其他</_item>
+														</shortText>
+														<longText>
+															<_item>招待客戶費用 - 其他</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="402" _operation="set">
+													<_object>
+														<shortText>
+															<_item>招待客戶費用 - 費用 / 門票</_item>
+														</shortText>
+														<longText>
+															<_item>招待客戶費用 - 費用 / 門票</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="403" _operation="set">
+													<_object>
+														<shortText>
+															<_item>招待客戶費用 - 餐點 / 飲料</_item>
+														</shortText>
+														<longText>
+															<_item>招待客戶費用 - 餐點 / 飲料</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="404" _operation="set">
+													<_object>
+														<shortText>
+															<_item>招待客戶費用 - 禮品</_item>
+														</shortText>
+														<longText>
+															<_item>招待客戶費用 - 禮品</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="500" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>每日津貼</_item>
-							</shortText>
-							<longText>
-							    <_item>每日津貼</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="500" _operation="set">
+													<_object>
+														<shortText>
+															<_item>每日津貼</_item>
+														</shortText>
+														<longText>
+															<_item>每日津貼</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="900" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>費用</_item>
-							</shortText>
-							<longText>
-							    <_item>費用</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="900" _operation="set">
+													<_object>
+														<shortText>
+															<_item>費用</_item>
+														</shortText>
+														<longText>
+															<_item>費用</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="901" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>費用 - 其他</_item>
-							</shortText>
-							<longText>
-							    <_item>費用 - 其他</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="901" _operation="set">
+													<_object>
+														<shortText>
+															<_item>費用 - 其他</_item>
+														</shortText>
+														<longText>
+															<_item>費用 - 其他</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="902" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>費用 - 代表公司</_item>
-							</shortText>
-							<longText>
-							    <_item>費用 - 代表公司</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="902" _operation="set">
+													<_object>
+														<shortText>
+															<_item>費用 - 代表公司</_item>
+														</shortText>
+														<longText>
+															<_item>費用 - 代表公司</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-						<org.opencrx.kernel.code1.CodeValueEntry code="903" _operation="set">
-						    <_object>
-							<shortText>
-							    <_item>費用 - 贊助</_item>
-							</shortText>
-							<longText>
-							    <_item>費用 - 贊助</_item>
-							</longText>
-						    </_object>
-						    <_content/>
-						</org.opencrx.kernel.code1.CodeValueEntry>
+												<org.opencrx.kernel.code1.CodeValueEntry code="903" _operation="set">
+													<_object>
+														<shortText>
+															<_item>費用 - 贊助</_item>
+														</shortText>
+														<longText>
+															<_item>費用 - 贊助</_item>
+														</longText>
+													</_object>
+													<_content/>
+												</org.opencrx.kernel.code1.CodeValueEntry>
 
-					    </entry>
-					</_content>
-				    </org.opencrx.kernel.code1.CodeValueContainer>
-				</valueContainer>
-			    </_content>
-			</org.opencrx.kernel.code1.Segment>
-		    </segment>
-		</_content>
-	    </org.openmdx.base.Provider>
-	</provider>
-    </_content>
+											</entry>
+										</_content>
+									</org.opencrx.kernel.code1.CodeValueContainer>
+								</valueContainer>
+							</_content>
+						</org.opencrx.kernel.code1.Segment>
+					</segment>
+				</_content>
+			</org.openmdx.base.Provider>
+		</provider>
+	</_content>
 </org.openmdx.base.Authority>

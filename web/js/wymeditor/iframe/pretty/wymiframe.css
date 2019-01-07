@@ -22,7 +22,7 @@
 @font-face {
     font-family: "Visitor";
     src: url("visitor1.woff") format("woff"),
-	url("visitor1.ttf") format("truetype");
+		url("visitor1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -45,15 +45,15 @@ table,
 address,
 blockquote,
 pre           { background: #FFFFFF;
-		padding:8px 5px 5px;
-		margin:10px; }
+				padding:8px 5px 5px;
+				margin:10px; }
 ul,
 ol,
 dl            { background: #B9C4D0;
-		margin: 10px;
-		padding: 0 0 0 10px;
-		list-style-position: outside;
-		min-height: 1.6em; }
+				margin: 10px;
+				padding: 0 0 0 10px;
+				list-style-position: outside;
+				min-height: 1.6em; }
 ul ul,
 ul ol,
 ol ol,
@@ -69,8 +69,8 @@ li > div:last-child {	margin-bottom: 0 }
 li, 
 dd, 
 dt            { background: white;
-		margin: 0px 0 4px 20px;
-		padding: 8px 0 0 5px; }
+				margin: 0px 0 4px 20px;
+				padding: 8px 0 0 5px; }
 dt            { margin-bottom: 0 }
 dd + dt       { margin-top: 4px; }
 dd            { margin: 2px 0 0 4em }
@@ -87,9 +87,9 @@ td            { height: 1.6em; }
 /* specific HTML elements */
 caption   { text-align: left; }
 img       { margin-right: 5px;
-	    border-style: solid;
-	    border-color: gray;
-	    border-width: 0; }
+			border-style: solid;
+			border-color: gray;
+			border-width: 0; }
 a img     { border-width: 1px; border-color: blue; }
 acronym   { border: 1px solid gray; }
 span      { /*background-color: #eef;*/ }
@@ -393,4 +393,4 @@ dfn:hover,
 code:hover,
 sup:hover,
 sub:hover { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY3DMfPj/////DDDMxIAGMAQYHTMf/kcWAADRgQ4R3lkO7wAAAABJRU5ErkJggg==) bottom left no-repeat,
-		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }
+				url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAgSURBVAiZY/z//z8DDDhlPfrPxIAGMAQYHTMf/kcWAABxJAgb2YLYKgAAAABJRU5ErkJggg==) bottom right no-repeat }

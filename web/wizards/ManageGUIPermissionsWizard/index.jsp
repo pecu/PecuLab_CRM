@@ -55,23 +55,22 @@
  */
 %>
 <%@page session="true" import="
-	java.util.*,
-	java.io.*,
-	java.text.*,
-	org.opencrx.kernel.backend.*,
-	org.opencrx.kernel.portal.wizard.*,
-	org.opencrx.kernel.generic.*,
-	org.openmdx.kernel.id.cci.*,
-	org.openmdx.kernel.id.*,
-	org.openmdx.base.exception.*,
-	org.openmdx.base.accessor.jmi.cci.*,
-	org.openmdx.portal.servlet.*,
-	org.openmdx.portal.servlet.attribute.*,
-	org.openmdx.portal.servlet.component.*,
-	org.openmdx.portal.servlet.control.*,
-	org.openmdx.portal.servlet.wizards.*,
-	org.openmdx.base.naming.*
-	" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "ManageGUIPermissionsForm";	
 	ManageGUIPermissionsWizardController wc = new ManageGUIPermissionsWizardController();
@@ -88,156 +87,156 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
+	</div>
+	<%
+		}
+	%>
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	<input type="hidden" id="Command" name="Command" value="" />
+	<table class="tableLayout">
+		<tr>
+			<td class="cellObject">
+				<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
+					<table>
+						<tr>
+							<td style="vertical-align:middle">Role:</td>
+							<td style="vertical-align:middle">
+								<select name="role" onchange="javascript:$('Refresh.Button').click();return false;">
+									<%
+																		org.openmdx.security.realm1.cci2.RoleQuery roleQuery = (org.openmdx.security.realm1.cci2.RoleQuery)pm.newQuery(org.openmdx.security.realm1.jmi1.Role.class);
+																		roleQuery.orderByName().ascending();
+																		List<org.openmdx.security.realm1.jmi1.Role> roles = wc.getPolicy().getRole(roleQuery);
+																		for(org.openmdx.security.realm1.jmi1.Role role: roles) {
+									%>
+									<option value="<%= role.getName() %>" <%= wc.getRoleName().equals(role.getName()) ? "selected" : "" %>><%= role.getName() %></option>
+									<%
+																		}
+									%>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="vertical-align:middle">View:</td>
+							<td style="vertical-align:middle">
+								<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_OPERATION_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_OPERATION_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Operations</input>
+								<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_FIELD_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_FIELD_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Fields</input>
+								<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_GRID_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_GRID_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Grids</input>
+							</td>
+						</tr>
+					</table>
+					<%
+										ManageGUIPermissionsWizardController.WizardViewState viewState = wc.getWizardState() == null
+											? null
+											: wc.getWizardState().getViewStates().get(wc.getViewName());
+										if(viewState != null) {
+					%>
+					<table>
+						<tr>
+							<td>		
+								<h2 style="font-size:larger;">Generic permissions:</h2>
+								<h3>Available:</h3>													
+								<select name="genericPermissions" id="genericPermissions" multiple style="font-family:Courier;font-size:11px;height:10em;width:50em;">
+									<%													
+																			for(String permission: viewState.genericPermissions) {
+									%>
+									<option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
+									<%					
+																			}
+									%>									
+								</select>
+							</td>
+							<td style="vertical-align:middle">
+								<input type="submit" name="RemoveGenericPermissions" value="&lt;" onclick="javascript:$('Command').value = this.name;" />
+								<input type="submit" name="AddGenericPermissions" value="&gt;" onclick="javascript:$('Command').value = this.name;" />
+							</td>
+							<td>							
+								<h2 style="font-size:larger;">&nbsp;</h2>
+								<h3>Current:</h3>
+								<select name="currentGenericPermissions" id="currentGenericPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
+									<%													
+																			for(String permission: viewState.currentGenericPermissions) {
+									%>
+									<option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
+									<%					
+																			}
+									%>									
+								</select>
+							</td>
+						</tr>
+					</table>
+					<br />						
+					<table>
+						<tr>
+							<td>
+								<h2 style="font-size:larger;">Permissions for <i><%= obj.refClass().refMofId() %></i>:</h2>								
+								<h3>Available:</h3>													
+								<select name="specificPermissions" id="specificPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
+									<%													
+																			for(String permission: viewState.specificPermissions) {
+									%>
+									<option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
+									<%					
+																			}
+									%>									
+								</select>
+							</td>
+							<td style="vertical-align:middle">
+								<input type="submit" name="RemoveSpecificPermissions" value="&lt;" onclick="javascript:$('Command').value = this.name;" />
+								<input type="submit" name="AddSpecificPermissions" value= "&gt;" onclick="javascript:$('Command').value = this.name;" />
+							</td>
+							<td>
+								<h2 style="font-size:larger;">&nbsp;</h2>								
+								<h3>Current:</h3>
+								<select name="currentSpecificPermissions" id="currentSpecificPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
+									<%													
+																			for(String permission: viewState.currentSpecificPermissions) {
+									%>
+									<option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
+									<%					
+																			}
+									%>									
+								</select>
+							</td>
+						</tr>
+					</table>
+					<%
+										}
+					%>
+				</div>	
+				<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('Command').value = this.name;" />
+				<%
+								if(wc.isCurrentUserIsAdmin() && wc.getWizardState().isDirty()) {
+				%>				
+				<input type="submit" name="Apply" id="Apply.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Apply" onclick="javascript:$('Command').value = this.name;" />
+				<%
+								}
+				%>
+				<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+			</td>
+		</tr>
 	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-    <input type="hidden" id="Command" name="Command" value="" />
-    <table class="tableLayout">
-	<tr>
-	    <td class="cellObject">
-		<div class="panel" id="panel<%= FORM_NAME %>" style="display:block;overflow:visible;">
-		    <table>
-			<tr>
-			    <td style="vertical-align:middle">Role:</td>
-			    <td style="vertical-align:middle">
-				<select name="role" onchange="javascript:$('Refresh.Button').click();return false;">
-				    <%
-													    org.openmdx.security.realm1.cci2.RoleQuery roleQuery = (org.openmdx.security.realm1.cci2.RoleQuery)pm.newQuery(org.openmdx.security.realm1.jmi1.Role.class);
-													    roleQuery.orderByName().ascending();
-													    List<org.openmdx.security.realm1.jmi1.Role> roles = wc.getPolicy().getRole(roleQuery);
-													    for(org.openmdx.security.realm1.jmi1.Role role: roles) {
-				    %>
-				    <option value="<%= role.getName() %>" <%= wc.getRoleName().equals(role.getName()) ? "selected" : "" %>><%= role.getName() %></option>
-				    <%
-													    }
-				    %>
-				</select>
-			    </td>
-			</tr>
-			<tr>
-			    <td style="vertical-align:middle">View:</td>
-			    <td style="vertical-align:middle">
-				<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_OPERATION_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_OPERATION_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Operations</input>
-				<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_FIELD_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_FIELD_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Fields</input>
-				<input type="radio" name="view" <%= ManageGUIPermissionsWizardController.WizardState.VIEW_GRID_PERMISSIONS.equals(wc.getViewName()) ? "checked" : "" %> value="<%= ManageGUIPermissionsWizardController.WizardState.VIEW_GRID_PERMISSIONS %>" onchange="javascript:$('Refresh.Button').click();return false;">Grids</input>
-			    </td>
-			</tr>
-		    </table>
-		    <%
-							    ManageGUIPermissionsWizardController.WizardViewState viewState = wc.getWizardState() == null
-								    ? null
-								    : wc.getWizardState().getViewStates().get(wc.getViewName());
-							    if(viewState != null) {
-		    %>
-		    <table>
-			<tr>
-			    <td>		
-				<h2 style="font-size:larger;">Generic permissions:</h2>
-				<h3>Available:</h3>													
-				<select name="genericPermissions" id="genericPermissions" multiple style="font-family:Courier;font-size:11px;height:10em;width:50em;">
-				    <%													
-														    for(String permission: viewState.genericPermissions) {
-				    %>
-				    <option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
-				    <%					
-														    }
-				    %>									
-				</select>
-			    </td>
-			    <td style="vertical-align:middle">
-				<input type="submit" name="RemoveGenericPermissions" value="&lt;" onclick="javascript:$('Command').value = this.name;" />
-				<input type="submit" name="AddGenericPermissions" value="&gt;" onclick="javascript:$('Command').value = this.name;" />
-			    </td>
-			    <td>							
-				<h2 style="font-size:larger;">&nbsp;</h2>
-				<h3>Current:</h3>
-				<select name="currentGenericPermissions" id="currentGenericPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
-				    <%													
-														    for(String permission: viewState.currentGenericPermissions) {
-				    %>
-				    <option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
-				    <%					
-														    }
-				    %>									
-				</select>
-			    </td>
-			</tr>
-		    </table>
-		    <br />						
-		    <table>
-			<tr>
-			    <td>
-				<h2 style="font-size:larger;">Permissions for <i><%= obj.refClass().refMofId() %></i>:</h2>								
-				<h3>Available:</h3>													
-				<select name="specificPermissions" id="specificPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
-				    <%													
-														    for(String permission: viewState.specificPermissions) {
-				    %>
-				    <option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
-				    <%					
-														    }
-				    %>									
-				</select>
-			    </td>
-			    <td style="vertical-align:middle">
-				<input type="submit" name="RemoveSpecificPermissions" value="&lt;" onclick="javascript:$('Command').value = this.name;" />
-				<input type="submit" name="AddSpecificPermissions" value= "&gt;" onclick="javascript:$('Command').value = this.name;" />
-			    </td>
-			    <td>
-				<h2 style="font-size:larger;">&nbsp;</h2>								
-				<h3>Current:</h3>
-				<select name="currentSpecificPermissions" id="currentSpecificPermissions" multiple style="font-family:Courier;font-size:11px;width:50em;height:10em;">
-				    <%													
-														    for(String permission: viewState.currentSpecificPermissions) {
-				    %>
-				    <option value="<%= permission %>"><%=  permission.replace("|", " | ") %></option>
-				    <%					
-														    }
-				    %>									
-				</select>
-			    </td>
-			</tr>
-		    </table>
-		    <%
-							    }
-		    %>
-		</div>	
-		<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="<%= app.getTexts().getReloadText() %>" onclick="javascript:$('Command').value = this.name;" />
-		<%
-						if(wc.isCurrentUserIsAdmin() && wc.getWizardState().isDirty()) {
-		%>				
-		<input type="submit" name="Apply" id="Apply.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Apply" onclick="javascript:$('Command').value = this.name;" />
-		<%
-						}
-		%>
-		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-	    </td>
-	</tr>
-    </table>
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
 </script>
 <t:wizardClose controller="<%= wc %>" />

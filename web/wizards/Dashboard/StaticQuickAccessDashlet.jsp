@@ -53,22 +53,22 @@
  */
 %>
 <%@ page session="true" import="
-	 java.util.*,
-	 java.util.zip.*,
-	 java.io.*,
-	 java.text.*,
-	 java.math.*,
-	 java.net.*,
-	 org.openmdx.base.naming.*,
-	 org.openmdx.kernel.exception.*,
-	 org.openmdx.base.accessor.jmi.cci.*,
-	 org.openmdx.base.exception.*,
-	 org.openmdx.portal.servlet.*,
-	 org.openmdx.portal.servlet.component.*,
-	 org.openmdx.portal.servlet.control.*,
-	 org.openmdx.portal.servlet.action.*,
-	 org.openmdx.kernel.log.*
-	 " %>
+		 java.util.*,
+		 java.util.zip.*,
+		 java.io.*,
+		 java.text.*,
+		 java.math.*,
+		 java.net.*,
+		 org.openmdx.base.naming.*,
+		 org.openmdx.kernel.exception.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.portal.servlet.component.*,
+		 org.openmdx.portal.servlet.control.*,
+		 org.openmdx.portal.servlet.action.*,
+		 org.openmdx.kernel.log.*
+		 " %>
 <%
 	/*
 	The StaticQuickAccessDashlet shows a menu with a list of shortcuts. The shortcuts are configured
@@ -145,194 +145,194 @@
 			ShowObjectView view = (ShowObjectView)viewsCache.getView(requestId);
 %>
 <div id="<%= dashletId %>Content">
-    <form id="<%= dashletId %>Form" name="<%= dashletId %>Form" />
-    <input id="<%= WebKeys.REQUEST_ID %>" name="<%= Action.PARAMETER_REQUEST_ID %>" type="hidden" value="<%= requestId %>" />
-    <input id="<%= WebKeys.REQUEST_PARAMETER %>" name="<%= WebKeys.REQUEST_PARAMETER %>" type="hidden" value="<%= parameters %>" />
-    <div>
-	<div class="<%= CssClass.sidebarNav %>">
-	    <ul class="<%= CssClass.nav + " " + CssClass.navList %>">
-		<%							
-									for(Object entry: menuEntries.values()) {
-										String menuEntry = (String)entry;
-										try {
-											int pos = menuEntry.indexOf(" > ");
-											if(pos > 0) {
-												String queryString = menuEntry.substring(0, pos);
-												if(!queryString.startsWith("?resourceIdentifier=")) {
-													queryString = "?resourceIdentifier=" + queryString;
-												}
-												javax.jdo.Query objectQuery = pm.newQuery(
-													org.openmdx.base.persistence.cci.Queries.QUERY_LANGUAGE,
-													queryString
-												);
-												List<javax.jmi.reflect.RefObject> objects = (List<javax.jmi.reflect.RefObject>)objectQuery.execute();
-												if(!objects.isEmpty()) {
-													Path targetXri = new Path(objects.iterator().next().refMofId());
-													String function = menuEntry.substring(pos + 3);
-													ShowObjectView targetView = null;
-													try {
-														targetView = new ShowObjectView(
-															view.getId(),
-															(String)null,
-															(RefObject_1_0)app.getNewPmData().getObjectById(targetXri),
-															app,
-															new HashMap(),
-															null, // nextPrevActions
-															(String)null, // lookupType
-															(String)null, // resourcePathPrefix
-															(String)null, // navigationTarget
-															(Boolean)null // isReadOnly
+	<form id="<%= dashletId %>Form" name="<%= dashletId %>Form" />
+	<input id="<%= WebKeys.REQUEST_ID %>" name="<%= Action.PARAMETER_REQUEST_ID %>" type="hidden" value="<%= requestId %>" />
+	<input id="<%= WebKeys.REQUEST_PARAMETER %>" name="<%= WebKeys.REQUEST_PARAMETER %>" type="hidden" value="<%= parameters %>" />
+	<div>
+		<div class="<%= CssClass.sidebarNav %>">
+			<ul class="<%= CssClass.nav + " " + CssClass.navList %>">
+				<%							
+											for(Object entry: menuEntries.values()) {
+												String menuEntry = (String)entry;
+												try {
+													int pos = menuEntry.indexOf(" > ");
+													if(pos > 0) {
+														String queryString = menuEntry.substring(0, pos);
+														if(!queryString.startsWith("?resourceIdentifier=")) {
+															queryString = "?resourceIdentifier=" + queryString;
+														}
+														javax.jdo.Query objectQuery = pm.newQuery(
+															org.openmdx.base.persistence.cci.Queries.QUERY_LANGUAGE,
+															queryString
 														);
-													} catch(Exception ignore) {}
-													if(targetView != null) {
-														if(function.startsWith("Operation.")) {
-															String operationName = function.substring(10);
-															List<OperationPaneControl> operationPaneControls = new ArrayList<OperationPaneControl>();
-															// Operations
-															for(OperationPaneControl paneControl: targetView.getControl().getChildren(OperationPaneControl.class)) {
-																for(UiOperationTabControl tabControl: paneControl.getChildren(UiOperationTabControl.class)) {
-																	if(tabControl.getQualifiedOperationName().equals(operationName)) {
-																		String tabId = Integer.toString(tabControl.getTabId());
-																		Action action = null;
-																		String target = "";
-																		if(tabControl instanceof UiWizardTabControl) {
-																			UiWizardTabControl wizardTabControl = (UiWizardTabControl)tabControl;
-																			if(wizardTabControl.isInplace()) {
-																				String script = "$('UserDialogWait').className='loading udwait';jQuery.ajax({type: 'get', url: '." + tabControl.getOperationName() + "?requestId=REQUEST_ID&xri=" + targetXri + "', dataType: 'html', success: function(data){$('UserDialog').innerHTML=data;eval(jQuery(data).find('script').text());eval(jQuery(data).filter('script').text());}});";
-																				action = new Action(
-																					MacroAction.EVENT_ID,
-																					new Action.Parameter[]{
-																						  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
-																						  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
-																						  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
-																					},
-																					tabControl.getToolTip(),
-																					tabControl.getToolTip(),
-																					true
-																				);
-																			}
-																			else {
-																				String script = "window.location.href=$('op" + tabId + "').href;";
-																				action = new Action(
-																					MacroAction.EVENT_ID,
-																					new Action.Parameter[]{
-																						  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
-																						  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
-																						  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
-																					},
-																					tabControl.getToolTip(),
-																					tabControl.getToolTip(),
-																					true
-																				);
-																				target = "_blank".equals(wizardTabControl.getWizardDefinition().getTargetType()) ? "target=\"_blank\"" : "target=\"_self\"";
+														List<javax.jmi.reflect.RefObject> objects = (List<javax.jmi.reflect.RefObject>)objectQuery.execute();
+														if(!objects.isEmpty()) {
+															Path targetXri = new Path(objects.iterator().next().refMofId());
+															String function = menuEntry.substring(pos + 3);
+															ShowObjectView targetView = null;
+															try {
+																targetView = new ShowObjectView(
+																	view.getId(),
+																	(String)null,
+																	(RefObject_1_0)app.getNewPmData().getObjectById(targetXri),
+																	app,
+																	new HashMap(),
+																	null, // nextPrevActions
+																	(String)null, // lookupType
+																	(String)null, // resourcePathPrefix
+																	(String)null, // navigationTarget
+																	(Boolean)null // isReadOnly
+																);
+															} catch(Exception ignore) {}
+															if(targetView != null) {
+																if(function.startsWith("Operation.")) {
+																	String operationName = function.substring(10);
+																	List<OperationPaneControl> operationPaneControls = new ArrayList<OperationPaneControl>();
+																	// Operations
+																	for(OperationPaneControl paneControl: targetView.getControl().getChildren(OperationPaneControl.class)) {
+																		for(UiOperationTabControl tabControl: paneControl.getChildren(UiOperationTabControl.class)) {
+																			if(tabControl.getQualifiedOperationName().equals(operationName)) {
+																				String tabId = Integer.toString(tabControl.getTabId());
+																				Action action = null;
+																				String target = "";
+																				if(tabControl instanceof UiWizardTabControl) {
+																					UiWizardTabControl wizardTabControl = (UiWizardTabControl)tabControl;
+																					if(wizardTabControl.isInplace()) {
+																						String script = "$('UserDialogWait').className='loading udwait';jQuery.ajax({type: 'get', url: '." + tabControl.getOperationName() + "?requestId=REQUEST_ID&xri=" + targetXri + "', dataType: 'html', success: function(data){$('UserDialog').innerHTML=data;eval(jQuery(data).find('script').text());eval(jQuery(data).filter('script').text());}});";
+																						action = new Action(
+																							MacroAction.EVENT_ID,
+																							new Action.Parameter[]{
+																								  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
+																								  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
+																								  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
+																							},
+																							tabControl.getToolTip(),
+																							tabControl.getToolTip(),
+																							true
+																						);
+																					}
+																					else {
+																						String script = "window.location.href=$('op" + tabId + "').href;";
+																						action = new Action(
+																							MacroAction.EVENT_ID,
+																							new Action.Parameter[]{
+																								  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
+																								  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
+																								  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
+																							},
+																							tabControl.getToolTip(),
+																							tabControl.getToolTip(),
+																							true
+																						);
+																						target = "_blank".equals(wizardTabControl.getWizardDefinition().getTargetType()) ? "target=\"_blank\"" : "target=\"_self\"";
+																					}
+																				}
+																				else {
+																					String script = "$('op" + tabId + "').onclick();";
+																					action = new Action(
+																						MacroAction.EVENT_ID,
+																						new Action.Parameter[]{
+																							  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
+																							  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
+																							  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
+																						},
+																						tabControl.getName(),
+																						tabControl.getToolTip(),
+																						true
+																					);
+																				}
+				%>
+				<li><a <%= target %> href="#" style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(action) %>;
+						onmouseover = function () {};"><%= action.getTitle() %></a></li>
+					<%
+																				}
 																			}
 																		}
-																		else {
-																			String script = "$('op" + tabId + "').onclick();";
-																			action = new Action(
-																				MacroAction.EVENT_ID,
-																				new Action.Parameter[]{
-																					  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
-																					  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
-																					  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
-																				},
-																				tabControl.getName(),
-																				tabControl.getToolTip(),
-																				true
-																			);
+																		// Wizards
+																		for(UiWizardTabControl tabControl: targetView.getControl().getChildren(WizardControl.class).get(0).getChildren(UiWizardTabControl.class)) {
+																			String tabId = Integer.toString(tabControl.getTabId());
+																			if(tabControl.getQualifiedOperationName().equals(operationName)) {
+																				Action action = null;
+																				if(tabControl.isInplace()) {
+																					String script = "$('UserDialogWait').className='loading udwait';jQuery.ajax({type: 'get', url: '." + tabControl.getOperationName() + "?requestId=REQUEST_ID&xri=" + targetXri + "', dataType: 'html', success: function(data){$('UserDialog').innerHTML=data;eval(jQuery(data).find('script').text());eval(jQuery(data).filter('script').text());}});";
+																					action = new Action(
+																						MacroAction.EVENT_ID,
+																						new Action.Parameter[]{
+																							  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
+																							  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
+																							  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
+																						},
+																						tabControl.getToolTip(),
+																						tabControl.getToolTip(),
+																						true
+																					);
+																				}
+																				else {
+																					String script = "window.location.href=$('op" + tabId + "').href;";
+																					action = new Action(
+																						MacroAction.EVENT_ID,
+																						new Action.Parameter[]{
+																							  new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
+																							  new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
+																							  new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
+																						},
+																						tabControl.getToolTip(),
+																						tabControl.getToolTip(),
+																						true
+																					);
+																				}
+																				String target = "_blank".equals(tabControl.getWizardDefinition().getTargetType()) ? "target=\"_blank\"" : "target=\"_self\"";
+					%>
+				<li><a href="#" <%= target %> style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(action) %>;
+						onmouseover = function () {};"><%= action.getTitle() %></a></li>
+					<%
+																			}
 																		}
-		%>
-		<li><a <%= target %> href="#" style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(action) %>;
-			onmouseover = function () {};"><%= action.getTitle() %></a></li>
-		    <%
-																	    }
-																    }
-															    }
-															    // Wizards
-															    for(UiWizardTabControl tabControl: targetView.getControl().getChildren(WizardControl.class).get(0).getChildren(UiWizardTabControl.class)) {
-																    String tabId = Integer.toString(tabControl.getTabId());
-																    if(tabControl.getQualifiedOperationName().equals(operationName)) {
-																	    Action action = null;
-																	    if(tabControl.isInplace()) {
-																		    String script = "$('UserDialogWait').className='loading udwait';jQuery.ajax({type: 'get', url: '." + tabControl.getOperationName() + "?requestId=REQUEST_ID&xri=" + targetXri + "', dataType: 'html', success: function(data){$('UserDialog').innerHTML=data;eval(jQuery(data).find('script').text());eval(jQuery(data).filter('script').text());}});";
-																		    action = new Action(
-																			    MacroAction.EVENT_ID,
-																			    new Action.Parameter[]{
-																				      new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
-																				      new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
-																				      new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
-																			    },
-																			    tabControl.getToolTip(),
-																			    tabControl.getToolTip(),
-																			    true
-																		    );
-																	    }
-																	    else {
-																		    String script = "window.location.href=$('op" + tabId + "').href;";
-																		    action = new Action(
-																			    MacroAction.EVENT_ID,
-																			    new Action.Parameter[]{
-																				      new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri()),
-																				      new Action.Parameter(Action.PARAMETER_NAME, org.openmdx.base.text.conversion.Base64.encode(script.getBytes("UTF-8"))),
-																				      new Action.Parameter(Action.PARAMETER_TYPE, Integer.toString(Action.MACRO_TYPE_JAVASCRIPT))                    
-																			    },
-																			    tabControl.getToolTip(),
-																			    tabControl.getToolTip(),
-																			    true
-																		    );
-																	    }
-																	    String target = "_blank".equals(tabControl.getWizardDefinition().getTargetType()) ? "target=\"_blank\"" : "target=\"_self\"";
-		    %>
-		<li><a href="#" <%= target %> style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(action) %>;
-			onmouseover = function () {};"><%= action.getTitle() %></a></li>
-		    <%
-																    }
-															    }
-														    }
-														    else if(function.startsWith("Reference.")) {
-															    String referenceName = function.substring(10);
-															    for(ReferencePane pane: targetView.getChildren(ReferencePane.class)) {
-																    for(Action action: pane.getSelectReferenceAction()) {
-																	    if(referenceName.equals(action.getParameter(Action.PARAMETER_REFERENCE_NAME))) {
-																		    List<Action.Parameter> actionParams = new ArrayList<Action.Parameter>(Arrays.asList(action.getParameters()));
-																		    actionParams.add(
-																			    new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri())
-																		    );
-																		    Action selectObjectAndReferenceAction = new Action(
-																			    SelectObjectAction.EVENT_ID,
-																			    actionParams.toArray(new Action.Parameter[actionParams.size()]),
-																			    action.getTitle(),
-																			    action.getIconKey(),
-																			    action.isEnabled()
-																		    );
-		    %>
-		<li><a href="#" style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(selectObjectAndReferenceAction) %>;
-			onmouseover = function () {};"><%= (action.getTitle().startsWith(WebKeys.TAB_GROUPING_CHARACTER) ? action.getTitle().substring(1) : action.getTitle()) %></a></li>
-		    <%
-																	    }						
-																    }
-															    }
-														    }
-													    }
-												    }
-											    }
-											    // Separator
-											    else {
-		    %>
-		    <%= menuEntry %>
-		    <%
-											    }
-										    } catch (Exception e) {
-											    ServiceException e0 = new ServiceException(e);
-											    if(e0.getExceptionCode() != BasicException.Code.AUTHORIZATION_FAILURE) {
-												    e0.log();
-											    }
-										    }
-									    }
-		    %>
-	    </ul>
+																	}
+																	else if(function.startsWith("Reference.")) {
+																		String referenceName = function.substring(10);
+																		for(ReferencePane pane: targetView.getChildren(ReferencePane.class)) {
+																			for(Action action: pane.getSelectReferenceAction()) {
+																				if(referenceName.equals(action.getParameter(Action.PARAMETER_REFERENCE_NAME))) {
+																					List<Action.Parameter> actionParams = new ArrayList<Action.Parameter>(Arrays.asList(action.getParameters()));
+																					actionParams.add(
+																						new Action.Parameter(Action.PARAMETER_OBJECTXRI, targetXri.toXri())
+																					);
+																					Action selectObjectAndReferenceAction = new Action(
+																						SelectObjectAction.EVENT_ID,
+																						actionParams.toArray(new Action.Parameter[actionParams.size()]),
+																						action.getTitle(),
+																						action.getIconKey(),
+																						action.isEnabled()
+																					);
+					%>
+				<li><a href="#" style="padding:2px;font-size:90%;" onmouseover="javascript:this.href =<%= view.getEvalHRef(selectObjectAndReferenceAction) %>;
+						onmouseover = function () {};"><%= (action.getTitle().startsWith(WebKeys.TAB_GROUPING_CHARACTER) ? action.getTitle().substring(1) : action.getTitle()) %></a></li>
+					<%
+																				}						
+																			}
+																		}
+																	}
+																}
+															}
+														}
+														// Separator
+														else {
+					%>
+					<%= menuEntry %>
+					<%
+														}
+													} catch (Exception e) {
+														ServiceException e0 = new ServiceException(e);
+														if(e0.getExceptionCode() != BasicException.Code.AUTHORIZATION_FAILURE) {
+															e0.log();
+														}
+													}
+												}
+					%>
+			</ul>
+		</div>
 	</div>
-    </div>
 </form>
 </div>
 <%				
@@ -340,11 +340,11 @@
 		else {
 %>
 <p>
-    <i>StaticQuickAccessDashlet invoked with missing or invalid parameters:</i>
+	<i>StaticQuickAccessDashlet invoked with missing or invalid parameters:</i>
 <ul>
-    <li><b>RequestId:</b> <%= requestId %></li>
-    <li><b>XRI:</b> <%= xri %></li>
-    <li><b>Dashlet-Id:</b> <%= dashletId %></li>
+	<li><b>RequestId:</b> <%= requestId %></li>
+	<li><b>XRI:</b> <%= xri %></li>
+	<li><b>Dashlet-Id:</b> <%= dashletId %></li>
 </ul>
 <%
 		}

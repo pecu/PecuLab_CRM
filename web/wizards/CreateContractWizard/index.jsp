@@ -54,23 +54,22 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-	   java.util.*,
-	   java.io.*,
-	   java.text.*,
-	   org.opencrx.kernel.backend.*,
-	   org.opencrx.kernel.portal.wizard.*,
-	   org.openmdx.base.exception.*,
-	   org.openmdx.base.text.conversion.*,
-	   org.openmdx.kernel.id.cci.*,
-	   org.openmdx.kernel.id.*,
-	   org.openmdx.base.accessor.jmi.cci.*,
-	   org.openmdx.portal.servlet.*,
-	   org.openmdx.portal.servlet.attribute.*,
-	   org.openmdx.portal.servlet.component.*,
-	   org.openmdx.portal.servlet.control.*,
-	   org.openmdx.portal.servlet.wizards.*,
-	   org.openmdx.base.naming.*
-	   " %>
+		   java.util.*,
+		   java.io.*,
+		   java.text.*,
+		   org.opencrx.portal.wizard.*,
+		   org.openmdx.base.exception.*,
+		   org.openmdx.base.text.conversion.*,
+		   org.openmdx.kernel.id.cci.*,
+		   org.openmdx.kernel.id.*,
+		   org.openmdx.base.accessor.jmi.cci.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.portal.servlet.attribute.*,
+		   org.openmdx.portal.servlet.component.*,
+		   org.openmdx.portal.servlet.control.*,
+		   org.openmdx.portal.servlet.wizards.*,
+		   org.openmdx.base.naming.*
+		   " %>
 <%
 	final String FORM_NAME = "CreateContractForm";
 	final String FORM_NAME_POSITION = "CreateContractPositionForm";
@@ -90,137 +89,137 @@
 %>
 <div class="OperationDialogTitle"><%= app.getTexts().getNewText() %>...</div>
 <form id="<%=FORM_NAME%>" name="<%=FORM_NAME%>" accept-charset="UTF-8" method="POST" action="<%=wc.getServletPath()%>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
-	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%=Action.PARAMETER_REQUEST_ID%>" value="<%=wc.getRequestId()%>" />
-    <input type="hidden" name="<%=Action.PARAMETER_OBJECTXRI%>" value="<%=wc.getObjectIdentity().toXRI()%>" />
-    <input type="hidden" id="Command" name="Command" value="Refresh" />
-    <input type="hidden" id="AddressXri" name="AddressXri" value="" />
-    <input type="hidden" id="DeletePositionIndex" name="DeletePositionIndex" value="" />
-    <table class="tableLayout">
-	<tr>
-	    <td class="cellObject">
-		<div class="panel" id="panel<%=FORM_NAME%>" style="display:block;overflow:visible;">
-		    <%
-							    // Contract
-							    wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
-							    viewPort.flush();
-
-							    // Contract positions
-							    int lastContractPositionIndex = -1;
-							    if(wc.getContractPositionCount() > 0) {
-		    %>
-		    <div class="fieldGroupName">Positions</div>
-		    <div>&nbsp;</div>
-		    <table class="gridTableFull">
-			<tr class="gridTableHeaderFull">
-			    <td />
-			    <td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "quantity", app.getCurrentLocaleAsIndex())%></td>
-			    <td><%=wc.getFieldLabel("org:opencrx:kernel:product1:ProductDescriptor", "product", app.getCurrentLocaleAsIndex())%></td>
-			    <td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "name", app.getCurrentLocaleAsIndex())%></td>
-			    <td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "pricePerUnit", app.getCurrentLocaleAsIndex())%></td>
-			    <td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "baseAmount", app.getCurrentLocaleAsIndex())%></td>
-			    <td class="addon"/>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
 			</tr>
-			<%
-										Map<String,Object> formValues = wc.getFormFields();
-										for(int i = 0; i < wc.getContractPositionCount(); i++) {
-											if(formValues.get("position.product.xri." + i) != null) {
-												lastContractPositionIndex = i;
-			%>
-			<tr class="gridTableRowFull">
-			    <td><input type="submit" name="DeletePosition" value="-" onclick="javascript:$('Command').value = this.name;$('DeletePositionIndex').value = '<%= i %>';"/></td>
-			    <td><input class="valueR" type="text" name="position.quantity.<%= i %>" value="<%= formValues.get("position.quantity." + i) %>"/></td>
-			    <td><input class="valueL" type="text" readonly name="position.product.<%= i %>" value="<%= formValues.get("position.product." + i) %>"/><input type="hidden" name="position.product.xri.<%= i %>" value="<%= formValues.get("position.product.xri." + i) %>"/></td>
-			    <td><input class="valueL" type="text" name="position.name.<%= i %>" value="<%= formValues.get("position.name." + i) %>"/></td>
-			    <td><input class="valueR" type="text" name="position.pricePerUnit.<%= i %>" value="<%= formValues.get("position.pricePerUnit." + i) %>"/></td>
-			    <td><input class="valueR" type="text" readonly name="position.amount.<%= i %>" value="<%= formValues.get("position.amount." + i) %>"/></td>
-			    <td class="addon"/>
-			</tr>
-			<%
-											}
-										}
-			%>
-		    </table>
-		    <%
-							    }
-							    wc.getForms().get(FORM_NAME_POSITION).paint(viewPort, null, true);
-							    viewPort.flush();
-		    %>
-		    <input type="hidden" name="ContractPositionCount" id="ContractPositionCount" value="<%= lastContractPositionIndex + 1 %>" />
-		    <input type="submit" name="AddPosition" id="AddPosition.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="+" onclick="javascript:$('Command').value = this.name"/>
-		    <div class="fieldGroupName">&nbsp;</div>
-		</div>
-		<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
-		<div id="SubmitArea" style="float:left;display:none;">				
-		    <input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Refresh" onclick="javascript:$('Command').value = this.name;"/>
-		    <input type="submit" name="CreateOpportunity" id="CreateOpportunity.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="Create Opportunity" onclick="javascript:$('Command').value = this.name;" />
-		    <input type="submit" name="CreateQuote" id="CreateQuote.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="Create Quote" onclick="javascript:$('Command').value = this.name;" />
-		    <input type="submit" name="CreateSalesOrder" id="CreateSalesOrder.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Create Sales Order" onclick="javascript:$('Command').value = this.name;" />
-		    <input type="submit" name="CreateInvoice" id="CreateInvoice.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9050" value="Create Invoice" onclick="javascript:$('Command').value = this.name;" />
-		    <input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
-		</div>
-		<%
-						if(wc.getCustomer() != null) {
-		%>
-		<div>&nbsp;</div>
-		<table class="gridTableFull">
-		    <tr class="gridTableHeaderFull">
-			<td><%= wc.getFieldLabel("org:opencrx:kernel:contract1:AccountAddress", "address", app.getCurrentLocaleAsIndex()) %></td>
-			<td>Set as shipping address</td>
-			<td>Set as billing address</td>
-			<td class="addon"/>
-		    </tr>
-		    <%
-								    org.opencrx.kernel.account1.cci2.AccountAddressQuery addressQuery = (org.opencrx.kernel.account1.cci2.AccountAddressQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
-								    List<org.opencrx.kernel.account1.jmi1.AccountAddress> addresses = wc.getCustomer().getAddress(addressQuery);
-								    int ii = 0;
-								    for(Iterator<org.opencrx.kernel.account1.jmi1.AccountAddress> i = addresses.iterator(); i.hasNext(); ) {
-									    org.opencrx.kernel.account1.jmi1.AccountAddress address = i.next();
-		    %>
-		    <tr class="gridTableRowFull">
-			<td><%= new ObjectReference(address, app).getTitle() %></td>
-			<td><input type="submit" id="Button.SetShippingAddress.<%= Integer.toString(ii) %>" name="SetShippingAddress" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Shipping" onclick="javascript:$('Command').value = this.name;$('AddressXri').value = '<%= address.refMofId() %>';"/>
-			<td><input type="submit" id="Button.SetBillingAddress.<%= Integer.toString(ii) %>" name="SetBillingAddress" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Billing" onclick="javascript:$('Command').value = this.name;$('AddressXri').value = '<%= address.refMofId() %>';"/>
-			<td class="addon"/>
-		    </tr>
-		    <%
-									    ii++;
-								    }
-		    %>
 		</table>
-		<%
-						}
-		%>
-	    </td>
-	</tr>
-    </table>
+	</div>
+	<%
+		}
+	%>
+	<input type="hidden" name="<%=Action.PARAMETER_REQUEST_ID%>" value="<%=wc.getRequestId()%>" />
+	<input type="hidden" name="<%=Action.PARAMETER_OBJECTXRI%>" value="<%=wc.getObjectIdentity().toXRI()%>" />
+	<input type="hidden" id="Command" name="Command" value="Refresh" />
+	<input type="hidden" id="AddressXri" name="AddressXri" value="" />
+	<input type="hidden" id="DeletePositionIndex" name="DeletePositionIndex" value="" />
+	<table class="tableLayout">
+		<tr>
+			<td class="cellObject">
+				<div class="panel" id="panel<%=FORM_NAME%>" style="display:block;overflow:visible;">
+					<%
+										// Contract
+										wc.getForms().get(FORM_NAME).paint(viewPort, null, true);
+										viewPort.flush();
+
+										// Contract positions
+										int lastContractPositionIndex = -1;
+										if(wc.getContractPositionCount() > 0) {
+					%>
+					<div class="fieldGroupName">Positions</div>
+					<div>&nbsp;</div>
+					<table class="gridTableFull">
+						<tr class="gridTableHeaderFull">
+							<td />
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "quantity", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:product1:ProductDescriptor", "product", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "name", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "pricePerUnit", app.getCurrentLocaleAsIndex())%></td>
+							<td><%=wc.getFieldLabel("org:opencrx:kernel:contract1:SalesContractPosition", "baseAmount", app.getCurrentLocaleAsIndex())%></td>
+							<td class="addon"/>
+						</tr>
+						<%
+													Map<String,Object> formValues = wc.getFormFields();
+													for(int i = 0; i < wc.getContractPositionCount(); i++) {
+														if(formValues.get("position.product.xri." + i) != null) {
+															lastContractPositionIndex = i;
+						%>
+						<tr class="gridTableRowFull">
+							<td><input type="submit" name="DeletePosition" value="-" onclick="javascript:$('Command').value = this.name;$('DeletePositionIndex').value = '<%= i %>';"/></td>
+							<td><input class="valueR" type="text" name="position.quantity.<%= i %>" value="<%= formValues.get("position.quantity." + i) %>"/></td>
+							<td><input class="valueL" type="text" readonly name="position.product.<%= i %>" value="<%= formValues.get("position.product." + i) %>"/><input type="hidden" name="position.product.xri.<%= i %>" value="<%= formValues.get("position.product.xri." + i) %>"/></td>
+							<td><input class="valueL" type="text" name="position.name.<%= i %>" value="<%= formValues.get("position.name." + i) %>"/></td>
+							<td><input class="valueR" type="text" name="position.pricePerUnit.<%= i %>" value="<%= formValues.get("position.pricePerUnit." + i) %>"/></td>
+							<td><input class="valueR" type="text" readonly name="position.amount.<%= i %>" value="<%= formValues.get("position.amount." + i) %>"/></td>
+							<td class="addon"/>
+						</tr>
+						<%
+														}
+													}
+						%>
+					</table>
+					<%
+										}
+										wc.getForms().get(FORM_NAME_POSITION).paint(viewPort, null, true);
+										viewPort.flush();
+					%>
+					<input type="hidden" name="ContractPositionCount" id="ContractPositionCount" value="<%= lastContractPositionIndex + 1 %>" />
+					<input type="submit" name="AddPosition" id="AddPosition.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9000" value="+" onclick="javascript:$('Command').value = this.name"/>
+					<div class="fieldGroupName">&nbsp;</div>
+				</div>
+				<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
+				<div id="SubmitArea" style="float:left;display:none;">				
+					<input type="submit" name="Refresh" id="Refresh.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="Refresh" onclick="javascript:$('Command').value = this.name;"/>
+					<input type="submit" name="CreateOpportunity" id="CreateOpportunity.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="Create Opportunity" onclick="javascript:$('Command').value = this.name;" />
+					<input type="submit" name="CreateQuote" id="CreateQuote.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9030" value="Create Quote" onclick="javascript:$('Command').value = this.name;" />
+					<input type="submit" name="CreateSalesOrder" id="CreateSalesOrder.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9040" value="Create Sales Order" onclick="javascript:$('Command').value = this.name;" />
+					<input type="submit" name="CreateInvoice" id="CreateInvoice.Button" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9050" value="Create Invoice" onclick="javascript:$('Command').value = this.name;" />
+					<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('Command').value = this.name;" />
+				</div>
+				<%
+								if(wc.getCustomer() != null) {
+				%>
+				<div>&nbsp;</div>
+				<table class="gridTableFull">
+					<tr class="gridTableHeaderFull">
+						<td><%= wc.getFieldLabel("org:opencrx:kernel:contract1:AccountAddress", "address", app.getCurrentLocaleAsIndex()) %></td>
+						<td>Set as shipping address</td>
+						<td>Set as billing address</td>
+						<td class="addon"/>
+					</tr>
+					<%
+											org.opencrx.kernel.account1.cci2.AccountAddressQuery addressQuery = (org.opencrx.kernel.account1.cci2.AccountAddressQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
+											List<org.opencrx.kernel.account1.jmi1.AccountAddress> addresses = wc.getCustomer().getAddress(addressQuery);
+											int ii = 0;
+											for(Iterator<org.opencrx.kernel.account1.jmi1.AccountAddress> i = addresses.iterator(); i.hasNext(); ) {
+												org.opencrx.kernel.account1.jmi1.AccountAddress address = i.next();
+					%>
+					<tr class="gridTableRowFull">
+						<td><%= new ObjectReference(address, app).getTitle() %></td>
+						<td><input type="submit" id="Button.SetShippingAddress.<%= Integer.toString(ii) %>" name="SetShippingAddress" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Shipping" onclick="javascript:$('Command').value = this.name;$('AddressXri').value = '<%= address.refMofId() %>';"/>
+						<td><input type="submit" id="Button.SetBillingAddress.<%= Integer.toString(ii) %>" name="SetBillingAddress" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Billing" onclick="javascript:$('Command').value = this.name;$('AddressXri').value = '<%= address.refMofId() %>';"/>
+						<td class="addon"/>
+					</tr>
+					<%
+												ii++;
+											}
+					%>
+				</table>
+				<%
+								}
+				%>
+			</td>
+		</tr>
+	</table>
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
-    $('WaitIndicator').style.display = 'none';
-    $('SubmitArea').style.display = 'block';
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />
 

@@ -54,16 +54,15 @@
  * openMDX (http://www.openmdx.org/)
  */
 %><%@ page session="true" import="
-	   java.util.*,
-	   java.net.*,
-	   java.util.Enumeration,
-	   java.io.PrintWriter,
-	   org.w3c.spi2.*,
-	   org.openmdx.portal.servlet.*,
-	   org.openmdx.base.naming.*,
-	   org.opencrx.kernel.generic.*,
-	   org.opencrx.kernel.backend.*
-	   "%>
+		   java.util.*,
+		   java.net.*,
+		   java.util.Enumeration,
+		   java.io.PrintWriter,
+		   org.w3c.spi2.*,
+		   org.openmdx.portal.servlet.*,
+		   org.openmdx.base.naming.*,
+		   org.opencrx.kernel.generic.*
+		   "%>
 <%
 	Boolean success = null;
 	String id = request.getParameter("id");
@@ -101,7 +100,7 @@
 						SecurityKeys.ADMIN_PRINCIPAL + SecurityKeys.ID_SEPARATOR + currentSegmentName, 
 						null
 					);
-					org.opencrx.kernel.home1.jmi1.Segment userHomeSegment = UserHomes.getInstance().getUserHomeSegment(pm, currentProviderName, currentSegmentName);
+					org.opencrx.kernel.home1.jmi1.Segment userHomeSegment = org.opencrx.kernel.backend.UserHomes.getInstance().getUserHomeSegment(pm, currentProviderName, currentSegmentName);
 					org.opencrx.kernel.home1.cci2.EMailAccountQuery emailAccountQuery = (org.opencrx.kernel.home1.cci2.EMailAccountQuery)org.openmdx.base.persistence.cci.PersistenceHelper.newQuery(
 						pm.getExtent(org.opencrx.kernel.home1.jmi1.EMailAccount.class),
 						userHomeSegment.refGetPath().getDescendant("userHome", ":*", "eMailAccount", ":*")
@@ -136,7 +135,7 @@
 			int count = 0;
 			for(org.openmdx.security.realm1.jmi1.Realm realm: realmSegment.<org.openmdx.security.realm1.jmi1.Realm>getRealm()) {
 				if(!realm.refGetPath().equals(LOGIN_REALM_IDENTITY) && !"Root".equals(realm.refGetPath().getLastSegment().toClassicRepresentation())) {
-					org.openmdx.security.realm1.jmi1.Principal principal = SecureObject.getInstance().findPrincipal(id, realm);
+					org.openmdx.security.realm1.jmi1.Principal principal = org.opencrx.kernel.backend.SecureObject.getInstance().findPrincipal(id, realm);
 					if(principal != null && !Boolean.TRUE.equals(principal.isDisabled())) {
 						principalName = id;
 						providerName = realm.refGetPath().getSegment(2).toClassicRepresentation();
@@ -179,77 +178,77 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-	<title>Request Password Reset</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Expires" content="0">
-	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<meta name="apple-touch-fullscreen" content="YES" />
+		<title>Request Password Reset</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="apple-touch-fullscreen" content="YES" />
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/ssf.css" >
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/n2default.css" >
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/colors.css">
-	<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/calendar-small.css">
-	<link rel='shortcut icon' href='<%= request.getContextPath() %>/images/favicon.ico' />
+		<!-- Styles -->
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/ssf.css" >
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/n2default.css" >
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/colors.css">
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/_style/calendar-small.css">
+		<link rel='shortcut icon' href='<%= request.getContextPath() %>/images/favicon.ico' />
 
-	<!-- Libraries -->
-	<script language="javascript" type="text/javascript" src="<%= request.getContextPath() %>/js/prototype.js"></script>
+		<!-- Libraries -->
+		<script language="javascript" type="text/javascript" src="<%= request.getContextPath() %>/js/prototype.js"></script>
 
     </head>
     <body style="border:0px solid white;">
-	<div id="header" style="height:90px;">
-	    <div id="logoTable">
-		<table dir="ltr" id="headerlayout" style="position:relative;">
-		    <tr id="headRow">
-			<td id="head" colspan="2">
-			    <table id="info">
-				<tr>
-				    <td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
-				    <td id="headerCellMiddle" style="background-image:url('./images/logoMiddle.gif');background-repeat:repeat-x;width:100%;"></td>
-				    <td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
-				</tr>
-			    </table>
-			</td>
-		    </tr>
-		</table>
-	    </div>
-	</div>
-	<div class="container">
-	    <div class="row">
-		<div class="col-sm-12">
-		    <%
-					    if(Boolean.TRUE.equals(success)) {
-		    %>
-		    <h2>Password reset request successful for <%= id %></h2>
-		    <p>
-			You should receive a notification e-mail within the next minutes.
-		    <p>
-			<%
-						} else if(Boolean.FALSE.equals(success)) {
-			%>
-		    <h2>Unable to request password reset</h2>
-		    <%
-					    } else {
-		    %>
-		    <form role="form" class="form-signin" style="max-width:400px;margin:0 auto;" method="POST" action="RequestPasswordReset.jsp" accept-charset="UTF-8">
-			<h2 class="form-signin-heading">Please enter your username, e-mail address or ID</h2>					
-			<input type="text" name="id" id="id" autofocus="" placeholder="ID (e.g. guest@CRX/Standard)" class="form-control" />
-			<br />
-			<button type="submit" class="btn btn-lg btn-primary btn-block">OK</button>
-			<br />
-			<%@ include file="request-password-reset-note.html" %>
-		    </form>
-		    <%
-					    }
-		    %>
+		<div id="header" style="height:90px;">
+			<div id="logoTable">
+				<table dir="ltr" id="headerlayout" style="position:relative;">
+					<tr id="headRow">
+						<td id="head" colspan="2">
+							<table id="info">
+								<tr>
+									<td id="headerCellLeft"><img id="logoLeft" style="cursor:default;" src="<%=request.getContextPath()%>/images/logoLeft.gif" alt="openCRX - limitless relationship management" title="openCRX - limitless relationship management" /></td>
+									<td id="headerCellMiddle" style="background-image:url('./images/logoMiddle.gif');background-repeat:repeat-x;width:100%;"></td>
+									<td id="headerCellRight"><img id="logoRight" src="<%=request.getContextPath()%>/images/logoRight.gif" alt="" title="" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
-	    </div>
-	    <div class="row">
-		<div class="col-sm-12">
-		    <a href="./Login.jsp">Go to login page</a>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<%
+								if(Boolean.TRUE.equals(success)) {
+					%>
+					<h2>Password reset request successful for <%= id %></h2>
+					<p>
+						You should receive a notification e-mail within the next minutes.
+					<p>
+						<%
+									} else if(Boolean.FALSE.equals(success)) {
+						%>
+					<h2>Unable to request password reset</h2>
+					<%
+								} else {
+					%>
+					<form role="form" class="form-signin" style="max-width:400px;margin:0 auto;" method="POST" action="RequestPasswordReset.jsp" accept-charset="UTF-8">
+						<h2 class="form-signin-heading">Please enter your username, e-mail address or ID</h2>					
+						<input type="text" name="id" id="id" autofocus="" placeholder="ID (e.g. guest@CRX/Standard)" class="form-control" />
+						<br />
+						<button type="submit" class="btn btn-lg btn-primary btn-block">OK</button>
+						<br />
+						<%@ include file="request-password-reset-note.html" %>
+					</form>
+					<%
+								}
+					%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="./Login.jsp">Go to login page</a>
+				</div>
+			</div>	
 		</div>
-	    </div>	
-	</div>
-    </body>
+	</body>
 </html>

@@ -55,23 +55,22 @@
  */
 %>
 <%@ page session="true" import="
-	 java.util.*,
-	 java.io.*,
-	 java.text.*,
-	 org.opencrx.kernel.backend.*,
-	 org.opencrx.kernel.portal.wizard.*,
-	 org.opencrx.kernel.generic.*,
-	 org.openmdx.kernel.id.cci.*,
-	 org.openmdx.kernel.id.*,
-	 org.openmdx.base.exception.*,
-	 org.openmdx.base.accessor.jmi.cci.*,
-	 org.openmdx.portal.servlet.*,
-	 org.openmdx.portal.servlet.attribute.*,
-	 org.openmdx.portal.servlet.component.*,
-	 org.openmdx.portal.servlet.control.*,
-	 org.openmdx.portal.servlet.wizards.*,
-	 org.openmdx.base.naming.*
-	 " %>
+		 java.util.*,
+		 java.io.*,
+		 java.text.*,
+		 org.opencrx.portal.wizard.*,
+		 org.opencrx.kernel.generic.*,
+		 org.openmdx.kernel.id.cci.*,
+		 org.openmdx.kernel.id.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.portal.servlet.*,
+		 org.openmdx.portal.servlet.attribute.*,
+		 org.openmdx.portal.servlet.component.*,
+		 org.openmdx.portal.servlet.control.*,
+		 org.openmdx.portal.servlet.wizards.*,
+		 org.openmdx.base.naming.*
+		 " %>
 <%
 	final String FORM_NAME = "MarkAsAllDayEventWizardForm";
 	MarkAsAllDayEventWizardController wc = new MarkAsAllDayEventWizardController();

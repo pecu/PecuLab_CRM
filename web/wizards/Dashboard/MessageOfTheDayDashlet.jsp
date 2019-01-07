@@ -53,20 +53,19 @@
  */
 %>
 <%@ page session="true" import="
-	 java.util.*,
-	 java.util.zip.*,
-	 java.io.*,
-	 java.text.*,
-	 java.math.*,
-	 java.net.*,
-	 org.openmdx.base.accessor.jmi.cci.*,
-	 org.openmdx.base.naming.*,
-	 org.openmdx.base.exception.*,
-	 org.openmdx.portal.servlet.*,
-	 org.opencrx.kernel.backend.*,
-	 org.opencrx.kernel.generic.*,
-	 org.openmdx.kernel.log.*
-	 " %>
+		 java.util.*,
+		 java.util.zip.*,
+		 java.io.*,
+		 java.text.*,
+		 java.math.*,
+		 java.net.*,
+		 org.openmdx.base.accessor.jmi.cci.*,
+		 org.openmdx.base.naming.*,
+		 org.openmdx.base.exception.*,
+		 org.openmdx.portal.servlet.*,
+		 org.opencrx.kernel.generic.*,
+		 org.openmdx.kernel.log.*
+		 " %>
 
 <%!
 	final static String DOCUMENT_PREFIX = "document:";
@@ -75,7 +74,7 @@
 		String documentName,
 		org.opencrx.kernel.document1.jmi1.Segment segment
 	) throws ServiceException {
-		return Documents.getInstance().findDocument(
+		return org.opencrx.kernel.backend.Documents.getInstance().findDocument(
 			documentName,
 			segment
 		);
@@ -136,52 +135,52 @@
 		String dashletId = Action.getParameter(parameters, Action.PARAMETER_ID);
 %>
 <div>
-    <%				
-			    if(xri != null && requestId != null && dashletId != null && viewsCache.getView(requestId) != null) {
-				    javax.jdo.PersistenceManager pm = app.getNewPmData();
-				    RefObject_1_0 obj = (RefObject_1_0)pm.getObjectById(new Path(xri));
-				    String providerName = obj.refGetPath().get(2);
-				    String segmentName = obj.refGetPath().get(4);
-				    org.opencrx.kernel.document1.jmi1.Segment documentSegment = Documents.getInstance().getDocumentSegment(pm, providerName, segmentName);
-				    List<String> documentNames = new ArrayList<String>();
-				    documentNames.add(MESSAGE_OF_THE_DAY_DOCUMENT_NAME);
-				    String messageOfTheDay = "";
-				    try {
-					    org.opencrx.kernel.document1.jmi1.Document messageOfTheDayDoc = findDocument (
-						    MESSAGE_OF_THE_DAY_DOCUMENT_NAME,
-						    documentSegment
-					    );
-					    messageOfTheDay += "<pre>" + messageOfTheDayDoc.getModifiedAt() + "</pre>";
-					    messageOfTheDay += documentContentToString(
-						    messageOfTheDayDoc,
-						    documentNames,
-						    documentSegment
-					    );
-					    messageOfTheDay += "<br />";
-					    if(messageOfTheDay.isEmpty()) {
-						    messageOfTheDay += "<pre> no message as of " + new Date() + "</pre>";
-					    }
-				    } catch (Exception e) {
-					    new ServiceException(e).log();
-    %>
-    <p>
-	<i>Dashlet Exception - see log file for details</i>
-    </p>
-    <%
-				    }
-				    pm.close();
-    %>
-    <%= messageOfTheDay %>
-    <%
-			    } else {
-    %>
-    <p>
-	<i>Dashlet invoked with missing or invalid parameters:</i>
-    <ul>
-	<li><b>RequestId:</b> <%= requestId %></li>
-	<li><b>XRI:</b> <%= xri %></li>
-	<li><b>Dashlet-Id:</b> <%= dashletId %></li>
-    </ul>
+	<%				
+				if(xri != null && requestId != null && dashletId != null && viewsCache.getView(requestId) != null) {
+					javax.jdo.PersistenceManager pm = app.getNewPmData();
+					RefObject_1_0 obj = (RefObject_1_0)pm.getObjectById(new Path(xri));
+					String providerName = obj.refGetPath().get(2);
+					String segmentName = obj.refGetPath().get(4);
+					org.opencrx.kernel.document1.jmi1.Segment documentSegment = org.opencrx.kernel.backend.Documents.getInstance().getDocumentSegment(pm, providerName, segmentName);
+					List<String> documentNames = new ArrayList<String>();
+					documentNames.add(MESSAGE_OF_THE_DAY_DOCUMENT_NAME);
+					String messageOfTheDay = "";
+					try {
+						org.opencrx.kernel.document1.jmi1.Document messageOfTheDayDoc = findDocument (
+							MESSAGE_OF_THE_DAY_DOCUMENT_NAME,
+							documentSegment
+						);
+						messageOfTheDay += "<pre>" + messageOfTheDayDoc.getModifiedAt() + "</pre>";
+						messageOfTheDay += documentContentToString(
+							messageOfTheDayDoc,
+							documentNames,
+							documentSegment
+						);
+						messageOfTheDay += "<br />";
+						if(messageOfTheDay.isEmpty()) {
+							messageOfTheDay += "<pre> no message as of " + new Date() + "</pre>";
+						}
+					} catch (Exception e) {
+						new ServiceException(e).log();
+	%>
+	<p>
+		<i>Dashlet Exception - see log file for details</i>
+	</p>
+	<%
+					}
+					pm.close();
+	%>
+	<%= messageOfTheDay %>
+	<%
+				} else {
+	%>
+	<p>
+		<i>Dashlet invoked with missing or invalid parameters:</i>
+	<ul>
+		<li><b>RequestId:</b> <%= requestId %></li>
+		<li><b>XRI:</b> <%= xri %></li>
+		<li><b>Dashlet-Id:</b> <%= dashletId %></li>
+	</ul>
 </p>
 <%
 			}

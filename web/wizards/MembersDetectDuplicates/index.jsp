@@ -55,23 +55,22 @@
  */
 %>
 <%@page session="true" import="
-	java.util.*,
-	java.io.*,
-	java.text.*,
-	org.opencrx.kernel.backend.*,
-	org.opencrx.kernel.portal.wizard.*,
-	org.opencrx.kernel.generic.*,
-	org.openmdx.kernel.id.cci.*,
-	org.openmdx.kernel.id.*,
-	org.openmdx.base.exception.*,
-	org.openmdx.base.accessor.jmi.cci.*,
-	org.openmdx.portal.servlet.*,
-	org.openmdx.portal.servlet.attribute.*,
-	org.openmdx.portal.servlet.component.*,
-	org.openmdx.portal.servlet.control.*,
-	org.openmdx.portal.servlet.wizards.*,
-	org.openmdx.base.naming.*
-	" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "MembersDetectDuplicates";	
 	MembersDetectDuplicatesController wc = new MembersDetectDuplicatesController();
@@ -90,106 +89,106 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form name="<%= FORM_NAME %>" id="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
-	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-    <input type="hidden" id="Command" name="Command" value="" />
-    <br />
-    <%
-	    if("OK".equals(wc.getCommand())) {
-    %>	
-    <table><tr><td>
-		<table id="resultTable" class="gridTableFull">
-		    <tr class="gridTableHeaderFull">
-			<td class="gridColTypeNormal"><div class="textfilter"><%= wc.getApp().getLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS) %> / <%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %></div></td>
-			<td class="gridColTypeNormal" align="center"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %></div></td>
-			<td class="gridColTypeNormal" align="center"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %></div></td>
-			<td class="gridColTypeNormal" align="left"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "createdAt", app.getCurrentLocaleAsIndex()) %></div></td>
-			<td class="gridColTypeNormal" align="left"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "createdBy", app.getCurrentLocaleAsIndex()) %></div></td>
-			<td class="gridColTypeNormal" align="center"></td>
-		    </tr>
-		    <%
-						    for(org.opencrx.kernel.account1.jmi1.Member member: wc.getMembersToDelete()) {
-							    try {
-								    org.opencrx.kernel.account1.jmi1.Account account = null;
-								    String customerInfo = "---";
-								    String accountHref = "";
-								    if(member.getAccount() != null) {
-									    customerInfo = (new ObjectReference(member.getAccount(), app)).getTitle();
-									    account = member.getAccount();
-									    Action action = new ObjectReference(
-										    account,
-										    app
-									    ).getSelectObjectAction();
-									    accountHref = action.getEncodedHRef();
-								    } else {
-									    continue;
-								    }
-		    %>
-		    <tr class="gridTableRowFull"><!-- 6 columns -->
-			<td colspan="6"><b><a href="<%= accountHref %>" target="_blank"><%= customerInfo %></a></b></td>
-		    </tr>
-		    <%
-								    org.opencrx.kernel.account1.cci2.MemberQuery memberQuery = (org.opencrx.kernel.account1.cci2.MemberQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.Member.class);
-								    memberQuery.thereExistsAccount().equalTo(account);
-								    for(org.opencrx.kernel.account1.jmi1.Member currentMember: ((org.opencrx.kernel.account1.jmi1.Account)wc.getObject()).getMember(memberQuery)) {
-									    String memberHref = "";
-									    Action action = new ObjectReference(
-										    currentMember,
-										    app
-									    ).getSelectObjectAction();
-									    memberHref = action.getEncodedHRef();
-		    %>
-		    <tr class="gridTableRowFull"><!-- 6 columns -->
-			<td><a href="<%= memberHref %>" target="_blank"><%= MembersDetectDuplicatesController.INDENT + (new ObjectReference(currentMember, app)).getTitle() %></a></td>
-			<td align="center"><img src="./images/<%= currentMember.isDisabled() != null && currentMember.isDisabled().booleanValue() ? "" : "not" %>checked_r.gif" alt="" /></td>
-			<td align="center"><img src="./images/<%= currentMember.getAccount() != null && currentMember.getAccount().isDisabled() != null && currentMember.getAccount().isDisabled().booleanValue() ? "" : "not" %>checked_r.gif" alt="" /></td>
-			<td align="left"><%= timeFormat.format(currentMember.getCreatedAt()) %></td>
-			<td align="left"><%= currentMember.getCreatedBy() %></td>
-			<td></td>
-		    </tr>
-		    <%
-								    }
-							    } catch (Exception ignore) {}
-						    }
-		    %>
+	<%
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
 		</table>
-	    </td></tr></table>
-	    <%
-		    }
-	    %>		
-    <div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
-    <div id="SubmitArea" style="float:left;display:none;">				
-	<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onClick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
-	<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
-    </div>
-    <br />	
+	</div>
+	<%
+		}
+	%>
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	<input type="hidden" id="Command" name="Command" value="" />
+	<br />
+	<%
+		if("OK".equals(wc.getCommand())) {
+	%>	
+	<table><tr><td>
+				<table id="resultTable" class="gridTableFull">
+					<tr class="gridTableHeaderFull">
+						<td class="gridColTypeNormal"><div class="textfilter"><%= wc.getApp().getLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS) %> / <%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %></div></td>
+						<td class="gridColTypeNormal" align="center"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %></div></td>
+						<td class="gridColTypeNormal" align="center"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.ACCOUNT_CLASS, "disabled", app.getCurrentLocaleAsIndex()) %></div></td>
+						<td class="gridColTypeNormal" align="left"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "createdAt", app.getCurrentLocaleAsIndex()) %></div></td>
+						<td class="gridColTypeNormal" align="left"><div class="textfilter"><%= app.getLabel(MembersDetectDuplicatesController.MEMBER_CLASS) %> <%= wc.getFieldLabel(MembersDetectDuplicatesController.MEMBER_CLASS, "createdBy", app.getCurrentLocaleAsIndex()) %></div></td>
+						<td class="gridColTypeNormal" align="center"></td>
+					</tr>
+					<%
+									for(org.opencrx.kernel.account1.jmi1.Member member: wc.getMembersToDelete()) {
+										try {
+											org.opencrx.kernel.account1.jmi1.Account account = null;
+											String customerInfo = "---";
+											String accountHref = "";
+											if(member.getAccount() != null) {
+												customerInfo = (new ObjectReference(member.getAccount(), app)).getTitle();
+												account = member.getAccount();
+												Action action = new ObjectReference(
+													account,
+													app
+												).getSelectObjectAction();
+												accountHref = action.getEncodedHRef();
+											} else {
+												continue;
+											}
+					%>
+					<tr class="gridTableRowFull"><!-- 6 columns -->
+						<td colspan="6"><b><a href="<%= accountHref %>" target="_blank"><%= customerInfo %></a></b></td>
+					</tr>
+					<%
+											org.opencrx.kernel.account1.cci2.MemberQuery memberQuery = (org.opencrx.kernel.account1.cci2.MemberQuery)pm.newQuery(org.opencrx.kernel.account1.jmi1.Member.class);
+											memberQuery.thereExistsAccount().equalTo(account);
+											for(org.opencrx.kernel.account1.jmi1.Member currentMember: ((org.opencrx.kernel.account1.jmi1.Account)wc.getObject()).getMember(memberQuery)) {
+												String memberHref = "";
+												Action action = new ObjectReference(
+													currentMember,
+													app
+												).getSelectObjectAction();
+												memberHref = action.getEncodedHRef();
+					%>
+					<tr class="gridTableRowFull"><!-- 6 columns -->
+						<td><a href="<%= memberHref %>" target="_blank"><%= MembersDetectDuplicatesController.INDENT + (new ObjectReference(currentMember, app)).getTitle() %></a></td>
+						<td align="center"><img src="./images/<%= currentMember.isDisabled() != null && currentMember.isDisabled().booleanValue() ? "" : "not" %>checked_r.gif" alt="" /></td>
+						<td align="center"><img src="./images/<%= currentMember.getAccount() != null && currentMember.getAccount().isDisabled() != null && currentMember.getAccount().isDisabled().booleanValue() ? "" : "not" %>checked_r.gif" alt="" /></td>
+						<td align="left"><%= timeFormat.format(currentMember.getCreatedAt()) %></td>
+						<td align="left"><%= currentMember.getCreatedBy() %></td>
+						<td></td>
+					</tr>
+					<%
+											}
+										} catch (Exception ignore) {}
+									}
+					%>
+				</table>
+			</td></tr></table>
+			<%
+				}
+			%>		
+	<div id="WaitIndicator" style="float:left;width:50px;height:24px;" class="wait">&nbsp;</div>
+	<div id="SubmitArea" style="float:left;display:none;">				
+		<input type="submit" name="OK" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9010" value="<%= app.getTexts().getOkTitle() %>" onClick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
+	</div>
+	<br />	
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
-    $('WaitIndicator').style.display = 'none';
-    $('SubmitArea').style.display = 'block';
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />

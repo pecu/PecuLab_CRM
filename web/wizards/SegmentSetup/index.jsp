@@ -55,23 +55,22 @@
  */
 %>
 <%@page session="true" import="
-	java.util.*,
-	java.io.*,
-	java.text.*,
-	org.opencrx.kernel.backend.*,
-	org.opencrx.kernel.portal.wizard.*,
-	org.opencrx.kernel.generic.*,
-	org.openmdx.kernel.id.cci.*,
-	org.openmdx.kernel.id.*,
-	org.openmdx.base.exception.*,
-	org.openmdx.base.accessor.jmi.cci.*,
-	org.openmdx.portal.servlet.*,
-	org.openmdx.portal.servlet.attribute.*,
-	org.openmdx.portal.servlet.component.*,
-	org.openmdx.portal.servlet.control.*,
-	org.openmdx.portal.servlet.wizards.*,
-	org.openmdx.base.naming.*
-	" %>
+		java.util.*,
+		java.io.*,
+		java.text.*,
+		org.opencrx.portal.wizard.*,
+		org.opencrx.kernel.generic.*,
+		org.openmdx.kernel.id.cci.*,
+		org.openmdx.kernel.id.*,
+		org.openmdx.base.exception.*,
+		org.openmdx.base.accessor.jmi.cci.*,
+		org.openmdx.portal.servlet.*,
+		org.openmdx.portal.servlet.attribute.*,
+		org.openmdx.portal.servlet.component.*,
+		org.openmdx.portal.servlet.control.*,
+		org.openmdx.portal.servlet.wizards.*,
+		org.openmdx.base.naming.*
+		" %>
 <%
 	final String FORM_NAME = "SegmentSetup.jsp";
 	SegmentSetupController wc = new SegmentSetupController();
@@ -89,56 +88,56 @@
 %>
 <div class="OperationDialogTitle"><%= wc.getToolTip() %></div>
 <form id="<%= FORM_NAME %>" name="<%= FORM_NAME %>" accept-charset="UTF-8" method="POST" action="<%= wc.getServletPath() %>">
-    <%
-	    if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
-    %>
-    <div class="alert alert-danger" role="alert">
-	<table>
-	    <tr>
-		<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
-		<td><%= wc.getErrorMessage() %></td>
-	    </tr>
-	</table>
-    </div>
-    <%
-	    }
-    %>
-    <input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
-    <input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
-    <input type="hidden" id="Command" name="Command" value="" />
-    <div class="container" style="width:100%">
-	<% wc.renderSetupReport(out); %>
-    </div>
-    <div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
-    <div id="SubmitArea" style="display:none;">
 	<%
-			if(wc.isCurrentUserIsAdmin()) {
-	%>	
-	<input type="Submit" name="Setup" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Setup" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;$('Command').value = this.name;this.name = '---';" />
-	<%
-			} else {
-	%>		
-	<div class="alert alert-warning">
-	    <b>NOTE:</b> This wizard requires admin permissions.
+		if(wc.getErrorMessage() != null && !wc.getErrorMessage().isEmpty()) {
+	%>
+	<div class="alert alert-danger" role="alert">
+		<table>
+			<tr>
+				<td style="vertical-align:top;padding:10px;"><span class="glyphicon glyphicon-exclamation-sign"></span></td>
+				<td><%= wc.getErrorMessage() %></td>
+			</tr>
+		</table>
 	</div>
 	<%
-			}
+		}
 	%>
-	<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
-    </div>
+	<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID %>" value="<%= wc.getRequestId() %>" />
+	<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI %>" value="<%= wc.getObjectIdentity().toXRI() %>" />
+	<input type="hidden" id="Command" name="Command" value="" />
+	<div class="container" style="width:100%">
+		<% wc.renderSetupReport(out); %>
+	</div>
+	<div id="WaitIndicator" style="width:50px;height:24px;" class="wait">&nbsp;</div>
+	<div id="SubmitArea" style="display:none;">
+		<%
+				if(wc.isCurrentUserIsAdmin()) {
+		%>	
+		<input type="Submit" name="Setup" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" value="Setup" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none';$('Command').value = this.name;$('Command').value = this.name;this.name = '---';" />
+		<%
+				} else {
+		%>		
+		<div class="alert alert-warning">
+			<b>NOTE:</b> This wizard requires admin permissions.
+		</div>
+		<%
+				}
+		%>
+		<input type="submit" name="Cancel" class="<%= CssClass.btn.toString() %> <%= CssClass.btnDefault.toString() %>" tabindex="9020" value="<%= app.getTexts().getCancelTitle() %>" onclick="javascript:$('WaitIndicator').style.display = 'block';$('SubmitArea').style.display = 'none'; $('Command').value = this.name;" />
+	</div>
 </form>
 <br />
 <script type="text/javascript">
-    Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
-	$('<%= FORM_NAME %>').request({
-	    onFailure: function () { },
-	    onSuccess: function (t) {
-		$('UserDialog').update(t.responseText);
-	    }
+	Event.observe('<%= FORM_NAME %>', 'submit', function (event) {
+		$('<%= FORM_NAME %>').request({
+			onFailure: function () { },
+			onSuccess: function (t) {
+				$('UserDialog').update(t.responseText);
+			}
+		});
+		Event.stop(event);
 	});
-	Event.stop(event);
-    });
-    $('WaitIndicator').style.display = 'none';
-    $('SubmitArea').style.display = 'block';
+	$('WaitIndicator').style.display = 'none';
+	$('SubmitArea').style.display = 'block';
 </script>
 <t:wizardClose controller="<%= wc %>" />		

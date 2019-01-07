@@ -57,7 +57,7 @@
 }
 @media print { 
     .table-responsive {
-	overflow: visible;
+		overflow: visible;
     }
 }
 /**
