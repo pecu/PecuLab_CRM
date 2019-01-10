@@ -148,7 +148,7 @@
 				}
 			}
 		%>
-		<title><%= app.getApplicationName() + " - " + title + (title.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
+		<title>PecuLab_CRM - <%= title + (title.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
 		<%
 			prolog.paint(p, PagePrologControl.FRAME_PRE_PROLOG, false);
 			p.flush();

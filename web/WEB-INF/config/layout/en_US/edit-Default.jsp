@@ -99,7 +99,7 @@
 			String objectTitle = view.getObjectReference().getTitle();
 			if(objectTitle == null) objectTitle = "#NULL";
 		%>
-		<title><%= app.getApplicationName() + " - " + objectTitle + (objectTitle.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
+		<title>PecuLab_CRM - <%= objectTitle + (objectTitle.length() == 0 ? "" : " - ") + view.getObjectReference().getLabel() %></title>
 		<%
 			prolog.paint(p, PagePrologControl.FRAME_PRE_PROLOG, false);
 			p.flush();

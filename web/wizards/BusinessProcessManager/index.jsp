@@ -1469,7 +1469,7 @@
 				white-space: nowrap;
 			}
 		</style>
-		<title>openCRX - Business Process Manager</title>
+		<title>PecuLab_CRM - Business Process Manager</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.min.css">	
 		<link rel="stylesheet" href="../../_style/colors.css">

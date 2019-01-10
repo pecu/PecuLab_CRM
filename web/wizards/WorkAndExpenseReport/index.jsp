@@ -689,7 +689,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
 	<head>
-		<title>openCRX - Work/Expense Report</title>
+		<title>PecuLab_CRM - Work/Expense Report</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.min.css">	
 		<link rel="stylesheet" href="../../_style/colors.css">

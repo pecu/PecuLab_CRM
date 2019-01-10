@@ -85,7 +85,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
     <head>
-		<title><%= app.getApplicationName() + " - Search" %></title>
+		<title>PecuLab_CRM - Search</title>
 		<meta name="label" content="Search">
 		<meta name="toolTip" content="Search">
 		<meta name="targetType" content="_blank">

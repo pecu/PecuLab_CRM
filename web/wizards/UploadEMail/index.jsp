@@ -77,7 +77,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<%= texts.getDir() %>">
 	<head>
-		<title>openCRX - Upload E-Mail</title>
+		<title>PecuLab_CRM - Upload E-Mail</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.min.css">	
 		<link rel="stylesheet" href="../../_style/colors.css">
