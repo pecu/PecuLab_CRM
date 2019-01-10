@@ -137,6 +137,19 @@ html>body #eheader {
 html>body #econtent {
     padding:9em 0.5em 0em 0.5em; /* 9em = height of #header and #footer + 1em, 1em = give the content some breathing space */
 }
+footer {
+	text-align:center;
+	height:30px;
+	width: 100%;
+	background-color:#eee;
+	padding:10px 10px 0 10px;
+	margin:20px 0px 0 0;
+	border-top:1px solid black;
+}
+footer a{color:#444444;}
+footer a:visited{color:#444444;}
+footer a:hover{font-weight:bold;color:#E66D00;background-color:#EEE;}
+
 #paneLeft {
     position:absolute;
     margin-top: 0px;

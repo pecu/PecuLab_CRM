@@ -298,7 +298,6 @@
 								boolean hideWorkspaceDashboard = Boolean.valueOf(app.getSettings().getProperty(UserSettings.HIDE_WORKSPACE_DASHBOARD.getName()));
 					%>
 					<div class="<%= CssClass.row %>">
-						<%@ include file="../../../../show-header.html" %>
 						<%
 										if(!hideWorkspaceDashboard) {
 						%>
@@ -358,10 +357,13 @@
 					</div>
 				</div>
 				<div class="row">
-					<%@ include file="../../../../show-footer.html" %>
+					<footer>
+						<a href="https://github.com/pecu/PecuLab_CRM" target="_blank">PecuLab_CRM 2018</a> 
+						<br>
+						<a href="http://www.opencrx.org/" target="_blank" title="openCRX - limitless relationship management">Powered by openCRX</a>
+					</footer>
 				</div> <!-- row -->
 			</div> <!-- container -->
-			<%@ include file="../../../../show-footer-noscroll.html" %>
 		</div> <!-- wrap -->
 	</div> <!-- container -->
 

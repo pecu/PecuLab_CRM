@@ -153,7 +153,6 @@
 					p.flush();
 				}
 			%>
-			<%@ include file="../../../../edit-header.html" %>
 		<div id="container">
 			<div id="wrap">
 				<div id="eheader">
@@ -170,7 +169,11 @@
 										p.close(false);
 						%>
 						<br />
-						<%@ include file="../../../../edit-footer.html" %>
+						<footer>
+							<a href="https://github.com/pecu/PecuLab_CRM" target="_blank">PecuLab_CRM 2018</a> 
+							<br>
+							<a href="http://www.opencrx.org/" target="_blank" title="openCRX - limitless relationship management">Powered by openCRX</a>
+						</footer>
 					</div> <!-- content -->
 				</div> <!-- content-wrap -->
 			</div> <!-- wrap -->

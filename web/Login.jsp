@@ -262,7 +262,6 @@
 				<br />
 				<button type="submit" class="btn btn-lg btn-primary btn-block"><%= texts.get("LoginText") %></button>
 				<br />
-				<%@ include file="login-note.html" %>      
 				<%
 					  if(loginFailed) {
 				%>
@@ -276,7 +275,11 @@
 			</form>
 		</div>
 		<div style="height:100px;"></div>
-		<%@ include file="login-footer.html" %>
+		<footer>
+			<a href="https://github.com/pecu/PecuLab_CRM" target="_blank">PecuLab_CRM 2018</a> 
+			<br>
+			<a href="http://www.opencrx.org/" target="_blank" title="openCRX - limitless relationship management">Powered by openCRX</a>
+		</footer>
 	</body>
 </html>
 <%
