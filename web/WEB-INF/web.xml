@@ -58,7 +58,7 @@
 			  <param-name>development</param-name>
 			  <param-value>true</param-value>
 		</init-param>
-	</servlet>\
+	</servlet>
 	
 	<!-- WorkflowController -->
 	<servlet id="WorkflowController">
