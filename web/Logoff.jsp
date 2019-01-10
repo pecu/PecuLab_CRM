@@ -151,9 +151,6 @@
 				</table>
 			</div>
 		</div>
-		<div id="login" style="position:relative;text-align:center;margin-left:auto;margin-right:auto;padding-top:10em;">
-			<%@ include file="login-header.html" %>
-		</div>
 
 		&nbsp;&nbsp;<input class="<%= CssClass.submit %>" type="submit" name="button" value="<%= texts.get("LoginText") == null ? "Login" :  texts.get("LoginText") %>" onclick="javascript:window.location.href = 'Login.jsp';" >
 
