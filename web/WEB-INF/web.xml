@@ -43,7 +43,6 @@
 		<param-value>Production</param-value>
 	</context-param>
 	<!-- Activate to enable development mode -->
-	<!--
 	<context-param>
 		<param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
 		<param-value>0</param-value>
@@ -59,8 +58,8 @@
 			  <param-name>development</param-name>
 			  <param-value>true</param-value>
 		</init-param>
-	</servlet>
-	-->
+	</servlet>\
+	
 	<!-- WorkflowController -->
 	<servlet id="WorkflowController">
 		<servlet-name>WorkflowController</servlet-name>
