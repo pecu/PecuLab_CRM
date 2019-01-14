@@ -1,4 +1,18 @@
-<%@page import="org.apache.commons.lang.ArrayUtils"%>
+<%@page import="org.opencrx.kernel.account1.cci2.PostalAddressQuery"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Locale"%>
+<%@page import="org.opencrx.kernel.account1.jmi1.Contact"%>
+<%@page import="org.opencrx.kernel.account1.cci2.ContactQuery"%>
+<%@page import="org.openmdx.portal.servlet.CssClass"%>
+<%@page import="org.openmdx.base.naming.Path"%>
+<%@page import="org.openmdx.base.accessor.jmi.cci.RefObject_1_0"%>
+<%@page import="org.openmdx.portal.servlet.Texts_1_0"%>
+<%@page import="org.openmdx.portal.servlet.Action"%>
+<%@page import="org.openmdx.portal.servlet.ViewsCache"%>
+<%@page import="org.openmdx.portal.servlet.WebKeys"%>
+<%@page import="org.openmdx.portal.servlet.ApplicationContext"%>
 <%@  page contentType= "text/html;charset=utf-8" language="java" pageEncoding= "UTF-8" %><%
 	/**
 	 * ====================================================================
@@ -6,32 +20,6 @@
 	 * ====================================================================
 	 */
 %>
-<%@ page session="true" import="
-         java.util.*,
-         java.io.*,
-         java.text.*,
-         java.math.*,
-         java.net.*,
-         java.sql.*,
-         javax.naming.Context,
-         javax.naming.InitialContext,
-         org.openmdx.kernel.id.cci.*,
-         org.openmdx.kernel.id.*,
-         org.opencrx.kernel.portal.*,
-         org.openmdx.base.accessor.jmi.cci.*,
-         org.openmdx.base.exception.*,
-         org.openmdx.portal.servlet.*,
-         org.openmdx.portal.servlet.attribute.*,
-         org.openmdx.portal.servlet.component.*,
-         org.openmdx.portal.servlet.control.*,
-         org.openmdx.portal.servlet.wizards.*,
-         org.openmdx.base.naming.*,
-         org.openmdx.base.query.*,
-         org.openmdx.base.text.conversion.*,
-         org.openmdx.kernel.log.*,
-         org.apache.poi.hssf.usermodel.*,
-         org.apache.poi.hssf.util.*
-         " %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	ApplicationContext app = (ApplicationContext) session.getValue(WebKeys.APPLICATION_KEY);
@@ -46,13 +34,28 @@
 	}
 	javax.jdo.PersistenceManager pm = app.getNewPmData();
 	Texts_1_0 texts = app.getTexts();
+
+	// get reference of calling object
+	RefObject_1_0 obj = (RefObject_1_0) pm.getObjectById(new Path(objectXri));
+
+	Path objectPath = new Path(objectXri);
+	String providerName = objectPath.get(2);
+	String segmentName = objectPath.get(4);
+
+	// Get account segment
+	org.opencrx.kernel.account1.jmi1.Segment accountSegment
+			= (org.opencrx.kernel.account1.jmi1.Segment) pm.getObjectById(
+					new Path("xri:@openmdx:org.opencrx.kernel.account1/provider/" + providerName + "/segment/" + segmentName)
+			);
+
+	int total, bond, high_yield;
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 
     <head>
-        <title>Search Relate Customer</title>
+        <title>類似客戶搜尋</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
 		<!-- Styles -->
@@ -110,118 +113,181 @@
 						</tr>
 					</table>
 				</div>
-
-				<div id="etitle" style="height:20px;padding-left:12px;">Search Relate Customer</div>
-
-				<div id="topnavi">
-
-					<form  accept-charset="UTF-8" method="GET" action="<%= "../.." + request.getServletPath()%>" style="padding-top:8px;">
-						<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI%>" value="<%= objectXri%>">
-						<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID%>" value="<%= requestId%>">
-						<table class="fieldGroup">
-							<tr>
-								<td class="fieldLabel">城市:</td>
-								<td><input type="text" name="city" class="valueL" required></td>
-							</tr>
-							<tr>
-								<td class="fieldLabel">生日:</td>
-								<td><input type="text" name="birthday" id="birthday" class="valueR" required></td>
-								<td class="addon">
-									<a><img class="popUpButton" id="birthday.Trigger" border="0" alt="Click to open Calendar" src="../../images/cal.gif"></a>
-									<script language="javascript" type="text/javascript">
-										Calendar.setup({
-											inputField: "birthday",
-											ifFormat: "%m/%d/%Y %I:%M:%S %p",
-											firstDay: 0,
-											timeFormat: "24",
-											button: "birthday.Trigger",
-											align: "Tl",
-											singleClick: true,
-											showsTime: true
-										});
-									</script>
-								</td>
-							</tr>
-							<tr class="gridTableRow">
-								<td class="fieldLabel">性別:</td>
-								<td>
-									<select name="gender" class="valueL" required>
-										<option value="" disabled selected>請選擇性別</option>
-										<option value="male">Male</option>
-										<option value="female">Female</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="addon">
-									<input type="submit" name="go" id="go" class="<%= CssClass.btn.toString()%> <%= CssClass.btnDefault.toString()%>" title="<%= app.getTexts().getSearchText()%>" value=">>">
-								</td>
-							</tr>
-						</table>
-					</form>
-				</div> <!-- topnavi -->
-
 			</div> <!-- header -->
 
-			<div id="content-wrap">
-				<div id="content" style="padding:13.5em 0.5em 0px 0.5em;">
+			<h1 style="padding: 2px;">類似客戶搜尋</h1>
 
-					<%
-						// Data for Chart
-						int[] ages = new int[12];
+			<form  accept-charset="UTF-8" method="GET" action="<%= "../.." + request.getServletPath()%>" style="padding-top:8px;">
+				<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI%>" value="<%= objectXri%>">
+				<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID%>" value="<%= requestId%>">
+				<table class="fieldGroup">
+					<tr>
+						<td class="fieldLabel">城市:</td>
+						<td><input type="text" name="city" class="valueL" required></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">生日:</td>
+						<td><input type="text" name="birthday" id="birthday" class="valueR" required></td>
+						<td class="addon">
+							<a><img class="popUpButton" id="birthday.Trigger" border="0" alt="Click to open Calendar" src="../../images/cal.gif"></a>
+							<script language="javascript" type="text/javascript">
+								Calendar.setup({
+									inputField: "birthday",
+									ifFormat: "%m/%d/%Y",
+									firstDay: 0,
+									timeFormat: "24",
+									button: "birthday.Trigger",
+									align: "Tl",
+									singleClick: true,
+									showsTime: true
+								});
+							</script>
+						</td>
+					</tr>
+					<tr class="gridTableRow">
+						<td class="fieldLabel">性別:</td>
+						<td>
+							<select name="gender" class="valueL" required>
+								<option value="" selected disabled></option>
+								<option value="0">Not given</option>
+								<option value="1">Male</option>
+								<option value="2">Female</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="addon">
+							<input type="submit" name="go" id="go" class="<%= CssClass.btn.toString()%> <%= CssClass.btnDefault.toString()%>" title="<%= app.getTexts().getSearchText()%>" value=">>">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<div class="table-responsive" style="margin-top:10px;">
+				<table class="table table-hover table-striped table-condensed" style="max-width:2400px;" id="G_0_0_gridTable">
+					<thead>
+						<tr>
+							<th>類別</th>
+							<th>債劵基金(比率)</th>
+							<th>高收益債(比率)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>全部</td>
+							<%
+								ContactQuery contactFilter = (ContactQuery) pm.newQuery(Contact.class);
+								contactFilter.forAllDisabled().isFalse();
+								total = accountSegment.getAccount(contactFilter).size();
 
-						// get reference of calling object
-						RefObject_1_0 obj = (RefObject_1_0) pm.getObjectById(new Path(objectXri));
+								contactFilter = (ContactQuery) pm.newQuery(Contact.class);
+								contactFilter.forAllDisabled().isFalse();
+								contactFilter.thereExistsExtBoolean4().equalTo(true);
+								bond = accountSegment.getAccount(contactFilter).size();
+								bond = ((total > 0) ? bond * 100 / total : 0);
 
-						Path objectPath = new Path(objectXri);
-						String providerName = objectPath.get(2);
-						String segmentName = objectPath.get(4);
+								contactFilter = (ContactQuery) pm.newQuery(Contact.class);
+								contactFilter.forAllDisabled().isFalse();
+								contactFilter.thereExistsExtBoolean5().equalTo(true);
+								high_yield = accountSegment.getAccount(contactFilter).size();
+								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
+							%>
+							<td><%= bond%>%</td>
+							<td><%= high_yield%>%</td>
+						</tr>
+						<% if (request.getParameter("gender") != null) { %>
+						<tr>
+							<td>性別</td>
+							<%
+								short gender = Short.parseShort(request.getParameter("gender"));
 
-						// Get account segment
-						org.opencrx.kernel.account1.jmi1.Segment accountSegment
-								= (org.opencrx.kernel.account1.jmi1.Segment) pm.getObjectById(
-										new Path("xri:@openmdx:org.opencrx.kernel.account1/provider/" + providerName + "/segment/" + segmentName)
-								);
+								ContactQuery genderFilter = (ContactQuery) pm.newQuery(Contact.class);
+								genderFilter.forAllDisabled().isFalse();
+								genderFilter.gender().equalTo(gender);
+								total = accountSegment.getAccount(genderFilter).size();
 
-						final String wildcard = ".*";
+								genderFilter = (ContactQuery) pm.newQuery(Contact.class);
+								genderFilter.forAllDisabled().isFalse();
+								genderFilter.gender().equalTo(gender);
+								genderFilter.thereExistsExtBoolean4().equalTo(true);
+								bond = accountSegment.getAccount(genderFilter).size();
+								bond = ((total > 0) ? bond * 100 / total : 0);
 
-						org.opencrx.kernel.account1.cci2.PostalAddressQuery accountFilter = (org.opencrx.kernel.account1.cci2.PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
-						accountFilter.forAllDisabled().isFalse();
+								genderFilter = (ContactQuery) pm.newQuery(Contact.class);
+								genderFilter.forAllDisabled().isFalse();
+								genderFilter.gender().equalTo(gender);
+								genderFilter.thereExistsExtBoolean5().equalTo(true);
+								high_yield = accountSegment.getAccount(genderFilter).size();
+								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
+							%>
+							<td><%= bond%>%</td>
+							<td><%= high_yield%>%</td>
+						</tr>
+						<% }
+							if (request.getParameter("birthday") != null) { %>
+						<tr>
+							<td>年齡層(10年)</td>
+							<%
+								Date birthday, begin = new Date(), finish = new Date();
+								DateFormat format = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
+								birthday = format.parse(request.getParameter("birthday"));
+								begin.setYear(birthday.getYear() / 10 * 10);
+								finish.setYear((birthday.getYear() / 10 + 1) * 10);
 
-						accountFilter.thereExistsPostalAddressLine().like("(?i)" + wildcard + "" + wildcard);
+								ContactQuery birthdayFilter = (ContactQuery) pm.newQuery(Contact.class);
+								birthdayFilter.forAllDisabled().isFalse();
+								birthdayFilter.thereExistsBirthdate().between(begin, finish);
+								total = accountSegment.getAccount(birthdayFilter).size();
 
-						Iterator accounts = accountSegment.getAddress(accountFilter).listIterator();
-						for (Iterator i = accounts; i.hasNext() && i != null;) {
-							org.opencrx.kernel.account1.jmi1.Account account = null;
-							org.opencrx.kernel.generic.jmi1.CrxObject crxObject = (org.opencrx.kernel.generic.jmi1.CrxObject) i.next();
-							if (crxObject instanceof org.opencrx.kernel.account1.jmi1.Account) {
-								account = (org.opencrx.kernel.account1.jmi1.Account) crxObject;
-							} else if (crxObject instanceof org.opencrx.kernel.account1.jmi1.EMailAddress) {
-								// get parent account
-								account = (org.opencrx.kernel.account1.jmi1.Account) pm.getObjectById(new Path(crxObject.refMofId()).getParent().getParent());
-							} else if (crxObject instanceof org.opencrx.kernel.account1.jmi1.PostalAddress) {
-								// get parent account
-								account = (org.opencrx.kernel.account1.jmi1.Account) pm.getObjectById(new Path(crxObject.refMofId()).getParent().getParent());
-							} else {
-								account = ((org.opencrx.kernel.account1.jmi1.Member) crxObject).getAccount();
-							}
+								birthdayFilter = (ContactQuery) pm.newQuery(Contact.class);
+								birthdayFilter.forAllDisabled().isFalse();
+								birthdayFilter.thereExistsBirthdate().between(begin, finish);
+								birthdayFilter.thereExistsExtBoolean4().equalTo(true);
+								bond = accountSegment.getAccount(birthdayFilter).size();
+								bond = ((total > 0) ? bond * 100 / total : 0);
 
-							org.opencrx.kernel.account1.jmi1.Contact contact = null;
-							if (account instanceof org.opencrx.kernel.account1.jmi1.Contact) {
-								contact = (org.opencrx.kernel.account1.jmi1.Contact) account;
-							}
-							if (account == null || contact == null) {
-								continue;
-							}
+								birthdayFilter = (ContactQuery) pm.newQuery(Contact.class);
+								birthdayFilter.forAllDisabled().isFalse();
+								birthdayFilter.thereExistsBirthdate().between(begin, finish);
+								birthdayFilter.thereExistsExtBoolean5().equalTo(true);
+								high_yield = accountSegment.getAccount(birthdayFilter).size();
+								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
+							%>
+							<td><%= bond%>%</td>
+							<td><%= high_yield%>%</td>
+						</tr>
+						<% }
+							if (request.getParameter("city") != null) { %>
+						<tr>
+							<td>地區</td>
+							<%
+								String city = request.getParameter("city");
 
-							long account_age = System.currentTimeMillis() - contact.getBirthdate().getTime();
-							Calendar c = Calendar.getInstance();
-							c.setTimeInMillis(account_age);
-							ages[(c.get(Calendar.YEAR) - 1970) / 10]++;
-						}
-					%>
-				</div> <!-- content -->
-			</div> <!-- content-wrap -->
+								PostalAddressQuery addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
+								addressFilter.forAllDisabled().isFalse();
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								total = accountSegment.getAddress(addressFilter).size();
+
+								addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
+								addressFilter.forAllDisabled().isFalse();
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								addressFilter.account().thereExistsExtBoolean4().equalTo(true);
+								bond = accountSegment.getAddress(addressFilter).size();
+								bond = ((total > 0) ? bond * 100 / total : 0);
+
+								addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
+								addressFilter.forAllDisabled().isFalse();
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								addressFilter.account().thereExistsExtBoolean5().equalTo(true);
+								high_yield = accountSegment.getAddress(addressFilter).size();
+								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
+							%>
+							<td><%= bond%>%</td>
+							<td><%= high_yield%>%</td>
+						</tr>
+						<% }%>
+					</tbody>
+				</table>
+			</div>
         </div> <!-- container -->
     </body>
 </html>
