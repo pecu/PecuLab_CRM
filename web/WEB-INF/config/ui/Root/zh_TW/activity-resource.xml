@@ -22,6 +22,12 @@
 											<label>
 												<_item>資源</_item>
 											</label>
+											<order>
+												<_item>40</_item>
+												<_item>0</_item>
+												<_item>10</_item>
+											</order>
+											<maxMember>4</maxMember>
 										</_object>
 										<_content/>
 									</org.openmdx.ui1.ElementDefinition>
@@ -1642,7 +1648,7 @@
 										<_object>
 											<active>true</active>
 											<toolTip>
-												<_item>是可以報銷的e</_item>
+												<_item>是可以報銷的</_item>
 											</toolTip>
 											<label>
 												<_item>是可以報銷的</_item>

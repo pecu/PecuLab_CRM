@@ -3,11 +3,11 @@
 	<_object />
 	<_content>
 		<provider>
-			<org.openmdx.base.Provider qualified名稱="CRX" _operation="null">
+			<org.openmdx.base.Provider qualifiedName="CRX" _operation="null">
 				<_object />
 				<_content>
 					<segment>
-						<org.openmdx.ui1.Segment qualified名稱="Root" _operation="null">
+						<org.openmdx.ui1.Segment qualifiedName="Root" _operation="null">
 							<_object />
 							<_content>
 								<elementDefinition>
