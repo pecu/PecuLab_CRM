@@ -48,6 +48,19 @@
 					new Path("xri:@openmdx:org.opencrx.kernel.account1/provider/" + providerName + "/segment/" + segmentName)
 			);
 
+	String gender_str = request.getParameter("gender");
+	if (gender_str == null) {
+		gender_str = "";
+	}
+	String city_str = request.getParameter("city");
+	if (city_str == null) {
+		city_str = "";
+	}
+	String birthday_str = request.getParameter("birthday");
+	if (birthday_str == null) {
+		birthday_str = "";
+	}
+
 	int total, bond, high_yield;
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -68,6 +81,7 @@
 		<link rel="stylesheet" href="../../js/wiky/wiky.lang.css" >
 		<link rel="stylesheet" href="../../js/wiky/wiky.math.css" >
 		<link rel="stylesheet" href="../../js/yui/build/assets/skins/sam/container.css" >
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 		<link rel='shortcut icon' href='../../images/favicon.ico' >
 		<!-- Libraries -->
 		<script type="text/javascript" src="../../javax.faces.resource/jsf.js.xhtml?ln=javax.faces&amp;stage=Development"></script>	
@@ -80,6 +94,7 @@
 		<script src="../../js/portal-all.js"></script>
 		<script src="../../js/calendar/lang/calendar-en_US.js"></script>
 		<!--[if lt IE 7]><script type="text/javascript" src="js/iehover-fix.js"></script><![endif]-->
+		<script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 		<script language="javascript" type="text/javascript">
 			var OF = null;
 			try {
@@ -123,11 +138,11 @@
 				<table class="fieldGroup">
 					<tr>
 						<td class="fieldLabel">城市:</td>
-						<td><input type="text" name="city" class="valueL" required></td>
+						<td><input type="text" name="city" class="valueL" value="<%= city_str%>" required></td>
 					</tr>
 					<tr>
 						<td class="fieldLabel">生日:</td>
-						<td><input type="text" name="birthday" id="birthday" class="valueR" required></td>
+						<td><input type="text" name="birthday" id="birthday" class="valueR" value="<%= birthday_str%>" required></td>
 						<td class="addon">
 							<a><img class="popUpButton" id="birthday.Trigger" border="0" alt="Click to open Calendar" src="../../images/cal.gif"></a>
 							<script language="javascript" type="text/javascript">
@@ -191,14 +206,14 @@
 								high_yield = accountSegment.getAccount(contactFilter).size();
 								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
 							%>
-							<td><%= bond%>%</td>
-							<td><%= high_yield%>%</td>
+							<td><div class="ct_chart"><%= bond%></div></td>
+							<td><div class="ct_chart"><%= high_yield%></div></td>
 						</tr>
-						<% if (request.getParameter("gender") != null) { %>
+						<% if (!gender_str.isEmpty()) { %>
 						<tr>
 							<td>性別</td>
 							<%
-								short gender = Short.parseShort(request.getParameter("gender"));
+								short gender = Short.parseShort(gender_str);
 
 								ContactQuery genderFilter = (ContactQuery) pm.newQuery(Contact.class);
 								genderFilter.forAllDisabled().isFalse();
@@ -219,17 +234,17 @@
 								high_yield = accountSegment.getAccount(genderFilter).size();
 								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
 							%>
-							<td><%= bond%>%</td>
-							<td><%= high_yield%>%</td>
+							<td><div class="ct_chart"><%= bond%></div></td>
+							<td><div class="ct_chart"><%= high_yield%></div></td>
 						</tr>
 						<% }
-							if (request.getParameter("birthday") != null) { %>
+							if (!birthday_str.isEmpty()) { %>
 						<tr>
 							<td>年齡層(10年)</td>
 							<%
 								Date birthday, begin = new Date(), finish = new Date();
 								DateFormat format = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
-								birthday = format.parse(request.getParameter("birthday"));
+								birthday = format.parse(birthday_str);
 								begin.setYear(birthday.getYear() / 10 * 10);
 								finish.setYear((birthday.getYear() / 10 + 1) * 10);
 
@@ -252,42 +267,54 @@
 								high_yield = accountSegment.getAccount(birthdayFilter).size();
 								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
 							%>
-							<td><%= bond%>%</td>
-							<td><%= high_yield%>%</td>
+							<td><div class="ct_chart"><%= bond%></div></td>
+							<td><div class="ct_chart"><%= high_yield%></div></td>
 						</tr>
 						<% }
-							if (request.getParameter("city") != null) { %>
+							if (!city_str.isEmpty()) { %>
 						<tr>
 							<td>地區</td>
 							<%
-								String city = request.getParameter("city");
-
 								PostalAddressQuery addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
 								addressFilter.forAllDisabled().isFalse();
-								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city_str + ".*");
 								total = accountSegment.getAddress(addressFilter).size();
 
 								addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
 								addressFilter.forAllDisabled().isFalse();
-								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city_str + ".*");
 								addressFilter.account().thereExistsExtBoolean4().equalTo(true);
 								bond = accountSegment.getAddress(addressFilter).size();
 								bond = ((total > 0) ? bond * 100 / total : 0);
 
 								addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
 								addressFilter.forAllDisabled().isFalse();
-								addressFilter.thereExistsPostalCity().like("(?i).*" + city + ".*");
+								addressFilter.thereExistsPostalCity().like("(?i).*" + city_str + ".*");
 								addressFilter.account().thereExistsExtBoolean5().equalTo(true);
 								high_yield = accountSegment.getAddress(addressFilter).size();
 								high_yield = ((total > 0) ? high_yield * 100 / total : 0);
 							%>
-							<td><%= bond%>%</td>
-							<td><%= high_yield%>%</td>
+							<td><div class="ct_chart"><%= bond%></div></td>
+							<td><div class="ct_chart"><%= high_yield%></div></td>
 						</tr>
 						<% }%>
 					</tbody>
 				</table>
 			</div>
         </div> <!-- container -->
+		<script>
+			var charts = document.getElementsByClassName("ct_chart");
+			Array.prototype.forEach.call(charts, function (element) {
+				var data = {
+					series: [element.innerHTML, 100 - element.innerHTML]
+				};
+				element.innerHTML = "";
+				new Chartist.Pie(element, data, {
+					labelInterpolationFnc: function (value) {
+						return value + '%';
+					}
+				})
+			});
+		</script>
     </body>
 </html>
