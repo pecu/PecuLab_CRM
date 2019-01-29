@@ -83,6 +83,11 @@
 		<link rel="stylesheet" href="../../js/yui/build/assets/skins/sam/container.css" >
 		<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 		<link rel='shortcut icon' href='../../images/favicon.ico' >
+                <style>
+                    .ct-label{
+                        font-size: 16px;
+                    }
+                </style>
 		<!-- Libraries -->
 		<script type="text/javascript" src="../../javax.faces.resource/jsf.js.xhtml?ln=javax.faces&amp;stage=Development"></script>	
 		<script src="../../js/prototype.js"></script>
