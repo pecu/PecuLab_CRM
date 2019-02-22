@@ -84,6 +84,12 @@
 		<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 		<link rel='shortcut icon' href='../../images/favicon.ico' >
                 <style>
+			.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+			    stroke: #0CC1DE;
+			}
+			.ct-series-b .ct-bar, .ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut {
+			    stroke: #BBBBBB;
+			}
                     .ct-label{
                         font-size: 16px;
                     }
