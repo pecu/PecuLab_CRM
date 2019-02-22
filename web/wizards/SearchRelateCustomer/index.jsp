@@ -68,7 +68,7 @@
 <html>
 
     <head>
-        <title>Similar customer search</title>
+        <title>Search Relate Customer</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
 		<!-- Styles -->
@@ -141,7 +141,7 @@
 				</div>
 			</div> <!-- header -->
 
-			<h1 style="padding: 2px;">Similar customer search</h1>
+			<h1 style="padding: 2px;">Search Relate Customer</h1>
 
 			<form  accept-charset="UTF-8" method="GET" action="<%= "../.." + request.getServletPath()%>" style="padding-top:8px;">
 				<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI%>" value="<%= objectXri%>">
