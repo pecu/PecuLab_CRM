@@ -141,18 +141,18 @@
 				</div>
 			</div> <!-- header -->
 
-			<h1 style="padding: 2px;">類似客戶搜尋</h1>
+			<h1 style="padding: 2px;">Similar customer search</h1>
 
 			<form  accept-charset="UTF-8" method="GET" action="<%= "../.." + request.getServletPath()%>" style="padding-top:8px;">
 				<input type="hidden" name="<%= Action.PARAMETER_OBJECTXRI%>" value="<%= objectXri%>">
 				<input type="hidden" name="<%= Action.PARAMETER_REQUEST_ID%>" value="<%= requestId%>">
 				<table class="fieldGroup">
 					<tr>
-						<td class="fieldLabel">城市:</td>
+						<td class="fieldLabel">City:</td>
 						<td><input type="text" name="city" class="valueL" value="<%= city_str%>" required></td>
 					</tr>
 					<tr>
-						<td class="fieldLabel">生日:</td>
+						<td class="fieldLabel">Birthday:</td>
 						<td><input type="text" name="birthday" id="birthday" class="valueR" value="<%= birthday_str%>" required></td>
 						<td class="addon">
 							<a><img class="popUpButton" id="birthday.Trigger" border="0" alt="Click to open Calendar" src="../../images/cal.gif"></a>
@@ -171,7 +171,7 @@
 						</td>
 					</tr>
 					<tr class="gridTableRow">
-						<td class="fieldLabel">性別:</td>
+						<td class="fieldLabel">Gender:</td>
 						<td>
 							<select name="gender" class="valueL" required>
 								<option value="" selected disabled></option>
@@ -192,14 +192,14 @@
 				<table class="table table-hover table-striped table-condensed" style="max-width:2400px;" id="G_0_0_gridTable">
 					<thead>
 						<tr>
-							<th>類別</th>
-							<th>債劵基金(比率)</th>
-							<th>高收益債(比率)</th>
+							<th>Type</th>
+							<th>Bond fund(rate)</th>
+							<th>High-yield debt(rate)</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>全部</td>
+							<td>All</td>
 							<%
 								ContactQuery contactFilter = (ContactQuery) pm.newQuery(Contact.class);
 								contactFilter.forAllDisabled().isFalse();
@@ -222,7 +222,7 @@
 						</tr>
 						<% if (!gender_str.isEmpty()) { %>
 						<tr>
-							<td>性別</td>
+							<td>Gender</td>
 							<%
 								short gender = Short.parseShort(gender_str);
 
@@ -251,7 +251,7 @@
 						<% }
 							if (!birthday_str.isEmpty()) { %>
 						<tr>
-							<td>年齡層(10年)</td>
+							<td>Age(decade)</td>
 							<%
 								Date birthday, begin = new Date(), finish = new Date();
 								DateFormat format = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
@@ -284,7 +284,7 @@
 						<% }
 							if (!city_str.isEmpty()) { %>
 						<tr>
-							<td>地區</td>
+							<td>Address</td>
 							<%
 								PostalAddressQuery addressFilter = (PostalAddressQuery) pm.newQuery(org.opencrx.kernel.account1.jmi1.PostalAddress.class);
 								addressFilter.forAllDisabled().isFalse();
